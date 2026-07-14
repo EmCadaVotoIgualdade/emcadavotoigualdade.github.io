@@ -46,23 +46,23 @@ h) O sufrágio universal, direto, secreto e periódico na designação dos titul
 ## A interpretação de constitucionalistas sobre a representação proporcional
 
 
-# **"Constituição da República Portuguesa anotada", Gomes Canotilho, Vital Moreira**
+### **"Constituição da República Portuguesa anotada", Gomes Canotilho, Vital Moreira**
 
 “À face da Constituição da República Portuguesa, portanto, e de acordo com o princípio democrático, o sistema eleitoral é um meio de fazer da AR um espelho político do país e não um meio de fabricar maiorias lá onde elas não existem”  
 "assegurar o sistema de representação proporcional significa que o procedimento de atribuição de mandatos deve contribuir o mais possível para a proporcionalidade entre a distribuição de votos e atribuição de mandatos"
 
 
-# **"Direito Constitucional e teoria da Constituição", Gomes Canotilho**  
+### **"Direito Constitucional e teoria da Constituição", Gomes Canotilho**  
 “A representação proporcional assenta numa regra que se pode resumir facilmente: «a cada um o que lhe é devido», ou seja, a percentagem de mandatos deve ser idêntica à percentagem dos votos.”  
 “O princípio da igualdade de voto exige que todos os votos tenham .. o mesmo peso.”
 
-**"Direito eleitoral", Jorge Miranda**  
+### **"Direito eleitoral", Jorge Miranda**  
 "A eleição maioritária e a proporcional distinguem-se segundo a desproporção que estabelece entre votos e mandatos"
 
-**"Constituição da República portuguesa: comentada", Marcelo Rebelo de Sousa, José de Melo Alexandrino**  
+### **"Constituição da República portuguesa: comentada", Marcelo Rebelo de Sousa, José de Melo Alexandrino**  
 Sobre a revisão constitucional de 1997: permite “sistemas mistos, com círculos plurinominais e uninominais (podendo haver mesmo só um círculo plurinominal interno, o nacional), desde que respeitada a prevalência da proporcionalidade e do método de Hondt”.
 
-**Evento “Sistema Eleitoral: a Reforma”, Maria Lúcia Amaral**  
+### **Evento “Sistema Eleitoral: a Reforma”, Maria Lúcia Amaral**  
 “[Após o 25 de Abril] Optámos pela representação proporcional, optámos com tal fervor que ela não é apenas a imposição constitucional .. mas é um limite material de revisão constitucional .. entre nós elevamos a controlo identitário a representação proporcional”  
 “A matriz do sistema foi escolhida .. primeiro, por uma razão negativa, porque não se queria aquilo que sempre tinha existido, que era o sistema maioritário, e se receava profundamente algo que se queria evitar a todo o custo, a criação de maiorias artificiais.”
 
@@ -75,7 +75,7 @@ Sobre a revisão constitucional de 1997: permite “sistemas mistos, com círcul
 
 “Na Constituição Portuguesa de 1976, a ideia de representação no Parlamento como «espelho da sociedade política» tem primazia na conformação do sistema eleitoral, determinando-lhe um figurino de representação proporcional, e avultando mesmo sobre qualquer outra ideia, nomeadamente o desiderato de obtenção de maiorias estáveis.”
 
-**António Vitorino**  
+#### **António Vitorino**  
 “..o princípio de representação [proporcional] consiste no objectivo de reflectir na composição do órgão electivo com a maior exactidão possível o universo das forças sociais e dos grupos políticos existentes na sociedade.”  
 “..se no caso dos Açores a existência de diversas ilhas.. [pode] justificar a pulverização de círculos eleitorais de diminuta dimensão.. tal não se verifica na Madeira, onde apenas o Porto Santo constitui uma ilha separada .. e onde as demais dez circunscrições se situam na ilha da Madeira, com absoluta contiguidade geográfica entre si, à semelhança do que acontece com as circunscrições eleitorais no continente para a Assembleia da República..”  
 “Até porque não me parece aceitável que se justifique um entorse a um princípio constitucional de tão assinalável relevância como é o princípio da representação proporcional apenas com base na pretensa tradição de um sistema cuja conformidade constitucional não se pode dar por adquirida como ponto de partida de um juízo de constitucionalidade, nem se pode presumir apenas por força do decurso do tempo e da ausência de initiatives de fiscalização da respectiva constitucionalidade.”
