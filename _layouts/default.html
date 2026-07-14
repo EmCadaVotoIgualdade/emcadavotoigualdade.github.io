@@ -138,5 +138,12 @@
     
     <!-- Script dinâmico para os gráficos com caminho resolvido de forma absoluta e segura -->
     <script src="{{ '/assets/js/charts.js' | relative_url }}" defer></script>
+    <script>
+        // Abre todos os links externos numa nova tab de forma automática
+        document.querySelectorAll('a[href^="http"]').forEach(link => {
+            link.setAttribute('target', '_blank');
+            link.setAttribute('rel', 'noopener noreferrer'); // Segurança extra
+        });
+    </script>
 </body>
 </html>
