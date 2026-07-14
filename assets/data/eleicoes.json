@@ -1,0 +1,50 @@
+{
+  "2019": [
+    { "party": "PS", "votos": 1862250, "seatsReal": 106, "seatsProposta": 80, "color": "bg-pink-500" },
+    { "party": "PSD", "votos": 1417492, "seatsReal": 77, "seatsProposta": 61, "color": "bg-orange-500" },
+    { "party": "BE", "votos": 491045, "seatsReal": 19, "seatsProposta": 11, "color": "bg-red-600" },
+    { "party": "CDU", "votos": 328790, "seatsReal": 12, "seatsProposta": 14, "color": "bg-emerald-700" },
+    { "party": "CDS", "votos": 215787, "seatsReal": 5, "seatsProposta": 9, "color": "bg-blue-600" },
+    { "party": "PAN", "votos": 166288, "seatsReal": 4, "seatsProposta": 7, "color": "bg-teal-500" },
+    { "party": "CH", "votos": 66210, "seatsReal": 1, "seatsProposta": 2, "color": "bg-indigo-950" },
+    { "party": "IL", "votos": 65321, "seatsReal": 1, "seatsProposta": 2, "color": "bg-cyan-500" },
+    { "party": "L", "votos": 55431, "seatsReal": 1, "seatsProposta": 2, "color": "bg-lime-500" },
+    { "party": "ALI", "votos": 39012, "seatsReal": 0, "seatsProposta": 1, "color": "bg-sky-400" }
+  ],
+  "2022": [
+    { "party": "PS", "votos": 2247431, "seatsReal": 117, "seatsProposta": 99, "color": "bg-pink-500" },
+    { "party": "PSD", "votos": 1578035, "seatsReal": 76, "seatsProposta": 69, "color": "bg-orange-500" },
+    { "party": "CH", "votos": 385780, "seatsReal": 12, "seatsProposta": 17, "color": "bg-indigo-950" },
+    { "party": "IL", "votos": 268729, "seatsReal": 8, "seatsProposta": 11, "color": "bg-cyan-500" },
+    { "party": "BE", "votos": 240257, "seatsReal": 5, "seatsProposta": 10, "color": "bg-red-600" },
+    { "party": "CDU", "votos": 236608, "seatsReal": 6, "seatsProposta": 10, "color": "bg-emerald-700" },
+    { "party": "CDS", "votos": 86646, "seatsReal": 0, "seatsProposta": 3, "color": "bg-blue-600" },
+    { "party": "PAN", "votos": 82284, "seatsReal": 1, "seatsProposta": 3, "color": "bg-teal-500" },
+    { "party": "L", "votos": 69010, "seatsReal": 1, "seatsProposta": 3, "color": "bg-lime-500" },
+    { "party": "RIR", "votos": 22559, "seatsReal": 0, "seatsProposta": 1, "color": "bg-purple-500" }
+  ],
+  "2024": [
+    { "party": "AD", "votos": 1811170, "seatsReal": 79, "seatsProposta": 71, "color": "bg-orange-600" },
+    { "party": "PS", "votos": 1760037, "seatsReal": 77, "seatsProposta": 69, "color": "bg-pink-500" },
+    { "party": "CH", "votos": 1108944, "seatsReal": 48, "seatsProposta": 43, "color": "bg-indigo-950" },
+    { "party": "IL", "votos": 312257, "seatsReal": 8, "seatsProposta": 12, "color": "bg-cyan-500" },
+    { "party": "BE", "votos": 274032, "seatsReal": 5, "seatsProposta": 10, "color": "bg-red-600" },
+    { "party": "PCP", "votos": 202446, "seatsReal": 4, "seatsProposta": 7, "color": "bg-emerald-700" },
+    { "party": "L", "votos": 200087, "seatsReal": 4, "seatsProposta": 7, "color": "bg-lime-500" },
+    { "party": "PAN", "votos": 118622, "seatsReal": 1, "seatsProposta": 4, "color": "bg-teal-500" },
+    { "party": "ADN", "votos": 100066, "seatsReal": 0, "seatsProposta": 3, "color": "bg-amber-500" },
+    { "party": "RIR", "votos": 25454, "seatsReal": 0, "seatsProposta": 0, "color": "bg-purple-500" }
+  ],
+  "2025": [
+    { "party": "AD", "votos": 1952001, "seatsReal": 89, "seatsProposta": 78, "color": "bg-orange-600" },
+    { "party": "PS", "votos": 1394820, "seatsReal": 58, "seatsProposta": 55, "color: "bg-pink-500" },
+    { "party": "CH", "votos": 1346310, "seatsReal": 58, "seatsProposta": 53, "color: "bg-indigo-950" },
+    { "party": "IL", "votos": 330456, "seatsReal": 9, "seatsProposta": 13, "color: "bg-cyan-500" },
+    { "party": "L", "votos": 250668, "seatsReal": 6, "seatsProposta": 10, "color": "bg-lime-500" },
+    { "party": "BE", "votos": 193058, "seatsReal": 1, "seatsProposta": 4, "color: "bg-red-600" },
+    { "party": "CDU", "votos": 180887, "seatsReal": 3, "seatsProposta": 7, "color: "bg-emerald-700" },
+    { "party": "PAN", "votos": 80839, "seatsReal": 1, "seatsProposta": 3, "color: "bg-teal-500" },
+    { "party": "ADN", "votos": 78976, "seatsReal": 0, "seatsProposta": 3, "color: "bg-amber-500" },
+    { "party": "JPP", "votos": 20112, "seatsReal": 1, "seatsProposta": 0, "color: "bg-green-600" }
+  ]
+}
