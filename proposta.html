@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Proposta de Reforma - Em Cada Voto Igualdade</title>
+    <!-- Importação do Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#1e293b',   // Azul escuro (Slate 800)
+                            accent: '#0f766e', // Verde petróleo (Teal 700)
+                            light: '#f8fafc'   // Fundo suave (Slate 50)
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-light text-slate-800 font-sans flex flex-col min-h-screen">
+
+    <!-- BARRA DE NAVEGAÇÃO -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logótipo / Nome do Projeto -->
+            <a href="index.html" class="text-xl font-bold text-brand-navy tracking-tight hover:opacity-80 transition">
+                Em Cada Voto <span class="text-brand-accent">Igualdade</span>
+            </a>
+
+            <!-- Menu para Computador -->
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="index.html" class="text-slate-600 hover:text-brand-accent transition">Início</a>
+                <a href="proposta.html" class="text-brand-accent transition">A Proposta</a>
+                <a href="analise.html" class="text-slate-600 hover:text-brand-accent transition">Análise Constitucional</a>
+                <a href="faq.html" class="text-slate-600 hover:text-brand-accent transition">Perguntas Frequentes</a>
+            </div>
+
+            <!-- Botão Hamburguer (Telemóvel) -->
+            <button id="menu-btn" class="md:hidden text-slate-600 focus:outline-none" aria-label="Abrir Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Menu Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-6 py-4 space-y-3 font-medium">
+            <a href="index.html" class="block text-slate-600 hover:text-brand-accent">Início</a>
+            <a href="proposta.html" class="block text-brand-accent">A Proposta</a>
+            <a href="analise.html" class="block text-slate-600 hover:text-brand-accent">Análise Constitucional</a>
+            <a href="faq.html" class="block text-slate-600 hover:text-brand-accent">Perguntas Frequentes</a>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="flex-grow max-w-4xl mx-auto px-6 py-12">
+        <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 md:p-12">
+            
+            <!-- Cabeçalho do Artigo -->
+            <header class="mb-8 border-b border-slate-100 pb-8">
+                <h1 class="text-3xl md:text-4xl font-extrabold text-brand-navy leading-tight mb-4">
+                    A Proposta de Reforma Eleitoral
+                </h1>
+                <p class="text-slate-500 text-lg leading-relaxed">
+                    Como podemos garantir a igualdade do valor de cada voto em Portugal, respeitando as especificidades regionais.
+                </p>
+            </header>
+
+            <!-- Corpo do Artigo -->
+            <div class="space-y-8 text-slate-700 leading-relaxed text-base md:text-lg">
+                <p>
+                    O atual sistema eleitoral português, embora tenha servido o país desde a fundação da democracia, apresenta hoje graves distorções democráticas. Devido à divisão do país em 22 círculos eleitorais (onde os mais pequenos elegem apenas 2 ou 3 deputados), centenas de milhares de votos são completamente desperdiçados todos os anos, não contribuindo em nada para a composição final do parlamento.
+                </p>
+
+                <h2 class="text-2xl font-bold text-brand-navy mt-8 mb-4">O Diagnóstico de 2022</h2>
+                <p>
+                    Nas eleições legislativas de 2022, a disparidade tornou-se evidente. Cerca de <strong>700.000 votos</strong> (mais de 12% do total) foram depositados em partidos que não conseguiram eleger qualquer deputado nos círculos onde concorreram. Isto cria cidadãos de primeira e de segunda categoria no que toca à eficácia do seu voto:
+                </p>
+
+                <!-- Quadro Comparativo Rápido -->
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 my-6">
+                    <h3 class="font-bold text-brand-navy mb-4 text-center">A Assimetria do Voto em Portugal (Exemplo)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                        <div class="bg-white p-4 rounded-lg border border-slate-100 shadow-sm">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-brand-accent">Círculo de Portalegre</span>
+                            <p class="text-xl font-bold text-brand-navy mt-1">~25.000 votos</p>
+                            <p class="text-slate-500 mt-1">Necessários para eleger 1 deputado neste distrito.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border border-slate-100 shadow-sm">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-brand-accent">Círculo de Lisboa</span>
+                            <p class="text-xl font-bold text-brand-navy mt-1">~15.000 votos</p>
+                            <p class="text-slate-500 mt-1">Média necessária para eleger 1 deputado na capital.</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-400 mt-4 text-center">Dados com base nos resultados oficiais de 2022.</p>
+                </div>
+
+                <h2 class="text-2xl font-bold text-brand-navy mt-8 mb-4">A Solução Proposta</h2>
+                <p>
+                    A reforma proposta pelo movimento <strong>"Em Cada Voto Igualdade"</strong> não exige o fim dos círculos distritais (mantendo a representação de cada região), mas sim a criação de um <strong>Círculo Nacional de Compensação</strong>.
+                </p>
+                
+                <p>
+                    Este mecanismo, já utilizado noutros países europeus de referência, garante que todos os votos que não serviram para eleger deputados a nível distrital são somados e convertidos em mandatos através de uma lista nacional. Desta forma, assegura-se que a composição final do parlamento reflete, com rigor matemático, a vontade expressa por todos os portugueses nas urnas.
+                </p>
+
+                <div class="border-l-4 border-brand-accent bg-teal-50/50 p-4 rounded-r-lg italic my-6">
+                    "O princípio da proporcionalidade não pode ser um ideal distante; tem de ser uma realidade prática na vida de cada eleitor, independentemente do seu código postal."
+                </div>
+            </div>
+
+            <!-- Rodapé do Artigo / Apelo à Ação -->
+            <footer class="mt-12 pt-8 border-t border-slate-100 text-center">
+                <p class="text-slate-600 mb-6">Quer compreender a compatibilidade legal desta proposta?</p>
+                <a href="analise.html" class="inline-flex items-center gap-2 bg-brand-accent hover:bg-teal-800 text-white font-medium px-6 py-3 rounded-lg shadow-sm transition duration-200">
+                    Avançar para a Análise Constitucional
+                    <span>→</span>
+                </a>
+            </footer>
+
+        </article>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="bg-brand-navy text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 text-center md:flex md:justify-between md:text-left">
+            <p class="text-sm mb-4 md:mb-0">
+                &copy; 2026 Em Cada Voto Igualdade. Projeto cívico apartidário.
+            </p>
+            <p class="text-sm">
+                Desenvolvido com foco em transparência e rigor constitucional.
+            </p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT DE INTERATIVIDADE (MENU MOBILE) -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            } else {
+                menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+            }
+        });
+    </script>
+</body>
+</html>
