@@ -22,9 +22,9 @@
         }
     </script>
 </head>
-<body class="bg-brand-light text-slate-800 font-sans flex flex-col min-h-screen">
+<body class="bg-brand-light text-slate-800 font-sans flex flex-col min-h-screen overflow-x-hidden">
 
-    <!-- BARRA DE NAVEGAÇÃO (Consistente com a Homepage) -->
+    <!-- BARRA DE NAVEGAÇÃO -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <!-- Logótipo / Nome do Projeto -->
@@ -58,8 +58,8 @@
     </header>
 
     <!-- CONTEÚDO PRINCIPAL -->
-    <main class="flex-grow max-w-4xl mx-auto px-6 py-12">
-        <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 md:p-12">
+    <main class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 py-12 w-full">
+        <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 md:p-12 w-full overflow-hidden">
             
             <div class="space-y-6 text-slate-700 leading-relaxed text-base md:text-lg">
                 
@@ -88,10 +88,36 @@
                     Número médio de votos por mandato, para o território nacional em 2022:
                 </p>
 
-                <!-- ESPAÇO DA IMAGEM 1 (Número médio de votos) -->
-                <div class="bg-slate-50 border border-dashed border-slate-300 rounded-xl p-6 text-center my-4">
-                    <p class="text-sm text-slate-500 font-medium">[ Espaço para a Imagem: Número médio de votos por mandato ]</p>
-                    <p class="text-xs text-slate-400 mt-1">Quando carregares a imagem no GitHub (ex: img/votos-mandato.png), substitui esta caixa por:<br>&lt;img src="img/votos-mandato.png" alt="Número médio de votos por mandato" class="mx-auto mt-2"&gt;</p>
+                <!-- GRÁFICO DINÂMICO INTERATIVO -->
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 sm:p-6 my-6 w-full">
+                    <!-- Painel de Controlo do Gráfico -->
+                    <div class="flex flex-col sm:flex-row sm:justify-between gap-4 mb-6 pb-6 border-b border-slate-200">
+                        <!-- Seletor do Ano -->
+                        <div>
+                            <span class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Ano Eleitoral</span>
+                            <div class="inline-flex rounded-lg p-1 bg-slate-200/60">
+                                <button id="btn-2022" onclick="setYear('2022')" class="px-4 py-1.5 text-sm font-semibold rounded-md transition duration-150 bg-brand-navy text-white shadow-sm">2022</button>
+                                <button id="btn-2024" onclick="setYear('2024')" class="px-4 py-1.5 text-sm font-semibold rounded-md transition duration-150 text-slate-600 hover:text-brand-navy">2024</button>
+                            </div>
+                        </div>
+                        <!-- Seletor de Modelo -->
+                        <div>
+                            <span class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Modelo de Distribuição</span>
+                            <div class="inline-flex rounded-lg p-1 bg-slate-200/60">
+                                <button id="btn-real" onclick="setMode('real')" class="px-4 py-1.5 text-sm font-semibold rounded-md transition duration-150 bg-brand-navy text-white shadow-sm">🏛️ Sistema Real (Atual)</button>
+                                <button id="btn-proposta" onclick="setMode('proposta')" class="px-4 py-1.5 text-sm font-semibold rounded-md transition duration-150 text-slate-600 hover:text-brand-navy">⚖️ Proposta de Reforma</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gráfico Real Renderizado por JS -->
+                    <div id="chart-container" class="space-y-4">
+                        <!-- Os dados serão injetados aqui pelo JavaScript -->
+                    </div>
+                    
+                    <p class="text-xs text-slate-400 mt-6 text-center italic">
+                        * As barras tracejadas e semitransparentes representam partidos que não elegeram deputados sob aquele sistema, realçando o custo desproporcional do seu voto.
+                    </p>
                 </div>
 
                 <p>
@@ -167,22 +193,22 @@
 
                 <!-- Links Rápidos e Contactos -->
                 <div class="bg-slate-100 p-6 rounded-xl border border-slate-200 my-8 space-y-3">
-                    <p class="m-0">
+                    <p class="m-0 break-all">
                         <strong>Perguntas frequentes:</strong> 
                         <a href="faq.html" class="text-brand-accent font-semibold hover:underline">https://emcadavotoigualdade.github.io/faq.html</a>
                     </p>
-                    <p class="m-0">
+                    <p class="m-0 break-all">
                         <strong>Dúvidas, críticas ou sugestões:</strong> 
                         <a href="mailto:emcadavotoigualdade@gmail.com" class="text-brand-accent font-semibold hover:underline">emcadavotoigualdade@gmail.com</a>
                     </p>
                 </div>
 
-                <!-- Referências -->
+                <!-- Referências (Com classes de quebra de palavra para telemóveis) -->
                 <div class="border-t border-slate-200 pt-6 text-sm text-slate-500 space-y-2">
                     <p class="font-bold text-slate-700">Referências:</p>
                     <p id="ref-1">[1] “Constituição da República Portuguesa anotada”, J.J. Gomes Canotilho, Vital Moreira, 2007</p>
-                    <p id="ref-2">[2] <a href="https://debates.parlamento.pt/catalogo/r3/dar/01/07/03/061/1998-04-23?sft=true" target="_blank" class="text-brand-accent hover:underline">https://debates.parlamento.pt/catalogo/r3/dar/01/07/03/061/1998-04-23?sft=true</a></p>
-                    <p id="ref-3">[3] "The Parliamentary Electoral System in Denmark": <a href="https://elections.im.dk/media/15737/parliamentary-system-dk.pdf" target="_blank" class="text-brand-accent hover:underline">https://elections.im.dk/media/15737/parliamentary-system-dk.pdf</a></p>
+                    <p id="ref-2" class="break-all">[2] <a href="https://debates.parlamento.pt/catalogo/r3/dar/01/07/03/061/1998-04-23?sft=true" target="_blank" class="text-brand-accent hover:underline">https://debates.parlamento.pt/catalogo/r3/dar/01/07/03/061/1998-04-23?sft=true</a></p>
+                    <p id="ref-3" class="break-all">[3] "The Parliamentary Electoral System in Denmark": <a href="https://elections.im.dk/media/15737/parliamentary-system-dk.pdf" target="_blank" class="text-brand-accent hover:underline">https://elections.im.dk/media/15737/parliamentary-system-dk.pdf</a></p>
                 </div>
 
                 <p class="font-semibold text-brand-navy pt-6">
@@ -225,6 +251,147 @@
             } else {
                 menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
             }
+        });
+    </script>
+
+    <!-- MOTOR DE DADOS DO GRÁFICO DINÂMICO -->
+    <script>
+        // Banco de dados fornecido
+        const chartData = {
+            "2022": {
+                "real": [
+                    { party: "PS", seats: 117, val: 19202, color: "bg-pink-500" },
+                    { party: "PSD", seats: 76, val: 20761, color: "bg-orange-500" },
+                    { party: "CH", seats: 12, val: 32131, color: "bg-indigo-950" },
+                    { party: "IL", seats: 8, val: 33552, color: "bg-cyan-500" },
+                    { party: "CDU", seats: 6, val: 39441, color: "bg-emerald-700" },
+                    { party: "BE", seats: 5, val: 48054, color: "bg-red-600" },
+                    { party: "L", seats: 1, val: 68975, color: "bg-lime-500" },
+                    { party: "PAN", seats: 1, val: 82252, color: "bg-teal-500" },
+                    { party: "CDS", seats: 0, val: 86577, color: "bg-blue-600" },
+                    { party: "RIR", seats: 0, val: 22559, color: "bg-purple-500" }
+                ],
+                "proposta": [
+                    { party: "PS", seats: 99, val: 22701, color: "bg-pink-500" },
+                    { party: "PSD", seats: 69, val: 22870, color: "bg-orange-500" },
+                    { party: "CH", seats: 17, val: 22693, color: "bg-indigo-950" },
+                    { party: "IL", seats: 11, val: 24430, color: "bg-cyan-500" },
+                    { party: "BE", seats: 10, val: 23661, color: "bg-red-600" },
+                    { party: "CDU", seats: 10, val: 24026, color: "bg-emerald-700" },
+                    { party: "CDS", seats: 3, val: 28882, color: "bg-blue-600" },
+                    { party: "PAN", seats: 3, val: 27428, color: "bg-teal-500" },
+                    { party: "L", seats: 3, val: 23003, color: "bg-lime-500" },
+                    { party: "RIR", seats: 1, val: 22559, color: "bg-purple-500" }
+                ]
+            },
+            "2024": {
+                "real": [
+                    { party: "AD", seats: 79, val: 22926, color: "bg-orange-500" },
+                    { party: "PS", seats: 77, val: 22858, color: "bg-pink-500" },
+                    { party: "CH", seats: 48, val: 23103, color: "bg-indigo-950" },
+                    { party: "IL", seats: 8, val: 39032, color: "bg-cyan-500" },
+                    { party: "BE", seats: 5, val: 54806, color: "bg-red-600" },
+                    { party: "PCP", seats: 4, val: 50612, color: "bg-emerald-700" },
+                    { party: "L", seats: 4, val: 50022, color: "bg-lime-500" },
+                    { party: "PAN", seats: 1, val: 118622, color: "bg-teal-500" },
+                    { party: "ADN", seats: 0, val: 100066, color: "bg-amber-500" }
+                ],
+                "proposta": [
+                    { party: "AD", seats: 71, val: 25509, color: "bg-orange-500" },
+                    { party: "PS", seats: 69, val: 25508, color: "bg-pink-500" },
+                    { party: "CH", seats: 43, val: 25789, color: "bg-indigo-950" },
+                    { party: "IL", seats: 12, val: 26021, color: "bg-cyan-500" },
+                    { party: "BE", seats: 10, val: 27403, color: "bg-red-600" },
+                    { party: "PCP", seats: 7, val: 28921, color: "bg-emerald-700" },
+                    { party: "L", seats: 7, val: 28584, color: "bg-lime-500" },
+                    { party: "PAN", seats: 4, val: 29656, color: "bg-teal-500" },
+                    { party: "ADN", seats: 3, val: 33355, color: "bg-amber-500" }
+                ]
+            }
+        };
+
+        // Estado inicial do gráfico
+        let activeYear = "2022";
+        let activeMode = "real";
+
+        function renderChart() {
+            const container = document.getElementById("chart-container");
+            const data = chartData[activeYear][activeMode];
+            
+            // Encontra o valor máximo atual para servir de escala (100% da largura do ecrã)
+            const maxVal = Math.max(...data.map(d => d.val));
+            
+            container.innerHTML = "";
+
+            data.forEach(item => {
+                const percent = (item.val / maxVal) * 100;
+                const isZero = item.seats === 0;
+
+                // Cria o bloco de cada partido
+                const row = document.createElement("div");
+                row.className = "space-y-1";
+
+                // Formatação do selo de Mandatos
+                let mandatosBadge = "";
+                if (isZero) {
+                    mandatosBadge = `<span class="text-[10px] font-bold text-red-600 bg-red-100/80 px-2 py-0.5 rounded-full">0 mandatos</span>`;
+                } else {
+                    mandatosBadge = `<span class="text-[10px] font-bold text-slate-500 bg-slate-200/60 px-2 py-0.5 rounded-full">${item.seats} ${item.seats === 1 ? 'mandato' : 'mandatos'}</span>`;
+                }
+
+                // Linha de dados com barras CSS puro baseadas nos dados reais
+                row.innerHTML = `
+                    <div class="flex justify-between items-center text-sm">
+                        <div class="flex items-center gap-2">
+                            <span class="font-extrabold text-brand-navy">${item.party}</span>
+                            ${mandatosBadge}
+                        </div>
+                        <span class="font-bold text-slate-700">
+                            ${item.val.toLocaleString('pt-PT')} <span class="text-xs font-normal text-slate-400">votos / dep</span>
+                        </span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-lg h-6 flex items-center overflow-hidden">
+                        ${isZero ? 
+                            `<div class="h-full rounded border-2 border-dashed border-slate-400 bg-slate-200/40 opacity-40" style="width: ${percent}%"></div>` : 
+                            `<div class="h-full rounded ${item.color} transition-all duration-500 ease-out" style="width: ${percent}%"></div>`
+                        }
+                    </div>
+                `;
+                container.appendChild(row);
+            });
+        }
+
+        // Controladores da UI para mudar o ano
+        function setYear(year) {
+            activeYear = year;
+            
+            // Resetar estilos dos botões
+            document.getElementById("btn-2022").className = "px-4 py-1.5 text-sm font-semibold rounded-md transition duration-150 text-slate-600 hover:text-brand-navy";
+            document.getElementById("btn-2024").className = "px-4 py-1.5 text-sm font-semibold rounded-md transition duration-150 text-slate-600 hover:text-brand-navy";
+            
+            // Ativar botão selecionado
+            document.getElementById(`btn-${year}`).className = "px-4 py-1.5 text-sm font-semibold rounded-md transition duration-150 bg-brand-navy text-white shadow-sm";
+            
+            renderChart();
+        }
+
+        // Controladores da UI para mudar o modo (Real vs Proposta)
+        function setMode(mode) {
+            activeMode = mode;
+            
+            // Resetar estilos dos botões
+            document.getElementById("btn-real").className = "px-4 py-1.5 text-sm font-semibold rounded-md transition duration-150 text-slate-600 hover:text-brand-navy";
+            document.getElementById("btn-proposta").className = "px-4 py-1.5 text-sm font-semibold rounded-md transition duration-150 text-slate-600 hover:text-brand-navy";
+            
+            // Ativar botão selecionado
+            document.getElementById(`btn-${mode}`).className = "px-4 py-1.5 text-sm font-semibold rounded-md transition duration-150 bg-brand-navy text-white shadow-sm";
+            
+            renderChart();
+        }
+
+        // Inicialização do Gráfico no load da página
+        document.addEventListener("DOMContentLoaded", () => {
+            renderChart();
         });
     </script>
 </body>
