@@ -34,6 +34,11 @@
         }
     </script>
 
+    <!-- Diz ao JavaScript exatamente qual é a raiz do site no GitHub Pages -->
+    <script>
+        window.siteBaseUrl = "{{ '' | relative_url }}";
+    </script>
+
     <!-- ================================================================ -->
     <!-- GoatCounter Analytics (Descomentar e colar o teu link no futuro)  -->
     <!-- <script data-goatcounter="https://NOME.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script> -->
@@ -131,7 +136,7 @@
         });
     </script>
     
-    <!-- Script dinâmico para os gráficos (carregado apenas se existirem na página) -->
-    <script src="assets/js/charts.js" defer></script>
+    <!-- Script dinâmico para os gráficos com caminho resolvido de forma absoluta e segura -->
+    <script src="{{ '/assets/js/charts.js' | relative_url }}" defer></script>
 </body>
 </html>
