@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes Técnicos - Em Cada Voto Igualdade</title>
+    
+    <!-- Importação do Tailwind CSS com o plugin de Tipografia (prose) -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    
+    <!-- Parser de Markdown super rápido -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#1e293b',   // Azul escuro
+                            accent: '#0f766e', // Verde petróleo
+                            light: '#f8fafc'   // Fundo suave
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-light text-slate-800 font-sans flex flex-col min-h-screen overflow-x-hidden">
+
+    <!-- BARRA DE NAVEGAÇÃO -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold text-brand-navy tracking-tight hover:opacity-80 transition">
+                Em Cada Voto <span class="text-brand-accent">Igualdade</span>
+            </a>
+
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="index.html" class="text-slate-600 hover:text-brand-accent transition">Início</a>
+                <a href="proposta.html" class="text-slate-600 hover:text-brand-accent transition">A Proposta</a>
+                <a href="analise.html" class="text-slate-600 hover:text-brand-accent transition">Análise Constitucional</a>
+                <a href="faq.html" class="text-slate-600 hover:text-brand-accent transition">Perguntas Frequentes</a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-slate-600 focus:outline-none" aria-label="Abrir Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-6 py-4 space-y-3 font-medium">
+            <a href="index.html" class="block text-slate-600 hover:text-brand-accent">Início</a>
+            <a href="proposta.html" class="block text-brand-accent">A Proposta</a>
+            <a href="analise.html" class="block text-slate-600 hover:text-brand-accent">Análise Constitucional</a>
+            <a href="faq.html" class="block text-slate-600 hover:text-brand-accent">Perguntas Frequentes</a>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 py-12 w-full">
+        <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 md:p-12 w-full overflow-hidden">
+            
+            <!-- CABEÇALHO EDITORIAL -->
+            <header class="mb-10 pb-8 border-b border-slate-100">
+                <span class="text-xs font-bold text-brand-accent uppercase tracking-widest block mb-2">Anexo Técnico</span>
+                <h1 class="text-3xl md:text-5xl font-extrabold text-brand-navy tracking-tight leading-tight mb-4">
+                    Detalhes Técnicos da Proposta
+                </h1>
+                <p class="text-lg md:text-xl text-slate-500 leading-relaxed font-light">
+                    O modelo de cálculo matemático e a simulação detalhada da distribuição de mandatos por círculo político.
+                </p>
+            </header>
+
+            <!-- Zona de Texto 1 (A nossa proposta) -->
+            <div id="content-1" class="prose prose-slate max-w-none prose-a:text-brand-accent hover:prose-a:text-teal-800 prose-headings:text-brand-navy mb-8"></div>
+
+            <!-- TABELA / GRAFICO DE NÚMERO MÉDIO DE VOTOS -->
+            <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 my-8">
+                <h3 class="font-bold text-brand-navy mb-4 text-center text-sm uppercase tracking-wider">Simulação Técnica (2022)</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                    <div class="bg-white p-4 rounded-lg border border-slate-100 shadow-sm">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-brand-accent">Custo d'Hondt Nacional</span>
+                        <p class="text-2xl font-extrabold text-brand-navy mt-1">~22.544 <span class="text-sm font-normal text-slate-500">votos / dep</span></p>
+                        <p class="text-slate-500 mt-2 text-xs">Custo fixado para todos os 226 mandatos do território nacional.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg border border-slate-100 shadow-sm">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-brand-accent">Caso Curioso: RIR</span>
+                        <p class="text-2xl font-extrabold text-brand-navy mt-1">22.559 <span class="text-sm font-normal text-slate-500">votos</span></p>
+                        <p class="text-slate-500 mt-2 text-xs">O partido elegia 1 deputado por uma margem de apenas <strong>16 votos</strong>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Zona de Texto 2 (Distribuição pelos Círculos) -->
+            <div id="content-2" class="prose prose-slate max-w-none prose-a:text-brand-accent hover:prose-a:text-teal-800 prose-headings:text-brand-navy mb-8"></div>
+
+            <!-- GRID DINÂMICA DOS CÍRCULOS (MANDATOS) -->
+            <div class="my-10">
+                <h3 class="text-xl font-extrabold text-brand-navy mb-2 text-center">Distribuição Simulada por Círculo (2022)</h3>
+                <p class="text-sm text-slate-500 text-center mb-8">As novas presenças partidárias resultantes da representação proporcional justa estão <span class="text-brand-accent font-semibold">destacadas com um asterisco (*)</span>.</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    
+                    <!-- Açores -->
+                    <div class="bg-slate-50/50 border border-slate-200 p-5 rounded-xl">
+                        <h4 class="font-bold text-brand-navy border-b border-slate-100 pb-2 mb-3">Açores</h4>
+                        <div class="text-xs space-y-1 text-slate-600">
+                            <p><span class="font-semibold text-slate-800">PS:</span> 3 mandatos</p>
+                            <p><span class="font-semibold text-slate-800">PSD:</span> 2 mandatos</p>
+                        </div>
+                    </div>
+
+                    <!-- Madeira -->
+                    <div class="bg-slate-50/50 border border-slate-200 p-5 rounded-xl">
+                        <h4 class="font-bold text-brand-navy border-b border-slate-100 pb-2 mb-3">Madeira</h4>
+                        <div class="text-xs space-y-1 text-slate-600">
+                            <p><span class="font-semibold text-slate-800">PS:</span> 3 mandatos</p>
+                            <p><span class="font-semibold text-slate-800">PSD:</span> 3 mandatos</p>
+                        </div>
+                    </div>
+
+                    <!-- Porto -->
+                    <div class="bg-teal-50/30 border-2 border-brand-accent/20 p-5 rounded-xl">
+                        <h4 class="font-bold text-brand-navy border-b border-brand-accent/10 pb-2 mb-3">Porto</h4>
+                        <div class="text-xs space-y-1 text-slate-600 mb-3">
+                            <p><span class="font-semibold text-slate-800">PS:</span> 17 &bull; <span class="font-semibold text-slate-800">PSD:</span> 11</p>
+                            <p><span class="font-semibold text-slate-800">CH:</span> 2 &bull; <span class="font-semibold text-slate-800">IL:</span> 2</p>
+                            <p><span class="font-semibold text-slate-800">BE:</span> 2 &bull; <span class="font-semibold text-slate-800">CDU:</span> 2</p>
+                        </div>
+                        <span class="text-[10px] font-bold text-brand-accent bg-teal-100/50 px-2 py-1 rounded block text-center">
+                            * Novas presenças: CDS (1), PAN (1), L (1), RIR (1)
+                        </span>
+                    </div>
+
+                    <!-- Lisboa -->
+                    <div class="bg-teal-50/30 border-2 border-brand-accent/20 p-5 rounded-xl">
+                        <h4 class="font-bold text-brand-navy border-b border-brand-accent/10 pb-2 mb-3">Lisboa</h4>
+                        <div class="text-xs space-y-1 text-slate-600 mb-3">
+                            <p><span class="font-semibold text-slate-800">PS:</span> 21 &bull; <span class="font-semibold text-slate-800">PSD:</span> 10</p>
+                            <p><span class="font-semibold text-slate-800">CH:</span> 4 &bull; <span class="font-semibold text-slate-800">IL:</span> 4</p>
+                            <p><span class="font-semibold text-slate-800">BE:</span> 2 &bull; <span class="font-semibold text-slate-800">CDU:</span> 3</p>
+                            <p><span class="font-semibold text-slate-800">PAN:</span> 1 &bull; <span class="font-semibold text-slate-800">L:</span> 2</p>
+                        </div>
+                        <span class="text-[10px] font-bold text-brand-accent bg-teal-100/50 px-2 py-1 rounded block text-center">
+                            * Novas presenças: CDS (1)
+                        </span>
+                    </div>
+
+                    <!-- Braga -->
+                    <div class="bg-teal-50/30 border-2 border-brand-accent/20 p-5 rounded-xl">
+                        <h4 class="font-bold text-brand-navy border-b border-brand-accent/10 pb-2 mb-3">Braga</h4>
+                        <div class="text-xs space-y-1 text-slate-600 mb-3">
+                            <p><span class="font-semibold text-slate-800">PS:</span> 7 &bull; <span class="font-semibold text-slate-800">PSD:</span> 7</p>
+                            <p><span class="font-semibold text-slate-800">CH:</span> 2 &bull; <span class="font-semibold text-slate-800">IL:</span> 1</p>
+                        </div>
+                        <span class="text-[10px] font-bold text-brand-accent bg-teal-100/50 px-2 py-1 rounded block text-center">
+                            * Novas presenças: BE (1), CDU (1)
+                        </span>
+                    </div>
+
+                    <!-- Viana do Castelo -->
+                    <div class="bg-slate-50/50 border border-slate-200 p-5 rounded-xl">
+                        <h4 class="font-bold text-brand-navy border-b border-slate-100 pb-2 mb-3">Viana do Castelo</h4>
+                        <div class="text-xs space-y-1 text-slate-600">
+                            <p><span class="font-semibold text-slate-800">PS:</span> 3 mandatos</p>
+                            <p><span class="font-semibold text-slate-800">PSD:</span> 3 mandatos</p>
+                        </div>
+                    </div>
+
+                    <!-- Vila Real -->
+                    <div class="bg-slate-50/50 border border-slate-200 p-5 rounded-xl">
+                        <h4 class="font-bold text-brand-navy border-b border-slate-100 pb-2 mb-3">Vila Real</h4>
+                        <div class="text-xs space-y-1 text-slate-600">
+                            <p><span class="font-semibold text-slate-800">PS:</span> 3 mandatos</p>
+                            <p><span class="font-semibold text-slate-800">PSD:</span> 2 mandatos</p>
+                        </div>
+                    </div>
+
+                    <!-- Bragança -->
+                    <div class="bg-slate-50/50 border border-slate-200 p-5 rounded-xl">
+                        <h4 class="font-bold text-brand-navy border-b border-slate-100 pb-2 mb-3">Bragança</h4>
+                        <div class="text-xs space-y-1 text-slate-600">
+                            <p><span class="font-semibold text-slate-800">PS:</span> 2 mandatos</p>
+                            <p><span class="font-semibold text-slate-800">PSD:</span> 1 mandato</p>
+                        </div>
+                    </div>
+
+                    <!-- Aveiro -->
+                    <div class="bg-teal-50/30 border-2 border-brand-accent/20 p-5 rounded-xl">
+                        <h4 class="font-bold text-brand-navy border-b border-brand-accent/10 pb-2 mb-3">Aveiro</h4>
+                        <div class="text-xs space-y-1 text-slate-600 mb-3">
+                            <p><span class="font-semibold text-slate-800">PS:</span> 6 &bull; <span class="font-semibold text-slate-800">PSD:</span> 6</p>
+                            <p><span class="font-semibold text-slate-800">CH:</span> 1</p>
+                        </div>
+                        <span class="text-[10px] font-bold text-brand-accent bg-teal-100/50 px-2 py-1 rounded block text-center">
+                            * Novas presenças: IL (1), BE (1), CDS (1)
+                        </span>
+                    </div>
+
+                    <!-- Viseu -->
+                    <div class="bg-teal-50/30 border-2 border-brand-accent/20 p-5 rounded-xl">
+                        <h4 class="font-bold text-brand-navy border-b border-brand-accent/10 pb-2 mb-3">Viseu</h4>
+                        <div class="text-xs space-y-1 text-slate-600 mb-3">
+                            <p><span class="font-semibold text-slate-800">PS:</span> 4 &bull; <span class="font-semibold text-slate-800">PSD:</span> 3</p>
+                        </div>
+                        <span class="text-[10px] font-bold text-brand-accent bg-teal-100/50 px-2 py-1 rounded block text-center">
+                            * Novas presenças: CH (1)
+                        </span>
+                    </div>
+
+                    <!-- Guarda -->
+                    <div class="bg-slate-50/50 border border-slate-200 p-5 rounded-xl">
+                        <h4 class="font-bold text-brand-navy border-b border-slate-100 pb-2 mb-3">Guarda</h4>
+                        <div class="text-xs space-y-1 text-slate-600">
+                            <p><span class="font-semibold text-slate-800">PS:</span> 2 mandatos</p>
+                            <p><span class="font-semibold text-slate-800">PSD:</span> 1 mandato</p>
+                        </div>
+                    </div>
+
+                    <!-- Castelo Branco -->
+                    <div class="bg-slate-50/50 border border-slate-200 p-5 rounded-xl">
+                        <h4 class="font-bold text-brand-navy border-b border-slate-100 pb-2 mb-3">Castelo Branco</h4>
+                        <div class="text-xs space-y-1 text-slate-600">
+                            <p><span class="font-semibold text-slate-800">PS:</span> 2 mandatos</p>
+                            <p><span class="font-semibold text-slate-800">PSD:</span> 2 mandatos</p>
+                        </div>
+                    </div>
+
+                    <!-- Coimbra -->
+                    <div class="bg-teal-50/30 border-2 border-brand-accent/20 p-5 rounded-xl">
+                        <h4 class="font-bold text-brand-navy border-b border-brand-accent/10 pb-2 mb-3">Coimbra</h4>
+                        <div class="text-xs space-y-1 text-slate-600 mb-3">
+                            <p><span class="font-semibold text-slate-800">PS:</span> 4 &bull; <span class="font-semibold text-slate-800">PSD:</span> 3</p>
+                        </div>
+                        <span class="text-[10px] font-bold text-brand-accent bg-teal-100/50 px-2 py-1 rounded block text-center">
+                            * Novas presenças: CH (1), BE (1)
+                        </span>
+                    </div>
+
+                    <!-- Leiria -->
+                    <div class="bg-teal-50/30 border-2 border-brand-accent/20 p-5 rounded-xl">
+                        <h4 class="font-bold text-brand-navy border-b border-brand-accent/10 pb-2 mb-3">Leiria</h4>
+                        <div class="text-xs space-y-1 text-slate-600 mb-3">
+                            <p><span class="font-semibold text-slate-800">PS:</span> 4 &bull; <span class="font-semibold text-slate-800">PSD:</span> 3</p>
+                            <p><span class="font-semibold text-slate-800">CH:</span> 1</p>
+                        </div>
+                        <span class="text-[10px] font-bold text-brand-accent bg-teal-100/50 px-2 py-1 rounded block text-center">
+                            * Novas presenças: IL (1), BE (1)
+                        </span>
+                    </div>
+
+                    <!-- Santarém -->
+                    <div class="bg-teal-50/30 border-2 border-brand-accent/20 p-5 rounded-xl">
+                        <h4 class="font-bold text-brand-navy border-b border-brand-accent/10 pb-2 mb-3">Santarém</h4>
+                        <div class="text-xs space-y-1 text-slate-600 mb-3">
+                            <p><span class="font-semibold text-slate-800">PS:</span> 4 &bull; <span class="font-semibold text-slate-800">PSD:</span> 3</p>
+                            <p><span class="font-semibold text-slate-800">CH:</span> 1</p>
+                        </div>
+                        <span class="text-[10px] font-bold text-brand-accent bg-teal-100/50 px-2 py-1 rounded block text-center">
+                            * Novas presenças: CDU (1)
+                        </span>
+                    </div>
+
+                    <!-- Setúbal -->
+                    <div class="bg-teal-50/30 border-2 border-brand-accent/20 p-5 rounded-xl">
+                        <h4 class="font-bold text-brand-navy border-b border-brand-accent/10 pb-2 mb-3">Setúbal</h4>
+                        <div class="text-xs space-y-1 text-slate-600 mb-3">
+                            <p><span class="font-semibold text-slate-800">PS:</span> 7 &bull; <span class="font-semibold text-slate-800">PSD:</span> 4</p>
+                            <p><span class="font-semibold text-slate-800">CH:</span> 2 &bull; <span class="font-semibold text-slate-800">IL:</span> 1</p>
+                            <p><span class="font-semibold text-slate-800">BE:</span> 1 &bull; <span class="font-semibold text-slate-800">CDU:</span> 2</p>
+                        </div>
+                        <span class="text-[10px] font-bold text-brand-accent bg-teal-100/50 px-2 py-1 rounded block text-center">
+                            * Novas presenças: PAN (1)
+                        </span>
+                    </div>
+
+                    <!-- Faro -->
+                    <div class="bg-teal-50/30 border-2 border-brand-accent/20 p-5 rounded-xl">
+                        <h4 class="font-bold text-brand-navy border-b border-brand-accent/10 pb-2 mb-3">Faro</h4>
+                        <div class="text-xs space-y-1 text-slate-600 mb-3">
+                            <p><span class="font-semibold text-slate-800">PS:</span> 3 &bull; <span class="font-semibold text-slate-800">PSD:</span> 2</p>
+                            <p><span class="font-semibold text-slate-800">CH:</span> 2</p>
+                        </div>
+                        <span class="text-[10px] font-bold text-brand-accent bg-teal-100/50 px-2 py-1 rounded block text-center">
+                            * Novas presenças: IL (1), BE (1)
+                        </span>
+                    </div>
+
+                    <!-- Évora -->
+                    <div class="bg-slate-50/50 border border-slate-200 p-5 rounded-xl">
+                        <h4 class="font-bold text-brand-navy border-b border-slate-100 pb-2 mb-3">Évora</h4>
+                        <div class="text-xs space-y-1 text-slate-600">
+                            <p><span class="font-semibold text-slate-800">PS:</span> 2 mandatos</p>
+                            <p><span class="font-semibold text-slate-800">PSD:</span> 1 mandato</p>
+                        </div>
+                    </div>
+
+                    <!-- Beja -->
+                    <div class="bg-teal-50/30 border-2 border-brand-accent/20 p-5 rounded-xl">
+                        <h4 class="font-bold text-brand-navy border-b border-brand-accent/10 pb-2 mb-3">Beja</h4>
+                        <div class="text-xs space-y-1 text-slate-600 mb-3">
+                            <p><span class="font-semibold text-slate-800">PS:</span> 1 &bull; <span class="font-semibold text-slate-800">CDU:</span> 1</p>
+                        </div>
+                        <span class="text-[10px] font-bold text-brand-accent bg-teal-100/50 px-2 py-1 rounded block text-center">
+                            * Novas presenças: PSD (1)
+                        </span>
+                    </div>
+
+                    <!-- Portalegre -->
+                    <div class="bg-teal-50/30 border-2 border-brand-accent/20 p-5 rounded-xl">
+                        <h4 class="font-bold text-brand-navy border-b border-brand-accent/10 pb-2 mb-3">Portalegre</h4>
+                        <div class="text-xs space-y-1 text-slate-600 mb-3">
+                            <p><span class="font-semibold text-slate-800">PS:</span> 1 mandato</p>
+                        </div>
+                        <span class="text-[10px] font-bold text-brand-accent bg-teal-100/50 px-2 py-1 rounded block text-center">
+                            * Novas presenças: PSD (1)
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Zona de Texto 3 (Voto Preferencial e Conclusão) -->
+            <div id="content-3" class="prose prose-slate max-w-none prose-a:text-brand-accent hover:prose-a:text-teal-800 prose-headings:text-brand-navy"></div>
+
+        </article>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="bg-brand-navy text-slate-400 py-16 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div class="space-y-4">
+                <h4 class="text-white font-bold text-lg">Em Cada Voto Igualdade</h4>
+                <p class="text-sm leading-relaxed text-slate-400">
+                    Um projeto cívico, independente e apartidário focado em devolver a justiça de representação e proporcionalidade ao sistema eleitoral português.
+                </p>
+            </div>
+            
+            <div class="space-y-4">
+                <h4 class="text-white font-bold text-sm uppercase tracking-wider">Navegação</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html" class="hover:text-white transition">Início</a></li>
+                    <li><a href="proposta.html" class="hover:text-white transition">A Proposta de Reforma</a></li>
+                    <li><a href="analise.html" class="hover:text-white transition">Análise Constitucional</a></li>
+                    <li><a href="faq.html" class="hover:text-white transition">Perguntas Frequentes</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="text-white font-bold text-sm uppercase tracking-wider">Contacto & Código</h4>
+                <ul class="space-y-2 text-sm">
+                    <li>Email: <a href="mailto:emcadavotoigualdade@gmail.com" class="text-slate-300 hover:text-white transition font-medium">emcadavotoigualdade@gmail.com</a></li>
+                    <li>Repositório: <a href="https://github.com/emcadavotoigualdade" target="_blank" class="text-slate-300 hover:text-white transition font-medium">GitHub</a></li>
+                </ul>
+                <p class="text-xs text-slate-500 pt-2 border-t border-slate-800">
+                    &copy; 2026 Em Cada Voto Igualdade. Desenvolvido com foco em transparência e rigor constitucional.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- SECÇÕES DE TEXTO EM MARKDOWN -->
+    <!-- ========================================== -->
+
+    <script type="text/markdown" id="md-1">
+O sistema eleitoral proposto procura resolver as distorções da democracia portuguesa respeitando a diversidade territorial e promovendo o poder direto de decisão do eleitor.
+
+### A nossa proposta para Portugal (aplicada a 2022)
+
+A reforma assenta em três pilares fundamentais:
+* **a) Distribuição de mandatos com base na votação nacional**, garantindo a justiça proporcional do resultado global;
+* **b) Distribuição de todos os mandatos pelos círculos locais**, evitando a centralização do sistema por via de uma lista nacional fechada;
+* **c) Uso do voto preferencial** para dar aos eleitores a possibilidade de escolher individualmente os candidatos da lista, estreitando a ligação entre eleitos e eleitores.
+
+---
+
+### a) Cálculo dos mandatos totais com base na votação nacional total
+
+A distribuição de mandatos global por partido é feita segundo o **método d'Hondt**, de forma unificada e baseada na totalidade dos votos de âmbito nacional. Para os 226 mandatos do território nacional, isto fixa um "custo" de **22.544 votos por mandato**.
+
+Sob esta distribuição proporcional justa, o parlamento de 2022 assumiria uma nova cara:
+* **PS:** 99 mandatos
+* **PSD:** 69 mandatos
+* **CH:** 17 mandatos
+* **IL:** 11 mandatos
+* **BE:** 10 mandatos
+* **CDU:** 10 mandatos
+* **CDS:** 3 mandatos
+* **PAN:** 3 mandatos
+* **L:** 3 mandatos
+* **RIR:** 1 mandato
+
+> **Uma curiosidade matemática:** O partido RIR (Reação, Inclusão, Reciclagem), com os seus 22.559 votos nacionais, passaria a ter representação no Parlamento por uma diferença de **apenas 16 votos**! Sob esta luz, percebe-se que até os seus 123 votos conquistados no pequeno círculo de Portalegre teriam sido cruciais para a eleição.
+    </script>
+
+    <script type="text/markdown" id="md-2">
+---
+
+### b) Distribuição de todos os mandatos pelos círculos locais
+
+Para não centralizar a política nem enfraquecer o interior, o ponto de partida do sistema é a representação parlamentar que cada círculo já tem hoje atribuída (como Lisboa com 48 mandatos ou Portalegre com 2). Os mandatos nacionais calculados anteriormente são distribuídos de volta pelos partidos e círculos com três passos simples:
+
+1. Os votos de cada partido em cada círculo são divididos sucessivamente por **1, 3, 6, 10, 15, etc.** (incrementos matemáticos progressivos de +2, +3, +4 para reforçar o efeito equilibrador do sistema).
+2. Os mandatos são atribuídos aos círculos começando nos maiores quocientes gerados.
+3. Quando o limite máximo de mandatos de um partido (ou a capacidade do círculo) é atingido, os restantes quocientes são ignorados, passando o mandato para o quociente seguinte na tabela nacional.
+
+#### Exemplificação dos maiores quocientes da simulação de 2022:
+* **1º quociente:** PS em Lisboa (483.034 votos)
+* **2º quociente:** PS no Porto (418.958 votos)
+* **3º quociente:** PSD no Porto (318.390 votos)
+* **4º quociente:** PSD em Lisboa (285.646 votos)
+* **5º quociente:** PS em Braga (207.837 votos)
+* **8º quociente:** Segundo mandato do PS em Lisboa (161.011 votos, resultando de 483.034 / 3)
+
+#### Os primeiros mandatos dos pequenos partidos na distribuição regional:
+* **15º quociente:** IL em Lisboa (93.567 votos)
+* **16º quociente:** CH em Lisboa (92.001 votos)
+* **36º quociente:** IL no Porto (50.389 votos) — o primeiro deputado de um pequeno partido eleito fora de Lisboa.
+* **65º quociente:** L em Lisboa (28.854 votos)
+* **84º quociente:** PAN em Lisboa (23.577 votos)
+
+#### Exemplos de quocientes ignorados para equilíbrio de limites:
+* **151º quociente:** 2º mandato do PS em Évora (34.700 / 3 = 11.567 votos). Como este era o 3º e último mandato elegível por Évora, a capacidade de Évora foi esgotada, e todos os restantes quocientes de partidos em Évora passaram a ser ignorados.
+* **152º quociente:** CDU em Évora (11.494 votos). Devido ao limite de Évora estar esgotado pelo 151º quociente, a CDU perde a eleição no distrito por apenas 74 votos. Esse mandato da CDU é realocado ao próximo distrito disponível do partido.
+* **162º quociente:** BE em Leiria (10.709 votos). Sendo este o último dos 10 mandatos a que o BE tinha direito proporcional, o quociente seguinte do BE em Santarém (10.011 votos no 165º quociente) foi ignorado e transferido para outro partido. Se o BE tivesse obtido mais 700 votos em Santarém, a sua representação teria mudado de Leiria para Santarém.
+
+---
+    </script>
+
+    <script type="text/markdown" id="md-3">
+Comparando com o sistema eleitoral atual, **nenhum partido perde representação num círculo local**, e 12 dos 20 círculos eleitorais passam a estar representados por pelo menos mais um partido político, quebrando o monopólio e o voto útil.
+
+---
+
+### c) Uso do voto preferencial na atribuição dos mandatos aos candidatos
+
+O sistema proposto de listas semi-abertas dá flexibilidade e poder aos partidos políticos para escolherem, de forma independente e estatutária, qual a liberdade de nomeação que conferem aos seus eleitores para definir os representantes finais. São propostas três alternativas possíveis:
+
+1. **Lista sem ordem pré-definida:** O partido apresenta a lista por ordem alfabética e são eleitos os candidatos que individualmente recolherem mais votos dos cidadãos.
+2. **Lista fechada e ordenada:** O partido apresenta uma lista ordenada que os eleitores não podem alterar de forma alguma (o modelo atualmente em vigor em Portugal).
+3. **Lista ordenada com barreira de preferência:** O partido apresenta uma lista previamente ordenada. Contudo, se um candidato receber votos individuais acima de uma determinada fasquia (propomos um limite simples de **5.000 votos preferenciais**), sobe automaticamente para o topo da lista.
+
+Esta flexibilidade já é amplamente utilizada e um sucesso na **Dinamarca** (onde os partidos podem adotar a opção 1 ou 3). A experiência dinamarquesa mostra que, ao longo do tempo, os partidos ganham confiança democrática e tendem a adotar a Opção 1, transferindo todo o poder de representação diretamente para as mãos e escolhas dos cidadãos.
+    </script>
+
+    <!-- LOGICA E ATIVAÇÃO -->
+    <script>
+        // Executa no carregamento da página
+        document.addEventListener("DOMContentLoaded", () => {
+            // Renderiza cada bloco de Markdown para HTML
+            for (let i = 1; i <= 3; i++) {
+                const mdSource = document.getElementById(`md-${i}`).textContent;
+                document.getElementById(`content-${i}`).innerHTML = marked.parse(mdSource.trim());
+            }
+        });
+    </script>
+</body>
+</html>
