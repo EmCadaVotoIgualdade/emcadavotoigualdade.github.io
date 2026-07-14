@@ -117,7 +117,7 @@
                 <div id="chart-container" class="space-y-4"></div>
                 
                 <p class="text-[11px] text-slate-400 mt-6 text-center italic">
-                    * Barras contornadas a tracejado escuro indicam 0 mandatos no sistema selecionado, evidenciando o desperdício absoluto desses votos.
+                    * Barras contornadas a tracejado escuro indicam que o partido não elegeu mandatos apesar de ter mais votos totais do que outros partidos eleitos.
                 </p>
             </div>
 
@@ -183,13 +183,7 @@
     <!-- ========================================== -->
 
     <script type="text/markdown" id="md-1">
-Sobre o sistema eleitoral a nossa Constituição sempre disse: **“A conversão dos votos em mandatos far-se-á de harmonia com o princípio da representação proporcional”**. Este princípio foi detalhado por Canotilho e Moreira, na sua Constituição anotada [[1]](#ref-1), como:
-
-<blockquote class="border-l-4 border-brand-accent bg-teal-50/60 p-6 my-6 rounded-r-xl not-prose">
-    <p class="italic text-lg text-slate-800 font-serif leading-relaxed m-0">
-        “À face da Constituição, e de acordo com o princípio democrático, o sistema eleitoral é um meio de fazer da Assembleia da República um espelho político do país e não um meio de fabricar maiorias lá onde elas não existem”
-    </p>
-</blockquote>
+Sobre o sistema eleitoral a nossa Constituição sempre disse: **“A conversão dos votos em mandatos far-se-á de harmonia com o princípio da representação proporcional”**. Este princípio foi detalhado por Canotilho e Moreira, na sua Constituição anotada [[1]](#ref-1), como: *“À face da Constituição, e de acordo com o princípio democrático, o sistema eleitoral é um meio de fazer da Assembleia da República um espelho político do país e não um meio de fabricar maiorias lá onde elas não existem”*.
 
 Este espelho cada vez distorce mais a realidade, e em 2022 aconteceram alguns casos extremos pela primeira vez:
 * um partido não está na A.R. apesar de ter mais votos do que outros com esse direito;
@@ -206,13 +200,7 @@ No maior debate sobre este tema, o governo apresentou em 1998 uma proposta inspi
 1. *“a proporcionalidade é reforçada porque (...) com a criação do círculo nacional, devolve-se utilidade a todos os votos, de todos os partidos, em todo o território nacional”*;
 2. *“o eleitor ganha maior liberdade, deixa de estar limitado à escolha do partido, passando a poder escolher também o seu Deputado. O partido terá de se abrir à sociedade, terá de partilhar com os cidadãos a escolha dos seus representantes."*
 
-O PSD, liderado por Marcelo Rebelo de Sousa, respondia numa proposta semelhante onde:
-
-<blockquote class="border-l-4 border-orange-500 bg-orange-50/60 p-6 my-6 rounded-r-xl not-prose">
-    <p class="italic text-lg text-slate-800 font-serif leading-relaxed m-0">
-        “a proporcionalidade será sempre assegurada de acordo com o resultado obtido no apuramento do voto nacional” [2].
-    </p>
-</blockquote>
+O PSD, liderado por Marcelo Rebelo de Sousa, respondia numa proposta semelhante onde *“a proporcionalidade será sempre assegurada de acordo com o resultado obtido no apuramento do voto nacional”* [[2]](#ref-2).
 
 Apesar desses pontos democráticos o sistema alemão é muito complexo e frágil: foi declarado inconstitucional pelo Tribunal Constitucional alemão duas vezes, e quando foi adoptado em Itália em 2001 foram logo usadas tácticas para corromper o sistema, e apenas durou uma eleição, e repetiu-se na Coreia do Sul em 2020, entre outros problemas.
 
@@ -269,7 +257,7 @@ No [documento completo](documento-completo.pdf) são ainda analisados os sistema
             }
         });
 
-        // Banco de Dados Eleitorais Corrigido (PS e PSD em 2019 ajustados)
+        // Banco de Dados Eleitorais
         const chartData = {
             "2019": [
                 { party: "PS", votos: 1862250, seatsReal: 106, seatsProposta: 80, color: "bg-pink-500" },
@@ -328,7 +316,6 @@ No [documento completo](documento-completo.pdf) são ainda analisados os sistema
             const container = document.getElementById("chart-container");
             const rawData = chartData[activeYear];
             
-            // Ordenação pelo total de votos decrescente
             const sortedData = [...rawData].sort((a, b) => b.votos - a.votos);
 
             // Escala partilhada estável para o ano
@@ -340,6 +327,10 @@ No [documento completo](documento-completo.pdf) são ainda analisados os sistema
                 if (localMax > maxValOfYear) maxValOfYear = localMax;
             });
 
+            // Detetar menor votação de um partido eleito nesse ano
+            const electingParties = rawData.filter(p => (activeMode === "real" ? p.seatsReal : p.seatsProposta) > 0);
+            const minVotesOfElecting = electingParties.length > 0 ? Math.min(...electingParties.map(p => p.votos)) : Infinity;
+
             container.innerHTML = "";
 
             sortedData.forEach(item => {
@@ -348,6 +339,9 @@ No [documento completo](documento-completo.pdf) são ainda analisados os sistema
                 const percent = (val / maxValOfYear) * 100;
                 const isZero = seats === 0;
 
+                // Logica do tracejado: Só no sistema real, se teve mais votos que o menor partido eleito
+                const isTracejado = isZero && activeMode === "real" && item.votos > minVotesOfElecting;
+
                 const row = document.createElement("div");
                 row.className = "space-y-1";
 
@@ -355,7 +349,7 @@ No [documento completo](documento-completo.pdf) são ainda analisados os sistema
                     ? `<span class="text-[10px] font-extrabold text-red-600 bg-red-50 border border-red-100 px-2 py-0.5 rounded-md">0 mandatos</span>`
                     : `<span class="text-[10px] font-bold text-slate-500 bg-slate-200/60 px-2 py-0.5 rounded-md">${seats} ${seats === 1 ? 'mandato' : 'mandatos'}</span>`;
 
-                // Aplicação da borda preta tracejada em "U" e opacidade de 50%
+                // Aplicação da borda preta tracejada em "U" apenas nos casos permitidos
                 row.innerHTML = `
                     <div class="flex flex-wrap justify-between items-end gap-x-2 text-sm">
                         <div class="flex items-center gap-1.5 flex-wrap">
@@ -369,7 +363,10 @@ No [documento completo](documento-completo.pdf) são ainda analisados os sistema
                     </div>
                     <div class="w-full bg-slate-100/70 rounded-md h-5 flex items-center overflow-hidden border border-slate-200/40 relative">
                         ${isZero ? 
-                            `<div class="h-full border-t-2 border-b-2 border-r-2 border-dashed border-black ${item.color}/50 border-l-0 rounded-r transition-all duration-300 ease-out" style="width: ${percent}%"></div>` : 
+                            (isTracejado ? 
+                                `<div class="h-full border-t-2 border-b-2 border-r-2 border-dashed border-black ${item.color}/50 border-l-0 rounded-r transition-all duration-300 ease-out" style="width: ${percent}%"></div>` : 
+                                `<div class="h-full ${item.color}/40 opacity-40 rounded-l transition-all duration-300 ease-out" style="width: ${percent}%"></div>`
+                            ) : 
                             `<div class="h-full rounded-l ${item.color} transition-all duration-300 ease-out shadow-inner" style="width: ${percent}%"></div>`
                         }
                     </div>
@@ -395,9 +392,7 @@ No [documento completo](documento-completo.pdf) são ainda analisados os sistema
             renderChart();
         }
 
-        // Executa no carregamento da página
         document.addEventListener("DOMContentLoaded", () => {
-            // Renderiza cada bloco de Markdown para HTML
             for (let i = 1; i <= 4; i++) {
                 const mdSource = document.getElementById(`md-${i}`).textContent;
                 document.getElementById(`content-${i}`).innerHTML = marked.parse(mdSource.trim());
