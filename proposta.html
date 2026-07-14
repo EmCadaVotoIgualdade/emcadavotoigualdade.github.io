@@ -62,14 +62,42 @@
     <main class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 py-12 w-full">
         <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 md:p-12 w-full overflow-hidden">
             
+            <!-- CABEÇALHO EDITORIAL -->
+            <header class="mb-10 pb-8 border-b border-slate-100">
+                <span class="text-xs font-bold text-brand-accent uppercase tracking-widest block mb-2">Reforma Eleitoral</span>
+                <h1 class="text-3xl md:text-5xl font-extrabold text-brand-navy tracking-tight leading-tight mb-4">
+                    A Proposta
+                </h1>
+                <p class="text-lg md:text-xl text-slate-500 leading-relaxed font-light mb-6">
+                    Uma proposta de reforma do sistema eleitoral português baseada no princípio constitucional da representação proporcional.
+                </p>
+                <div class="inline-flex items-center gap-2 bg-slate-50 border border-slate-200 px-3 py-1.5 rounded-full text-xs font-medium text-slate-500">
+                    <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    Tempo de leitura: 12 minutos
+                </div>
+            </header>
+
             <!-- Zona de Texto 1 (Introdução) -->
             <div id="content-1" class="prose prose-slate max-w-none prose-a:text-brand-accent hover:prose-a:text-teal-800 prose-headings:text-brand-navy"></div>
 
             <!-- GRÁFICO DINÂMICO INTERATIVO -->
-            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 sm:p-6 my-8 w-full shadow-sm">
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 sm:p-6 my-10 w-full shadow-sm">
+                
+                <div class="mb-6">
+                    <h3 class="text-lg md:text-xl font-bold text-brand-navy mb-1">
+                        Como varia o custo de um deputado para cada partido?
+                    </h3>
+                    <p class="text-xs sm:text-sm text-slate-500">
+                        Selecione o ano eleitoral e compare a realidade do sistema atual com a justiça proporcional do modelo proposto.
+                    </p>
+                </div>
+
+                <!-- Painel de Controlo do Gráfico -->
                 <div class="flex flex-col sm:flex-row sm:justify-between gap-4 mb-6 pb-6 border-b border-slate-200">
                     <div>
-                        <span class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Ano Eleitoral</span>
+                        <span class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">Ano Eleitoral</span>
                         <div class="inline-flex rounded-lg p-1 bg-slate-200/60 flex-wrap gap-1">
                             <button id="btn-2019" onclick="setYear('2019')" class="px-3 py-1.5 text-xs font-semibold rounded-md transition duration-150 text-slate-600 hover:text-brand-navy">2019</button>
                             <button id="btn-2022" onclick="setYear('2022')" class="px-3 py-1.5 text-xs font-semibold rounded-md transition duration-150 bg-brand-navy text-white shadow-sm">2022</button>
@@ -78,7 +106,7 @@
                         </div>
                     </div>
                     <div>
-                        <span class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Sistema Eleitoral</span>
+                        <span class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">Sistema Eleitoral</span>
                         <div class="inline-flex rounded-lg p-1 bg-slate-200/60">
                             <button id="btn-real" onclick="setMode('real')" class="px-4 py-1.5 text-xs font-semibold rounded-md transition duration-150 bg-brand-navy text-white shadow-sm">Actual</button>
                             <button id="btn-proposta" onclick="setMode('proposta')" class="px-4 py-1.5 text-xs font-semibold rounded-md transition duration-150 text-slate-600 hover:text-brand-navy">Proposto</button>
@@ -88,52 +116,72 @@
 
                 <div id="chart-container" class="space-y-4"></div>
                 
-                <p class="text-xs text-slate-400 mt-6 text-center italic">
-                    * Barras tracejadas e semitransparentes indicam partidos com 0 mandatos no respetivo sistema, evidenciando o desperdício absoluto desses votos.
+                <p class="text-[11px] text-slate-400 mt-6 text-center italic">
+                    * Barras tracejadas e semitransparentes com a cor do respetivo partido indicam 0 mandatos no sistema selecionado, evidenciando o desperdício desses votos.
                 </p>
             </div>
 
             <!-- Zona de Texto 2 (O Debate e 1º Objetivo) -->
             <div id="content-2" class="prose prose-slate max-w-none prose-a:text-brand-accent hover:prose-a:text-teal-800 prose-headings:text-brand-navy"></div>
 
-            <!-- ESPAÇO DA IMAGEM 2 (Votos desperdiçados) -->
+            <!-- ESPAÇO DA IMAGEM 2 -->
             <div class="bg-slate-50 border border-dashed border-slate-300 rounded-xl p-6 text-center my-6">
                 <p class="text-sm text-slate-500 font-medium">[ Espaço para a Imagem: Votos desperdiçados por círculo ]</p>
                 <p class="text-xs text-slate-400 mt-1">Quando carregares a imagem no GitHub (ex: img/votos-desperdicados.png), podes usar HTML direto no Markdown se preferires.</p>
             </div>
 
-            <!-- Zona de Texto 3 (2º Objetivo) -->
+            <!-- Zona de Texto 3 -->
             <div id="content-3" class="prose prose-slate max-w-none prose-a:text-brand-accent hover:prose-a:text-teal-800 prose-headings:text-brand-navy"></div>
 
-            <!-- ESPAÇO PARA O VÍDEO DO YOUTUBE / VISUALIZAÇÃO -->
+            <!-- ESPAÇO PARA O VÍDEO DO YOUTUBE -->
             <div class="bg-slate-50 border border-dashed border-slate-300 rounded-xl p-6 text-center my-6">
                 <p class="text-sm text-slate-500 font-medium">[ Espaço para o Vídeo / Imagem de Distribuição ]</p>
                 <p class="text-xs text-slate-400 mt-1">Podes incorporar o teu vídeo aqui.</p>
             </div>
 
-            <!-- Zona de Texto 4 (Links, Contactos e Referências) -->
+            <!-- Zona de Texto 4 -->
             <div id="content-4" class="prose prose-slate max-w-none prose-a:text-brand-accent hover:prose-a:text-teal-800 prose-headings:text-brand-navy"></div>
 
         </article>
     </main>
 
     <!-- RODAPÉ -->
-    <footer class="bg-brand-navy text-slate-400 py-12 border-t border-slate-800">
-        <div class="max-w-6xl mx-auto px-6 text-center md:flex md:justify-between md:text-left">
-            <p class="text-sm mb-4 md:mb-0">
-                &copy; 2026 Em Cada Voto Igualdade. Projeto cívico apartidário.
-            </p>
-            <p class="text-sm">
-                Desenvolvido com foco em transparência e rigor constitucional.
-            </p>
+    <footer class="bg-brand-navy text-slate-400 py-16 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div class="space-y-4">
+                <h4 class="text-white font-bold text-lg">Em Cada Voto Igualdade</h4>
+                <p class="text-sm leading-relaxed text-slate-400">
+                    Um projeto cívico, independente e apartidário focado em devolver a justiça de representação e proporcionalidade ao sistema eleitoral português.
+                </p>
+            </div>
+            
+            <div class="space-y-4">
+                <h4 class="text-white font-bold text-sm uppercase tracking-wider">Navegação</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html" class="hover:text-white transition">Início</a></li>
+                    <li><a href="proposta.html" class="hover:text-white transition">A Proposta de Reforma</a></li>
+                    <li><a href="analise.html" class="hover:text-white transition">Análise Constitucional</a></li>
+                    <li><a href="faq.html" class="hover:text-white transition">Perguntas Frequentes</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="text-white font-bold text-sm uppercase tracking-wider">Contacto & Código</h4>
+                <ul class="space-y-2 text-sm">
+                    <li>Email: <a href="mailto:emcadavotoigualdade@gmail.com" class="text-slate-300 hover:text-white transition font-medium">emcadavotoigualdade@gmail.com</a></li>
+                    <li>Repositório: <a href="https://github.com/emcadavotoigualdade" target="_blank" class="text-slate-300 hover:text-white transition font-medium">GitHub</a></li>
+                </ul>
+                <p class="text-xs text-slate-500 pt-2 border-t border-slate-800">
+                    &copy; 2026 Em Cada Voto Igualdade. Desenvolvido com foco em transparência e rigor constitucional.
+                </p>
+            </div>
         </div>
     </footer>
 
     <!-- ========================================== -->
-    <!-- ESCREVE O TEU TEXTO EM MARKDOWN AQUI EM BAIXO -->
+    <!-- SECÇÕES DE TEXTO EM MARKDOWN -->
     <!-- ========================================== -->
 
-    <!-- BLOCO 1: Introdução antes do Gráfico -->
     <script type="text/markdown" id="md-1">
 Sobre o sistema eleitoral a nossa Constituição sempre disse: **“A conversão dos votos em mandatos far-se-á de harmonia com o princípio da representação proporcional”**. Este princípio foi detalhado por Canotilho e Moreira, na sua Constituição anotada [[1]](#ref-1), como: *“À face da Constituição, e de acordo com o princípio democrático, o sistema eleitoral é um meio de fazer da Assembleia da República um espelho político do país e não um meio de fabricar maiorias lá onde elas não existem”*.
 
@@ -144,11 +192,8 @@ Este espelho cada vez distorce mais a realidade, e em 2022 aconteceram alguns ca
 * os dois maiores partidos elegem com metade dos votos por mandato, face aos restantes.
 
 Tudo isto acontece porque não é feita uma distribuição dos mandatos a nível nacional, o que origina muitos votos desperdiçados, e "custos" de votos por mandato muito desproporcionais.
-
-**Número médio de votos por mandato, para o território nacional:**
     </script>
 
-    <!-- BLOCO 2: Debate de 1998 e 1º Objetivo -->
     <script type="text/markdown" id="md-2">
 No maior debate sobre este tema, o governo apresentou em 1998 uma proposta inspirada no sistema alemão, onde António Costa explicava [[2]](#ref-2) assim dois objetivos:
 
@@ -173,7 +218,6 @@ Outra consequência de tratar de forma igual os votos em todo o país é que dim
 **Votos "desperdiçados" por circulo eleitoral em 2022:**
     </script>
 
-    <!-- BLOCO 3: 2º Objetivo -->
     <script type="text/markdown" id="md-3">
 ### 2º objectivo: ligação entre eleitos e eleitores
 Os eleitores votam num partido, e opcionalmente nomeiam candidatados da lista. Os eleitos são os mais nomeados, em vez de serem escolhidos exclusivamente pela ordem do partido.
@@ -185,25 +229,19 @@ Os detalhes de ambos os objectivos podem ser consultados [aqui](analise.html).
 No documento completo são ainda analisados os sistemas de Espanha, Reino Unido, Alemanha, Países Baixos e Dinamarca, e algumas propostas existentes para Portugal. Abordamos também temas como a governabilidade, o tamanho das listas, e o círculo da emigração.
     </script>
 
-    <!-- BLOCO 4: Links de Contacto e Referências -->
     <script type="text/markdown" id="md-4">
 ---
 
-* **Perguntas frequentes:** [https://emcadavotoigualdade.github.io/faq.html](faq.html)
-* **Dúvidas, críticas ou sugestões:** [emcadavotoigualdade@gmail.com](mailto:emcadavotoigualdade@gmail.com)
-
----
-
-#### Referências:
-* <span id="ref-1">**[1]**</span> “Constituição da República Portuguesa anotada”, J.J. Gomes Canotilho, Vital Moreira, 2007
-* <span id="ref-2">**[2]**</span> [Diário da Assembleia da República - Debate Parlamentar de 23 de abril de 1998](https://debates.parlamento.pt/catalogo/r3/dar/01/07/03/061/1998-04-23?sft=true)
-* <span id="ref-3">**[3]**</span> "The Parliamentary Electoral System in Denmark": [https://elections.im.dk/media/15737/parliamentary-system-dk.pdf](https://elections.im.dk/media/15737/parliamentary-system-dk.pdf)
-
-**Visualização da distribuição dos mandatos pelos círculos para os resultados de 2022:**
+<div class="text-xs text-slate-500 space-y-3 font-mono">
+  <p class="font-bold text-slate-700">REFERÊNCIAS:</p>
+  <p id="ref-1"><strong>[1]</strong> “Constituição da República Portuguesa anotada”, J.J. Gomes Canotilho, Vital Moreira, Coimbra Editora, 2007.</p>
+  <p id="ref-2"><strong>[2]</strong> Diário da Assembleia da República - Debate Parlamentar sobre Reforma Eleitoral de 23 de abril de 1998 (Disponível em <a href="https://debates.parlamento.pt/catalogo/r3/dar/01/07/03/061/1998-04-23?sft=true" target="_blank">debates.parlamento.pt</a>).</p>
+  <p id="ref-3"><strong>[3]</strong> Ministry of the Interior and Social Affairs of Denmark - "The Parliamentary Electoral System in Denmark" (Disponível para consulta em <a href="https://elections.im.dk/media/15737/parliamentary-system-dk.pdf" target="_blank">elections.im.dk</a>).</p>
+</div>
     </script>
 
 
-    <!-- LÓGICA E SCRIPTS DO SITE -->
+    <!-- LÓGICA DO GRÁFICO E INTERATIVIDADE -->
     <script>
         // Menu Mobile Toggle
         const menuBtn = document.getElementById('menu-btn');
@@ -219,16 +257,16 @@ No documento completo são ainda analisados os sistemas de Espanha, Reino Unido,
             }
         });
 
-        // Banco de Dados Eleitorais
+        // Banco de Dados Eleitorais Corrigido & Completo
         const chartData = {
             "2019": [
-                { party: "PS", votos: 1862250, seatsReal: 94, seatsProposta: 80, color: "bg-pink-500" },
-                { party: "PSD", votos: 1417492, seatsReal: 69, seatsProposta: 61, color: "bg-orange-500" },
-                { party: "BE", votos: 491045, seatsReal: 17, seatsProposta: 11, color: "bg-red-600" },
-                { party: "CDU", votos: 328790, seatsReal: 10, seatsProposta: 14, color: "bg-emerald-700" },
-                { party: "CDS", votos: 215787, seatsReal: 4, seatsProposta: 9, color: "bg-blue-600" },
-                { party: "PAN", votos: 166288, seatsReal: 3, seatsProposta: 7, color: "bg-teal-500" },
-                { party: "CH", votos: 66210, seatsReal: 0, seatsProposta: 2, color: "bg-indigo-950" },
+                { party: "PS", votos: 1862250, seatsReal: 106, seatsProposta: 80, color: "bg-pink-500" },
+                { party: "PSD", votos: 1417492, seatsReal: 77, seatsProposta: 61, color: "bg-orange-500" },
+                { party: "BE", votos: 491045, seatsReal: 19, seatsProposta: 11, color: "bg-red-600" },
+                { party: "CDU", votos: 328790, seatsReal: 12, seatsProposta: 14, color: "bg-emerald-700" },
+                { party: "CDS", votos: 215787, seatsReal: 5, seatsProposta: 9, color: "bg-blue-600" },
+                { party: "PAN", votos: 166288, seatsReal: 4, seatsProposta: 7, color: "bg-teal-500" },
+                { party: "CH", votos: 66210, seatsReal: 1, seatsProposta: 2, color: "bg-indigo-950" },
                 { party: "IL", votos: 65321, seatsReal: 1, seatsProposta: 2, color: "bg-cyan-500" },
                 { party: "L", votos: 55431, seatsReal: 1, seatsProposta: 2, color: "bg-lime-500" },
                 { party: "ALI", votos: 39012, seatsReal: 0, seatsProposta: 1, color: "bg-sky-400" }
@@ -278,7 +316,7 @@ No documento completo são ainda analisados os sistemas de Espanha, Reino Unido,
             const container = document.getElementById("chart-container");
             const rawData = chartData[activeYear];
             
-            // Ordenação fixa pelo total de votos
+            // Ordenação incondicional pelo total de votos decrescente
             const sortedData = [...rawData].sort((a, b) => b.votos - a.votos);
 
             // Escala partilhada estável para o ano
@@ -306,18 +344,19 @@ No documento completo são ainda analisados os sistemas de Espanha, Reino Unido,
                     : `<span class="text-[10px] font-bold text-slate-500 bg-slate-200/60 px-2 py-0.5 rounded-md">${seats} ${seats === 1 ? 'mandato' : 'mandatos'}</span>`;
 
                 row.innerHTML = `
-                    <div class="flex justify-between items-center text-sm">
-                        <div class="flex items-center gap-2">
+                    <div class="flex flex-wrap justify-between items-end gap-x-2 text-sm">
+                        <div class="flex items-center gap-1.5 flex-wrap">
                             <span class="font-extrabold text-brand-navy min-w-[35px] inline-block">${item.party}</span>
                             ${mandatosBadge}
+                            <span class="text-[11px] text-slate-400 font-medium">(${item.votos.toLocaleString('pt-PT')} votos)</span>
                         </div>
-                        <span class="font-semibold text-slate-700">
+                        <span class="font-bold text-slate-700 text-right whitespace-nowrap">
                             ${val.toLocaleString('pt-PT')} <span class="text-xs font-normal text-slate-400">votos/dep</span>
                         </span>
                     </div>
                     <div class="w-full bg-slate-100/70 rounded-md h-5 flex items-center overflow-hidden border border-slate-200/40">
                         ${isZero ? 
-                            `<div class="h-full rounded-l border-r-2 border-dashed border-slate-400 bg-slate-300/30 opacity-40" style="width: ${percent}%"></div>` : 
+                            `<div class="h-full rounded-l border-r-2 border-dashed border-slate-500/80 ${item.color} opacity-40 transition-all duration-300 ease-out" style="width: ${percent}%"></div>` : 
                             `<div class="h-full rounded-l ${item.color} transition-all duration-300 ease-out shadow-inner" style="width: ${percent}%"></div>`
                         }
                     </div>
