@@ -37,14 +37,14 @@
   ],
   "2025": [
     { "party": "AD", "votos": 1952001, "seatsReal": 89, "seatsProposta": 78, "color": "bg-orange-600" },
-    { "party": "PS", "votos": 1394820, "seatsReal": 58, "seatsProposta": 55, "color: "bg-pink-500" },
-    { "party": "CH", "votos": 1346310, "seatsReal": 58, "seatsProposta": 53, "color: "bg-indigo-950" },
-    { "party": "IL", "votos": 330456, "seatsReal": 9, "seatsProposta": 13, "color: "bg-cyan-500" },
+    { "party": "PS", "votos": 1394820, "seatsReal": 58, "seatsProposta": 55, "color": "bg-pink-500" },
+    { "party": "CH", "votos": 1346310, "seatsReal": 58, "seatsProposta": 53, "color": "bg-indigo-950" },
+    { "party": "IL", "votos": 330456, "seatsReal": 9, "seatsProposta": 13, "color": "bg-cyan-500" },
     { "party": "L", "votos": 250668, "seatsReal": 6, "seatsProposta": 10, "color": "bg-lime-500" },
-    { "party": "BE", "votos": 193058, "seatsReal": 1, "seatsProposta": 4, "color: "bg-red-600" },
-    { "party": "CDU", "votos": 180887, "seatsReal": 3, "seatsProposta": 7, "color: "bg-emerald-700" },
-    { "party": "PAN", "votos": 80839, "seatsReal": 1, "seatsProposta": 3, "color: "bg-teal-500" },
-    { "party": "ADN", "votos": 78976, "seatsReal": 0, "seatsProposta": 3, "color: "bg-amber-500" },
-    { "party": "JPP", "votos": 20112, "seatsReal": 1, "seatsProposta": 0, "color: "bg-green-600" }
+    { "party": "BE", "votos": 193058, "seatsReal": 1, "seatsProposta": 4, "color": "bg-red-600" },
+    { "party": "CDU", "votos": 180887, "seatsReal": 3, "seatsProposta": 7, "color": "bg-emerald-700" },
+    { "party": "PAN", "votos": 80839, "seatsReal": 1, "seatsProposta": 3, "color": "bg-teal-500" },
+    { "party": "ADN", "votos": 78976, "seatsReal": 0, "seatsProposta": 3, "color": "bg-amber-500" },
+    { "party": "JPP", "votos": 20112, "seatsReal": 1, "seatsProposta": 0, "color": "bg-green-600" }
   ]
 }
