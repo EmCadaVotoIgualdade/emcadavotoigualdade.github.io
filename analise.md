@@ -45,11 +45,14 @@ h) O sufrágio universal, direto, secreto e periódico na designação dos titul
 
 ## A interpretação de constitucionalistas sobre a representação proporcional
 
-**"Constituição da República Portuguesa anotada", Gomes Canotilho, Vital Moreira**  
+
+# **"Constituição da República Portuguesa anotada", Gomes Canotilho, Vital Moreira**
+
 “À face da Constituição da República Portuguesa, portanto, e de acordo com o princípio democrático, o sistema eleitoral é um meio de fazer da AR um espelho político do país e não um meio de fabricar maiorias lá onde elas não existem”  
 "assegurar o sistema de representação proporcional significa que o procedimento de atribuição de mandatos deve contribuir o mais possível para a proporcionalidade entre a distribuição de votos e atribuição de mandatos"
 
-**"Direito Constitucional e teoria da Constituição", Gomes Canotilho**  
+
+# **"Direito Constitucional e teoria da Constituição", Gomes Canotilho**  
 “A representação proporcional assenta numa regra que se pode resumir facilmente: «a cada um o que lhe é devido», ou seja, a percentagem de mandatos deve ser idêntica à percentagem dos votos.”  
 “O princípio da igualdade de voto exige que todos os votos tenham .. o mesmo peso.”
 
@@ -186,9 +189,9 @@ Uma análise mais detalhada, incluindo transcrições dos acórdãos e uma compa
 
 Na República Checa há 200 deputados e 14 províncias que elegem entre 5 e 26 deputados (média de 14,3 deputados por círculo que compara com 10,5 em Portugal).
 
-Sobre o sistema eleitoral a sua constituição diz no artigo 18.1: “Elections to the Assembly of Deputies shall be held by secret ballot on the basis of a universal, equal, and direct right to vote, according to the principle of proportional representation”. 
+Sobre o sistema eleitoral a sua [constituição](https://www.constituteproject.org/constitution/Czech_Republic_2013) diz no artigo 18.1: “Elections to the Assembly of Deputies shall be held by secret ballot on the basis of a universal, equal, and direct right to vote, according to the principle of proportional representation”. 
 
-### O pedido de verificação da constitucionalidade
+### [O pedido de verificação da constitucionalidade](https://nalus.usoud.cz/Search/GetText.aspx?sz=Pl-44-17_1)
 
 Dois meses após a eleição de 2017, deputados de três partidos apresentaram uma queixa ao Tribunal Constitucional, alegando que o sistema punha em causa o princípio da representação proporcional e da igualdade de voto nas eleições.
 
@@ -224,6 +227,3 @@ Um dos maiores especialistas deste tema, Arend Lijphart, conclui que não em “
 > “...majoritarian democracies do not outperform the consensus democracies on effective government and effective policy-making - in fact, the consensus democracies have the better record - but the consensus democracies do clearly outperform the majoritarian democracies with regard to the quality of democracy and democratic representation as well as with regard to what I have called the kindness and gentleness of their public policy orientations.”
 
 Escreveu ainda que para atingir esse nível é preciso que o sistema proporcional seja proporcional na prática, não apenas em nome, e aqui referiu explicitamente o caso espanhol, que desde então foi ultrapassado pelo português no que diz respeito à desproporcionalidade.
-
-Há uma secção de perguntas frequentes, além do âmbito constitucional, [aqui](faq.html).
-Dúvidas, críticas ou sugestões: [emcadavotoigualdade@gmail.com](mailto:emcadavotoigualdade@gmail.com)
