@@ -62,67 +62,273 @@
         <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 md:p-12">
             
             <!-- Cabeçalho do Artigo -->
-            <header class="mb-8 border-b border-slate-100 pb-8">
-                <h1 class="text-3xl md:text-4xl font-extrabold text-brand-navy leading-tight mb-4">
+            <header class="mb-10 border-b border-slate-100 pb-8">
+                <h1 class="text-3xl md:text-5xl font-extrabold text-brand-navy leading-tight mb-6">
                     A Proposta de Reforma Eleitoral
                 </h1>
-                <p class="text-slate-500 text-lg leading-relaxed">
-                    Como podemos garantir a igualdade do valor de cada voto em Portugal, respeitando as especificidades regionais.
+                
+                <!-- Citação Constitucional Inicial -->
+                <div class="bg-slate-50 border-l-4 border-brand-accent p-6 rounded-r-xl my-6">
+                    <p class="italic text-slate-700 text-lg mb-3">
+                        “A conversão dos votos em mandatos far-se-á de harmonia com o princípio da representação proporcional.”
+                    </p>
+                    <p class="text-sm text-slate-500 font-semibold">
+                        — Artigo 149.º, n.º 1 da Constituição da República Portuguesa
+                    </p>
+                </div>
+
+                <p class="text-slate-600 text-md md:text-lg leading-relaxed mt-6">
+                    Este princípio básico foi detalhado pelos reputados constitucionalistas J.J. Gomes Canotilho e Vital Moreira: 
+                    <span class="italic">“À face da Constituição, e de acordo com o princípio democrático, o sistema eleitoral é um meio de fazer da Assembleia da República um espelho político do país e não um meio de fabricar maiorias lá onde elas não existem”</span> <span class="text-xs font-semibold text-brand-accent bg-teal-50 px-1.5 py-0.5 rounded cursor-help" title="Constituição da República Portuguesa anotada, 2007">[1]</span>.
                 </p>
             </header>
 
             <!-- Corpo do Artigo -->
             <div class="space-y-8 text-slate-700 leading-relaxed text-base md:text-lg">
-                <p>
-                    O atual sistema eleitoral português, embora tenha servido o país desde a fundação da democracia, apresenta hoje graves distorções democráticas. Devido à divisão do país em 22 círculos eleitorais (onde os mais pequenos elegem apenas 2 ou 3 deputados), centenas de milhares de votos são completamente desperdiçados todos os anos, não contribuindo em nada para a composição final do parlamento.
-                </p>
+                
+                <!-- O Diagnóstico de 2022 -->
+                <section>
+                    <h2 class="text-2xl md:text-3xl font-bold text-brand-navy mb-4">O Diagnóstico: Um Espelho Distorcido</h2>
+                    <p class="mb-6">
+                        Infelizmente, este "espelho" democrático tem vindo a distorcer cada vez mais a realidade do país. Nas eleições legislativas de 2022, assistimos a anomalias democráticas sem precedentes em Portugal:
+                    </p>
 
-                <h2 class="text-2xl font-bold text-brand-navy mt-8 mb-4">O Diagnóstico de 2022</h2>
-                <p>
-                    Nas eleições legislativas de 2022, a disparidade tornou-se evidente. Cerca de <strong>700.000 votos</strong> (mais de 12% do total) foram depositados em partidos que não conseguiram eleger qualquer deputado nos círculos onde concorreram. Isto cria cidadãos de primeira e de segunda categoria no que toca à eficácia do seu voto:
-                </p>
-
-                <!-- Quadro Comparativo Rápido -->
-                <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 my-6">
-                    <h3 class="font-bold text-brand-navy mb-4 text-center">A Assimetria do Voto em Portugal (Exemplo)</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
-                        <div class="bg-white p-4 rounded-lg border border-slate-100 shadow-sm">
-                            <span class="text-xs font-semibold uppercase tracking-wider text-brand-accent">Círculo de Portalegre</span>
-                            <p class="text-xl font-bold text-brand-navy mt-1">~25.000 votos</p>
-                            <p class="text-slate-500 mt-1">Necessários para eleger 1 deputado neste distrito.</p>
+                    <!-- Lista de Sintomas com Design Moderno -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                        <div class="p-5 bg-red-50/50 border border-red-100 rounded-xl flex gap-4">
+                            <span class="text-red-600 font-bold text-xl">!</span>
+                            <p class="text-sm text-slate-600"><strong class="text-slate-900 block">Exclusão Injusta:</strong> Um partido ficou fora da Assembleia da República apesar de ter obtido mais votos nacionais do que outros que conseguiram eleger.</p>
                         </div>
-                        <div class="bg-white p-4 rounded-lg border border-slate-100 shadow-sm">
-                            <span class="text-xs font-semibold uppercase tracking-wider text-brand-accent">Círculo de Lisboa</span>
-                            <p class="text-xl font-bold text-brand-navy mt-1">~15.000 votos</p>
-                            <p class="text-slate-500 mt-1">Média necessária para eleger 1 deputado na capital.</p>
+                        <div class="p-5 bg-red-50/50 border border-red-100 rounded-xl flex gap-4">
+                            <span class="text-red-600 font-bold text-xl">!</span>
+                            <p class="text-sm text-slate-600"><strong class="text-slate-900 block">Inversão de Representação:</strong> Um grupo parlamentar obteve menos deputados do que outro partido que teve menos votos do que ele.</p>
+                        </div>
+                        <div class="p-5 bg-red-50/50 border border-red-100 rounded-xl flex gap-4">
+                            <span class="text-red-600 font-bold text-xl">!</span>
+                            <p class="text-sm text-slate-600"><strong class="text-slate-900 block">Maioria Absoluta Artificial:</strong> O limiar para a obtenção de uma maioria absoluta de deputados desceu para apenas 41% dos votos expressos.</p>
+                        </div>
+                        <div class="p-5 bg-red-50/50 border border-red-100 rounded-xl flex gap-4">
+                            <span class="text-red-600 font-bold text-xl">!</span>
+                            <p class="text-sm text-slate-600"><strong class="text-slate-900 block">Custos Desproporcionais:</strong> Os dois maiores partidos elegeram deputados com metade dos votos necessários, comparando com os restantes partidos.</p>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-400 mt-4 text-center">Dados com base nos resultados oficiais de 2022.</p>
-                </div>
 
-                <h2 class="text-2xl font-bold text-brand-navy mt-8 mb-4">A Solução Proposta</h2>
-                <p>
-                    A reforma proposta pelo movimento <strong>"Em Cada Voto Igualdade"</strong> não exige o fim dos círculos distritais (mantendo a representação de cada região), mas sim a criação de um <strong>Círculo Nacional de Compensação</strong>.
-                </p>
-                
-                <p>
-                    Este mecanismo, já utilizado noutros países europeus de referência, garante que todos os votos que não serviram para eleger deputados a nível distrital são somados e convertidos em mandatos através de uma lista nacional. Desta forma, assegura-se que a composição final do parlamento reflete, com rigor matemático, a vontade expressa por todos os portugueses nas urnas.
-                </p>
+                    <p>
+                        Tudo isto acontece porque não é feita uma distribuição dos mandatos a nível nacional. A divisão estrita por distritos origina um número colossal de votos desperdiçados e "custos" de votos por mandato profundamente desproporcionais.
+                    </p>
+                </section>
 
-                <div class="border-l-4 border-brand-accent bg-teal-50/50 p-4 rounded-r-lg italic my-6">
-                    "O princípio da proporcionalidade não pode ser um ideal distante; tem de ser uma realidade prática na vida de cada eleitor, independentemente do seu código postal."
-                </div>
+                <!-- GRÁFICO 1: Votos por Mandato em 2022 (Desenhado em puro Tailwind CSS) -->
+                <section class="bg-slate-50 border border-slate-200 rounded-2xl p-6 md:p-8 my-8">
+                    <h3 class="text-lg font-bold text-brand-navy mb-2 text-center">Desproporcionalidade de Voto (2022)</h3>
+                    <p class="text-xs text-slate-500 text-center mb-6">Média de votos nacionais necessários para eleger um único deputado por partido</p>
+                    
+                    <div class="space-y-4">
+                        <!-- Partido PS -->
+                        <div>
+                            <div class="flex justify-between text-sm font-semibold mb-1">
+                                <span class="text-slate-700">PS (120 deputados)</span>
+                                <span class="text-brand-accent">11.733 votos / mandato</span>
+                            </div>
+                            <div class="w-full bg-slate-200 h-3 rounded-full overflow-hidden">
+                                <div class="bg-teal-600 h-full rounded-full" style="width: 13%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Partido PSD -->
+                        <div>
+                            <div class="flex justify-between text-sm font-semibold mb-1">
+                                <span class="text-slate-700">PSD (77 deputados)</span>
+                                <span class="text-brand-accent">14.116 votos / mandato</span>
+                            </div>
+                            <div class="w-full bg-slate-200 h-3 rounded-full overflow-hidden">
+                                <div class="bg-teal-600 h-full rounded-full" style="width: 16%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Livre -->
+                        <div>
+                            <div class="flex justify-between text-sm font-semibold mb-1">
+                                <span class="text-slate-700">LIVRE (1 deputado)</span>
+                                <span class="text-slate-600">71.235 votos / mandato</span>
+                            </div>
+                            <div class="w-full bg-slate-200 h-3 rounded-full overflow-hidden">
+                                <div class="bg-slate-500 h-full rounded-full" style="width: 81%"></div>
+                            </div>
+                        </div>
+
+                        <!-- PAN -->
+                        <div>
+                            <div class="flex justify-between text-sm font-semibold mb-1">
+                                <span class="text-slate-700">PAN (1 deputado)</span>
+                                <span class="text-slate-600">88.130 votos / mandato</span>
+                            </div>
+                            <div class="w-full bg-slate-200 h-3 rounded-full overflow-hidden">
+                                <div class="bg-slate-500 h-full rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+
+                        <!-- CDS-PP (Caso extremo) -->
+                        <div>
+                            <div class="flex justify-between text-sm font-semibold mb-1">
+                                <span class="text-red-700">CDS-PP (0 deputados - Fora do Parlamento)</span>
+                                <span class="text-red-600">89.113 votos e zero mandatos</span>
+                            </div>
+                            <div class="w-full bg-slate-200 h-3 rounded-full overflow-hidden">
+                                <div class="bg-red-500 h-full rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-400 mt-6 text-center italic">Nota: Com o sistema atual, votar num partido mais pequeno fora das grandes metrópoles (Lisboa/Porto) significa, quase sempre, ter um voto irrelevante.</p>
+                </section>
+
+                <!-- O Debate Histórico e o Sistema Alemão -->
+                <section class="space-y-6">
+                    <h2 class="text-2xl font-bold text-brand-navy">O Debate Histórico de 1998</h2>
+                    <p>
+                        Este não é um tema novo. No grande debate parlamentar sobre a reforma eleitoral em 1998, tanto o Governo (PS) como a oposição (PSD) apresentaram propostas de reforma inspiradas no modelo alemão, procurando resolver exatamente os mesmos problemas:
+                    </p>
+
+                    <!-- Citação António Costa vs Marcelo -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+                        <div class="bg-slate-50 p-6 rounded-xl border border-slate-100">
+                            <span class="text-xs font-bold text-brand-accent uppercase tracking-wider block mb-2">António Costa (PS, 1998)</span>
+                            <p class="text-sm italic text-slate-600">
+                                “A proporcionalidade é reforçada porque (...) com a criação do círculo nacional, devolve-se utilidade a todos os votos, de todos os partidos, em todo o território nacional.” <span class="text-xs text-brand-accent bg-teal-50 px-1 rounded cursor-help" title="Debates Parlamentares de 23 de Abril de 1998">[2]</span>
+                            </p>
+                        </div>
+                        <div class="bg-slate-50 p-6 rounded-xl border border-slate-100">
+                            <span class="text-xs font-bold text-brand-accent uppercase tracking-wider block mb-2">Marcelo Rebelo de Sousa (PSD, 1998)</span>
+                            <p class="text-sm italic text-slate-600">
+                                “A proporcionalidade será sempre assegurada de acordo com o resultado obtido no apuramento do voto nacional.” <span class="text-xs text-brand-accent bg-teal-50 px-1 rounded cursor-help" title="Proposta alternativa do PSD em 1998">[2]</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <p>
+                        Apesar do mérito teórico, o <strong>sistema de representação proporcional personalizado alemão provou ser extremamente complexo e frágil na prática</strong>. Foi declarado inconstitucional pelo Tribunal Constitucional alemão em duas ocasiões. Quando a Itália o tentou adotar em 2001, foi rapidamente manipulado por táticas partidárias ("listas fantasma") e durou apenas uma eleição. O mesmo aconteceu na Coreia do Sul em 2020.
+                    </p>
+                </section>
+
+                <!-- A Nossa Proposta -->
+                <section class="bg-white border-2 border-brand-accent/20 rounded-2xl p-6 md:p-8 my-10 space-y-6">
+                    <div class="text-center max-w-2xl mx-auto">
+                        <h2 class="text-2xl md:text-3xl font-extrabold text-brand-navy mb-3">A Nossa Proposta</h2>
+                        <p class="text-slate-600 text-sm md:text-base">
+                            Mantemos os objetivos das propostas históricas de PS e PSD, mas aplicamos um sistema muito mais sólido, testado e intuitivo, baseado no modelo de sucesso dos <strong>países nórdicos</strong> (Dinamarca e Suécia) <span class="text-xs text-brand-accent bg-teal-50 px-1 rounded cursor-help" title="The Parliamentary Electoral System in Denmark">[3]</span>.
+                        </p>
+                    </div>
+
+                    <hr class="border-slate-100">
+
+                    <!-- Objetivo 1 -->
+                    <div>
+                        <h3 class="text-xl font-bold text-brand-navy flex items-center gap-2 mb-3">
+                            <span class="w-7 h-7 bg-teal-100 text-brand-accent rounded-full flex items-center justify-center text-sm font-bold">1</span>
+                            Proporcionalidade Absoluta e Igualdade de Voto
+                        </h3>
+                        <p class="text-sm md:text-base text-slate-600 mb-4">
+                            A proporcionalidade é garantida aplicando o método d'Hondt ao total de votos de âmbito nacional. Em 2022, isto resultaria num "custo" fixo de cerca de 22 mil votos por mandato, de forma igual para todos. Os deputados são depois distribuídos de volta aos distritos atuais, refletindo a força regional de cada partido.
+                        </p>
+                        <p class="text-sm md:text-base text-slate-600">
+                            <strong>Nenhum distrito perde representação territorial</strong> e a maioria passa a eleger um leque mais plural de partidos. Os votos desperdiçados são drasticamente reduzidos.
+                        </p>
+                    </div>
+
+                    <!-- GRÁFICO 2: VOTOS DESPERDIÇADOS (Espaço reservado para a Imagem do GitHub) -->
+                    <div class="my-6">
+                        <!-- NOTA: Assim que enviares a imagem do gráfico para o GitHub, basta atualizar o 'src' abaixo para: "img/NOME_DA_TUA_IMAGEM.png" -->
+                        <div class="bg-slate-50 border border-dashed border-slate-300 rounded-xl p-8 text-center flex flex-col items-center justify-center">
+                            <svg class="w-12 h-12 text-slate-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2" />
+                            </svg>
+                            <p class="font-semibold text-slate-700 text-sm">Visualização: Votos "desperdiçados" por círculo eleitoral em 2022</p>
+                            <p class="text-xs text-slate-500 mt-1">Coloca a tua imagem do mapa/gráfico na pasta "img" do GitHub e substitui esta secção pela tag correspondente.</p>
+                            <!-- Quando tiveres a imagem no GitHub, podes remover o bloco acima e descomentar a linha abaixo: -->
+                            <!-- <img src="img/votos-desperdicados.png" alt="Mapa de votos desperdiçados em 2022" class="mx-auto rounded-lg shadow-sm"> -->
+                        </div>
+                    </div>
+
+                    <hr class="border-slate-100">
+
+                    <!-- Objetivo 2 -->
+                    <div>
+                        <h3 class="text-xl font-bold text-brand-navy flex items-center gap-2 mb-3">
+                            <span class="w-7 h-7 bg-teal-100 text-brand-accent rounded-full flex items-center justify-center text-sm font-bold">2</span>
+                            Listas Semi-Abertas (Ligação Eleitos-Eleitores)
+                        </h3>
+                        <p class="text-sm md:text-base text-slate-600">
+                            Os eleitores continuam a votar no partido da sua preferência, mas passam a poder colocar uma cruz (voto de preferência) em candidatos específicos daquela lista. No final, são eleitos os deputados mais votados pelos cidadãos, e não apenas aqueles que as direções dos partidos decidiram colocar no topo da lista. Este sistema incentiva a transparência e a proximidade do deputado à sua comunidade local.
+                        </p>
+                    </div>
+
+                    <!-- LEITOR DE VÍDEO DO YOUTUBE RESPONSIVO -->
+                    <div class="my-8">
+                        <h4 class="text-center text-sm font-semibold text-slate-500 mb-4 uppercase tracking-wider">Aprenda mais sobre o Projeto em 2 minutos</h4>
+                        <div class="aspect-video w-full rounded-xl overflow-hidden shadow-lg border border-slate-200">
+                            <!-- NOTA: Substitui o 'ID_DO_V_DEO' (atualmente 'dQw4w9WgXcQ') pelo ID real do teu vídeo do YouTube -->
+                            <iframe 
+                                class="w-full h-full"
+                                src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                title="Vídeo Explicativo - Em Cada Voto Igualdade" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                </section>
+
+                <!-- Documento Completo & Próximos Passos -->
+                <section class="border-t border-slate-100 pt-8 space-y-4 text-center">
+                    <p class="text-slate-600">
+                        Pode consultar os detalhes técnicos, a análise de outros sistemas (Espanha, Reino Unido, Países Baixos) e o impacto na governabilidade e círculos de emigração na nossa secção jurídica:
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4 pt-2">
+                        <a href="analise.html" class="bg-brand-accent hover:bg-teal-800 text-white font-medium px-6 py-2.5 rounded-lg shadow-sm transition">
+                            Consultar Detalhes e Análise Constitucional
+                        </a>
+                        <a href="faq.html" class="bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 font-medium px-6 py-2.5 rounded-lg shadow-sm transition">
+                            Perguntas Frequentes
+                        </a>
+                    </div>
+                </section>
+
+                <!-- GRÁFICO 3: DISTRIBUIÇÃO DOS MANDATOS (Espaço reservado para a Imagem do GitHub) -->
+                <section class="border-t border-slate-100 pt-8">
+                    <h3 class="text-lg font-bold text-brand-navy mb-4 text-center">Distribuição Simulada de Mandatos (Dados de 2022)</h3>
+                    <!-- NOTA: Assim que enviares a imagem da simulação de círculos para o GitHub, faz como no Gráfico 2 -->
+                    <div class="bg-slate-50 border border-dashed border-slate-300 rounded-xl p-8 text-center flex flex-col items-center justify-center">
+                        <svg class="w-12 h-12 text-slate-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <p class="font-semibold text-slate-700 text-sm">Visualização da distribuição dos mandatos pelos círculos para os resultados de 2022</p>
+                        <p class="text-xs text-slate-500 mt-1">Insere aqui a imagem de simulação que tens no teu Google Sites.</p>
+                        <!-- <img src="img/simulacao-distribuicao-2022.png" alt="Distribuição simulada de mandatos" class="mx-auto rounded-lg shadow-sm"> -->
+                    </div>
+                </section>
+
+                <!-- Sugestões e Contacto -->
+                <section class="bg-teal-50/30 rounded-xl p-6 text-center border border-teal-50">
+                    <p class="text-sm text-slate-600">
+                        Tem dúvidas, críticas ou sugestões de melhoria para esta proposta? Escreva-nos para:
+                    </p>
+                    <a href="mailto:emcadavotoigualdade@gmail.com" class="text-brand-accent font-bold hover:underline block mt-2 text-md">
+                        emcadavotoigualdade@gmail.com
+                    </a>
+                </section>
+
+                <!-- Referências Académicas -->
+                <footer class="text-xs text-slate-400 border-t border-slate-100 pt-6 space-y-1">
+                    <p><strong>Referências:</strong></p>
+                    <p>[1] Gomes Canotilho, J.J. e Moreira, Vital (2007) – <em>Constituição da República Portuguesa Anotada</em>.</p>
+                    <p>[2] Diário da Assembleia da República - Debate Parlamentar de 23 de abril de 1998 (Disponível em <a href="https://debates.parlamento.pt/catalogo/r3/dar/01/07/03/061/1998-04-23?sft=true" target="_blank" class="underline hover:text-brand-accent">debates.parlamento.pt</a>).</p>
+                    <p>[3] Ministry of the Interior, Denmark – <em>The Parliamentary Electoral System in Denmark</em> (Disponível em <a href="https://elections.im.dk" target="_blank" class="underline hover:text-brand-accent">elections.im.dk</a>).</p>
+                </footer>
+
             </div>
-
-            <!-- Rodapé do Artigo / Apelo à Ação -->
-            <footer class="mt-12 pt-8 border-t border-slate-100 text-center">
-                <p class="text-slate-600 mb-6">Quer compreender a compatibilidade legal desta proposta?</p>
-                <a href="analise.html" class="inline-flex items-center gap-2 bg-brand-accent hover:bg-teal-800 text-white font-medium px-6 py-3 rounded-lg shadow-sm transition duration-200">
-                    Avançar para a Análise Constitucional
-                    <span>→</span>
-                </a>
-            </footer>
-
         </article>
     </main>
 
