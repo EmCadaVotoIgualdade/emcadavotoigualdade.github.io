@@ -3,8 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const chartElements = document.querySelectorAll(".interactive-chart");
     if (chartElements.length === 0) return;
 
+    // Constrói o caminho correto de forma dinâmica baseado na raiz do site no GitHub Pages
+    const baseUrl = window.siteBaseUrl || "";
+    const jsonPath = (baseUrl + "/assets/data/eleicoes.json").replace(/\/+/g, '/');
+
     // 1. Carrega a base de dados em JSON
-    fetch("assets/data/eleicoes.json")
+    fetch(jsonPath)
         .then(response => {
             if (!response.ok) throw new Error("Não foi possível carregar os dados eleitorais.");
             return response.json();
