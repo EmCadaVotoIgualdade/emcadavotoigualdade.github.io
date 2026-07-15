@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- Favicon (O teu logo na aba do navegador!) -->
+    <link rel="icon" type="image/png" href="{{ '/assets/images/logo.png' | relative_url }}">
+    
     <!-- SEO Dinâmico (Lido das configurações no topo de cada página) -->
     <title>{{ page.title }} - Em Cada Voto Igualdade</title>
     <meta name="description" content="{{ page.description }}">
@@ -59,11 +62,14 @@
     <!-- BARRA DE NAVEGAÇÃO ÚNICA -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-xl font-bold text-brand-navy tracking-tight hover:opacity-80 transition">
-                Em Cada Voto <span class="text-brand-accent">Igualdade</span>
+            
+            <!-- Logo + Título do Site -->
+            <a href="index.html" class="flex items-center gap-3 text-xl font-bold text-brand-navy tracking-tight hover:opacity-80 transition">
+                <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo Em Cada Voto Igualdade" class="h-8 w-auto">
+                <span>Em Cada Voto <span class="text-brand-accent">Igualdade</span></span>
             </a>
 
-            <!-- Menu para Computador (Destaca o botão ativo de forma dinâmica) -->
+            <!-- Menu para Computador -->
             <div class="hidden md:flex space-x-6 font-medium">
                 <a href="index.html" class="{% if page.url == '/' or page.url == '/index.html' %}text-brand-accent font-bold{% else %}text-slate-600 hover:text-brand-accent{% endif %} transition">Início</a>
                 <a href="proposta.html" class="{% if page.url contains 'proposta' or page.url contains 'detalhes' or page.url contains 'alemao' %}text-brand-accent font-bold{% else %}text-slate-600 hover:text-brand-accent{% endif %} transition">A Proposta</a>
