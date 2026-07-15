@@ -175,7 +175,7 @@ Espanha e Bélgica são países onde a garantia da proporcionalidade nacional n�
 
 A Alemanha e a Áustria são países federais e os estados são muito independentes e têm um governo/governador.
 A média de deputados em cada estado é 37 na Alemanha e 20 na Áustria, o que bastaria para terem sistemas muito proporcionais, mesmo com cada estado a eleger de forma independente.
-Apesar destes motivos, existem círculos nacionais em ambos os sistemas, que servem para compensar os partidos prejudicados na alocação de mandatos a nível do estado, garantindo dessa forma a segurança de voto a nível nacional.
+Apesar destes motivos, existem círculos nacionais em ambos os sistemas, que servem para compensar os partidos prejudicados na alocação de mandatos a nível do estado, garantindo dessa forma a igualdade de voto a nível nacional.
 
 Em Portugal estes obstáculos não existem, e todos os partidos presentes na A.R. em 2026 (excepto o JPP) já apresentaram propostas com círculos nacionais.
 
