@@ -29,7 +29,7 @@
     { "party": "CH", "votos": 1108944, "seatsReal": 48, "seatsProposta": 43, "color": "bg-indigo-950" },
     { "party": "IL", "votos": 312257, "seatsReal": 8, "seatsProposta": 12, "color": "bg-cyan-500" },
     { "party": "BE", "votos": 274032, "seatsReal": 5, "seatsProposta": 10, "color": "bg-red-600" },
-    { "party": "PCP", "votos": 202446, "seatsReal": 4, "seatsProposta": 7, "color": "bg-emerald-700" },
+    { "party": "CDU", "votos": 202446, "seatsReal": 4, "seatsProposta": 7, "color": "bg-emerald-700" },
     { "party": "L", "votos": 200087, "seatsReal": 4, "seatsProposta": 7, "color": "bg-lime-500" },
     { "party": "PAN", "votos": 118622, "seatsReal": 1, "seatsProposta": 4, "color": "bg-teal-500" },
     { "party": "ADN", "votos": 100066, "seatsReal": 0, "seatsProposta": 3, "color": "bg-amber-500" },
