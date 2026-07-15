@@ -70,7 +70,7 @@ Os detalhes de ambos os objectivos podem ser consultados [aqui](detalhes.html).
 ---
 
 > 📖 **Estudo Exaustivo (Tempo de leitura: ~55 minutos)**
-> Se pretendes aprofundar a discussão, analisar em detalhe o funcionamento do sistema eleitoral em países como Espanha, Reino Unido, Alemanha, Países Baixos e Dinamarca, e consultar toda a fundamentação técnica e histórica, podes ler o nosso [Documento Completo]([LINK_DO_TEU_GDOC_DA_PROPOSTA](https://docs.google.com/document/d/1NxZX4EXWl3y77qbcE1pW2d-RBM3WFRZ90aI6AAQplYw/edit?usp=sharing)).
+> Se pretendes aprofundar a discussão, analisar em detalhe o funcionamento do sistema eleitoral em países como Espanha, Reino Unido, Alemanha, Países Baixos e Dinamarca, e consultar toda a fundamentação técnica e histórica, podes ler o nosso [Documento Completo](https://docs.google.com/document/d/1NxZX4EXWl3y77qbcE1pW2d-RBM3WFRZ90aI6AAQplYw/edit?usp=sharing).
 
 ---
 
