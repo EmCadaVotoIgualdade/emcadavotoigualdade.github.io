@@ -64,11 +64,10 @@
             </a>
 
             <!-- Menu para Computador (Destaca o botão ativo de forma dinâmica) -->
-            <div class="hidden md:flex space-x-6 font-medium">
+            <div class="hidden md:flex space-x-8 font-medium">
                 <a href="index.html" class="{% if page.url == '/' or page.url == '/index.html' %}text-brand-accent font-bold{% else %}text-slate-600 hover:text-brand-accent{% endif %} transition">Início</a>
                 <a href="proposta.html" class="{% if page.url contains 'proposta' or page.url contains 'detalhes' %}text-brand-accent font-bold{% else %}text-slate-600 hover:text-brand-accent{% endif %} transition">A Proposta</a>
-                <a href="analise.html" class="{% if page.url contains 'analise' or page.url contains 'calculo' %}text-brand-accent font-bold{% else %}text-slate-600 hover:text-brand-accent{% endif %} transition">Análise Constitucional</a>
-                <a href="suica.html" class="{% if page.url contains 'suica' %}text-brand-accent font-bold{% else %}text-slate-600 hover:text-brand-accent{% endif %} transition">O Caso da Suíça</a>
+                <a href="analise.html" class="{% if page.url contains 'analise' or page.url contains 'suica' %}text-brand-accent font-bold{% else %}text-slate-600 hover:text-brand-accent{% endif %} transition">Análise Constitucional</a>
                 <a href="faq.html" class="{% if page.url contains 'faq' %}text-brand-accent font-bold{% else %}text-slate-600 hover:text-brand-accent{% endif %} transition">FAQ</a>
             </div>
 
@@ -87,8 +86,7 @@
             <a href="detalhes.html" class="block pl-4 text-sm {% if page.url contains 'detalhes' %}text-brand-accent font-bold{% else %}text-slate-500{% endif %}">└─ Detalhes da Reforma</a>
             <a href="analise.html" class="block {% if page.url contains 'analise' %}text-brand-accent font-bold{% else %}text-slate-600{% endif %}">Análise Constitucional</a>
             <a href="analise-resumida.html" class="block pl-4 text-sm {% if page.url contains 'analise-resumida' %}text-brand-accent font-bold{% else %}text-slate-500{% endif %}">└─ Versão Resumida</a>
-            <a href="calculo-indices.html" class="block pl-4 text-sm {% if page.url contains 'calculo' %}text-brand-accent font-bold{% else %}text-slate-500{% endif %}">└─ Cálculo de Índices</a>
-            <a href="suica.html" class="block {% if page.url contains 'suica' %}text-brand-accent font-bold{% else %}text-slate-600{% endif %}">O Caso da Suíça</a>
+            <a href="suica.html" class="block pl-4 text-sm {% if page.url contains 'suica' %}text-brand-accent font-bold{% else %}text-slate-500{% endif %}">└─ O Caso da Suíça</a>
             <a href="faq.html" class="block {% if page.url contains 'faq' %}text-brand-accent font-bold{% else %}text-slate-600{% endif %}">Perguntas Frequentes</a>
         </div>
     </header>
@@ -108,7 +106,7 @@
             <div class="space-y-4">
                 <h4 class="text-white font-bold text-lg">Em Cada Voto Igualdade</h4>
                 <p class="text-sm leading-relaxed text-slate-400">
-                    Um projeto cívico, independente e apartidário focado em devolver a justiça de representação e proporcionalidade ao sistema eleitoral português.
+                    Um projecto cívico, independente e apartidário focado em devolver a justiça de representação e a proporcionalidade ao sistema eleitoral português.
                 </p>
             </div>
             
@@ -120,20 +118,18 @@
                     <li><a href="detalhes.html" class="hover:text-white transition text-slate-500 pl-2">· Detalhes Técnicos</a></li>
                     <li><a href="analise.html" class="hover:text-white transition">Análise Constitucional</a></li>
                     <li><a href="analise-resumida.html" class="hover:text-white transition text-slate-500 pl-2">· Versão Resumida</a></li>
-                    <li><a href="calculo-indices.html" class="hover:text-white transition text-slate-500 pl-2">· Cálculo de Índices</a></li>
-                    <li><a href="suica.html" class="hover:text-white transition">O Caso da Suíça</a></li>
+                    <li><a href="suica.html" class="hover:text-white transition text-slate-500 pl-2">· O Caso da Suíça</a></li>
                     <li><a href="faq.html" class="hover:text-white transition">Perguntas Frequentes (FAQ)</a></li>
                 </ul>
             </div>
 
             <div class="space-y-4">
-                <h4 class="text-white font-bold text-sm uppercase tracking-wider">Contacto & Código</h4>
-                <ul class="space-y-2 text-sm">
-                    <li>Email: <a href="mailto:emcadavotoigualdade@gmail.com" class="text-slate-300 hover:text-white transition font-medium">emcadavotoigualdade@gmail.com</a></li>
-                    <li>Repositório: <a href="https://github.com/emcadavotoigualdade" target="_blank" class="text-slate-300 hover:text-white transition font-medium">GitHub</a></li>
-                </ul>
+                <h4 class="text-white font-bold text-sm uppercase tracking-wider">Contacto</h4>
+                <p class="text-sm">
+                    Email: <a href="mailto:emcadavotoigualdade@gmail.com" class="text-slate-300 hover:text-white transition font-medium">emcadavotoigualdade@gmail.com</a>
+                </p>
                 <p class="text-xs text-slate-500 pt-2 border-t border-slate-800">
-                    &copy; 2026 Em Cada Voto Igualdade. Desenvolvido com foco em transparência e rigor constitucional.
+                    &copy; 2026 Em Cada Voto Igualdade.
                 </p>
             </div>
         </div>
