@@ -78,6 +78,11 @@ No [documento completo](documento-completo.pdf) são ainda analisados os sistema
 
 ---
 
+> 📖 **Estudo Exaustivo (Tempo de leitura: ~55 minutos)**
+> Se pretendes aprofundar a discussão, analisar em detalhe o funcionamento do sistema eleitoral em países como Espanha, Reino Unido, Alemanha, Países Baixos e Dinamarca, e consultar toda a fundamentação técnica e histórica, podes ler o nosso [Documento Completo]([LINK_DO_TEU_GDOC_DA_PROPOSTA](https://docs.google.com/document/d/1NxZX4EXWl3y77qbcE1pW2d-RBM3WFRZ90aI6AAQplYw/edit?usp=sharing)).
+
+---
+
 <div class="text-xs text-slate-500 space-y-3 font-mono">
   <p class="font-bold text-slate-700">REFERÊNCIAS:</p>
   <p id="ref-1"><strong>[1]</strong> “Constituição da República Portuguesa anotada”, J.J. Gomes Canotilho, Vital Moreira, Coimbra Editora, 2007.</p>
