@@ -67,7 +67,12 @@ A possibilidade de escolher candidatos está associada a uma maior responsabiliz
 
 Os detalhes de ambos os objectivos podem ser consultados [aqui](detalhes.html).
 
-No [documento completo](documento-completo.pdf) são ainda analisados os sistemas de Espanha, Reino Unido, Alemanha, Países Baixos e Dinamarca, e algumas propostas existentes para Portugal. Abordamos também temas como a governabilidade, o tamanho das listas e o círculo da emigração.
+---
+
+> 📖 **Estudo Exaustivo (Tempo de leitura: ~55 minutos)**
+> Se pretendes aprofundar a discussão, analisar em detalhe o funcionamento do sistema eleitoral em países como Espanha, Reino Unido, Alemanha, Países Baixos e Dinamarca, e consultar toda a fundamentação técnica e histórica, podes ler o nosso [Documento Completo]([LINK_DO_TEU_GDOC_DA_PROPOSTA](https://docs.google.com/document/d/1NxZX4EXWl3y77qbcE1pW2d-RBM3WFRZ90aI6AAQplYw/edit?usp=sharing)).
+
+---
 
 <div class="my-8 space-y-4">
     <p class="font-medium text-slate-700">Visualização da distribuição dos mandatos pelos círculos para os resultados de 2022:</p>
@@ -75,11 +80,6 @@ No [documento completo](documento-completo.pdf) são ainda analisados os sistema
         <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/Ohk58KunGIA" title="Visualização da distribuição dos mandatos pelos círculos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 </div>
-
----
-
-> 📖 **Estudo Exaustivo (Tempo de leitura: ~55 minutos)**
-> Se pretendes aprofundar a discussão, analisar em detalhe o funcionamento do sistema eleitoral em países como Espanha, Reino Unido, Alemanha, Países Baixos e Dinamarca, e consultar toda a fundamentação técnica e histórica, podes ler o nosso [Documento Completo]([LINK_DO_TEU_GDOC_DA_PROPOSTA](https://docs.google.com/document/d/1NxZX4EXWl3y77qbcE1pW2d-RBM3WFRZ90aI6AAQplYw/edit?usp=sharing)).
 
 ---
 
