@@ -239,12 +239,12 @@ Na nossa Constituição parece claro que a proporcionalidade deve ter a primazia
 
 Acrescentamos ainda a interpretação de Gomes Canotilho em “Direito Constitucional e teoria da Constituição”:
 
-> “Ao consagrar o princípio da representação proporcional como princípio garantido contra a própria revisão e ao possibilitar, inclusivamente, a formação de governos de minoria, a Constituição portuguesa aponta para .. o pluralismo partidário sem artifícios redutores.”
+> Ao consagrar o princípio da representação proporcional como princípio garantido contra a própria revisão e ao possibilitar, inclusivamente, a formação de governos de minoria, a Constituição portuguesa aponta para .. o pluralismo partidário sem artifícios redutores.
 
 Mas será mesmo um equilíbrio? Será que as “democracias maioritárias”, onde há dois grandes partidos e governos de maioria absoluta artificial, sacrificam a igualdade dos eleitores e a justiça do resultado para conseguir um systema mais estável no médio prazo?
 
 Um dos maiores especialistas deste tema, Arend Lijphart, conclui que não em “Patterns of Democracy”, com base na sua análise de 36 países com eleições livres:
 
-> “...majoritarian democracies do not outperform the consensus democracies on effective government and effective policy-making - in fact, the consensus democracies have the better record - but the consensus democracies do clearly outperform the majoritarian democracies with regard to the quality of democracy and democratic representation as well as with regard to what I have called the kindness and gentleness of their public policy orientations.”
+> ...majoritarian democracies do not outperform the consensus democracies on effective government and effective policy-making - in fact, the consensus democracies have the better record - but the consensus democracies do clearly outperform the majoritarian democracies with regard to the quality of democracy and democratic representation as well as with regard to what I have called the kindness and gentleness of their public policy orientations.
 
 Escreveu ainda que para atingir esse nível é preciso que o sistema proporcional seja proporcional na prática, não apenas em nome, e aqui referiu explicitamente o caso espanhol, que desde então foi ultrapassado pelo português no que diz respeito à desproporcionalidade.
