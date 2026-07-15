@@ -249,8 +249,7 @@ Um dos maiores especialistas deste tema, Arend Lijphart, conclui que não em “
 
 Escreveu ainda que para atingir esse nível é preciso que o sistema proporcional seja proporcional na prática, não apenas em nome, e aqui referiu explicitamente o caso espanhol, que desde então foi ultrapassado pelo português no que diz respeito à desproporcionalidade.
 
-
 ---
 
 > ⚖️ **Análise Constitucional Alargada (Tempo de leitura: ~45 minutos)**
-> Para quem quiser analisar em detalhe os pareceres dos nossos constitucionalistas, os Acórdãos do Tribunal Constitucional e uma análise mais exaustiva dos sistemas eleitorais europeus, bem como detalhes sobre a decisão histórica do Tribunal Constitucional Checo, disponibilizamos a nossa [Análise Alargada]([LINK_DO_TEU_GDOC_CONSTITUCIONAL](https://docs.google.com/document/d/1op3_6bZjSWOpL56qhZfjm7AFjMW0CeQEskStcXXmM8Y/edit?usp=sharing)).
+> Para quem quiser analisar em detalhe os pareceres dos nossos constitucionalistas, os Acórdãos do Tribunal Constitucional e uma análise mais exaustiva dos sistemas eleitorais europeus, bem como detalhes sobre a decisão histórica do Tribunal Constitucional Checo, disponibilizamos a nossa [Análise Alargada](https://docs.google.com/document/d/1op3_6bZjSWOpL56qhZfjm7AFjMW0CeQEskStcXXmM8Y/edit?usp=sharing).
