@@ -1,58 +1,38 @@
-<!-- _includes/graph.html -->
-<div id="{{ include.id }}" class="interactive-chart bg-slate-50 border border-slate-200 rounded-2xl p-4 sm:p-6 my-10 w-full shadow-sm not-prose" data-chart-id="{{ include.id }}" data-chart-type="{{ include.type }}">
-    
-    <!-- 1. CONTROLES ESPECÍFICOS PARA O GRÁFICO "CUSTO-VOTOS" -->
-    {% if include.type == 'custo-votos' %}
-    <div class="flex flex-col sm:flex-row sm:justify-between gap-4 mb-6 pb-6 border-b border-slate-200">
-        <div>
-            <span class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">Ano Eleitoral</span>
-            <div class="inline-flex rounded-lg p-1 bg-slate-200/60 flex-wrap gap-1">
-                <button class="chart-year-btn px-3 py-1.5 text-xs font-semibold rounded-md transition text-slate-600 hover:text-brand-navy" data-year="2019">2019</button>
-                <button class="chart-year-btn px-3 py-1.5 text-xs font-semibold rounded-md transition bg-brand-navy text-white shadow-sm" data-year="2022">2022</button>
-                <button class="chart-year-btn px-3 py-1.5 text-xs font-semibold rounded-md transition text-slate-600 hover:text-brand-navy" data-year="2024">2024</button>
-                <button class="chart-year-btn px-3 py-1.5 text-xs font-semibold rounded-md transition text-slate-600 hover:text-brand-navy" data-year="2025">2025</button>
-            </div>
+<div id="{{ include.id }}" class="interactive-chart my-6 p-4 bg-white border border-slate-200 shadow-sm rounded-xl" data-chart-type="{{ include.type }}">
+    <!-- Cabeçalho do Gráfico com Botões de Ano -->
+    <div class="flex flex-wrap justify-between items-center gap-3 border-b border-slate-100 pb-3 mb-4">
+        <div class="flex items-center gap-1 bg-slate-100 p-1 rounded-lg">
+            <button class="chart-year-btn px-3 py-1.5 text-xs font-semibold rounded-md transition text-slate-600 hover:text-brand-navy" data-year="2019">2019</button>
+            <button class="chart-year-btn px-3 py-1.5 text-xs font-semibold rounded-md transition bg-brand-navy text-white shadow-sm" data-year="2022">2022</button>
+            <button class="chart-year-btn px-3 py-1.5 text-xs font-semibold rounded-md transition text-slate-600 hover:text-brand-navy" data-year="2024">2024</button>
+            <button class="chart-year-btn px-3 py-1.5 text-xs font-semibold rounded-md transition text-slate-600 hover:text-brand-navy" data-year="2025">2025</button>
         </div>
-        <div>
-            <span class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">Sistema Eleitoral</span>
-            <div class="inline-flex rounded-lg p-1 bg-slate-200/60">
-                <button class="chart-mode-btn px-4 py-1.5 text-xs font-semibold rounded-md transition bg-brand-navy text-white shadow-sm" data-mode="real">Actual</button>
-                <button class="chart-mode-btn px-4 py-1.5 text-xs font-semibold rounded-md transition text-slate-600 hover:text-brand-navy" data-mode="proposta">Proposto</button>
-            </div>
-        </div>
-    </div>
-    {% endif %}
-
-    <!-- 2. CONTROLES ESPECÍFICOS PARA OUTROS GRÁFICOS FUTUROS (EXEMPLO) -->
-    {% if include.type == 'votos-desperdicados' %}
-    <!-- No futuro, os teus botões personalizados para votos desperdiçados entram aqui! -->
-    {% endif %}
-
-    <!-- CONTENTOR CENTRAL (Onde o JavaScript injeta as barras dinamicamente) -->
-    <div class="chart-container space-y-4">
         
-        <!-- FALLBACK SE O USER DESATIVAR JAVASCRIPT (Excelente para SEO e Acessibilidade) -->
-        <noscript>
-            {% if include.type == 'custo-votos' %}
-            <div class="text-sm text-slate-600">
-                <p class="mb-4">Para interagir com este gráfico e comparar as eleições, ative o JavaScript do seu navegador. Entretanto, consulte os dados médios de 2022 (Sistema Real):</p>
-                <ul class="space-y-1 list-disc pl-5">
-                    <li><strong>PS:</strong> 19.202 votos por deputado</li>
-                    <li><strong>PSD:</strong> 20.761 votos por deputado</li>
-                    <li><strong>BE:</strong> 48.054 votos por deputado</li>
-                    <li><strong>Livre:</strong> 68.975 votos por deputado</li>
-                    <li><strong>PAN:</strong> 82.252 votos por deputado</li>
-                </ul>
-            </div>
-            {% endif %}
-        </noscript>
-        
-    </div>
-
-    <!-- NOTA DE RODAPÉ DO GRÁFICO -->
-    <p class="text-[11px] text-slate-400 mt-6 text-center italic">
         {% if include.type == 'custo-votos' %}
-        * Barras contornadas a tracejado escuro indicam que o partido não elegeu mandatos apesar de ter mais votos totais do que outros partidos eleitos.
+        <!-- Controlos específicos para o Custo de Votos -->
+        <div class="flex items-center gap-1 bg-slate-100 p-1 rounded-lg">
+            <button class="chart-mode-btn px-4 py-1.5 text-xs font-semibold rounded-md transition bg-brand-navy text-white shadow-sm" data-mode="real">Sistema Atual</button>
+            <button class="chart-mode-btn px-4 py-1.5 text-xs font-semibold rounded-md transition text-slate-600 hover:text-brand-navy" data-mode="proposta">Proposta</button>
+        </div>
+        {% else %}
+        <!-- Legenda visual para o Gráfico de Votos Desperdiçados -->
+        <div class="flex gap-4 text-xs font-medium px-1">
+            <div class="flex items-center gap-1.5"><span class="w-3 h-3 bg-blue-600 rounded-sm"></span> Atual (D'Hondt)</div>
+            <div class="flex items-center gap-1.5"><span class="w-3 h-3 bg-red-500 rounded-sm"></span> Proposta</div>
+        </div>
         {% endif %}
+    </div>
+
+    <!-- O Contentor Mágico onde o JS vai desenhar as barras reais -->
+    <div class="chart-container space-y-3">
+        <!-- O JavaScript substitui isto com elementos visuais -->
+        <p class="text-xs text-slate-400 text-center py-4">A carregar dados estatísticos...</p>
+    </div>
+
+    <!-- Nota de rodapé apenas se for o gráfico de custos -->
+    {% if include.type == 'custo-votos' %}
+    <p class="text-[11px] text-slate-400 mt-3 italic leading-relaxed">
+        * Barras contornadas a tracejado escuro indicam que o partido não elegeu mandatos apesar de ter mais votos totais do que outros partidos eleitos.
     </p>
+    {% endif %}
 </div>
