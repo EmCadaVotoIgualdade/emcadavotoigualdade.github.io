@@ -2,6 +2,9 @@
 layout: default
 title: A Proposta
 description: Uma proposta de reforma do sistema eleitoral português baseada no princípio constitucional da representação proporcional.
+custom_scripts:
+  - custo-votos
+  - votos-desperdicados
 ---
 
 # A Proposta de Reforma
@@ -34,7 +37,7 @@ Abaixo podes analisar de forma interactiva como o sistema actual inflaciona o cu
 
 No maior debate sobre este tema, o governo apresentou em 1998 uma proposta inspirada no sistema alemão, onde António Costa explicava[[2]](#ref-2) assim dois objectivos:
 
-1. *“a proporcionalidade é reforçada porque (...) com a criação do círculo nacional, devolve-se utilidade a todos os votos, de todos os partidos, em todo o território nacional”*;
+1. *“a proporcionalidade é reforçada porque (...) com a criação do círculo nacional, devolve-se utilidade a todos os votos, de todos os partidos, em todo o territory nacional”*;
 2. *“o eleitor ganha maior liberdade, deixa de estar limitado à escolha do partido, passando a poder escolher também o seu Deputado. O partido terá de se abrir à sociedade, terá de partilhar com os cidadãos a escolha dos seus representantes.”*
 
 O PSD, liderado por Marcelo Rebelo de Sousa, respondia numa proposta semelhante onde *“a proporcionalidade será sempre assegurada de acordo com o resultado obtido no apuramento do voto nacional”*[[2]](#ref-2).
@@ -53,11 +56,9 @@ Comparando com o sistema actual, em 2022, nenhum partido perde representação t
 
 Outra consequência de tratar de forma igual os votos em todo o país é que diminuem muito os votos "desperdiçados" que não contribuem para o partido eleger.
 
-**Votos "desperdiçados" por círculo eleitoral em 2022:**
+**Votos "desperdiçados" por círculo eleitoral:**
 
-<div class="my-6">
-    <img src="{{ '/assets/images/votos-desperdicados.png' | relative_url }}" alt="Votos desperdiçados por círculo eleitoral em 2022" class="w-full h-auto rounded-xl border border-slate-200 shadow-sm">
-</div>
+{% include graph.html id="votos-desperdicados" type="votos-desperdicados" %}
 
 ### 2º objectivo: ligação entre eleitos e eleitores
 
@@ -69,7 +70,7 @@ Os detalhes de ambos os objectivos podem ser consultados [aqui](detalhes.html).
 
 ---
 
-> 📖 **Estudo Exaustivo (Tempo de leitura: ~55 minutos)**
+> 📖 **Estudo Exaustivo (Tempo de leitura: ~55 minutes)**
 > Se pretendes aprofundar a discussão, analisar em detalhe o funcionamento do sistema eleitoral em países como Espanha, Reino Unido, Alemanha, Países Baixos e Dinamarca, e consultar toda a fundamentação técnica e histórica, podes ler o nosso [Documento Completo](https://docs.google.com/document/d/1NxZX4EXWl3y77qbcE1pW2d-RBM3WFRZ90aI6AAQplYw/edit?usp=sharing).
 
 ---
