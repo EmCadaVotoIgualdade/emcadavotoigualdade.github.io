@@ -1,34 +1,28 @@
-// assets/js/charts.js
 document.addEventListener("DOMContentLoaded", () => {
     const chartElements = document.querySelectorAll(".interactive-chart");
     if (chartElements.length === 0) return;
 
-    // Constrói o caminho correto de forma dinâmica baseado na raiz do site no GitHub Pages
     const baseUrl = window.siteBaseUrl || "";
-    const jsonPath = (baseUrl + "/assets/data/eleicoes.json").replace(/\/+/g, '/');
 
-    // 1. Carrega a base de dados em JSON
-    fetch(jsonPath)
-        .then(response => {
-            if (!response.ok) throw new Error("Não foi possível carregar os dados eleitorais.");
-            return response.json();
-        })
-        .then(data => {
-            // 2. Orquestrador: Deteta o tipo de cada gráfico e ativa a função correta
-            chartElements.forEach(chartEl => {
-                const chartType = chartEl.getAttribute("data-chart-type");
+    chartElements.forEach(chartEl => {
+        const chartType = chartEl.getAttribute("data-chart-type");
 
-                if (chartType === "custo-votos") {
-                    initCustoVotosChart(chartEl, data);
-                } 
-                else if (chartType === "votos-desperdicados") {
-                    // initVotosDesperdicadosChart(chartEl, data); <-- Pronto para o futuro!
-                }
-            });
-        })
-        .catch(error => {
-            console.error("Erro no motor de orquestração de gráficos:", error);
-        });
+        if (chartType === "custo-votos") {
+            const path = (baseUrl + "/assets/data/custo-votos.json").replace(/\/+/g, '/');
+            fetch(path)
+                .then(res => { if (!res.ok) throw new Error(); return res.json(); })
+                .then(data => initCustoVotosChart(chartEl, data))
+                .catch(() => console.error("Erro ao carregar custos de mandatos."));
+        } 
+        
+        else if (chartType === "votos-desperdicados") {
+            const path = (baseUrl + "/assets/data/votos-desperdicados.json").replace(/\/+/g, '/');
+            fetch(path)
+                .then(res => { if (!res.ok) throw new Error(); return res.json(); })
+                .then(data => initVotosDesperdicadosChart(chartEl, data))
+                .catch(() => console.error("Erro ao carregar votos desperdiçados."));
+        }
+    });
 });
 
 // =========================================================================
@@ -65,7 +59,6 @@ function initCustoVotosChart(chartElement, allData) {
             const val = seats > 0 ? Math.round(item.votos / seats) : item.votos;
             const percent = (val / maxValOfYear) * 100;
             const isZero = seats === 0;
-
             const isTracejado = isZero && activeMode === "real" && item.votos > minVotesOfElecting;
 
             const row = document.createElement("div");
@@ -117,6 +110,68 @@ function initCustoVotosChart(chartElement, allData) {
             activeMode = btn.getAttribute("data-mode");
             modeButtons.forEach(b => b.className = "chart-mode-btn px-4 py-1.5 text-xs font-semibold rounded-md transition text-slate-600 hover:text-brand-navy");
             btn.className = "chart-mode-btn px-4 py-1.5 text-xs font-semibold rounded-md transition bg-brand-navy text-white shadow-sm";
+            render();
+        });
+    });
+
+    render();
+}
+
+// =========================================================================
+// LÓGICA ESPECÍFICA: GRÁFICO DE VOTOS DESPERDIÇADOS POR CÍRCULO
+// =========================================================================
+function initVotosDesperdicadosChart(chartElement, database) {
+    const container = chartElement.querySelector(".chart-container");
+    if (!container) return;
+
+    let activeYear = "2022";
+
+    function render() {
+        const yearData = database[activeYear];
+        if (!yearData) return;
+
+        container.innerHTML = "";
+
+        yearData.forEach(item => {
+            const pctDhondt = (item.dhondt / item.valid) * 100;
+            const pctProposta = (item.proposta / item.valid) * 100;
+
+            const block = document.createElement("div");
+            block.className = "border-b border-slate-100/80 pb-3 last:border-0";
+
+            block.innerHTML = `
+                <div class="text-sm font-bold text-brand-navy mb-1.5">${item.district}</div>
+                <div class="space-y-1.5 pl-1">
+                    <!-- Sistema Atual (D'Hondt) - Azul -->
+                    <div class="flex items-center gap-2">
+                        <div class="w-full bg-slate-100/70 rounded h-4 overflow-hidden border border-slate-200/40 relative">
+                            <div class="h-full bg-blue-600 transition-all duration-500 ease-out shadow-inner" style="width: ${pctDhondt}%"></div>
+                        </div>
+                        <span class="text-xs font-mono font-bold text-slate-600 w-28 shrink-0 text-right">
+                            ${item.dhondt.toLocaleString('pt-PT')} <span class="text-[10px] font-normal text-slate-400">(${pctDhondt.toFixed(1)}%)</span>
+                        </span>
+                    </div>
+                    <!-- Proposta - Vermelho -->
+                    <div class="flex items-center gap-2">
+                        <div class="w-full bg-slate-100/70 rounded h-4 overflow-hidden border border-slate-200/40 relative">
+                            <div class="h-full bg-red-500 transition-all duration-500 ease-out shadow-inner" style="width: ${pctProposta}%"></div>
+                        </div>
+                        <span class="text-xs font-mono font-bold text-slate-600 w-28 shrink-0 text-right">
+                            ${item.proposta.toLocaleString('pt-PT')} <span class="text-[10px] font-normal text-slate-400">(${pctProposta.toFixed(1)}%)</span>
+                        </span>
+                    </div>
+                </div>
+            `;
+            container.appendChild(block);
+        });
+    }
+
+    const yearButtons = chartElement.querySelectorAll(".chart-year-btn");
+    yearButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            activeYear = btn.getAttribute("data-year");
+            yearButtons.forEach(b => b.className = "chart-year-btn px-3 py-1.5 text-xs font-semibold rounded-md transition text-slate-600 hover:text-brand-navy");
+            btn.className = "chart-year-btn px-3 py-1.5 text-xs font-semibold rounded-md transition bg-brand-navy text-white shadow-sm";
             render();
         });
     });
