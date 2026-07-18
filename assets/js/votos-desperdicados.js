@@ -26,7 +26,7 @@ function initVotosDesperdicadosChart(chartElement, database) {
     if (!container) return;
 
     let activeYear = "2022";
-    let activeDisplay = "absolute"; // Pode ser 'absolute' ou 'percent'
+    let activeDisplay = "absolute"; // 'absolute' ou 'percent'
 
     function render() {
         const yearData = database[activeYear];
@@ -35,23 +35,49 @@ function initVotosDesperdicadosChart(chartElement, database) {
             return;
         }
 
-        container.innerHTML = "";
-
+        // 1. Encontrar o valor máximo para criar a escala correta da barra
+        let maxVal = 0;
         yearData.forEach(item => {
             const pctDhondt = (item.dhondt / item.valid) * 100;
             const pctProposta = (item.proposta / item.valid) * 100;
 
+            if (activeDisplay === "absolute") {
+                const localMax = Math.max(item.dhondt, item.proposta);
+                if (localMax > maxVal) maxVal = localMax;
+            } else {
+                const localMax = Math.max(pctDhondt, pctProposta);
+                if (localMax > maxVal) maxVal = localMax;
+            }
+        });
+
+        container.innerHTML = "";
+
+        // 2. Desenhar as barras com base na escala dinâmica calculada
+        yearData.forEach(item => {
+            const pctDhondt = (item.dhondt / item.valid) * 100;
+            const pctProposta = (item.proposta / item.valid) * 100;
+
+            let widthDhondt = 0;
+            let widthProposta = 0;
+            let labelDhondt = "";
+            let labelProposta = "";
+
+            if (activeDisplay === "absolute") {
+                // Modo Votos Absolutos: a barra escala pelo número de votos totais
+                widthDhondt = maxVal > 0 ? (item.dhondt / maxVal) * 100 : 0;
+                widthProposta = maxVal > 0 ? (item.proposta / maxVal) * 100 : 0;
+                labelDhondt = `${item.dhondt.toLocaleString('pt-PT')} <span class="text-[10px] text-slate-400 font-normal">votos</span>`;
+                labelProposta = `${item.proposta.toLocaleString('pt-PT')} <span class="text-[10px] text-slate-400 font-normal">votos</span>`;
+            } else {
+                // Modo Percentagem: a barra escala pela taxa de desperdício local
+                widthDhondt = maxVal > 0 ? (pctDhondt / maxVal) * 100 : 0;
+                widthProposta = maxVal > 0 ? (pctProposta / maxVal) * 100 : 0;
+                labelDhondt = `${pctDhondt.toFixed(1)}%`;
+                labelProposta = `${pctProposta.toFixed(1)}%`;
+            }
+
             const block = document.createElement("div");
             block.className = "border-b border-slate-100 pb-3 last:border-0 block w-full";
-
-            // Decide o formato do texto de acordo com o botão ativo
-            const labelDhondt = activeDisplay === "absolute" 
-                ? `${item.dhondt.toLocaleString('pt-PT')} <span class="text-[10px] text-slate-400 font-normal">votos</span>`
-                : `${pctDhondt.toFixed(1)}%`;
-
-            const labelProposta = activeDisplay === "absolute" 
-                ? `${item.proposta.toLocaleString('pt-PT')} <span class="text-[10px] text-slate-400 font-normal">votos</span>`
-                : `${pctProposta.toFixed(1)}%`;
 
             block.innerHTML = `
                 <div class="text-sm font-bold text-brand-navy mb-1.5 block w-full">${item.district}</div>
@@ -59,7 +85,7 @@ function initVotosDesperdicadosChart(chartElement, database) {
                     <!-- Linha D'Hondt -->
                     <div class="flex items-center gap-3 w-full">
                         <div class="flex-grow bg-slate-100 rounded h-4 overflow-hidden border border-slate-200/50 relative">
-                            <div class="h-full bg-blue-600 transition-all duration-500 ease-out shadow-inner" style="width: ${pctDhondt}%"></div>
+                            <div class="h-full bg-blue-600 transition-all duration-500 ease-out shadow-inner" style="width: ${widthDhondt}%"></div>
                         </div>
                         <span class="text-xs font-mono font-bold text-slate-600 w-24 shrink-0 text-right inline-block">
                             ${labelDhondt}
@@ -68,7 +94,7 @@ function initVotosDesperdicadosChart(chartElement, database) {
                     <!-- Linha Proposta -->
                     <div class="flex items-center gap-3 w-full">
                         <div class="flex-grow bg-slate-100 rounded h-4 overflow-hidden border border-slate-200/50 relative">
-                            <div class="h-full bg-red-500 transition-all duration-500 ease-out shadow-inner" style="width: ${pctProposta}%"></div>
+                            <div class="h-full bg-red-500 transition-all duration-500 ease-out shadow-inner" style="width: ${widthProposta}%"></div>
                         </div>
                         <span class="text-xs font-mono font-bold text-slate-600 w-24 shrink-0 text-right inline-block">
                             ${labelProposta}
