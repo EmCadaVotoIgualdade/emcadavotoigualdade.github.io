@@ -1,7 +1,7 @@
 <div id="{{ include.id }}" class="interactive-chart not-prose my-6 p-5 bg-white border border-slate-200 shadow-sm rounded-xl" data-chart-type="{{ include.type }}">
     <!-- Cabeçalho do Gráfico -->
     <div class="flex flex-wrap justify-between items-center gap-3 border-b border-slate-100 pb-3 mb-4">
-        <!-- Seleção de Anos (Comum a ambos) -->
+        <!-- Seleção de Anos -->
         <div class="flex items-center gap-1 bg-slate-100 p-1 rounded-lg">
             <button class="chart-year-btn px-3 py-1.5 text-xs font-semibold rounded-md transition text-slate-600 hover:text-brand-navy" data-year="2019">2019</button>
             <button class="chart-year-btn px-3 py-1.5 text-xs font-semibold rounded-md transition bg-brand-navy text-white shadow-sm" data-year="2022">2022</button>
@@ -26,8 +26,8 @@
     <!-- Legendas Visuais para Votos Desperdiçados -->
     {% if include.type == 'votos-desperdicados' %}
     <div class="flex gap-4 text-xs font-medium px-1 mb-4 text-slate-600">
-        <div class="flex items-center gap-1.5"><span class="w-3 h-3 bg-blue-600 rounded-sm"></span> Atual (D'Hondt)</div>
-        <div class="flex items-center gap-1.5"><span class="w-3 h-3 bg-red-500 rounded-sm"></span> Proposta</div>
+        <div class="flex items-center gap-1.5"><span class="w-3 h-3 bg-blue-600 rounded-sm"></span> Sistema atual</div>
+        <div class="flex items-center gap-1.5"><span class="w-3 h-3 bg-red-500 rounded-sm"></span> Sistema proposto</div>
     </div>
     {% endif %}
 
@@ -40,6 +40,12 @@
     {% if include.type == 'custo-votos' %}
     <p class="text-[11px] text-slate-400 mt-3 italic leading-relaxed block">
         * Barras contornadas a tracejado escuro indicam que o partido não elegeu mandatos apesar de ter mais votos totais do que outros partidos eleitos.
+    </p>
+    {% endif %}
+    
+    {% if include.type == 'votos-desperdicados' %}
+    <p class="text-[11px] text-slate-400 mt-3 italic leading-relaxed block">
+        * Votos "desperdiçados" são os que foram contabilizados para partidos que não elegeram no respetivo círculo.
     </p>
     {% endif %}
 </div>
