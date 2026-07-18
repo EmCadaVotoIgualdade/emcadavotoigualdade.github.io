@@ -8,6 +8,7 @@ description: Um projecto cívico, independente e apartidário focado em garantir
 
 Propomos um sistema inspirado no modelo dos países nórdicos, onde **os mandatos de cada partido dependem da votação nacional**, sendo depois todos alocados aos círculos actuais, dispensando uma lista nacional centralizada que iria retirar mandatos aos círculos locais.
 Isto garante que os **votos são iguais em todo o país**, mas mantém os círculos existentes para que não percam representação.
+Descobre os detalhes abaixo!
 
 ---
 
