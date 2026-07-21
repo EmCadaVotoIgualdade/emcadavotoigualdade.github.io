@@ -38,7 +38,7 @@ A pergunta chave. Na Nova Zelândia os eleitores manifestaram a sua insatisfaç�
 
 Em Portugal seria preciso uma pressão semelhante da sociedade civil.
 
-Noutros sítios como na Suíça ou na República Checa a mudança aconteceu depois de haverem queixas aos tribunais por parte de eleitores e deputados respectivamente. A Constituição Portuguesa é mais exigente que estas quanto à proporcionalidade, e sobre isso há aqui uma [análise constitucional]({{ '/analise.html' | relative_url }}).
+Noutros sítios como na Suíça ou na República Checa a mudança aconteceu depois de haver queixas aos tribunais por parte de eleitores e deputados respectivamente. A Constituição Portuguesa é mais exigente que estas quanto à proporcionalidade, e sobre isso há aqui uma [análise constitucional]({{ '/analise.html' | relative_url }}).
 
 ## Mas o nosso sistema é assim tão desproporcional?
 
