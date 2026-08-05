@@ -4,10 +4,18 @@ title: Em Cada Voto Igualdade
 description: Um projecto cívico, independente e apartidário focado em garantir a igualdade de voto em todo o país.
 ---
 
+## O problema
+
+O sistema eleitoral português não garante a igualdade de voto consagrada na Constituição. Um eleitor em Lisboa ou no Porto tem uma capacidade muito maior de eleger representantes do que um eleitor num círculo menor, onde apenas os maiores partidos conseguem eleger deputados.
+
+Embora a nossa Constituição exija uma elevada igualdade eleitoral, o sistema português é dos mais desiguais entre os modelos proporcionais europeus.
+
+
+
 ## A Nossa Proposta de Reforma
 
-Propomos um sistema inspirado no modelo dos países nórdicos, onde **os mandatos de cada partido dependem da votação nacional**, sendo depois todos alocados aos círculos actuais, dispensando uma lista nacional centralizada que iria retirar mandatos aos círculos locais.
-Isto garante que os **votos são iguais em todo o país**, mas mantém os círculos existentes para que não percam representação.
+Propomos um sistema inspirado no modelo dos países nórdicos, onde **os mandatos de cada partido dependem da votação nacional**, sendo depois todos alocados aos círculos actuais, dispensando uma lista nacional centralizada.
+Isto garante que os **votos valem o mesmo em todo o país**, mas mantém a representação dos círculos existentes.
 Descobre os detalhes abaixo!
 
 ---
