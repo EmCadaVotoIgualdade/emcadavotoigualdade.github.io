@@ -6,11 +6,7 @@ description: Perguntas frequentes sobre o sistema eleitoral, a proporcionalidade
 
 ## Um sistema mais proporcional não vai gerar instabilidade?
 
-Não necessariamente. Pode haver mais dificuldade em formar governos, mas há menos polarização, e é reduzido o potencial instabilizador dos sistemas maioritários quando há troca de partido no governo.
-
-No clássico "Patterns of Democracy" de Arend Lijphart são analisados todos os 36 países considerados democracias livres desde pelo menos 1989: A conclusão é que, no global, os sistemas não-proporcionais, como o exemplo clássico do Reino Unido, não são mais estáveis.
-
-Por outro lado os países com sistemas verdadeiramente proporcionais tendem a gerar uma "democracia consensual" que origina melhores políticas públicas, e que é o modelo mais frequente na Europa.
+No clássico "Patterns of Democracy" de Arend Lijphart são analisados todos os 36 países considerados democracias livres desde pelo menos 1989: A conclusão é que, no global, os sistemas não-proporcionais, como o exemplo clássico do Reino Unido, não são mais estáveis. Por outro lado os países com sistemas verdadeiramente proporcionais tendem a gerar uma "democracia consensual" que origina melhores políticas públicas.
 
 ## Não basta mudar o método de Hondt?
 
@@ -38,7 +34,7 @@ A pergunta chave. Na Nova Zelândia os eleitores manifestaram a sua insatisfaç�
 
 Em Portugal seria preciso uma pressão semelhante da sociedade civil.
 
-Noutros sítios como na Suíça ou na República Checa a mudança aconteceu depois de haverem queixas aos tribunais por parte de eleitores e deputados respectivamente. A Constituição Portuguesa é mais exigente que estas quanto à proporcionalidade, e sobre isso há aqui uma [análise constitucional]({{ '/analise.html' | relative_url }}).
+Noutros sítios como na Suíça ou na República Checa a mudança aconteceu depois de haver queixas aos tribunais por parte de eleitores e deputados respectivamente. A Constituição Portuguesa é mais exigente que estas quanto à proporcionalidade, e sobre isso há aqui uma [análise constitucional]({{ '/analise.html' | relative_url }}).
 
 ## Mas o nosso sistema é assim tão desproporcional?
 
