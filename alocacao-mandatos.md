@@ -63,9 +63,9 @@ Aqui não vão ser apresentados os detalhes técnicos de cada sistema, apenas os
 | Métrica Analisada | Sistema Atual | Método Dinamarquês | Método de Zurique | Objetivo |
 | :--- | :---: | :---: | :---: | :---: |
 | **Proporcionalidade (Gallagher)** | 12,0 | 10,1 | **9,7** | Quanto menor, melhor |
-| **Pluralidade Territorial** | 64,78 | **86,15** | 82,52 | Quanto maior, melhor |
-| **Inversões Locais** | **0,00** | 0,76 | 1,89 | Quanto menor, melhor |
-| **Inversões Globais** | 71,54 | 60,12 | **53,44** | Quanto menor, melhor |
+| **Pluralidade Territorial** | 64,8 | **86,2** | 82,5 | Quanto maior, melhor |
+| **Inversões Locais** | **0,0** | 0,8 | 1,9 | Quanto menor, melhor |
+| **Inversões Globais** | 71,5 | 60,1 | **53,4** | Quanto menor, melhor |
 
 ---
 
@@ -80,19 +80,19 @@ Aqui o método de Zurique ganha claramente, com uma média de 9.7, contra 10.1 d
 #### 2. Pluralidade da representação territorial
 
 Aqui somamos o número de partidos representados em cada distrito.
-O método dinamarquês foi criado em parte para responder a esta métrica, e com o ajuste que fizemos para o adaptar aos círculos portugueses torna-se imbatível, com uma média de 86.15, contra 82.52 do método de Zurique e apenas 64.78 do sistema actual.
+O método dinamarquês foi criado em parte para responder a esta métrica, e com o ajuste que fizemos para o adaptar aos círculos portugueses torna-se imbatível, com uma média de 86.2, contra 82.5 do método de Zurique e apenas 64.8 do sistema actual.
 
 
 #### 3. Inversões de pares mandatos/votos no mesmo círculo
 
 Estas inversões acontecem quando num círculo um partido tem mais votos que outro mas menos mandatos.
 
-No sistema actual, e em todos onde os círculos estão isolados, nunca há inversões dentro do mesmo círculo. No método de Zurique há em média 1.89 inversões e no dinamarquês 0.76, em cada eleição. Nas eleições reais da Dinamarca, Suécia, Noruega e Zurique estas inversões acontecem com regularidade. Este efeito é visto como o custo a pagar para garantir a igualdade de voto a nível nacional e por consequência evitar as mais graves inversões de mandatos/votos a nível nacional.
+No sistema actual, e em todos onde os círculos estão isolados, nunca há inversões dentro do mesmo círculo. No método de Zurique há em média 1.9 inversões e no dinamarquês 0.8, em cada eleição. Nas eleições reais da Dinamarca, Suécia, Noruega e Zurique estas inversões acontecem com regularidade. Este efeito é visto como o custo a pagar para garantir a igualdade de voto a nível nacional e por consequência evitar as mais graves inversões de mandatos/votos a nível nacional.
 
 
 #### 4. Inversões de pares mandatos/votos entre os vários círculos
 
-Quando alargamos a análise para inversões também entre círculos diferentes, entre o mesmo partido ou partidos diferentes, obtemos menos inversões no método de Zurique, com 53.44 pares em média, contra 60.12 do método dinamarquês e 71.54 do sistema actual.
+Quando alargamos a análise para inversões também entre círculos diferentes, entre o mesmo partido ou partidos diferentes, obtemos menos inversões no método de Zurique, com 53.4 pares em média, contra 60.1 do método dinamarquês e 71.5 do sistema actual.
 
 ---
 
