@@ -72,7 +72,7 @@
             <!-- Menu para Computador -->
             <div class="hidden md:flex space-x-6 font-medium">
                 <a href="index.html" class="{% if page.url == '/' or page.url == '/index.html' %}text-brand-accent font-bold{% else %}text-slate-600 hover:text-brand-accent{% endif %} transition">Início</a>
-                <a href="proposta.html" class="{% if page.url contains 'proposta' or page.url contains 'detalhes' or page.url contains 'alemao' %}text-brand-accent font-bold{% else %}text-slate-600 hover:text-brand-accent{% endif %} transition">A Proposta</a>
+                <a href="proposta.html" class="{% if page.url contains 'proposta' or page.url contains 'detalhes' or page.url contains 'alocacao' or page.url contains 'alemao' %}text-brand-accent font-bold{% else %}text-slate-600 hover:text-brand-accent{% endif %} transition">A Proposta</a>
                 <a href="analise.html" class="{% if page.url contains 'analise' or page.url contains 'suica' %}text-brand-accent font-bold{% else %}text-slate-600 hover:text-brand-accent{% endif %} transition">Análise Constitucional</a>
                 <a href="faq.html" class="{% if page.url contains 'faq' %}text-brand-accent font-bold{% else %}text-slate-600 hover:text-brand-accent{% endif %} transition">FAQ</a>
                 <a href="proximos-passos.html" class="{% if page.url contains 'proximos-passos' %}text-brand-accent font-bold{% else %}text-slate-600 hover:text-brand-accent{% endif %} transition">Próximos Passos</a>
@@ -91,6 +91,7 @@
             <a href="index.html" class="block {% if page.url == '/' or page.url == '/index.html' %}text-brand-accent font-bold{% else %}text-slate-600{% endif %}">Início</a>
             <a href="proposta.html" class="block {% if page.url contains 'proposta' %}text-brand-accent font-bold{% else %}text-slate-600{% endif %}">A Proposta</a>
             <a href="detalhes.html" class="block pl-4 text-sm {% if page.url contains 'detalhes' %}text-brand-accent font-bold{% else %}text-slate-500{% endif %}">└─ Detalhes da Reforma</a>
+            <a href="alocacao-mandatos.html" class="block pl-4 text-sm {% if page.url contains 'alocacao' %}text-brand-accent font-bold{% else %}text-slate-500{% endif %}">└─ Modelos Alternativos</a>
             <a href="problemas-alemao.html" class="block pl-4 text-sm {% if page.url contains 'alemao' %}text-brand-accent font-bold{% else %}text-slate-500{% endif %}">└─ O Sistema Alemão</a>
             <a href="analise.html" class="block {% if page.url contains 'analise' %}text-brand-accent font-bold{% else %}text-slate-600{% endif %}">Análise Constitucional</a>
             <a href="analise-resumida.html" class="block pl-4 text-sm {% if page.url contains 'analise-resumida' %}text-brand-accent font-bold{% else %}text-slate-500{% endif %}">└─ Versão Resumida</a>
@@ -117,7 +118,7 @@
             <div class="space-y-4">
                 <h4 class="text-white font-bold text-lg">Em Cada Voto Igualdade</h4>
                 <p class="text-sm leading-relaxed text-slate-400">
-                    Um projecto cívico, independente e apartidário focado em garantir a igualdade de voto em todo o país.
+                    Um projecto cívico, independente e apartidário dedicado a garantir a igualdade de voto em todo o país.
                 </p>
             </div>
             
@@ -131,6 +132,7 @@
                         <a href="proposta.html" class="hover:text-white transition">A Proposta de Reforma</a>
                         <ul class="pl-4 space-y-1 mt-1 text-slate-500 text-xs">
                             <li><a href="detalhes.html" class="hover:text-white transition">· Detalhes Técnicos</a></li>
+                            <li><a href="alocacao-mandatos.html" class="hover:text-white transition">· Modelos Alternativos</a></li>
                             <li><a href="problemas-alemao.html" class="hover:text-white transition">· O Sistema Alemão</a></li>
                         </ul>
                     </li>

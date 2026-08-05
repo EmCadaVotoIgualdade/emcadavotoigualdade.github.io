@@ -16,7 +16,7 @@ Descobre os detalhes abaixo!
 
 Convidamos-te a explorar os dados, os estudos e os fundamentos técnicos que sustentam esta proposta:
 
-* 📊 **[A Proposta para Portugal]({{ '/proposta.html' | relative_url }}):** Conhece o enquadramento histórico, a proposta concreta e as consequências na igualdade de voto. (Podes também analisar o **[Anexo de Detalhes Técnicos]({{ '/detalhes.html' | relative_url }})** ou perceber os **[Problemas do Sistema Alemão]({{ '/problemas-alemao.html' | relative_url }})**).
+* 📊 **[A Proposta para Portugal]({{ '/proposta.html' | relative_url }}):** Conhece o enquadramento histórico, a proposta concreta e as consequências na igualdade de voto. (Podes também analisar o **[Anexo de Detalhes Técnicos]({{ '/detalhes.html' | relative_url }})**, explorar **[Modelos Alternativos]({{ '/alocacao-mandatos.html' | relative_url }})** para alocação de mandatos, ou perceber os **[Problemas do Sistema Alemão]({{ '/problemas-alemao.html' | relative_url }})**).
 * 🔍 **[Análise Constitucional]({{ '/analise.html' | relative_url }}):** Opinião de Constitucionalistas, Acórdãos do TC, comparativo com países europeus e decisões do tribunal suíço e checo. (Podes também ler a **[Versão Resumida]({{ '/analise-resumida.html' | relative_url }})** de 3 minutos ou conhecer em detalhe **[O Caso da Suíça]({{ '/suica.html' | relative_url }})**).
 * ❓ **[Perguntas Frequentes (FAQ)]({{ '/faq.html' | relative_url }}):** Respostas às principais dúvidas sobre modelos alternativos ou consequências como a estabilidade governativa.
 * 🚀 **[Próximos Passos]({{ '/proximos-passos.html' | relative_url }}):** Simulações dos métodos de distribuição de mandatos (dinamarquês, suíço, etc) e mapas de representação interactivos.
