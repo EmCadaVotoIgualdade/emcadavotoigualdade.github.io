@@ -15,7 +15,7 @@ description: Como o Tribunal Constitucional Checo levou à reforma do sistema el
 Na República Checa há 200 deputados divididos em 14 províncias, que elegem entre 5 e 26 mandatos (média de 14,3, que compara com 10,5 em Portugal).
 
 Sobre o sistema eleitoral, a [Constituição checa](https://www.constituteproject.org/constitution/Czech_Republic_2013) estabelece no artigo 18.º, n.º 1:
-> «Elections to the Assembly of Deputies shall be held by secret ballot on the basis of a universal, equal, and direct right to vote, according to the principle of proportional representation.»
+> Elections to the Assembly of Deputies shall be held by secret ballot on the basis of a universal, equal, and direct right to vote, according to the principle of proportional representation.
 
 Tal como na Suíça, trata-se de uma garantia genérica de proporcionalidade, sem indicação sobre a dimensão dos círculos eleitorais, o que deixou em aberto a questão de saber se a desigualdade entre círculos de 5 e de 26 mandatos seria, por si só, compatível com esse princípio.
 
@@ -46,21 +46,21 @@ Com base nestes argumentos, os deputados defendiam que o sistema podia manter os
 #### 3.2. A resposta do governo
 O governo defendia a rejeição do pedido, invocando dois argumentos centrais:
 
-> «Embora o atual sistema eleitoral não seja perfeito, ele tem funcionado (em conformidade com a ordem constitucional) há 17 anos, portanto não se pode concluir que seja inconstitucional.»
+«Embora o atual sistema eleitoral não seja perfeito, ele tem funcionado (em conformidade com a ordem constitucional) há 17 anos, portanto não se pode concluir que seja inconstitucional.»
 
-> «A presença de nove partidos políticos na Câmara dos Deputados é prova de que a livre concorrência dos partidos políticos não é prejudicada.»
+«A presença de nove partidos políticos na Câmara dos Deputados é prova de que a livre concorrência dos partidos políticos não é prejudicada.»
 *(Pode ser relevante notar que, no Reino Unido, estão presentes 10 partidos na câmara baixa, mesmo com um sistema maioritário.)*
 
 #### 3.3. A opinião do Tribunal Constitucional
 O Tribunal Constitucional checo rejeitou a posição do governo:
 
-> «O princípio da representação proporcional deve ser definido como um conjunto de elementos pelos quais o resultado eleitoral é determinado e garantido, não apenas no distrito eleitoral (o que pode tornar-se uma caricatura da representação proporcional na prática), mas através da conversão dos votos recebidos pelos partidos políticos em mandatos para preencher os lugares disponíveis no órgão eleito.»
+«O princípio da representação proporcional deve ser definido como um conjunto de elementos pelos quais o resultado eleitoral é determinado e garantido, não apenas no distrito eleitoral (o que pode tornar-se uma caricatura da representação proporcional na prática), mas através da conversão dos votos recebidos pelos partidos políticos em mandatos para preencher os lugares disponíveis no órgão eleito.»
 
-> «Do ponto de vista da igualdade do direito de voto e da igualdade de oportunidades das partes candidatas, sob as condições de representação proporcional, é necessário que cada partido político eleitoral obtenha uma proporção correspondente de mandatos na Câmara dos Deputados de acordo com a sua proporção no número total de votos válidos expressos.»
+«Do ponto de vista da igualdade do direito de voto e da igualdade de oportunidades das partes candidatas, sob as condições de representação proporcional, é necessário que cada partido político eleitoral obtenha uma proporção correspondente de mandatos na Câmara dos Deputados **de acordo com a sua proporção no número total de votos válidos expressos**.»
 
-> «O problema de constitucionalidade não reside nas discrepâncias no tamanho das circunscrições eleitorais, mas sim na forma como estão incorporadas no sistema eleitoral geral.»
+«O problema de constitucionalidade não reside nas discrepâncias no tamanho das circunscrições eleitorais, **mas sim na forma como estão incorporadas no sistema eleitoral** geral.»
 
-> «Não se trata apenas do próprio resultado eleitoral, pois a representação proporcional, na forma de distribuição de mandatos de acordo com o número de votos que um partido político recebe nacionalmente, pode ser alcançada na prática, por vezes aleatoriamente, mesmo em eleições com um sistema de voto maioritário. O princípio constitucional estabelecido no artigo 18.º, n.º 1, exige que a proporção entre os votos recebidos e os mandatos obtidos não seja obra do acaso, mas sim das regras estabelecidas na lei eleitoral.»
+«Não se trata apenas do próprio resultado eleitoral, pois a representação proporcional, na forma de distribuição de mandatos de acordo com o número de votos que um partido político recebe nacionalmente, pode ser alcançada na prática, por vezes aleatoriamente, mesmo em eleições com um sistema de voto maioritário. O princípio constitucional estabelecido no artigo 18.º, n.º 1, exige que a proporção entre os votos recebidos e os mandatos obtidos **não seja obra do acaso, mas sim das regras estabelecidas na lei eleitoral**.»
 
 
 ---
@@ -68,5 +68,4 @@ O Tribunal Constitucional checo rejeitou a posição do governo:
 ### 4. Síntese conclusiva
 O Tribunal Constitucional checo definiu que a proporcionalidade de um sistema eleitoral não se mede círculo a círculo, mas sim pelo resultado no conjunto do território eleitoral. O tribunal checo não exigiu a alteração dos círculos eleitorais, referindo que a sua integração no sistema eleitoral geral é que precisava de ser revista. Na eleição seguinte passou a existir um mecanismo de compensação a nível nacional.
 
-Esta compreensão da proporcionalidade aproxima-se da interpretação defendida por vários juizes do Tribunal Constitucional português, e em particular por Vítor Nunes de Almeida no [Acórdão n.º 199/00](https://www.tribunalconstitucional.pt/tc/acordaos/20000199.html).
-> «É no confronto entre a repartição de mandatos e os votos obtidos por cada formação política concorrente, no âmbito do colégio eleitoral, que se devem apurar os desvios à proporcionalidade - não círculo por círculo»
+Esta compreensão da proporcionalidade aproxima-se da interpretação defendida por vários juizes do **[Tribunal Constitucional português]({{ '/tc.html' | relative_url }})** *[resumidas no link anterior]*

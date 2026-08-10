@@ -14,7 +14,7 @@ Sobre o sistema eleitoral, a nossa Constituição sempre disse:
 > **A conversão dos votos em mandatos far-se-á de harmonia com o princípio da representação proporcional.**
 
 
-Este princípio basilar da nossa democracia foi detalhado de forma lapidar pelos constitucionalistas J. J. Gomes Canotilho e Vital Moreira na sua *Constituição Anotada*[[1]](#ref-1):
+Este princípio basilar da nossa democracia foi detalhado pelos constitucionalistas J. J. Gomes Canotilho e Vital Moreira na sua *Constituição Anotada*[[1]](#ref-1):
 
 > *À face da Constituição, e de acordo com o princípio democrático, o sistema eleitoral é um meio de fazer da Assembleia da República um espelho político do país e não um meio de fabricar maiorias lá onde elas não existem.*
 
