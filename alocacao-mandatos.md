@@ -37,11 +37,11 @@ A distribuição destes mandatos pelos círculos é feita de modo a garantir que
 
 ## Igualdade de voto e mandatos nacionais
 
-Para que um sistema com mandatos de compensação garanta a igualdade de voto, é preciso que esses mandatos sejam em número suficiente. Nos Açores, por exemplo, o pequeno número de mandatos de compensação nunca permitiu atingir uma proporcionalidade perfeita. Já na Dinamarca, onde os mandatos de compensação são mais, esse problema aconteceu na eleição de 2022, pela primeira vez em 70 anos, e deu lugar a várias propostas para evitar o problema em eleições futuras.
+Para que um sistema com mandatos de compensação garanta a igualdade de voto, é preciso que esses mandatos sejam em número suficiente. Nos Açores, por exemplo, o pequeno número de mandatos de compensação nunca permitiu atingir uma proporcionalidade perfeita. Já na Dinamarca, onde há mais mandatos de compensação, esse problema aconteceu na eleição de 2022, pela primeira vez em 70 anos, e deu lugar a várias propostas para evitar o problema em eleições futuras.
 
 A excepção ao ponto anterior são sistemas como o da Alemanha e da Suécia, onde os mandatos dos círculos locais podem ser revogados caso o respectivo partido não tenha cobertura para eles a nível nacional.
 
-Assim a forma mais simples de garantir a igualdade de voto, é calcular os mandatos nacionais de cada partido com base na sua votação nacional, deixando a sua distribuição pelos círculos para uma fase posterior, como no sistema de Zurique.
+Assim a forma mais simples de garantir a igualdade de voto é calcular os mandatos nacionais de cada partido com base na sua votação nacional, deixando a sua distribuição pelos círculos para uma fase posterior, como no sistema de Zurique.
 
 
 ### A distribuição dos mandatos nacionais pelos círculos
@@ -54,7 +54,7 @@ Aqui não vão ser apresentados os detalhes técnicos de cada sistema, apenas os
 Para cada eleição foram simuladas 5 mil variantes, onde cada partido tem a sua votação global a variar até $\pm 8\%$ de forma aleatória, bem como uma variação local em cada círculo até $\pm 2\%$, de forma independente.
 
 Este procedimento gerou 25 mil resultados eleitorais possíveis, que permitem uma análise mais robusta das consequências de cada método do que analisando apenas os cinco resultados históricos.
-*(os detalhes técnicos de cada sistema, os resultados detalhados das simulações, bem como o código para as reproduzir será apresentado neste site no futuro, e até lá poderá ser solicitado em emcadavotoigualdade@gmail.com)*
+*(os detalhes técnicos de cada sistema, os resultados detalhados das simulações, bem como o código para as reproduzir serão apresentado neste site no futuro, e até lá poderá ser solicitado em emcadavotoigualdade@gmail.com)*
 
 ---
 
@@ -98,4 +98,4 @@ Quando alargamos a análise para inversões também entre círculos diferentes, 
 
 ## Conclusão
 
-A adopção de um sistema como o de Zurique, ou de uma variante do sistema dinamarquês permitem garantir a igualdade de voto a nível nacional; manter o número de mandatos em todos os círculos, mas aumentar a pluralidade de representação, particularmente importante nos círculos mais pequenos; e tornar a distribuição dos mandatos pelos círculos mais proporcional em relação às percentagens de votos.
+A adopção de um sistema como o de Zurique, ou de uma variante do sistema dinamarquês permite garantir a igualdade de voto a nível nacional; manter o número de mandatos em todos os círculos, mas aumentar a pluralidade de representação, particularmente importante nos círculos mais pequenos; e tornar a distribuição dos mandatos pelos círculos mais proporcional em relação às percentagens de votos.

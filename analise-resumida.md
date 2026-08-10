@@ -17,17 +17,17 @@ Neste documento apresenta-se a interpretação de constitucionalistas, e acórd�
 
 ## A interpretação de constitucionalistas sobre a representação proporcional
 
-**"Constituição da República Portuguesa anotada", Gomes Canotilho, Vital Moreira**  
-“À face da Constituição da República Portuguesa, portanto, e de acordo com o princípio democrático, o sistema eleitoral é um meio de fazer da AR um espelho político do país e não um meio de fabricar maiorias lá onde elas não existem"
+### "Constituição da República Portuguesa anotada", Gomes Canotilho, Vital Moreira 
+«À face da Constituição da República Portuguesa, portanto, e de acordo com o princípio democrático, o sistema eleitoral é um meio de fazer da AR um espelho político do país e não um meio de fabricar maiorias lá onde elas não existem»
 
-**"Direito Constitucional e teoria da Constituição", Gomes Canotilho**  
-“A representação proporcional assenta numa regra que se pode resumir facilmente: «a cada um o que lhe é devido», ou seja, a percentagem de mandatos deve ser idêntica à percentagem dos votos.”
+### "Direito Constitucional e teoria da Constituição", Gomes Canotilho  
+«A representação proporcional assenta numa regra que se pode resumir facilmente: "a cada um o que lhe é devido", ou seja, a percentagem de mandatos deve ser idêntica à percentagem dos votos.»
 
 ---
 
 ## Acórdãos [1/91](https://www.tribunalconstitucional.pt/tc/acordaos/19910001.html) e [199/00](https://www.tribunalconstitucional.pt/tc/acordaos/20000199.html) do Tribunal Constitucional sobre representação proporcional
 
-«Na CRP, a idea de representação no Parlamento como «espelho da sociedade política» tem primazia na conformação do sistema eleitoral, avultando mesmo sobre a obtenção de maiorias estáveis.»
+«Na CRP, a ideia de representação no Parlamento como "espelho da sociedade política" tem primazia na conformação do sistema eleitoral, avultando mesmo sobre a obtenção de maiorias estáveis.»
 
 «..o princípio de representação [proporcional] consiste no objectivo de reflectir na composição do órgão electivo com a maior exactidão possível o universo dos grupos políticos existentes na sociedade.»
 
@@ -45,7 +45,7 @@ Diversos países procuram aproximar-se do princípio da representação proporci
 * um círculo nacional de compensação (Áustria, Alemanha e Açores);
 * ou círculos locais ajustados com a votação nacional (Dinamarca, Suécia e Noruega), neste caso, até o número de deputados de cada círculo pode manter-se igual ao actual.
 
-Apresenta-se o Índice de Gallagher (o mais usado para medir a desproporcionalidade de sistema eleitorais), para todos os países europeus com eleições livres desde 1980, mais de um milhão de habitantes, e sistemas formalmente proporcionais:
+Apresenta-se o Índice de Gallagher (o mais usado para medir a desproporcionalidade de sistemas eleitorais), para todos os países europeus com eleições livres desde 1980, mais de um milhão de habitantes, e sistemas formalmente proporcionais:
 
 <img src="{{ '/assets/images/inconstitucional_grafico_gallagher.png' | relative_url }}" alt="Gráfico do Índice de Gallagher na Europa" class="mx-auto my-6 rounded-xl shadow-md max-w-full">
 
@@ -57,17 +57,17 @@ E o Índice CAd, que mede a vantagem que o sistema eleitoral dá aos dois maiore
 
 ## A jurisprudência do Tribunal Federal Suíço
 
-Houve uma série de decisões em relação às eleições de vários cantões [Zurique](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-129-I-185), [Argóvia](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-131-I-74), [Zug](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-136-I-376), [Valais](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-140-I-107), [Uri](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-143-I-92), que são analisados em mais detalhe num [documento anexo](suica.html), e levaram à mudanças de vários sistemas eleitorais para garantirem a igualdade de voto. A citação que melhor resume todas estas decisões é:
+Houve uma série de decisões em relação às eleições de vários cantões [Zurique](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-129-I-185), [Argóvia](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-131-I-74), [Zug](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-136-I-376), [Valais](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-140-I-107), [Uri](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-143-I-92), que são analisados em mais detalhe num [documento anexo](suica.html), e levaram a mudanças de vários sistemas eleitorais para garantirem a igualdade de voto. A citação que melhor resume todas estas decisões é:
 
-«Sempre que não ocorra uma compensação com efeitos transdistritais (o chamado sistema de representação proporcional puro), um círculo eleitoral deve dispor de, pelo menos, dez mandatos.»
+> «Sempre que não ocorra uma compensação com efeitos transdistritais (o chamado sistema de representação proporcional puro), um círculo eleitoral deve dispor de, pelo menos, dez mandatos.»
 
 ---
 
 ## A decisão do Tribunal Constitucional da República Checa
 
-«O princípio da representação proporcional deve ser garantido, não apenas no distrito eleitoral, o que pode se tornar uma caricatura da representação proporcional, mas através da conversão dos votos recebidos pelos partidos políticos em mandatos para preencher os lugares disponíveis no órgão eleito.» 
+«O princípio da representação proporcional deve ser garantido, não apenas no distrito eleitoral, o que pode tornar-se uma caricatura da representação proporcional, mas através da conversão dos votos recebidos pelos partidos políticos em mandatos para preencher os lugares disponíveis no órgão eleito.» 
 
 «O princípio constitucional exige que a proporção entre os votos recebidos e os mandatos obtidos não seja obra do acaso, mas sim das regras estabelecidas na lei eleitoral.»
 
 
-#### Em ambos os países, os sistemas eleitorais mantiveram os círculos eleitorais, mas passaram a atribuir os mandatos aos partidos em função da sua votação global, através de mecanismos de compensação nacional.
+> Em ambos os países, os sistemas eleitorais mantiveram os círculos eleitorais, mas passaram a atribuir os mandatos aos partidos em função da sua votação global, através de mecanismos de compensação nacional.
