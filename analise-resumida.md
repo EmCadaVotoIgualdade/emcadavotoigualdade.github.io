@@ -11,39 +11,39 @@ description: Um resumo de 3 minutos sobre a interpretação de constitucionalist
 
 ---
 
-Neste documento apresenta-se a interpretação de constitucionalistas, e acórdãos do Tribunal Constitucional, sobre a representação proporcional, um comparativo dos sistemas eleitorais europeus, e as decisões do Tribunal Federal da Suíça e do Tribunal Constitucional da República Checa com base em Constituições menos exigentes que a Portuguesa e em sistemas eleitorais menos desproporcionais que o nosso.
+Neste documento apresenta-se a interpretação de **constitucionalistas**, e **acórdãos do Tribunal Constitucional**, sobre a representação proporcional, um comparativo dos sistemas eleitorais europeus, e as decisões do **Tribunal Federal da Suíça** e do **Tribunal Constitucional da República Checa** com base em **Constituições menos exigentes que a Portuguesa** e em sistemas eleitorais menos desproporcionais que o nosso.
 
 ---
 
 ## A interpretação de constitucionalistas sobre a representação proporcional
 
 ### "Constituição da República Portuguesa anotada", Gomes Canotilho, Vital Moreira 
-«À face da Constituição da República Portuguesa, portanto, e de acordo com o princípio democrático, o sistema eleitoral é um meio de fazer da AR um espelho político do país e não um meio de fabricar maiorias lá onde elas não existem»
+«À face da Constituição da República Portuguesa, portanto, e de acordo com o princípio democrático, **o sistema eleitoral é um meio de fazer da AR um espelho político do país e não um meio de fabricar maiorias lá onde elas não existem**»
 
 ### "Direito Constitucional e teoria da Constituição", Gomes Canotilho  
-«A representação proporcional assenta numa regra que se pode resumir facilmente: "a cada um o que lhe é devido", ou seja, a percentagem de mandatos deve ser idêntica à percentagem dos votos.»
+«A representação proporcional assenta numa regra que se pode resumir facilmente: "a cada um o que lhe é devido", ou seja, **a percentagem de mandatos deve ser idêntica à percentagem dos votos**.»
 
 ---
 
 ## Acórdãos [1/91](https://www.tribunalconstitucional.pt/tc/acordaos/19910001.html) e [199/00](https://www.tribunalconstitucional.pt/tc/acordaos/20000199.html) do Tribunal Constitucional sobre representação proporcional
 
-«Na CRP, a ideia de representação no Parlamento como "espelho da sociedade política" tem primazia na conformação do sistema eleitoral, avultando mesmo sobre a obtenção de maiorias estáveis.»
+«Na CRP, a ideia de representação no Parlamento como "espelho da sociedade política" tem primazia na conformação do sistema eleitoral, **avultando mesmo sobre a obtenção de maiorias estáveis**.»
 
-«..o princípio de representação [proporcional] consiste no objectivo de reflectir na composição do órgão electivo com a maior exactidão possível o universo dos grupos políticos existentes na sociedade.»
+«..o princípio de representação [proporcional] consiste no objectivo de reflectir na composição do órgão electivo **com a maior exactidão possível** o universo dos grupos políticos existentes na sociedade.»
 
-«É no confronto entre a repartição de mandatos e os votos obtidos por cada formação política concorrente, no âmbito do colégio eleitoral, que se devem apurar os desvios à proporcionalidade - não círculo por círculo, cada um dos quais não é mais do que um desdobramento geográfico desse mesmo colégio» [Interpretação idêntica à que viria a ser feita duas décadas depois pelo TC da República Checa]
+«É no confronto entre a repartição de mandatos e os votos obtidos por cada formação política concorrente, **no âmbito do colégio eleitoral**, que se devem apurar os desvios à proporcionalidade - não círculo por círculo, cada um dos quais não é mais do que um desdobramento geográfico desse mesmo colégio» [Interpretação idêntica à que viria a ser feita duas décadas depois pelo TC da República Checa]
 
-«Bastaria [para respeitar o princípio de representação proporcional] que as distorções resultantes da pequenez dos círculos fossem corrigidas através de um apuramento complementar.»
+«Bastaria [para respeitar o princípio de representação proporcional] que as distorções resultantes da pequenez dos círculos fossem **corrigidas através de um apuramento complementar**.»
 
 ---
 
 ## Proporcionalidade comparada
 
 Diversos países procuram aproximar-se do princípio da representação proporcional através de:
-* poucos círculos eleitorais, para aumentar o seu tamanho médio (Finlândia e Bélgica);
-* um círculo único nacional para garantir a proporcionalidade (Países Baixos e Madeira);
-* um círculo nacional de compensação (Áustria, Alemanha e Açores);
-* ou círculos locais ajustados com a votação nacional (Dinamarca, Suécia e Noruega), neste caso, até o número de deputados de cada círculo pode manter-se igual ao actual.
+* **poucos círculos eleitorais**, para aumentar o seu tamanho médio (Finlândia e Bélgica);
+* um **círculo único nacional** para garantir a proporcionalidade (Países Baixos e Madeira);
+* um **círculo nacional de compensação** (Áustria, Alemanha e Açores);
+* ou **círculos locais ajustados com a votação nacional** (Dinamarca, Suécia e Noruega), neste caso, até o número de deputados de cada círculo pode manter-se igual ao actual.
 
 Apresenta-se o Índice de Gallagher (o mais usado para medir a desproporcionalidade de sistemas eleitorais), para todos os países europeus com eleições livres desde 1980, mais de um milhão de habitantes, e sistemas formalmente proporcionais:
 
