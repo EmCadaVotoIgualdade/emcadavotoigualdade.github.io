@@ -11,12 +11,12 @@ custom_scripts:
 
 Sobre o sistema eleitoral, a nossa Constituição sempre disse:
 
-> **A conversão dos votos em mandatos far-se-á de harmonia com o princípio da representação proporcional.**
+> **«A conversão dos votos em mandatos far-se-á de harmonia com o princípio da representação proporcional.»**
 
 
 Este princípio foi detalhado pelos constitucionalistas J. J. Gomes Canotilho e Vital Moreira na sua *Constituição Anotada*[[1]](#ref-1):
 
-> *À face da Constituição, e de acordo com o princípio democrático, o sistema eleitoral é um meio de fazer da Assembleia da República um espelho político do país e não um meio de fabricar maiorias lá onde elas não existem.*
+> *«À face da Constituição, e de acordo com o princípio democrático, **o sistema eleitoral é um meio de fazer da Assembleia da República um espelho político do país e não um meio de fabricar maiorias lá onde elas não existem**.»*
 
 Este espelho cada vez distorce mais a realidade, e em 2022 aconteceram alguns casos extremos pela primeira vez:
 * Um partido não está na Assembleia da República apesar de ter tido mais votos totais do que outros com esse direito;
@@ -37,10 +37,10 @@ Abaixo podes analisar de forma interactiva como o sistema actual inflaciona o cu
 
 No maior debate sobre este tema, o governo apresentou em 1998 uma proposta inspirada no sistema alemão, onde António Costa explicava[[2]](#ref-2) assim dois objectivos:
 
-1. *“a proporcionalidade é reforçada porque (...) com a criação do círculo nacional, devolve-se utilidade a todos os votos, de todos os partidos, em todo o territory nacional”*;
-2. *“o eleitor ganha maior liberdade, deixa de estar limitado à escolha do partido, passando a poder escolher também o seu Deputado. O partido terá de se abrir à sociedade, terá de partilhar com os cidadãos a escolha dos seus representantes.”*
+1. *«a proporcionalidade é reforçada porque (...) com a criação do círculo nacional, devolve-se utilidade a todos os votos, de todos os partidos, em todo o territory nacional»*;
+2. *«o eleitor ganha maior liberdade, deixa de estar limitado à escolha do partido, passando a poder escolher também o seu Deputado. O partido terá de se abrir à sociedade, terá de partilhar com os cidadãos a escolha dos seus representantes.»*
 
-O PSD, liderado por Marcelo Rebelo de Sousa, respondia numa proposta semelhante onde *“a proporcionalidade será sempre assegurada de acordo com o resultado obtido no apuramento do voto nacional”*[[2]](#ref-2).
+O PSD, liderado por Marcelo Rebelo de Sousa, respondia numa proposta semelhante onde *«a proporcionalidade será sempre assegurada de acordo com o resultado obtido no apuramento do voto nacional»*[[2]](#ref-2).
 
 Apesar desses pontos democráticos, o sistema alemão é muito complexo e frágil: foi declarado inconstitucional pelo Tribunal Constitucional alemão duas vezes. Além disso, quando foi adoptado em Itália em 2001 foram logo usadas tácticas para corromper o sistema (durando apenas uma eleição), e o mesmo cenário repetiu-se na Coreia do Sul em 2020, entre [outros problemas]({{ '/problemas-alemao.html' | relative_url }})
 

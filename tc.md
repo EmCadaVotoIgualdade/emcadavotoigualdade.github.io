@@ -22,8 +22,7 @@ description: ACÓRDÃO  Nº 1/91 e Nº 199/00
 *[Após fazer referência ao tamanho médio dos círculos, ao índice de proporcionalidade em comparação com os sistemas proporcionais europeus, a estimativas dos limites para obter maioria absoluta, e rácios de votos/mandatos.]*
 
 «Terá de concluir-se que da soma de todas estas características resulta uma acentuada desfiguração do sistema proporcional, o que torna, só por si, inconstitucionais os n.os 2 e 3 do artigo 1.º do Decreto n.º 293/V, por violação dos princípios da proporcionalidade e da igualdade do sufrágio.
-Mas seria necessário pagar tal restrição ao princípio da proporcionalidade para respeitar a coincidência dos círculos eleitorais com os municípios, que o princípio da autonomia tenderia a justificar? Decerto que não.. A criação de um **círculo regional adicional** aos círculos municipais permitiria conciliar os princípios da igualdade e da proporcionalidade, por um lado, e da autonomia, por outro.  Bastaria, para tanto, adoptar um sistema semelhante ao alemão..
-»
+Mas seria necessário pagar tal restrição ao princípio da proporcionalidade para respeitar a coincidência dos círculos eleitorais com os municípios, que o princípio da autonomia tenderia a justificar? Decerto que não.. A criação de um **círculo regional adicional** aos círculos municipais permitiria conciliar os princípios da igualdade e da proporcionalidade, por um lado, e da autonomia, por outro.  Bastaria, para tanto, adoptar um sistema semelhante ao alemão..»
 *[ou seja, com um círculo de compensação capaz de corrigir a proporcionalidade vinda dos círculos locais]*
 
 
