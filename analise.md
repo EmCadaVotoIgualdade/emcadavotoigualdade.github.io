@@ -46,11 +46,13 @@ h) O sufrágio universal, direto, secreto e periódico na designação dos titul
 ## A interpretação de constitucionalistas sobre a representação proporcional
 
 
+
 ### **"Constituição da República Portuguesa anotada", Gomes Canotilho, Vital Moreira**
 
 «À face da Constituição da República Portuguesa, portanto, e de acordo com o princípio democrático, o sistema eleitoral é um meio de **fazer da AR um espelho político do país e não um meio de fabricar maiorias lá onde elas não existem**»
 
 «assegurar o sistema de representação proporcional significa que o procedimento de atribuição de mandatos deve **contribuir o mais possível para a proporcionalidade entre a distribuição de votos e atribuição de mandatos**»
+
 
 
 ### **"Direito Constitucional e teoria da Constituição", Gomes Canotilho**  
@@ -59,12 +61,15 @@ h) O sufrágio universal, direto, secreto e periódico na designação dos titul
 «**O princípio da igualdade de voto exige que todos os votos tenham ... o mesmo peso**.»
 
 
+
 ### **"Direito eleitoral", Jorge Miranda**  
 «A eleição maioritária e a proporcional **distinguem-se segundo a desproporção que estabelece entre votos e mandatos**»
 
 
+
 ### **"Constituição da República portuguesa: comentada", Marcelo Rebelo de Sousa, José de Melo Alexandrino**  
 Sobre a revisão constitucional de 1997: permite «sistemas mistos, com círculos plurinominais e uninominais (**podendo haver mesmo só um círculo plurinominal interno, o nacional**), desde que respeitada a prevalência da proporcionalidade e do método d'Hondt».
+
 
 
 ### **Evento “Sistema Eleitoral: a Reforma”, Maria Lúcia Amaral**  
@@ -81,7 +86,7 @@ Sobre a revisão constitucional de 1997: permite «sistemas mistos, com círculo
 «Na Constituição Portuguesa de 1976, a ideia de representação no Parlamento como "espelho da sociedade política" tem primazia na conformação do sistema eleitoral, determinando-lhe um figurino de representação proporcional, e **avultando mesmo sobre qualquer outra ideia, nomeadamente o desiderato de obtenção de maiorias estáveis**.»
 
 
-#### **António Vitorino**
+### **António Vitorino**
 
 «...o princípio de representação [proporcional] consiste no objectivo de reflectir na composição do órgão electivo com **a maior exactidão possível** o universo das forças sociais e dos grupos políticos existentes na sociedade.»  
 
@@ -90,7 +95,7 @@ Sobre a revisão constitucional de 1997: permite «sistemas mistos, com círculo
 «Até porque **não me parece aceitável que se justifique um entorse a um princípio constitucional de tão assinalável relevância como é o princípio da representação proporcional** apenas com base na pretensa tradição de um sistema cuja conformidade constitucional não se pode dar por adquirida como ponto de partida de um juízo de constitucionalidade, nem se pode presumir apenas por força do decurso do tempo e da ausência de initiativas de fiscalização da respectiva constitucionalidade.»
 
 
-#### **Luís Nunes de Almeida**  
+### **Luís Nunes de Almeida**  
 
 «Verifica-se, assim, dada a dimensão das circunscrições, que o partido mais votado obteria um "benefício" de 14,11 %, enquanto todos os outros seriam penalizados.  Particularmente **significativa e reveladora, porque chocante, é a circunstância de o CDS, apesar de obter mais votos, ser contemplado com menos mandatos que a UDP**... A injustiça do sistema — em termos de representação proporcional — é gritante, não parecendo legítimo ignorar estes números, cujo significado se afigura inegável.»  
 
@@ -99,11 +104,11 @@ Sobre a revisão constitucional de 1997: permite «sistemas mistos, com círculo
 «Bastaria, [para respeitar o princípio de representação proporcional], que as distorções resultantes da pequenez dos círculos **fossem corrigidas através de um apuramento complementar efectuado a nível regional**...»
 
 
-#### **Armindo Ribeiro Mendes**  
+### **Armindo Ribeiro Mendes**  
 «É bem conhecido, porém, que os sistemas de representação proporcional resultam **profundamente desvirtuados** nos casos em que "os mandatos são atribuídos segundo uma fórmula de representação proporcional em muitos círculos de tamanho pequeno".»
 
 
-#### **José de Sousa e Brito** 
+### **José de Sousa e Brito** 
 
 «Terá de concluir-se que da soma de todas estas características resulta uma acentuada desfiguração do sistema proporcional, o que torna, só por si, inconstitucionais os n.os 2 e 3 do artigo 1.º do Decreto n.º 293/V, por violação dos princípios da proporcionalidade e da igualdade do sufrágio.»
 
@@ -116,7 +121,7 @@ Sobre a revisão constitucional de 1997: permite «sistemas mistos, com círculo
 «Por definição, o sistema proporcional... tem como objectivo garantir que todas as correntes políticas significativas obtêm representação, fazendo eleger candidatos seus, e que **as várias correntes políticas obtêm representação em proporção da sua quota de votos, sem discrepâncias significativas**.»
 
 
-#### **Vítor Nunes de Almeida**  
+### **Vítor Nunes de Almeida**  
 
 «É no confronto entre a repartição de mandatos e os votos obtidos por cada formação política concorrente, **no âmbito do colégio eleitoral, que se devem apurar os desvios à proporcionalidade - não círculo por círculo, cada um dos quais não é mais do que um desdobramento geográfico desse mesmo colégio**. Aliás à Constituição não repugna esta concepção, quando proclama que os deputados representam todo o país e não os círculos por que são eleitos...»
 [Esta é uma interpretação idêntica à que viria a ser feita 2 décadas depois pelo T.C. da República Checa, e que contribuiu para a declaração de inconstitucionalidade]
