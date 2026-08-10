@@ -15,7 +15,8 @@ description: Como o Tribunal Federal Suíço levou à reforma dos sistemas eleit
 
 #### O enquadramento constitucional histórico
 Antes da análise dos casos concretos, importa contextualizar a base constitucional que deu origem a toda a sequência de decisões. A [Constituição do Cantão de Zurique](https://www.notes.zh.ch/appl/zhlex_r.nsf/WebRT/0668FEEC473836ABC1256CDA00313A62) limitava-se a estabelecer:
-«O Conselho Cantonal é eleito segundo o sistema de representação proporcional. O procedimento é determinado por lei.»
+
+> «O Conselho Cantonal é eleito segundo o sistema de representação proporcional. O procedimento é determinado por lei.»
 
 Esta formulação é particularmente relevante porque demonstra que a jurisprudência do Tribunal Federal Suíço não assentou numa cláusula constitucional detalhada sobre a dimensão dos círculos eleitorais, os quóruns naturais ou os mecanismos de compensação. Foi a partir desta garantia geral de representação proporcional que o tribunal desenvolveu progressivamente a doutrina da igualdade do valor do voto.
 

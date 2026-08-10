@@ -27,13 +27,13 @@ Neste documento apresenta-se a interpretação de constitucionalistas, e acórd�
 
 ## Acórdãos [1/91](https://www.tribunalconstitucional.pt/tc/acordaos/19910001.html) e [199/00](https://www.tribunalconstitucional.pt/tc/acordaos/20000199.html) do Tribunal Constitucional sobre representação proporcional
 
-“Na CRP, a idea de representação no Parlamento como «espelho da sociedade política» tem primazia na conformação do sistema eleitoral, avultando mesmo sobre a obtenção de maiorias estáveis.”
+«Na CRP, a idea de representação no Parlamento como «espelho da sociedade política» tem primazia na conformação do sistema eleitoral, avultando mesmo sobre a obtenção de maiorias estáveis.»
 
-“..o princípio de representação [proporcional] consiste no objectivo de reflectir na composição do órgão electivo com a maior exactidão possível o universo dos grupos políticos existentes na sociedade.”
+«..o princípio de representação [proporcional] consiste no objectivo de reflectir na composição do órgão electivo com a maior exactidão possível o universo dos grupos políticos existentes na sociedade.»
 
-“É no confronto entre a repartição de mandatos e os votos obtidos por cada formação política concorrente, no âmbito do colégio eleitoral, que se devem apurar os desvios à proporcionalidade - não círculo por círculo, cada um dos quais não é mais do que um desdobramento geográfico desse mesmo colégio [Interpretação idêntica à que viria a ser feita duas décadas depois pelo TC da República Checa]
+«É no confronto entre a repartição de mandatos e os votos obtidos por cada formação política concorrente, no âmbito do colégio eleitoral, que se devem apurar os desvios à proporcionalidade - não círculo por círculo, cada um dos quais não é mais do que um desdobramento geográfico desse mesmo colégio» [Interpretação idêntica à que viria a ser feita duas décadas depois pelo TC da República Checa]
 
-“Bastaria [para respeitar o princípio de representação proporcional] que as distorções resultantes da pequenez dos círculos fossem corrigidas através de um apuramento complementar.”
+«Bastaria [para respeitar o princípio de representação proporcional] que as distorções resultantes da pequenez dos círculos fossem corrigidas através de um apuramento complementar.»
 
 ---
 
@@ -57,16 +57,17 @@ E o Índice CAd, que mede a vantagem que o sistema eleitoral dá aos dois maiore
 
 ## A jurisprudência do Tribunal Federal Suíço
 
-Houve uma série de decisões em relação às eleições de vários cantões [Zurique](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-129-I-185), [Argóvia](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-131-I-74), [Zug](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-136-I-376), [Valais](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-140-I-107), [Uri](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-143-I-92), que são analisados em mais detalhe num [documento anexo](suica.html). A citação que melhor resume todas estas decisões é:
+Houve uma série de decisões em relação às eleições de vários cantões [Zurique](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-129-I-185), [Argóvia](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-131-I-74), [Zug](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-136-I-376), [Valais](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-140-I-107), [Uri](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-143-I-92), que são analisados em mais detalhe num [documento anexo](suica.html), e levaram à mudanças de vários sistemas eleitorais para garantirem a igualdade de voto. A citação que melhor resume todas estas decisões é:
 
-> «Sempre que não ocorra uma compensação com efeitos transdistritais (o chamado sistema de representação proporcional puro), um círculo eleitoral deve dispor de, pelo menos, dez mandatos.»
+«Sempre que não ocorra uma compensação com efeitos transdistritais (o chamado sistema de representação proporcional puro), um círculo eleitoral deve dispor de, pelo menos, dez mandatos.»
 
 ---
 
 ## A decisão do Tribunal Constitucional da República Checa
 
-“O princípio da representação proporcional deve ser garantido, não apenas no distrito eleitoral, o que pode se tornar uma caricatura da representação proporcional, mas através da conversão dos votos recebidos pelos partidos políticos em mandatos para preencher os lugares disponíveis no órgão eleito.” [Interpretação idêntica à de Vítor Nunes de Almeida no Acórdão 199/00]
+«O princípio da representação proporcional deve ser garantido, não apenas no distrito eleitoral, o que pode se tornar uma caricatura da representação proporcional, mas através da conversão dos votos recebidos pelos partidos políticos em mandatos para preencher os lugares disponíveis no órgão eleito.» 
 
-“O princípio constitucional exige que a proporção entre os votos recebidos e os mandatos obtidos não seja obra do acaso, mas sim das regras estabelecidas na lei eleitoral.”
+«O princípio constitucional exige que a proporção entre os votos recebidos e os mandatos obtidos não seja obra do acaso, mas sim das regras estabelecidas na lei eleitoral.»
 
-Em ambos os países, os sistemas eleitorais mantiveram os círculos eleitorais, mas passaram a atribuir os mandatos aos partidos em função da sua votação global, através de mecanismos de compensação nacional.
+
+#### Em ambos os países, os sistemas eleitorais mantiveram os círculos eleitorais, mas passaram a atribuir os mandatos aos partidos em função da sua votação global, através de mecanismos de compensação nacional.

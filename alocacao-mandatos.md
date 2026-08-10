@@ -51,10 +51,10 @@ A Constituição exige que o número de mandatos de cada círculo do território
 
 Aqui não vão ser apresentados os detalhes técnicos de cada sistema, apenas os seus efeitos quando aplicados aos resultados das eleições legislativas de 2015, 2019, 2022, 2024 e 2025.
 
-> Para cada eleição foram simuladas 5 mil variantes, onde cada partido tem a sua votação global a variar até $\pm 8\%$ de forma aleatória, bem como uma variação local em cada círculo até $\pm 2\%$, de forma independente.
->
-> Este procedimento gerou 25 mil resultados eleitorais possíveis, que permitem uma análise mais robusta das consequências de cada método do que analisando apenas os cinco resultados históricos.
-> *(os detalhes técnicos de cada sistema, os resultados detalhados das simulações, bem como o código para as reproduzir será apresentado neste site no futuro, e até lá poderá ser solicitado em emcadavotoigualdade@gmail.com)*
+Para cada eleição foram simuladas 5 mil variantes, onde cada partido tem a sua votação global a variar até $\pm 8\%$ de forma aleatória, bem como uma variação local em cada círculo até $\pm 2\%$, de forma independente.
+
+Este procedimento gerou 25 mil resultados eleitorais possíveis, que permitem uma análise mais robusta das consequências de cada método do que analisando apenas os cinco resultados históricos.
+*(os detalhes técnicos de cada sistema, os resultados detalhados das simulações, bem como o código para as reproduzir será apresentado neste site no futuro, e até lá poderá ser solicitado em emcadavotoigualdade@gmail.com)*
 
 ---
 

@@ -15,7 +15,7 @@ description: Como o Tribunal Constitucional Checo levou à reforma do sistema el
 Na República Checa há 200 deputados divididos em 14 províncias, que elegem entre 5 e 26 mandatos (média de 14,3, que compara com 10,5 em Portugal).
 
 Sobre o sistema eleitoral, a [Constituição checa](https://www.constituteproject.org/constitution/Czech_Republic_2013) estabelece no artigo 18.º, n.º 1:
-> Elections to the Assembly of Deputies shall be held by secret ballot on the basis of a universal, equal, and direct right to vote, according to the principle of proportional representation.
+> «Elections to the Assembly of Deputies shall be held by secret ballot on the basis of a universal, equal, and direct right to vote, according to the principle of proportional representation.»
 
 Tal como na Suíça, trata-se de uma garantia genérica de proporcionalidade, sem indicação sobre a dimensão dos círculos eleitorais, o que deixou em aberto a questão de saber se a desigualdade entre círculos de 5 e de 26 mandatos seria, por si só, compatível com esse princípio.
 
