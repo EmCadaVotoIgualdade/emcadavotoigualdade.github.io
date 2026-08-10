@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Igualdade de Voto e Representação Local — O Caso da Suíça
+title: Igualdade de Voto e Representação Local: O Caso da Suíça
 description: Como o Tribunal Federal Suíço levou à reforma dos sistemas eleitorais de cantões centenários.
 ---
 
 # Igualdade de Voto e Representação Local 
 ## Como o Tribunal Federal Suíço levou à reforma dos sistemas eleitorais de cantões centenários
 
-*[Salvo indicação em contrário, as citações foram traduzidas do alemão a partir dos textos originais dos acórdãos do Tribunal Federal Suíço.]*
+*[As citações foram traduzidas do alemão a partir dos textos originais dos acórdãos do Tribunal Federal Suíço.]*
 
 ---
 
@@ -71,4 +71,5 @@ No caso [BGE 143 I 92](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-143-I-92)
 ### 4. Síntese conclusiva
 A jurisprudência suíça evoluiu de uma crítica aos círculos extremamente pequenos para a afirmação de um princípio geral: num sistema de representação proporcional, a igualdade do valor do voto exige que a proporcionalidade seja apreciada à escala do território eleitoral como um todo.
 
-Esta compreensão da proporcionalidade aproxima-se da interpretação defendida por Vítor Nunes de Almeida no [Acórdão n.º 199/00](https://www.tribunalconstitucional.pt/tc/acordaos/20000199.html) do Tribunal Constitucional português.
+Esta compreensão da proporcionalidade aproxima-se da interpretação defendida por vários juizes do Tribunal Constitucional português, e em particular por Vítor Nunes de Almeida no [Acórdão n.º 199/00](https://www.tribunalconstitucional.pt/tc/acordaos/20000199.html).
+> «É no confronto entre a repartição de mandatos e os votos obtidos por cada formação política concorrente, no âmbito do colégio eleitoral, que se devem apurar os desvios à proporcionalidade - não círculo por círculo»
