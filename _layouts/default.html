@@ -89,13 +89,13 @@
         <!-- Menu Mobile Dropdown -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-6 py-4 space-y-3 font-medium">
             <a href="index.html" class="block {% if page.url == '/' or page.url == '/index.html' %}text-brand-accent font-bold{% else %}text-slate-600{% endif %}">Início</a>
-            <a href="proposta.html" class="block {% if page.url contains 'proposta' %}text-brand-accent font-bold{% else %}text-slate-600{% endif %}">A Proposta</a>
+            <a href="proposta.html" class="block {% if page.url contains 'proposta' or page.url contains 'detalhes' or page.url contains 'alocacao' or page.url contains 'alemao' %}text-brand-accent font-bold{% else %}text-slate-600{% endif %}">A Proposta</a>
             <a href="detalhes.html" class="block pl-4 text-sm {% if page.url contains 'detalhes' %}text-brand-accent font-bold{% else %}text-slate-500{% endif %}">└─ Detalhes da Reforma</a>
             <a href="alocacao-mandatos.html" class="block pl-4 text-sm {% if page.url contains 'alocacao' %}text-brand-accent font-bold{% else %}text-slate-500{% endif %}">└─ Modelos Alternativos</a>
             <a href="problemas-alemao.html" class="block pl-4 text-sm {% if page.url contains 'alemao' %}text-brand-accent font-bold{% else %}text-slate-500{% endif %}">└─ O Sistema Alemão</a>
-            <a href="analise.html" class="block {% if page.url contains 'analise' %}text-brand-accent font-bold{% else %}text-slate-600{% endif %}">Análise Constitucional</a>
+            <a href="analise.html" class="block {% if page.url contains 'analise' or page.url contains 'suica' or page.url contains 'checa' or page.url contains 'tc' %}text-brand-accent font-bold{% else %}text-slate-600{% endif %}">Análise Constitucional</a>
             <a href="analise-resumida.html" class="block pl-4 text-sm {% if page.url contains 'analise-resumida' %}text-brand-accent font-bold{% else %}text-slate-500{% endif %}">└─ Versão Resumida</a>
-            <a href="suica.html" class="block pl-4 text-sm {% if page.url contains 'suica' or page.url contains 'checa' or page.url contains 'tc' %}text-brand-accent font-bold{% else %}text-slate-500{% endif %}">└─ O Caso da Suíça</a>
+            <a href="suica.html" class="block pl-4 text-sm {% if page.url contains 'suica' %}text-brand-accent font-bold{% else %}text-slate-500{% endif %}">└─ O Caso da Suíça</a>
             <a href="checa.html" class="block pl-4 text-sm {% if page.url contains 'checa' %}text-brand-accent font-bold{% else %}text-slate-500{% endif %}">└─ O Caso da República Checa</a>
             <a href="tc.html" class="block pl-4 text-sm {% if page.url contains 'tc' %}text-brand-accent font-bold{% else %}text-slate-500{% endif %}">└─ Detalhes do T.C.</a>
             <a href="faq.html" class="block {% if page.url contains 'faq' %}text-brand-accent font-bold{% else %}text-slate-600{% endif %}">Perguntas Frequentes</a>
