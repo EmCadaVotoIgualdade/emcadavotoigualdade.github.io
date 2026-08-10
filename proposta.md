@@ -42,7 +42,7 @@ No maior debate sobre este tema, o governo apresentou em 1998 uma proposta inspi
 
 O PSD, liderado por Marcelo Rebelo de Sousa, respondia numa proposta semelhante onde *“a proporcionalidade será sempre assegurada de acordo com o resultado obtido no apuramento do voto nacional”*[[2]](#ref-2).
 
-Apesar desses pontos democráticos, o sistema alemão é muito complexo e frágil: foi declarado inconstitucional pelo Tribunal Constitucional alemão duas vezes. Além disso, quando foi adoptado em Itália em 2001 foram logo usadas tácticas para corromper o sistema (durando apenas uma eleição), e o mesmo cenário repetiu-se na Coreia do Sul em 2020, entre outros problemas.
+Apesar desses pontos democráticos, o sistema alemão é muito complexo e frágil: foi declarado inconstitucional pelo Tribunal Constitucional alemão duas vezes. Além disso, quando foi adoptado em Itália em 2001 foram logo usadas tácticas para corromper o sistema (durando apenas uma eleição), e o mesmo cenário repetiu-se na Coreia do Sul em 2020, entre [outros problemas]({{ '/problemas-alemao.html' | relative_url }})
 
 Assim, partilhamos os dois objectivos dessas propostas PS/PSD, mas para os concretizar propomos um sistema mais sólido e intuitivo, inspirado nos sistemas eleitorais dos países nórdicos[[3]](#ref-3), onde tem uma grande aceitação.
 
