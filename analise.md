@@ -11,12 +11,12 @@ description: A interpretação de constitucionalistas e de tribunais constitucio
 
 ---
 
-As decisões do Tribunal Federal da Suíça quanto a um sistema eleitoral com mais de 100 anos, e do Tribunal Constitucional da República Checa quanto ao seu sistema eleitoral de 25 anos levaram à alteração dos respectivos sistemas.
-Os fundamentos que levaram os tribunais suíço e checo a intervir encontram paralelo, em grau ainda mais acentuado, na realidade portuguesa, em particular nas eleições legislativas após 2015.
+As decisões do Tribunal Federal da Suíça quanto a um sistema eleitoral com mais de 100 anos, e do Tribunal Constitucional da República Checa quanto ao seu sistema eleitoral de 25 anos **levaram à alteração dos respectivos sistemas**.
+Os fundamentos que levaram os tribunais suíço e checo a intervir **encontram paralelo, em grau ainda mais acentuado, na realidade portuguesa**, em particular nas eleições legislativas após 2015.
 
-E não é que a nossa Constituição seja menos exigente que as da Suíça ou da República Checa quanto à igualdade de voto e ao sistema de representation proporcional, pelo contrário!
+E não é que a nossa Constituição seja menos exigente que as da Suíça ou da República Checa quanto à igualdade de voto e ao sistema de representação proporcional, pelo contrário!
 
-Neste documento apresenta-se a interpretação de constitucionalistas e do Tribunal Constitucional sobre a representação proporcional, um comparativo dos sistemas eleitorais europeus e as decisões dos tribunais da Suíça e da República Checa.
+Neste documento apresenta-se a interpretação de **constitucionalistas** e do **Tribunal Constitucional** sobre a representação proporcional, um comparativo dos sistemas eleitorais europeus e as decisões dos tribunais da **Suíça** e da **República Checa**.
 
 ---
 
@@ -29,7 +29,7 @@ Neste documento apresenta-se a interpretação de constitucionalistas e do Tribu
 5. A conversão dos votos em mandatos far-se-á de **harmonia com o princípio da representação proporcional**.
 
 **ARTIGO 149.º (Círculos eleitorais)**  
-1. Os Deputados são eleitos por círculos eleitorais geograficamente definidos na lei, a qual pode determinar a existência de círculos plurinominais e uninominais, bem como a respetiva natureza e complementaridade, **por forma a assegurar o sistema de representação proporcional** e o método da média mais alta de Hondt na conversão dos votos em número de mandatos.
+1. Os Deputados são eleitos por círculos eleitorais geograficamente definidos na lei, a qual pode determinar a existência de círculos plurinominais e uninominais, bem como a respetiva natureza e complementaridade, **por forma a assegurar o sistema de representação proporcional** e o método da média mais alta d'Hondt na conversão dos votos em número de mandatos.
 
 **ARTIGO 152.º (Representação política)**  
 1. A lei não pode estabelecer limites à conversão dos votos em mandatos por exigência de uma percentagem de votos nacional mínima.  
@@ -48,28 +48,28 @@ h) O sufrágio universal, direto, secreto e periódico na designação dos titul
 
 ### **"Constituição da República Portuguesa anotada", Gomes Canotilho, Vital Moreira**
 
-“À face da Constituição da República Portuguesa, portanto, e de acordo com o princípio democrático, o sistema eleitoral é um meio de **fazer da AR um espelho político do país e não um meio de fabricar maiorias lá onde elas não existem**”
+«À face da Constituição da República Portuguesa, portanto, e de acordo com o princípio democrático, o sistema eleitoral é um meio de **fazer da AR um espelho político do país e não um meio de fabricar maiorias lá onde elas não existem**»
 
-"assegurar o sistema de representação proporcional significa que o procedimento de atribuição de mandatos deve **contribuir o mais possível para a proporcionalidade entre a distribuição de votos e atribuição de mandatos**"
+«assegurar o sistema de representação proporcional significa que o procedimento de atribuição de mandatos deve **contribuir o mais possível para a proporcionalidade entre a distribuição de votos e atribuição de mandatos**»
 
 
 ### **"Direito Constitucional e teoria da Constituição", Gomes Canotilho**  
-“A representação proporcional assenta numa regra que se pode resumir facilmente: **«a cada um o que lhe é devido»**, ou seja, **a percentagem de mandatos deve ser idêntica à percentagem dos votos**.”
+«A representação proporcional assenta numa regra que se pode resumir facilmente: **"a cada um o que lhe é devido"**, ou seja, **a percentagem de mandatos deve ser idêntica à percentagem dos votos**.»
 
-“**O princípio da igualdade de voto exige que todos os votos tenham .. o mesmo peso**.”
+«**O princípio da igualdade de voto exige que todos os votos tenham ... o mesmo peso**.»
 
 
 ### **"Direito eleitoral", Jorge Miranda**  
-"A eleição maioritária e a proporcional **distinguem-se segundo a desproporção que estabelece entre votos e mandatos**"
+«A eleição maioritária e a proporcional **distinguem-se segundo a desproporção que estabelece entre votos e mandatos**»
 
 
 ### **"Constituição da República portuguesa: comentada", Marcelo Rebelo de Sousa, José de Melo Alexandrino**  
-Sobre a revisão constitucional de 1997: permite “sistemas mistos, com círculos plurinominais e uninominais (**podendo haver mesmo só um círculo plurinominal interno, o nacional**), desde que respeitada a prevalência da proporcionalidade e do método de Hondt”.
+Sobre a revisão constitucional de 1997: permite «sistemas mistos, com círculos plurinominais e uninominais (**podendo haver mesmo só um círculo plurinominal interno, o nacional**), desde que respeitada a prevalência da proporcionalidade e do método d'Hondt».
 
 
 ### **Evento “Sistema Eleitoral: a Reforma”, Maria Lúcia Amaral**  
-“[Após o 25 de Abril] Optámos pela representação proporcional, optámos com tal fervor que ela não é apenas a imposição constitucional .. mas é um limite material de revisão constitucional .. **entre nós elevamos a controlo identitário a representação proporcional**”  
-“A matriz do sistema foi escolhida .. primeiro, por uma razão negativa, porque não se queria aquilo que sempre tinha existido, que era o sistema maioritário, **e se receava profundamente algo que se queria evitar a todo o custo, a criação de maiorias artificiais**.”
+«[Após o 25 de Abril] Optámos pela representação proporcional, optámos com tal fervor que ela não é apenas a imposição constitucional ... mas é um limite material de revisão constitucional ... **entre nós elevamos a controlo identitário a representação proporcional**»  
+«A matriz do sistema foi escolhida ... primeiro, por uma razão negativa, porque não se queria aquilo que sempre tinha existido, que era o sistema maioritário, **e se receava profundamente algo que se queria evitar a todo o custo, a criação de maiorias artificiais**.»
 
 ---
 
@@ -78,50 +78,50 @@ Sobre a revisão constitucional de 1997: permite “sistemas mistos, com círcul
 
 ### [ACÓRDÃO  Nº 1/91](https://www.tribunalconstitucional.pt/tc/acordaos/19910001.html)
 
-“Na Constituição Portuguesa de 1976, a ideia de representação no Parlamento como «espelho da sociedade política» tem primazia na conformação do sistema eleitoral, determinando-lhe um figurino de representação proporcional, e **avultando mesmo sobre qualquer outra ideia, nomeadamente o desiderato de obtenção de maiorias estáveis**.”
+«Na Constituição Portuguesa de 1976, a ideia de representação no Parlamento como "espelho da sociedade política" tem primazia na conformação do sistema eleitoral, determinando-lhe um figurino de representação proporcional, e **avultando mesmo sobre qualquer outra ideia, nomeadamente o desiderato de obtenção de maiorias estáveis**.»
 
 
 #### **António Vitorino**
 
-“..o princípio de representação [proporcional] consiste no objectivo de reflectir na composição do órgão electivo com **a maior exactidão possível** o universo das forças sociais e dos grupos políticos existentes na sociedade.”  
+«...o princípio de representação [proporcional] consiste no objectivo de reflectir na composição do órgão electivo com **a maior exactidão possível** o universo das forças sociais e dos grupos políticos existentes na sociedade.»  
 
-“**..se no caso dos Açores a existência de diversas ilhas.. [pode] justificar a pulverização de círculos eleitorais de diminuta dimensão.. tal não se verifica na Madeira**, onde apenas o Porto Santo constitui uma ilha separada .. e onde as demais dez circunscrições se situam na ilha da Madeira, com absoluta contiguidade geográfica entre si, **à semelhança do que acontece com as circunscrições eleitorais no continente para a Assembleia da República**..” 
+«...**se no caso dos Açores a existência de diversas ilhas... [pode] justificar a pulverização de círculos eleitorais de diminuta dimensão... tal não se verifica na Madeira**, onde apenas o Porto Santo constitui uma ilha separada... e onde as demais dez circunscrições se situam na ilha da Madeira, com absoluta contiguidade geográfica entre si, **à semelhança do que acontece com as circunscrições eleitorais no continente para a Assembleia da República**...» 
 
-“Até porque **não me parece aceitável que se justifique um entorse a um princípio constitucional de tão assinalável relevância como é o princípio da representação proporcional** apenas com base na pretensa tradição de um sistema cuja conformidade constitucional não se pode dar por adquirida como ponto de partida de um juízo de constitucionalidade, nem se pode presumir apenas por força do decurso do tempo e da ausência de initiatives de fiscalização da respectiva constitucionalidade.”
+«Até porque **não me parece aceitável que se justifique um entorse a um princípio constitucional de tão assinalável relevância como é o princípio da representação proporcional** apenas com base na pretensa tradição de um sistema cuja conformidade constitucional não se pode dar por adquirida como ponto de partida de um juízo de constitucionalidade, nem se pode presumir apenas por força do decurso do tempo e da ausência de initiativas de fiscalização da respectiva constitucionalidade.»
 
 
 #### **Luís Nunes de Almeida**  
 
-“Verifica-se, assim, dada a dimensão das circunscrições, que o partido mais votado obteria um «benefício» de 14,11 %, enquanto todos os outros seriam penalizados.  Particularmente **significativa e reveladora, porque chocante, é a circunstância de o CDS, apesar de obter mais votos, ser contemplado com menos mandatos que a UDP**.. A injustiça do sistema — em termos de representação proporcional — é gritante, não parecendo legítimo ignorar estes números, cujo significado se afigura inegável.”  
+«Verifica-se, assim, dada a dimensão das circunscrições, que o partido mais votado obteria um "benefício" de 14,11 %, enquanto todos os outros seriam penalizados.  Particularmente **significativa e reveladora, porque chocante, é a circunstância de o CDS, apesar de obter mais votos, ser contemplado com menos mandatos que a UDP**... A injustiça do sistema — em termos de representação proporcional — é gritante, não parecendo legítimo ignorar estes números, cujo significado se afigura inegável.»  
 
-“Tudo, pois, confirma a conclusão a que já se chegou: **o princípio da representação proporcional é grosseiramente violado pelas normas questionadas**.”  
+«Tudo, pois, confirma a conclusão a que já se chegou: **o princípio da representação proporcional é grosseiramente violado pelas normas questionadas**.»  
 
-“Bastaria, [para respeitar o princípio de representação proporcional], que as distorções resultantes da pequenez dos círculos **fossem corrigidas através de um apuramento complementar efectuado a nível regional**..”
+«Bastaria, [para respeitar o princípio de representação proporcional], que as distorções resultantes da pequenez dos círculos **fossem corrigidas através de um apuramento complementar efectuado a nível regional**...»
 
 
 #### **Armindo Ribeiro Mendes**  
-“É bem conhecido, porém, que os sistemas de representação proporcional resultam **profundamente desvirtuados** nos casos em que «os mandatos são atribuídos segundo uma fórmula de representação proporcional em muitos círculos de tamanho pequeno».”
+«É bem conhecido, porém, que os sistemas de representação proporcional resultam **profundamente desvirtuados** nos casos em que "os mandatos são atribuídos segundo uma fórmula de representação proporcional em muitos círculos de tamanho pequeno".»
 
 
 #### **José de Sousa e Brito** 
 
-“Terá de concluir-se que da soma de todas estas características resulta uma acentuada desfiguração do sistema proporcional, o que torna, só por si, inconstitucionais os n.os 2 e 3 do artigo 1.º do Decreto n.º 293/V, por violação dos princípios da proporcionalidade e da igualdade do sufrágio.”
+«Terá de concluir-se que da soma de todas estas características resulta uma acentuada desfiguração do sistema proporcional, o que torna, só por si, inconstitucionais os n.os 2 e 3 do artigo 1.º do Decreto n.º 293/V, por violação dos princípios da proporcionalidade e da igualdade do sufrágio.»
 
 ---
 
 ### [ACÓRDÃO  Nº 199/00](https://www.tribunalconstitucional.pt/tc/acordaos/20000199.html)
 
-“Ao princípio da representação proporcional foi atribuída tal importância no funcionamento do sistema eleitoral português e na própria construção do regime democrático que o legislador constitucional o erigiu em limite material de revisão da Constituição.”  
+«Ao princípio da representação proporcional foi atribuída tal importância no funcionamento do sistema eleitoral português e na própria construção do regime democrático que o legislador constitucional o erigiu em limite material de revisão da Constituição.»  
 
-“Por definição, o sistema proporcional .. tem como objectivo garantir que todas as correntes políticas significativas obtêm representação, fazendo eleger candidatos seus, e que **as várias correntes políticas obtêm representação em proporção da sua quota de votos, sem discrepâncias significativas**.”
+«Por definição, o sistema proporcional... tem como objectivo garantir que todas as correntes políticas significativas obtêm representação, fazendo eleger candidatos seus, e que **as várias correntes políticas obtêm representação em proporção da sua quota de votos, sem discrepâncias significativas**.»
 
 
 #### **Vítor Nunes de Almeida**  
 
-“É no confronto entre a repartição de mandatos e os votos obtidos por cada formação política concorrente, **no âmbito do colégio eleitoral, que se devem apurar os desvios à proporcionalidade - não círculo por círculo, cada um dos quais não é mais do que um desdobramento geográfico desse mesmo colégio**. Aliás à Constituição não repugna esta concepção, quando proclama que os deputados representam todo o país e não os círculos por que são eleitos..”
+«É no confronto entre a repartição de mandatos e os votos obtidos por cada formação política concorrente, **no âmbito do colégio eleitoral, que se devem apurar os desvios à proporcionalidade - não círculo por círculo, cada um dos quais não é mais do que um desdobramento geográfico desse mesmo colégio**. Aliás à Constituição não repugna esta concepção, quando proclama que os deputados representam todo o país e não os círculos por que são eleitos...»
 [Esta é uma interpretação idêntica à que viria a ser feita 2 décadas depois pelo T.C. da República Checa, e que contribuiu para a declaração de inconstitucionalidade]
 
-“Os critérios de determinação dos círculos assumem importância crucial, porque por via da definição dos círculos se podem praticar operações de verdadeira engenharia eleitoral, com vista à **fabricação de maiorias parlamentares**..”
+«Os critérios de determinação dos círculos assumem importância crucial, porque por via da definição dos círculos se podem praticar operações de verdadeira engenharia eleitoral, com vista à **fabricação de maiorias parlamentares**...»
 
 ---
 
@@ -135,7 +135,7 @@ Nenhum sistema garante a proporcionalidade perfeita, isso é matematicamente imp
 
 Em Portugal há muitos círculos eleitorais, e muitos círculos com poucos mandatos. Ainda assim, a proporcionalidade e igualdade de voto podiam ser garantidas sem mexer nos círculos, com um mecanismo semelhante aos usados na Dinamarca, Suécia, Noruega, Suíça, Áustria ou Alemanha, algo que a Constituição permite explicitamente desde 1989. Nos quatro primeiros sistemas até o número de deputados de cada círculo pode manter-se igual ao actual, como nesta proposta.
 
-As comparações vão ser feitas com base no Índice de Gallagher, **LSq**, o indicador mais usado para medir a desproporcionalidade de sistemas eleitorais, calculated com base na percentagem de votos e de mandatos de cada partido. Valores elevados implicam sistemas mais desproporcionais.
+As comparações vão ser feitas com base no Índice de Gallagher, **LSq**, o indicador mais usado para medir a desproporcionalidade de sistemas eleitorais, calculado com base na percentagem de votos e de mandatos de cada partido. Valores elevados implicam sistemas mais desproporcionais.
 Adicionalmente vai ser calculado o índice **CAd**, “Custo Adicional”, que mede o benefício dos 2 partidos mais votados face aos restantes. Um valor elevado implica desproporcionalidade e incentivo ao bipartidarismo, como acontece tradicionalmente nos sistemas maioritários. A forma de calcular cada um deles é detalhada [aqui](calculo-indices.html).
 
 Abaixo apresentamos o valor dos dois índices para Portugal:
@@ -191,7 +191,7 @@ Ao longo de vários acórdãos, o Tribunal Federal Suíço desenvolveu o entendi
 ### [Zurique (2002 - BGE 129 I 185)](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-129-I-185)
 O Tribunal Federal recorreu ao exemplo recente do círculo mais pequeno, equivalente a Portalegre, concluindo que «o facto de mais de um terço dos votos dos eleitores [...] não ter sido tido em conta, permanecendo sem peso, é incompatível com a igualdade do valor do voto».
 O tribunal acrescentou ainda o seguinte cenário, então apresentado como hipotético:
-«un partido que reúna apenas pouco mais de metade ou mesmo apenas uma maioria relativa dos votos pode ganhar ambos os mandatos, se os restantes votos estiverem fragmentados por vários partidos mais pequenos. Em ambos os casos, o caráter do sistema de representação proporcional é amplamente adulterado.»
+«um partido que reúna apenas pouco mais de metade ou mesmo apenas uma maioria relativa dos votos pode ganhar ambos os mandatos, se os restantes votos estiverem fragmentados por vários partidos mais pequenos. Em ambos os casos, o caráter do sistema de representação proporcional é amplamente adulterado.»
 
 No caso português, este cenário deixou de ser uma mera hipótese teórica: no círculo de Portalegre, o partido mais votado conquistou ambos os mandatos em 2005, 2019 e 2022, sendo que, nas duas últimas eleições, mais de metade dos votos expressos nesse círculo não contribuiu para a eleição de qualquer deputado, ficando, na formulação da própria jurisprudência suíça, inteiramente «sem peso».
 
@@ -218,12 +218,12 @@ Dois meses após a eleição de 2017, deputados de três partidos apresentaram u
 
 O argumento principal era que nos círculos mais pequenos, e em particular nos dois mais pequenos (com 5 e 8 mandatos), existe uma discriminação sistemática dos eleitores, que na prática têm um leque de escolhas reduzido face aos eleitores nos maiores círculos.
 
-Assim, defendiam que o sistema até podia manter os círculos existentes, e o método de Hondt no cálculo dos mandatos, mas precisava de mecanismos adicionais para compensar a desproporcionalidade vinda dos círculos locais.
+Assim, defendiam que o sistema até podia manter os círculos existentes, e o método d'Hondt no cálculo dos mandatos, mas precisava de mecanismos adicionais para compensar a desproporcionalidade vinda dos círculos locais.
 
 ### A decisão do Tribunal Constitucional
 *[excertos traduzidos automaticamente do Checo]*
 
-«O princípio da representação proporcional deve ser definido como um conjunto de elementos pelos quais o resultado eleitoral é determinado e garantido, não apenas no distrito eleitoral (o que pode se tornar uma caricatura da representação proporcional na prática), mas através da conversão dos votos recebidos pelos partidos políticos em mandatos para preencher os lugares disponíveis no órgão eleito (Câmara dos Deputados).»
+«O princípio da representação proporcional deve ser definido como um conjunto de elementos pelos quais o resultado eleitoral é determinado e garantido, não apenas no distrito eleitoral (o que pode tornar-se uma caricatura da representação proporcional na prática), mas através da conversão dos votos recebidos pelos partidos políticos em mandatos para preencher os lugares disponíveis no órgão eleito (Câmara dos Deputados).»
 
 «Do ponto de vista da igualdade do direito de voto e da igualdade de oportunidades das partes candidatas sob as condições de representação proporcional, é necessário que cada partido político obtenha uma proporção correspondente de mandatos na Câmara dos Deputados de acordo com a sua proporção no número total de votos válidos expressos»
 
@@ -241,7 +241,7 @@ Acrescentamos ainda a interpretação de Gomes Canotilho em “Direito Constituc
 
 > «Ao consagrar o princípio da representação proporcional como princípio garantido contra a própria revisão e ao possibilitar, inclusivamente, a formação de governos de minoria, a Constituição portuguesa aponta para .. o pluralismo partidário sem artifícios redutores.»
 
-Mas será mesmo um equilíbrio? Será que as “democracias maioritárias”, onde há dois grandes partidos e governos de maioria absoluta artificial, sacrificam a igualdade dos eleitores e a justiça do resultado para conseguir um systema mais estável no médio prazo?
+Mas será mesmo um equilíbrio? Será que as “democracias maioritárias”, onde há dois grandes partidos e governos de maioria absoluta artificial, sacrificam a igualdade dos eleitores e a justiça do resultado para conseguir um sistema mais estável no médio prazo?
 
 Um dos maiores especialistas deste tema, Arend Lijphart, conclui que não em “Patterns of Democracy”, com base na sua análise de 36 países com eleições livres:
 
