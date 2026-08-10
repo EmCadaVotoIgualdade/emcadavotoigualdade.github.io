@@ -92,7 +92,7 @@ Sobre a revisão constitucional de 1997: permite «sistemas mistos, com círculo
 
 «...**se no caso dos Açores a existência de diversas ilhas... [pode] justificar a pulverização de círculos eleitorais de diminuta dimensão... tal não se verifica na Madeira**, onde apenas o Porto Santo constitui uma ilha separada... e onde as demais dez circunscrições se situam na ilha da Madeira, com absoluta contiguidade geográfica entre si, **à semelhança do que acontece com as circunscrições eleitorais no continente para a Assembleia da República**...» 
 
-«Até porque **não me parece aceitável que se justifique um entorse a um princípio constitucional de tão assinalável relevância como é o princípio da representação proporcional** apenas com base na pretensa tradição de um sistema cuja conformidade constitucional não se pode dar por adquirida como ponto de partida de um juízo de constitucionalidade, nem se pode presumir apenas por força do decurso do tempo e da ausência de initiativas de fiscalização da respectiva constitucionalidade.»
+«Até porque **não me parece aceitável que se justifique um entorse a um princípio constitucional de tão assinalável relevância como é o princípio da representação proporcional** apenas com base na pretensa tradição de um sistema cuja conformidade constitucional não se pode dar por adquirida como ponto de partida de um juízo de constitucionalidade, nem se pode presumir apenas por força do decurso do tempo e da ausência de iniciativas de fiscalização da respectiva constitucionalidade.»
 
 
 ### **Luís Nunes de Almeida**  
