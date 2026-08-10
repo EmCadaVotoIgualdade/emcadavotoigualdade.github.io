@@ -42,10 +42,8 @@
         window.siteBaseUrl = "{{ '' | relative_url }}";
     </script>
 
-    <!-- ================================================================ -->
-    <!-- GoatCounter Analytics (Descomentar e colar o teu link no futuro)  -->
+    <!-- GoatCounter Analytics -->
     <script data-goatcounter="https://emcadavotoigualdade.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-    <!-- ================================================================ -->
     
     <!-- Ativa o suporte para fórmulas matemáticas (LaTeX) -->
     <script>
@@ -69,13 +67,52 @@
                 <span>Em Cada Voto <span class="text-brand-accent">Igualdade</span></span>
             </a>
 
-            <!-- Menu para Computador -->
-            <div class="hidden md:flex space-x-6 font-medium">
-                <a href="index.html" class="{% if page.url == '/' or page.url == '/index.html' %}text-brand-accent font-bold{% else %}text-slate-600 hover:text-brand-accent{% endif %} transition">Início</a>
-                <a href="proposta.html" class="{% if page.url contains 'proposta' or page.url contains 'detalhes' or page.url contains 'alocacao' or page.url contains 'alemao' %}text-brand-accent font-bold{% else %}text-slate-600 hover:text-brand-accent{% endif %} transition">A Proposta</a>
-                <a href="analise.html" class="{% if page.url contains 'analise' or page.url contains 'suica' or page.url contains 'checa' or page.url contains 'tc' %}text-brand-accent font-bold{% else %}text-slate-600 hover:text-brand-accent{% endif %} transition">Análise Constitucional</a>
-                <a href="faq.html" class="{% if page.url contains 'faq' %}text-brand-accent font-bold{% else %}text-slate-600 hover:text-brand-accent{% endif %} transition">FAQ</a>
-                <a href="proximos-passos.html" class="{% if page.url contains 'proximos-passos' %}text-brand-accent font-bold{% else %}text-slate-600 hover:text-brand-accent{% endif %} transition">Próximos Passos</a>
+            <!-- Menu para Computador (Com Submenus Dropdown) -->
+            <div class="hidden md:flex space-x-6 font-medium items-center">
+                
+                <!-- Início -->
+                <a href="index.html" class="{% if page.url == '/' or page.url == '/index.html' %}text-brand-accent font-bold{% else %}text-slate-600 hover:text-brand-accent{% endif %} transition py-2">
+                    Início
+                </a>
+
+                <!-- A Proposta (Dropdown) -->
+                <div class="relative group py-2">
+                    <a href="proposta.html" class="flex items-center gap-1 {% if page.url contains 'proposta' or page.url contains 'detalhes' or page.url contains 'alocacao' or page.url contains 'alemao' %}text-brand-accent font-bold{% else %}text-slate-600 hover:text-brand-accent{% endif %} transition">
+                        <span>A Proposta</span>
+                        <svg class="w-4 h-4 opacity-70 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </a>
+                    <!-- Submenu -->
+                    <div class="absolute left-0 top-full hidden group-hover:block w-56 bg-white rounded-xl shadow-lg border border-slate-100 py-2 z-50 transition-all">
+                        <a href="detalhes.html" class="block px-4 py-2 text-sm {% if page.url contains 'detalhes' %}text-brand-accent font-bold bg-slate-50{% else %}text-slate-600 hover:bg-slate-50 hover:text-brand-accent{% endif %} transition">Detalhes da Reforma</a>
+                        <a href="alocacao-mandatos.html" class="block px-4 py-2 text-sm {% if page.url contains 'alocacao' %}text-brand-accent font-bold bg-slate-50{% else %}text-slate-600 hover:bg-slate-50 hover:text-brand-accent{% endif %} transition">Modelos Alternativos</a>
+                    </div>
+                </div>
+
+                <!-- Análise Constitucional (Dropdown) -->
+                <div class="relative group py-2">
+                    <a href="analise.html" class="flex items-center gap-1 {% if page.url contains 'analise' or page.url contains 'suica' or page.url contains 'checa' or page.url contains 'tc' %}text-brand-accent font-bold{% else %}text-slate-600 hover:text-brand-accent{% endif %} transition">
+                        <span>Análise Constitucional</span>
+                        <svg class="w-4 h-4 opacity-70 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </a>
+                    <!-- Submenu -->
+                    <div class="absolute left-0 top-full hidden group-hover:block w-60 bg-white rounded-xl shadow-lg border border-slate-100 py-2 z-50 transition-all">
+                        <a href="analise-resumida.html" class="block px-4 py-2 text-sm {% if page.url contains 'analise-resumida' %}text-brand-accent font-bold bg-slate-50{% else %}text-slate-600 hover:bg-slate-50 hover:text-brand-accent{% endif %} transition">Versão Resumida</a>
+                        <a href="suica.html" class="block px-4 py-2 text-sm {% if page.url contains 'suica' %}text-brand-accent font-bold bg-slate-50{% else %}text-slate-600 hover:bg-slate-50 hover:text-brand-accent{% endif %} transition">O Caso da Suíça</a>
+                        <a href="checa.html" class="block px-4 py-2 text-sm {% if page.url contains 'checa' %}text-brand-accent font-bold bg-slate-50{% else %}text-slate-600 hover:bg-slate-50 hover:text-brand-accent{% endif %} transition">O Caso da República Checa</a>
+                        <a href="tc.html" class="block px-4 py-2 text-sm {% if page.url contains 'tc' %}text-brand-accent font-bold bg-slate-50{% else %}text-slate-600 hover:bg-slate-50 hover:text-brand-accent{% endif %} transition">Detalhes do T.C.</a>
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <a href="faq.html" class="{% if page.url contains 'faq' %}text-brand-accent font-bold{% else %}text-slate-600 hover:text-brand-accent{% endif %} transition py-2">
+                    FAQ
+                </a>
+
+                <!-- Próximos Passos -->
+                <a href="proximos-passos.html" class="{% if page.url contains 'proximos-passos' %}text-brand-accent font-bold{% else %}text-slate-600 hover:text-brand-accent{% endif %} transition py-2">
+                    Próximos Passos
+                </a>
+
             </div>
 
             <!-- Botão Hamburguer (Telemóvel) -->
@@ -92,7 +129,6 @@
             <a href="proposta.html" class="block {% if page.url contains 'proposta' or page.url contains 'detalhes' or page.url contains 'alocacao' or page.url contains 'alemao' %}text-brand-accent font-bold{% else %}text-slate-600{% endif %}">A Proposta</a>
             <a href="detalhes.html" class="block pl-4 text-sm {% if page.url contains 'detalhes' %}text-brand-accent font-bold{% else %}text-slate-500{% endif %}">└─ Detalhes da Reforma</a>
             <a href="alocacao-mandatos.html" class="block pl-4 text-sm {% if page.url contains 'alocacao' %}text-brand-accent font-bold{% else %}text-slate-500{% endif %}">└─ Modelos Alternativos</a>
-            <a href="problemas-alemao.html" class="block pl-4 text-sm {% if page.url contains 'alemao' %}text-brand-accent font-bold{% else %}text-slate-500{% endif %}">└─ O Sistema Alemão</a>
             <a href="analise.html" class="block {% if page.url contains 'analise' or page.url contains 'suica' or page.url contains 'checa' or page.url contains 'tc' %}text-brand-accent font-bold{% else %}text-slate-600{% endif %}">Análise Constitucional</a>
             <a href="analise-resumida.html" class="block pl-4 text-sm {% if page.url contains 'analise-resumida' %}text-brand-accent font-bold{% else %}text-slate-500{% endif %}">└─ Versão Resumida</a>
             <a href="suica.html" class="block pl-4 text-sm {% if page.url contains 'suica' %}text-brand-accent font-bold{% else %}text-slate-500{% endif %}">└─ O Caso da Suíça</a>
@@ -135,7 +171,6 @@
                         <ul class="pl-4 space-y-1 mt-1 text-slate-500 text-xs">
                             <li><a href="detalhes.html" class="hover:text-white transition">· Detalhes Técnicos</a></li>
                             <li><a href="alocacao-mandatos.html" class="hover:text-white transition">· Modelos Alternativos</a></li>
-                            <li><a href="problemas-alemao.html" class="hover:text-white transition">· O Sistema Alemão</a></li>
                         </ul>
                     </li>
                     
