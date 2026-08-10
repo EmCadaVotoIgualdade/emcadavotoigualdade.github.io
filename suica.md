@@ -71,5 +71,4 @@ No caso [BGE 143 I 92](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-143-I-92)
 ### 4. Síntese conclusiva
 A jurisprudência suíça evoluiu de uma crítica aos círculos extremamente pequenos para a afirmação de um princípio geral: num sistema de representação proporcional, a igualdade do valor do voto exige que a proporcionalidade seja apreciada à escala do território eleitoral como um todo.
 
-Esta compreensão da proporcionalidade aproxima-se da interpretação defendida por vários juizes do Tribunal Constitucional português, e em particular por Vítor Nunes de Almeida no [Acórdão n.º 199/00](https://www.tribunalconstitucional.pt/tc/acordaos/20000199.html).
-> «É no confronto entre a repartição de mandatos e os votos obtidos por cada formação política concorrente, no âmbito do colégio eleitoral, que se devem apurar os desvios à proporcionalidade - não círculo por círculo»
+Esta compreensão da proporcionalidade aproxima-se da interpretação defendida por vários juizes do **[Tribunal Constitucional português]({{ '/tc.html' | relative_url }})** *[resumidas no link anterior]*
