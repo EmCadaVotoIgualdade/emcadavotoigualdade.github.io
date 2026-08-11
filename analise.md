@@ -58,7 +58,7 @@ h) O sufrágio universal, direto, secreto e periódico na designação dos titul
 ### **"Direito Constitucional e teoria da Constituição", Gomes Canotilho**  
 «A representação proporcional assenta numa regra que se pode resumir facilmente: **"a cada um o que lhe é devido"**, ou seja, **a percentagem de mandatos deve ser idêntica à percentagem dos votos**.»
 
-«**O princípio da igualdade de voto exige que todos os votos tenham ... o mesmo peso**.»
+«**O princípio da igualdade de voto exige que todos os votos tenham... o mesmo peso**.»
 
 
 
@@ -73,8 +73,8 @@ Sobre a revisão constitucional de 1997: permite «sistemas mistos, com círculo
 
 
 ### **Evento “Sistema Eleitoral: a Reforma”, Maria Lúcia Amaral**  
-«[Após o 25 de Abril] Optámos pela representação proporcional, optámos com tal fervor que ela não é apenas a imposição constitucional ... mas é um limite material de revisão constitucional ... **entre nós elevamos a controlo identitário a representação proporcional**»  
-«A matriz do sistema foi escolhida ... primeiro, por uma razão negativa, porque não se queria aquilo que sempre tinha existido, que era o sistema maioritário, **e se receava profundamente algo que se queria evitar a todo o custo, a criação de maiorias artificiais**.»
+«[Após o 25 de Abril] Optámos pela representação proporcional, optámos com tal fervor que ela não é apenas a imposição constitucional... mas é um limite material de revisão constitucional... **entre nós elevamos a controlo identitário a representação proporcional**»  
+«A matriz do sistema foi escolhida... primeiro, por uma razão negativa, porque não se queria aquilo que sempre tinha existido, que era o sistema maioritário, **e se receava profundamente algo que se queria evitar a todo o custo, a criação de maiorias artificiais**.»
 
 ---
 
@@ -88,16 +88,16 @@ Sobre a revisão constitucional de 1997: permite «sistemas mistos, com círculo
 
 ### **António Vitorino**
 
-«...o princípio de representação [proporcional] consiste no objectivo de reflectir na composição do órgão electivo com **a maior exactidão possível** o universo das forças sociais e dos grupos políticos existentes na sociedade.»  
+«... o princípio de representação [proporcional] consiste no objectivo de reflectir na composição do órgão electivo com **a maior exactidão possível** o universo das forças sociais e dos grupos políticos existentes na sociedade.»  
 
-«...**se no caso dos Açores a existência de diversas ilhas... [pode] justificar a pulverização de círculos eleitorais de diminuta dimensão... tal não se verifica na Madeira**, onde apenas o Porto Santo constitui uma ilha separada... e onde as demais dez circunscrições se situam na ilha da Madeira, com absoluta contiguidade geográfica entre si, **à semelhança do que acontece com as circunscrições eleitorais no continente para a Assembleia da República**...» 
+«... **se no caso dos Açores a existência de diversas ilhas... [pode] justificar a pulverização de círculos eleitorais de diminuta dimensão... tal não se verifica na Madeira**, onde apenas o Porto Santo constitui uma ilha separada... e onde as demais dez circunscrições se situam na ilha da Madeira, com absoluta contiguidade geográfica entre si, **à semelhança do que acontece com as circunscrições eleitorais no continente para a Assembleia da República**...» 
 
 «Até porque **não me parece aceitável que se justifique um entorse a um princípio constitucional de tão assinalável relevância como é o princípio da representação proporcional** apenas com base na pretensa tradição de um sistema cuja conformidade constitucional não se pode dar por adquirida como ponto de partida de um juízo de constitucionalidade, nem se pode presumir apenas por força do decurso do tempo e da ausência de iniciativas de fiscalização da respectiva constitucionalidade.»
 
 
 ### **Luís Nunes de Almeida**  
 
-«Verifica-se, assim, dada a dimensão das circunscrições, que o partido mais votado obteria um "benefício" de 14,11 %, enquanto todos os outros seriam penalizados.  Particularmente **significativa e reveladora, porque chocante, é a circunstância de o CDS, apesar de obter mais votos, ser contemplado com menos mandatos que a UDP**... A injustiça do sistema — em termos de representação proporcional — é gritante, não parecendo legítimo ignorar estes números, cujo significado se afigura inegável.»  
+«Verifica-se, assim, dada a dimensão das circunscrições, que o partido mais votado obteria um "benefício" de 14,11 %, enquanto todos os outros seriam penalizados. Particularmente **significativa e reveladora, porque chocante, é a circunstância de o CDS, apesar de obter mais votos, ser contemplado com menos mandatos que a UDP**... A injustiça do sistema — em termos de representação proporcional — é gritante, não parecendo legítimo ignorar estes números, cujo significado se afigura inegável.»  
 
 «Tudo, pois, confirma a conclusão a que já se chegou: **o princípio da representação proporcional é grosseiramente violado pelas normas questionadas**.»  
 
@@ -132,7 +132,7 @@ Sobre a revisão constitucional de 1997: permite «sistemas mistos, com círculo
 
 ## Proporcionalidade comparada
 
-Nenhum sistema garante a proporcionalidade perfeita, isso é matematicamente impossível, mas alguns sistemas/países tentam aproximar-se desse ideal, usando:
+Nenhum sistema garante a proporcionalidade perfeita, isso é matematicamente impossível, mas alguns sistemas/países tentam aproximar-se desse ideal, adoptando:
 * **poucos círculos eleitorais**, para aumentar o seu tamanho médio (Finlândia e Bélgica);
 * um **círculo único nacional** para garantir a proporcionalidade (Países Baixos e Madeira);
 * um **círculo nacional de compensação** (Áustria, Alemanha e Açores);
@@ -147,7 +147,7 @@ Abaixo apresentamos o valor dos dois índices para Portugal:
 
 <img src="{{ '/assets/images/lsqecad.png' | relative_url }}" alt="Valores do LSq e CAd para Portugal" class="mx-auto my-6 rounded-xl shadow-md max-w-full">
 
-Com base na [actualização](https://web.archive.org/web/20230218002146/https://www.tcd.ie/Political_Science/people/michael_gallagher/ElSystems/Docts/ElectionIndices.pdf) em Janeiro de 2023, dos 46 países europeus com eleições livres apenas 13 (28%) tinham um LSq na última eleição mais elevado que Portugal. Todos eles com elementos expressamente proibidos pela nossa Constituição.
+Com base na [actualização](https://web.archive.org/web/20230218002146/https://www.tcd.ie/Political_Science/people/michael_gallagher/ElSystems/Docts/ElectionIndices.pdf) em Janeiro de 2023, dos 46 países europeus com eleições livres apenas 13 (28%) tinham um LSq na última eleição mais elevado que Portugal. Todos eles com elementos proibidos pela nossa Constituição.
 
 Desses, apenas 5 (11%) tiveram o LSq mais alto que Portugal nas duas últimas eleições.
 Apesar de ter um sistema maioritário, o Reino Unido não está neste grupo.
@@ -194,7 +194,7 @@ O processo iniciou-se com a queixa de dois eleitores em Zurique, e acabou com o 
 Ao longo de vários acórdãos, o Tribunal Federal Suíço desenvolveu o entendimento de que círculos eleitorais de pequena dimensão (com menos de 10 mandatos), quando funcionam de forma isolada, comprometem o princípio da representação proporcional. O ponto mais importante é que cada voto tenha uma capacidade semelhante de influenciar a distribuição final de mandatos, independentemente da geografia do eleitor.
 
 ### [Zurique (2002 - BGE 129 I 185)](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-129-I-185)
-O Tribunal Federal recorreu ao exemplo recente do círculo mais pequeno, equivalente a Portalegre, concluindo que «o facto de mais de um terço dos votos dos eleitores [...] não ter sido tido em conta, permanecendo sem peso, é incompatível com a igualdade do valor do voto».
+O Tribunal Federal recorreu ao exemplo recente do círculo mais pequeno, equivalente a Portalegre, concluindo que «o facto de mais de um terço dos votos dos eleitores... não ter sido tido em conta, permanecendo sem peso, é incompatível com a igualdade do valor do voto».
 O tribunal acrescentou ainda o seguinte cenário, então apresentado como hipotético:
 «um partido que reúna apenas pouco mais de metade ou mesmo apenas uma maioria relativa dos votos pode ganhar ambos os mandatos, se os restantes votos estiverem fragmentados por vários partidos mais pequenos. Em ambos os casos, o caráter do sistema de representação proporcional é amplamente adulterado.»
 
@@ -221,7 +221,7 @@ Sobre o sistema eleitoral a sua [constituição](https://www.constituteproject.o
 
 Dois meses após a eleição de 2017, deputados de três partidos apresentaram uma queixa ao Tribunal Constitucional, alegando que o sistema punha em causa o princípio da representação proporcional e da igualdade de voto nas eleições.
 
-O argumento principal era que nos círculos mais pequenos, e em particular nos dois mais pequenos (com 5 e 8 mandatos), existe uma discriminação sistemática dos eleitores, que na prática têm um leque de escolhas reduzido face aos eleitores nos maiores círculos.
+O argumento principal era que nos círculos mais pequenos, e em particular nos dois mais pequenos (com 5 e 8 mandatos), existe uma discriminação sistemática dos eleitores, que, na prática, têm um leque de escolhas reduzido face aos eleitores nos maiores círculos.
 
 Assim, defendiam que o sistema até podia manter os círculos existentes, e o método d'Hondt no cálculo dos mandatos, mas precisava de mecanismos adicionais para compensar a desproporcionalidade vinda dos círculos locais.
 
@@ -244,17 +244,17 @@ Na nossa Constituição parece claro que a proporcionalidade deve ter a primazia
 
 Acrescentamos ainda a interpretação de Gomes Canotilho em “Direito Constitucional e teoria da Constituição”:
 
-> «Ao consagrar o princípio da representação proporcional como princípio garantido contra a própria revisão e ao possibilitar, inclusivamente, a formação de governos de minoria, a Constituição portuguesa aponta para .. o pluralismo partidário sem artifícios redutores.»
+> «Ao consagrar o princípio da representação proporcional como princípio garantido contra a própria revisão e ao possibilitar, inclusivamente, a formação de governos de minoria, a Constituição portuguesa aponta para... o pluralismo partidário sem artifícios redutores.»
 
 Mas será mesmo um equilíbrio? Será que as “democracias maioritárias”, onde há dois grandes partidos e governos de maioria absoluta artificial, sacrificam a igualdade dos eleitores e a justiça do resultado para conseguir um sistema mais estável no médio prazo?
 
 Um dos maiores especialistas deste tema, Arend Lijphart, conclui que não em “Patterns of Democracy”, com base na sua análise de 36 países com eleições livres:
 
-> «...majoritarian democracies do not outperform the consensus democracies on effective government and effective policy-making - in fact, the consensus democracies have the better record - but the consensus democracies do clearly outperform the majoritarian democracies with regard to the quality of democracy and democratic representation as well as with regard to what I have called the kindness and gentleness of their public policy orientations.»
+> «... majoritarian democracies do not outperform the consensus democracies on effective government and effective policy-making - in fact, the consensus democracies have the better record - but the consensus democracies do clearly outperform the majoritarian democracies with regard to the quality of democracy and democratic representation as well as with regard to what I have called the kindness and gentleness of their public policy orientations.»
 
 Escreveu ainda que para atingir esse nível é preciso que o sistema proporcional seja proporcional na prática, não apenas em nome, e aqui referiu explicitamente o caso espanhol, que desde então foi ultrapassado pelo português no que diz respeito à desproporcionalidade.
 
 ---
 
 > ⚖️ **Análise Constitucional Alargada (Tempo de leitura: ~45 minutos)**
-> Para quem quiser analisar em detalhe os pareceres dos nossos constitucionalistas, os Acórdãos do Tribunal Constitucional e uma análise mais exaustiva dos sistemas eleitorais europeus, bem como detalhes sobre a decisão histórica do Tribunal Constitucional Checo, disponibilizamos a nossa [Análise Alargada](https://docs.google.com/document/d/1op3_6bZjSWOpL56qhZfjm7AFjMW0CeQEskStcXXmM8Y/edit?usp=sharing).
+> Para quem quiser conhecer com mais detalhe os pareceres dos nossos constitucionalistas, os Acórdãos do Tribunal Constitucional e uma análise mais exaustiva dos sistemas eleitorais europeus, bem como detalhes sobre a decisão histórica do Tribunal Constitucional Checo, disponibilizamos a nossa [Análise Alargada](https://docs.google.com/document/d/1op3_6bZjSWOpL56qhZfjm7AFjMW0CeQEskStcXXmM8Y/edit?usp=sharing).

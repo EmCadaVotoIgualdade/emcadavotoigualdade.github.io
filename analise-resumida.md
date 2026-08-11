@@ -29,9 +29,9 @@ Neste documento apresenta-se a interpretação de **constitucionalistas**, e **a
 
 «Na CRP, a ideia de representação no Parlamento como "espelho da sociedade política" tem primazia na conformação do sistema eleitoral, **avultando mesmo sobre a obtenção de maiorias estáveis**.»
 
-«..o princípio de representação [proporcional] consiste no objectivo de reflectir na composição do órgão electivo **com a maior exactidão possível** o universo dos grupos políticos existentes na sociedade.»
+«...o princípio de representação [proporcional] consiste no objectivo de reflectir na composição do órgão electivo **com a maior exactidão possível** o universo dos grupos políticos existentes na sociedade.»
 
-«É no confronto entre a repartição de mandatos e os votos obtidos por cada formação política concorrente, **no âmbito do colégio eleitoral**, que se devem apurar os desvios à proporcionalidade - não círculo por círculo, cada um dos quais não é mais do que um desdobramento geográfico desse mesmo colégio» [Interpretação idêntica à que viria a ser feita duas décadas depois pelo TC da República Checa]
+«É no confronto entre a repartição de mandatos e os votos obtidos por cada formação política concorrente, **no âmbito do colégio eleitoral**, que se devem apurar os desvios à proporcionalidade - não círculo por círculo, cada um dos quais não é mais do que um desdobramento geográfico desse mesmo colégio» [Interpretação idêntica à que seria feita duas décadas depois pelo T.C. da República Checa]
 
 «Bastaria [para respeitar o princípio de representação proporcional] que as distorções resultantes da pequenez dos círculos fossem **corrigidas através de um apuramento complementar**.»
 
@@ -39,13 +39,13 @@ Neste documento apresenta-se a interpretação de **constitucionalistas**, e **a
 
 ## Proporcionalidade comparada
 
-Diversos países procuram aproximar-se do princípio da representação proporcional através de:
+Diversos países procuram aproximar-se do princípio da representação proporcional adoptando:
 * **poucos círculos eleitorais**, para aumentar o seu tamanho médio (Finlândia e Bélgica);
 * um **círculo único nacional** para garantir a proporcionalidade (Países Baixos e Madeira);
 * um **círculo nacional de compensação** (Áustria, Alemanha e Açores);
 * ou **círculos locais ajustados com a votação nacional** (Dinamarca, Suécia e Noruega), neste caso, até o número de deputados de cada círculo pode manter-se igual ao actual.
 
-Apresenta-se o Índice de Gallagher (o mais usado para medir a desproporcionalidade de sistemas eleitorais), para todos os países europeus com eleições livres desde 1980, mais de um milhão de habitantes, e sistemas formalmente proporcionais:
+Apresenta-se o [Índice de Gallagher](calculo-indices.html) (o mais usado para medir a desproporcionalidade de sistemas eleitorais), para todos os países europeus com eleições livres desde 1980, mais de um milhão de habitantes, e sistemas formalmente proporcionais:
 
 <img src="{{ '/assets/images/inconstitucional_grafico_gallagher.png' | relative_url }}" alt="Gráfico do Índice de Gallagher na Europa" class="mx-auto my-6 rounded-xl shadow-md max-w-full">
 
@@ -57,9 +57,9 @@ E o Índice CAd, que mede a vantagem que o sistema eleitoral dá aos dois maiore
 
 ## A jurisprudência do Tribunal Federal Suíço
 
-Houve uma série de decisões em relação às eleições de vários cantões [Zurique](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-129-I-185), [Argóvia](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-131-I-74), [Zug](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-136-I-376), [Valais](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-140-I-107), [Uri](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-143-I-92), que são analisados em mais detalhe num [documento anexo](suica.html), e levaram a mudanças de vários sistemas eleitorais para garantirem a igualdade de voto. A citação que melhor resume todas estas decisões é:
+Houve uma série de decisões relativamente às eleições de vários cantões [Zurique](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-129-I-185), [Argóvia](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-131-I-74), [Zug](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-136-I-376), [Valais](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-140-I-107), [Uri](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-143-I-92), analisados em mais detalhe num [documento anexo](suica.html), e levaram a mudanças de vários sistemas eleitorais para garantirem a igualdade de voto. A citação do tribunal que melhor resume estas decisões é:
 
-> «Sempre que não ocorra uma compensação com efeitos transdistritais (o chamado sistema de representação proporcional puro), um círculo eleitoral deve dispor de, pelo menos, dez mandatos.»
+> «Sempre que não ocorra uma compensação com efeitos transdistritais, um círculo eleitoral deve dispor de, pelo menos, dez mandatos.»
 
 ---
 
@@ -70,4 +70,4 @@ Houve uma série de decisões em relação às eleições de vários cantões [Z
 «O princípio constitucional exige que a proporção entre os votos recebidos e os mandatos obtidos não seja obra do acaso, mas sim das regras estabelecidas na lei eleitoral.»
 
 
-> Em ambos os países, os sistemas eleitorais mantiveram os círculos eleitorais, mas passaram a atribuir os mandatos aos partidos em função da sua votação global, através de mecanismos de compensação nacional.
+> Em ambos os países, os sistemas eleitorais mantiveram os círculos eleitorais, mas passaram a atribuir os mandatos aos partidos em função da sua votação global, por via de mecanismos de compensação nacional.

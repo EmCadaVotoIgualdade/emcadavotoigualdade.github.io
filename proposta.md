@@ -48,7 +48,7 @@ Assim, partilhamos os dois objectivos dessas propostas PS/PSD, mas para os concr
 
 ### 1º objectivo: proporcionalidade e igualdade de voto
 
-A proporcionalidade será sempre assegurada ao aplicar o método de Hondt ao total dos votos nacionais, o que em 2022 resultaria num "custo" de 22 mil votos por mandato (44 mil votos davam dois mandatos, 66 mil votos davam três, etc).
+A proporcionalidade será sempre assegurada ao aplicar o método d'Hondt ao total dos votos nacionais, o que em 2022 resultaria num "custo" de 22 mil votos por mandato (44 mil votos davam dois mandatos, 66 mil votos davam três, etc).
 
 Os mandatos são depois totalmente distribuídos pelos círculos actuais, de forma a reflectir o apoio de cada partido pelo país, sem centralizar o sistema com uma lista de círculo nacional.
 
@@ -71,7 +71,7 @@ Os detalhes de ambos os objectivos podem ser consultados [aqui](detalhes.html).
 ---
 
 > 📖 **Estudo Exaustivo (Tempo de leitura: ~55 minutes)**
-> Se pretendes aprofundar a discussão, analisar em detalhe o funcionamento do sistema eleitoral em países como Espanha, Reino Unido, Alemanha, Países Baixos e Dinamarca, e consultar toda a fundamentação técnica e histórica, podes ler o nosso [Documento Completo](https://docs.google.com/document/d/1NxZX4EXWl3y77qbcE1pW2d-RBM3WFRZ90aI6AAQplYw/edit?usp=sharing).
+> Se pretende aprofundar a discussão, analisar em detalhe o funcionamento do sistema eleitoral em países como Espanha, Reino Unido, Alemanha, Países Baixos e Dinamarca, e consultar toda a fundamentação técnica e histórica, podes ler o nosso [Documento Completo](https://docs.google.com/document/d/1NxZX4EXWl3y77qbcE1pW2d-RBM3WFRZ90aI6AAQplYw/edit?usp=sharing).
 
 ---
 
