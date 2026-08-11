@@ -7,7 +7,7 @@ description: ACÓRDÃO  Nº 1/91 e Nº 199/00
 # Acórdãos do Tribunal Constitucional sobre a representação proporcional
 *[Ambos sobre o sistema eleitoral da Assembleia Legislativa da Região Autónoma da Madeira, antes de ter passado a haver um círculo único]*
 
-## [ACÓRDÃO  Nº 1/91](https://www.tribunalconstitucional.pt/tc/acordaos/19910001.html)
+## [ACÓRDÃO Nº 1/91](https://www.tribunalconstitucional.pt/tc/acordaos/19910001.html)
 
 «... o legislador constitucional português optou pelo sistema de representação proporcional e ligou-o de tal modo a ideia de genuinidade da representação democrática que o erigiu em limite material de revisão da Constituição (CRP, artigo 288.º, alínea h)»
 
@@ -55,7 +55,7 @@ Mas seria necessário pagar tal restrição ao princípio da proporcionalidade p
 «Bastaria, [para respeitar o princípio de representação proporcional], que as distorções resultantes da pequenez dos círculos fossem **corrigidas através de um apuramento complementar efectuado a nível regional**...»
 
 
-## [ACÓRDÃO  Nº 199/00](https://www.tribunalconstitucional.pt/tc/acordaos/20000199.html)
+## [ACÓRDÃO Nº 199/00](https://www.tribunalconstitucional.pt/tc/acordaos/20000199.html)
 
 «Ao princípio da representação proporcional foi atribuída tal importância no funcionamento do sistema eleitoral português e na própria construção do regime democrático que o legislador constitucional o erigiu em limite material de revisão da Constituição.»
 
