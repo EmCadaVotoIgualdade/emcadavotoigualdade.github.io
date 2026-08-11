@@ -121,6 +121,6 @@ A proposta é que cada partido possa escolher, de forma independente, a liberdad
 2. Apresentar listas ordenadas, sem possibilidade de ser alterada pelos eleitores, como actualmente
 3. Uma opção intermédia, onde é apresentada uma lista ordenada, e os candidatos que recebem acima de um determinado número de votos pessoais vão para o topo da lista
 
-Quanto à opção 3, é preciso definir um valor mínimo de votos para os candidatos poderem subir na lista. Propomos um valor simples, como 5.000 votos, e que pode ser ajustado à medida que os portugueses se habituam ao voto preferencial.
+Quanto à opção 3, é preciso definir um valor mínimo de votos para os candidatos poderem subir na lista. Propomos um valor simples, como 5.000 votos, e pode ser ajustado à medida que os portugueses se habituam ao voto preferencial.
 
 Na Dinamarca também existe esta flexibilidade (opção 1 ou 3), e ao longo do tempo os partidos estão a adotar cada vez mais a opção 1, que dá aos eleitores todo o poder.

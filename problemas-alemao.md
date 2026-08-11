@@ -8,7 +8,7 @@ description: Uma análise crítica ao sistema eleitoral alemão, as suas complex
 
 > **Nota de Actualidade:** O sistema alemão foi alterado para as últimas eleições em 2025, e pela primeira vez desde que o sistema existe (1949) os vencedores dos círculos uninominais (apenas um vencedor) já não têm garantida a presença no parlamento. Em 2025, 23 destes vencedores não chegaram ao parlamento, ficando os círculos locais sem representação ou representados por candidatos derrotados.
 >
-> No entanto, a análise abaixo, do modelo anterior, continua válida, pois as propostas deste sistema para Portugal geralmente garantem a representação dos vencedores, mesmo que tenham uma percentagem baixa ou os seus partidos não tenham votos suficientes a nível nacional, o que traz os problemas que os alemães tinham no modelo anterior. Além disso, partidos do actual governo já manifestaram vontade de voltar ao modelo antigo.
+> No entanto, a análise abaixo, do modelo anterior, continua válida, pois as propostas deste sistema para Portugal garantem geralmente a representação dos vencedores, mesmo que tenham uma percentagem baixa ou os seus partidos não tenham votos suficientes a nível nacional, o que traz os problemas que os alemães tinham no modelo anterior. Além disso, partidos do actual governo já manifestaram vontade de voltar ao modelo antigo.
 
 ---
 
@@ -21,10 +21,10 @@ Assim, cada partido recebe aproximadamente o mesmo número de votos nacionais po
 À primeira vista este sistema consegue o melhor das duas filosofias que também defendemos, proporcionalidade e ligação entre eleitores e eleitos, mas todos os sistemas têm defeitos, e o alemão tem vários, alguns muito graves, que vamos apresentar:
 
 ### 1. O crescimento descontrolado do Parlamento
-Os 299 mandatos de compensação têm sido cada vez mais insuficientes para corrigir a falta de proporcionalidade resultante das eleições uninominais, em parte devido ao aumento dos partidos no Parlamento. Em 2002 foram necessários 5 deputados adicionais, número que foi crescendo até aos 138 em 2021. Este aumento não tem um limite teórico, e começa a ser tão problemático que já existem propostas para reduzir o número de círculos uninominais de 299 para 280[[4]](#ref-4), reduzindo a proporção de deputados eleitos localmente, que nesta altura ronda os 40%.
+Os 299 mandatos de compensação têm sido cada vez mais insuficientes para corrigir a falta de proporcionalidade resultante das eleições uninominais, em parte devido ao aumento dos partidos no Parlamento. Em 2002 foram necessários 5 deputados adicionais, número que cresceu até aos 138 em 2021. Este aumento não tem um limite teórico, e começa a ser tão problemático que já existem propostas para reduzir o número de círculos uninominais de 299 para 280[[4]](#ref-4), reduzindo a proporção de deputados eleitos localmente, que nesta altura ronda os 40%.
 
 ### 2. O incentivo ao voto táctico e "partidos-fantoche"
-O voto táctico ou insincero é frequente neste tipo de sistemas, devido à existência de dois votos, que permitem manipular o sistema de compensação. Na Nova Zelândia, dirigentes dos maiores partidos já chegaram a sugerir abertamente que alguns dos seus apoiantes utilizem o seu voto local noutros partidos do mesmo espectro político, de forma a maximizar o número de deputados de uma futura coligação[[5]](#ref-5). Na Alemanha um dos partidos chegou a receber mais de metade dos seus votos nacionais emparelhados com votos locais noutros partidos[[6]](#ref-6).
+O voto táctico ou insincero é frequente neste tipo de sistemas, devido à existência de dois votos, que permitem manipular o sistema de compensação. Na Nova Zelândia, dirigentes dos maiores partidos já chegaram a sugerir abertamente que alguns dos seus apoiantes utilizem o seu voto local noutros partidos do mesmo espectro político, para maximizar o número de deputados de uma futura coligação[[5]](#ref-5). Na Alemanha um dos partidos chegou a receber mais de metade dos seus votos nacionais emparelhados com votos locais noutros partidos[[6]](#ref-6).
 
 Uma versão mais extrema desta táctica é usar um “partido-fantoche” para manipular o sistema de compensação sem depender de um eventual parceiro de coligação. Isto ocorreu em Itália em 2001[[7]](#ref-7), onde os dois maiores partidos criaram partidos-fantoche, que entre eles elegeram 75% dos deputados locais, com menos de 1% dos votos nacionais, já que os apoiantes foram instruídos a dar apenas o voto local ao partido “fantoche”, e o voto nacional ao partido “a sério”. Esta táctica foi repetida pelos dois maiores partidos da Coreia do Sul em 2020, na primeira eleição com um sistema do tipo alemão, entre outros exemplos[[8]](#ref-8).
 
@@ -43,9 +43,9 @@ Ainda neste tema, em 1998 foi dito no Parlamento: *“A proposta de lei do Gover
 ### 5. O esforço burocrático e o risco de "Gerrymandering"
 Existe um esforço burocrático de actualização do desenho dos círculos uninominais para compensar variações populacionais, que tem má fama sobretudo nos Estados Unidos devido ao efeito de “Gerrymandering”[[14]](#ref-14), em que os decisores podem influenciar os resultados das eleições pela forma como desenham os mapas.
 
-É visível a dificuldade deste desenho no território Português quando numa proposta há um círculo com mais 50% de eleitores que a média[[15]](#ref-15), acima dos 25% permitidos legalmente na Alemanha, e muito acima dos 15% recomendados[[16]](#ref-16).
+É visível a dificuldade deste desenho no território português quando numa proposta há um círculo com mais 50% de eleitores que a média[[15]](#ref-15), acima dos 25% permitidos legalmente na Alemanha, e muito acima dos 15% recomendados[[16]](#ref-16).
 
-Este desequilíbrio é reduzido noutra proposta[[17]](#ref-17), mas à custa de uma menor integridade entre concelhos. Começando pelo Norte, surgem problemas logo no distrito de Braga: O concelho de Barcelos é dividido, com uma metade agregada a Esposende, e a outra a Vila Verde, e o mesmo acontece no concelho de Braga e no de Guimarães. O autor explica: *"A elaboração da proposta de mapa para os círculos uninominais foi difícil e complexa”*.
+Este desequilíbrio é reduzido noutra proposta[[17]](#ref-17), mas à custa de uma menor integridade entre concelhos. Começando pelo Norte, surgem problemas logo no distrito de Braga: O concelho de Barcelos é dividido, com uma metade agregada a Esposende, e a outra a Vila Verde, e o mesmo acontece no concelho de Braga e no de Guimarães. O autor explica: *«A elaboração da proposta de mapa para os círculos uninominais foi difícil e complexa»*.
 
 Este é um problema geral dos círculos uninominais, o actual chanceler da Alemanha foi eleito num círculo cujo nome deixa adivinhar alguma complexidade no processo: **Potsdam – Potsdam-Mittelmark II – Teltow-Fläming II**.
 
@@ -55,7 +55,7 @@ Outra questão particular são as regiões autónomas. Numas propostas não há 
 Noutras propostas há círculos uninominais nas regiões autónomas, mesmo tendo de agregar algumas ilhas a partes de outras, talvez como resposta ao parecer da Universidade Católica[[18]](#ref-18) em 1998 que dizia: *“Não é admissível que, num Estado Unitário como o nosso, os círculos eleitorais das regiões autónomas sejam excluídos do objectivo da personalização do voto”*.
 
 ### 7. Distorção da representação local e "seguros de eleição"
-Uma nota final sobre como os círculos uninominais traduzem a vontade e a representação dos eleitores Alemães, analisando os resultados do círculo de Merkel em 2017, o último ano em que concorreu, e que ganhou pela oitava vez consecutiva desde 1990[[19]](#ref-19):
+Uma nota final sobre como os círculos uninominais traduzem a vontade e a representação dos eleitores alemães, analisando os resultados do círculo de Merkel em 2017, o último ano em que concorreu, e que ganhou pela oitava vez consecutiva desde 1990[[19]](#ref-19):
 
 Merkel venceu com 44% dos votos pessoais, mas quatro dos derrotados foram eleitos pelas listas nacionais. Assim, ter ganho Merkel ou um dos outros quatro candidatos, seria indiferente para a composição do Bundestag. Além disso, os habitantes desse círculo tiveram, na prática, direito a cinco representantes locais, enquanto outros, com população semelhante, têm direito a apenas um.
 
@@ -87,11 +87,11 @@ Além destes problemas técnicos, em 1998 tanto o PCP como o CDS criticaram a ca
 
 A IL apresentou no programa de 2022[[23]](#ref-23) uma proposta semelhante ao modelo alemão, mas com um voto único, o equivalente a ter de dar o voto local e o nacional ao mesmo partido. O voto único tem algumas vantagens, como impedir a táctica dos partidos-fantoche, mencionada na análise do sistema alemão, e reduzir a pressão no círculo de compensação.
 
-A desvantagem é que retira liberdade aos eleitores. Este problema foi apontado pela maioria das universidades em 1998, e a conclusão geral foi que *“o voto singular limita as opções dos eleitores”* e *“o critério partidário tenderá a prevalecer sobre a escolha personalizada”*[[24]](#ref-24), e levou o Governo a adoptar o duplo voto na proposta. A primeira eleição na Alemanha Ocidental, em 1949, usou este sistema, e na seguinte foi implementado o duplo voto.
+A desvantagem é que retira liberdade aos eleitores. Este problema foi apontado pela maioria das universidades em 1998, e a conclusão geral foi que *«o voto singular limita as opções dos eleitores»* e *«o critério partidário tenderá a prevalecer sobre a escolha personalizada»*[[24]](#ref-24), e levou o Governo a adoptar o duplo voto na proposta. A primeira eleição na Alemanha Ocidental, em 1949, usou este sistema, e na seguinte foi implementado o duplo voto.
 
-A proposta tem 150 círculos uninominais, e apenas 80 mandatos de compensação, um número baixo comparado com os exemplos existentes (com voto duplo), uma tendência natural quando o objectivo é aproximar os deputados locais dos seus eleitores.
+Esta proposta tem 150 círculos uninominais, e apenas 80 mandatos de compensação, um número baixo comparado com os exemplos existentes (com voto duplo), uma tendência natural quando o objectivo é aproximar os deputados locais dos seus eleitores.
 
-A possibilidade dos maiores partidos terem exclusividade nos mandatos de proximidade foi referida em 1998, e também na proposta da IL que explica: *“mesmo que poucos partidos grandes monopolizem os 150 círculos uninominais (...) os demais 80 mandatos em jogo garantem a proporcionalidade global, e a justa representação aos pequenos partidos”*.
+A possibilidade dos maiores partidos terem exclusividade nos mandatos de proximidade foi referida em 1998, e também na proposta da IL que explica: *«mesmo que poucos partidos grandes monopolizem os 150 círculos uninominais... os demais 80 mandatos em jogo garantem a proporcionalidade global, e a justa representação aos pequenos partidos»*.
 
 Em 2022 os pequenos partidos teriam direito a 59 deputados, abaixo dos 80 do mandato de compensação. O problema surge se for apenas um dos grandes partidos a dominar, e vencer mais mandatos locais do que aqueles a que teria direito pela distribuição nacional. Nesta proposta o partido mantém os “mandatos de bónus”, e os restantes partidos perdem o direito a alguns dos seus mandatos de compensação, deixando de se garantir a proporcionalidade a nível nacional.
 
@@ -99,13 +99,13 @@ Um novo sistema pode influenciar as escolhas dos eleitores, e neste caso o próp
 
 Utilizando um valor mais conservador face à estimativa dos concelhos, e considerando que o PS vence 87% dos círculos uninominais, o PS obtém 131 mandatos, mais 11 do que no sistema actual (e mais 30 do que num sistema proporcional). A variação nos restantes partidos seria: PSD -23, CH +1, IL +1, BE +3, CDU +2, CDS +3, PAN +1, e L +1.
 
-Esta distribuição de mandatos não é proporcional, e portanto não seria coerente com a Constituição. Além disso, este sistema tem um problema semelhante ao alemão quando foi declarado inconstitucional. Nesse sistema era possível que para alguns eleitores, votar no seu partido não fosse a opção que lhe daria mais deputados.
+Esta distribuição de mandatos não é proporcional, e, portanto, não seria coerente com a Constituição. Além disso, este sistema tem um problema semelhante ao alemão quando foi declarado inconstitucional. Nesse sistema era possível que para alguns eleitores, votar no seu partido não fosse a opção que lhe daria mais deputados.
 
-Na estimativa analisada o PS perdia apenas 19 círculos para o PSD (o único partido com chances nos concelhos em 2022), e cada derrota adicional libertaria um mandato de compensação para a distribuição proporcional. O primeiro mandato de compensação adicional, caso o PS baixasse de 131 para 130 vitórias, caberia ao PAN. Isto significa que num dos círculos em que o PS vence com menor margem, o voto dos apoiantes do PAN no PSD podia dar esse mandato uninominal ao PSD (p.ex. no concelho do Porto, onde o PS venceu por 500 votos). 
+Na estimativa analisada o PS perdia apenas 19 círculos para o PSD (o único partido com hipóteses nos concelhos em 2022), e cada derrota adicional libertaria um mandato de compensação para a distribuição proporcional. O primeiro mandato de compensação adicional, caso o PS baixasse de 131 para 130 vitórias, caberia ao PAN. Isto significa que num dos círculos em que o PS vence com menor margem, o voto dos apoiantes do PAN no PSD podia dar esse mandato uninominal ao PSD (p.ex. no concelho do Porto, onde o PS venceu por 500 votos). 
 
 O resultado dessa vitória do PSD, na composição do Parlamento, seria menos um deputado do PS, e mais um do PAN. Para esses apoiantes do PAN, mudar o voto para o PAN seria perder um deputado. O PSD manteria os 54 deputados apesar dessa vitória adicional, o número de mandatos uninominais aumentaria de 19 para 20, mas o número de mandatos de compensação diminuiria de 35 para 34. Caso o PSD vencesse mais outro círculo ao PS esse mandato caberia, de forma mais intuitiva, ao PSD, e o seguinte ao CH.
 
-> **Nota Final:** Toda esta análise poderia ser feita trocando PS e PSD, se fosse aplicada a um ano em que foi o PSD a dominar (por exemplo em 2011 onde venceu 80% dos concelhos, com 39% dos votos nacionais), e aí poderiam ser alguns apoiantes da IL a descobrir que a forma de terem ganho mais um deputado seria terem votado no PS.
+> **Nota Final:** Esta análise poderia ser feita trocando PS e PSD, se fosse aplicada a um ano em que foi o PSD a dominar (por exemplo, em 2011 onde venceu 80% dos concelhos, com 39% dos votos nacionais), e aí poderiam ser alguns apoiantes da IL a descobrir que a forma de terem ganho mais um deputado seria terem votado no PS.
 
 ---
 

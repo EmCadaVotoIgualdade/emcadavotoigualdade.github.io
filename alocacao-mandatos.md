@@ -13,14 +13,14 @@ Na Europa há vários sistemas eleitorais que procuram conciliar a existência d
 
 Nestes sistemas há círculos locais e mandatos de compensação alocados a um nível superior. Os mandatos locais dependem apenas dos votos nesse círculo, enquanto os de compensação dependem dos votos totais de cada partido e do seu número de mandatos nos círculos locais.
 
-Este sistema tem duas desvantagens que foram mencionadas em debates parlamentares sobre propostas deste género:
+Este sistema tem duas desvantagens mencionadas em debates parlamentares sobre propostas deste género:
 * **Criação de duas categorias de deputados:** os eleitos diretamente pelos círculos locais e os eleitos pelas listas centrais de compensação.
 * **Erosão da representação local:** para criar um círculo de compensação sem aumentar o número total de deputados, é necessário retirar mandatos aos círculos actuais.
 
 
 ### Dinamarca e Suécia
 
-Estes sistemas resolvem as duas desvantagens anteriores com um passo adicional que aloca os mandatos de compensação aos círculos locais em função da distribuição de votos dos vários partidos. Neste passo é possível que um círculo mais pequeno que outro (por exemplo com menos eleitores) acabe com mais mandatos, se for aí que um ou mais partidos com direito a mandatos de compensação tiverem a sua maior votação.
+Estes sistemas resolvem as duas desvantagens anteriores com um passo adicional que aloca os mandatos de compensação aos círculos locais em função da distribuição de votos dos vários partidos. Neste passo é possível que um círculo mais pequeno que outro (por exemplo, com menos eleitores) acabe com mais mandatos, se for aí que um ou mais partidos com direito a mandatos de compensação tiverem a sua maior votação.
 
 
 ### Noruega
@@ -54,7 +54,7 @@ Aqui não vão ser apresentados os detalhes técnicos de cada sistema, apenas os
 Para cada eleição foram simuladas 5 mil variantes, onde cada partido tem a sua votação global a variar até $\pm 8\%$ de forma aleatória, bem como uma variação local em cada círculo até $\pm 2\%$, de forma independente.
 
 Este procedimento gerou 25 mil resultados eleitorais possíveis, que permitem uma análise mais robusta das consequências de cada método do que analisando apenas os cinco resultados históricos.
-*(os detalhes técnicos de cada sistema, os resultados detalhados das simulações, bem como o código para as reproduzir serão apresentado neste site no futuro, e até lá poderá ser solicitado em emcadavotoigualdade@gmail.com)*
+*(os detalhes técnicos de cada sistema, os resultados detalhados das simulações, bem como o código para as reproduzir serão apresentados neste site no futuro, e até lá poderá ser solicitado em emcadavotoigualdade@gmail.com)*
 
 ---
 
@@ -73,7 +73,7 @@ Este procedimento gerou 25 mil resultados eleitorais possíveis, que permitem um
 
 #### 1. Proporcionalidade entre votos e mandatos, círculo a círculo
 
-Nesta métrica é calculado o índice de Gallagher círculo a círculo, quanto mais baixo o valor mais proporcional é o método.
+Nesta métrica é calculado o índice de Gallagher círculo a círculo, quanto mais baixo for o valor mais proporcional é o método.
 Aqui o método de Zurique ganha claramente, com uma média de 9.7, contra 10.1 do método dinamarquês e 12.0 do sistema actual.
 
 
@@ -85,9 +85,9 @@ O método dinamarquês foi criado em parte para responder a esta métrica, e com
 
 #### 3. Inversões de pares mandatos/votos no mesmo círculo
 
-Estas inversões acontecem quando num círculo um partido tem mais votos que outro mas menos mandatos.
+Estas inversões acontecem quando num círculo um partido tem mais votos que outro, mas menos mandatos.
 
-No sistema actual, e em todos onde os círculos estão isolados, nunca há inversões dentro do mesmo círculo. No método de Zurique há em média 1.9 inversões e no dinamarquês 0.8, em cada eleição. Nas eleições reais da Dinamarca, Suécia, Noruega e Zurique estas inversões acontecem com regularidade. Este efeito é visto como o custo a pagar para garantir a igualdade de voto a nível nacional e por consequência evitar as mais graves inversões de mandatos/votos a nível nacional.
+No sistema actual, e em todos onde os círculos estão isolados, nunca há inversões dentro do mesmo círculo. No método de Zurique há em média 1.9 inversões e no dinamarquês 0.8, em cada eleição. Nas eleições reais da Dinamarca, Suécia, Noruega e Zurique estas inversões acontecem com regularidade. Este efeito é visto como o custo a pagar para garantir a igualdade de voto global e por consequência evitar as mais graves inversões de mandatos/votos a nível nacional.
 
 
 #### 4. Inversões de pares mandatos/votos entre os vários círculos
@@ -98,4 +98,4 @@ Quando alargamos a análise para inversões também entre círculos diferentes, 
 
 ## Conclusão
 
-A adopção de um sistema como o de Zurique, ou de uma variante do sistema dinamarquês permite garantir a igualdade de voto a nível nacional; manter o número de mandatos em todos os círculos, mas aumentar a pluralidade de representação, particularmente importante nos círculos mais pequenos; e tornar a distribuição dos mandatos pelos círculos mais proporcional em relação às percentagens de votos.
+A adopção de um sistema como o de Zurique, ou de uma variante do sistema dinamarquês permite garantir a igualdade de voto a nível nacional; manter o número de mandatos em todos os círculos, mas aumentar a pluralidade de representação, particularmente importante nos círculos mais pequenos; e tornar a distribuição dos mandatos pelos círculos mais proporcional relativamente às percentagens de votos.

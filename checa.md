@@ -33,15 +33,15 @@ Dois meses após a eleição de 2017, deputados do partido STAN, o mais prejudic
 
 Os argumentos incluíam que, na eleição de 2017:
 
-1. Nos círculos mais pequenos, e em particular nos dois mais pequenos (com 5 e 8 mandatos), devido à elevada cláusula barreira implícita, existia uma discriminação sistemática que prejudicava os pequenos partidos, que dificilmente conseguiam obter um mandato, bem como os eleitores desses círculos, que na prática tinham um leque de escolhas mais reduzido.
-2. O maior partido recebeu mais 15 mandatos do que teria num sistema com proporcionalidade a nível nacional, 78 em vez de 63, já que o sistema então em vigor elegia com um rácio muito mais favorável do que o dos pequenos partidos. No mesmo sistema proporcional, o partido STAN obteria 10 mandatos em vez de 6. No sistema como um todo, 16 mandatos (8% do total) seriam alocados de forma diferente.
+1. Nos círculos mais pequenos, e em particular nos dois mais pequenos (com 5 e 8 mandatos), devido à elevada cláusula barreira implícita, existia uma discriminação sistemática que prejudicava os pequenos partidos, que dificilmente conseguiam obter um mandato, bem como os eleitores desses círculos, que, na prática, tinham um leque de escolhas reduzido.
+2. O maior partido recebeu mais 15 mandatos do que teria num sistema com proporcionalidade a nível nacional, 78 em vez de 63, já que o sistema então em vigor elegia com um rácio muito mais favorável do que o dos pequenos partidos. No mesmo sistema proporcional, o partido STAN obteria 10 mandatos em vez de 6. No global, 16 mandatos (8% do total) seriam alocados de forma diferente.
 *(Em comparação, em Portugal em 2022, o equivalente ao STAN seria a CDU, que teria 10 mandatos em vez de apenas 6, ou, ainda mais desproporcional, o BE, que teria 10 em vez de 5, igual ao CDS em 2019. No global, 25 mandatos, 11% do total, seriam alocados de forma diferente.)*
 3. Era possível a um partido com 5% dos votos obter zero mandatos, mas, com esses mesmos votos concentrados nos círculos certos, seria possível obter 12 mandatos.
 *(Em 2022, a IL obteve cerca de 5% dos votos e 8 mandatos. Os mesmos votos, concentrados nos círculos certos, podiam dar 20 mandatos; dispersos pelo país, podiam dar 0 mandatos; e com uma distribuição proporcional a nível nacional dariam 11 mandatos.)*
 4. Criticava-se o facto de o número de deputados de um partido poder depender da distribuição dos seus apoiantes dentro do país e, por consequência, a possibilidade de um partido com mais votos que outro poder eleger menos deputados, apesar de tal nunca ter acontecido até então.
-*(Esta inversão aconteceu em Portugal pela primeira vez em 2022, com o BE em relação à CDU, e o CDS em relação ao PAN e ao Livre. Nesse ano, se o PSD aumentasse a sua votação de forma proporcional em todo o país, quando tivesse menos 33 mil votos que o PS já teria mais um mandato do que o PS, e com menos 4 500 votos já teria mais 4 mandatos.)*
+*(Esta inversão aconteceu em Portugal pela primeira vez em 2022, com o BE relativamente à CDU, e o CDS em relativamente ao PAN e ao Livre. Nesse ano, se o PSD aumentasse a sua votação de forma proporcional em todo o país, quando tivesse menos 33 mil votos que o PS já teria mais um mandato do que o PS, e com menos 4 500 votos já teria mais 4 mandatos.)*
 
-Com base nestes argumentos, os deputados defendiam que o sistema podia manter os círculos existentes e o método de Hondt no cálculo dos mandatos, mas que eram precisos mecanismos adicionais para compensar a desproporcionalidade gerada pelos círculos locais.
+Com base nestes argumentos, os deputados defendiam que o sistema podia manter os círculos existentes e o método d'Hondt no cálculo dos mandatos, mas que eram precisos mecanismos adicionais para compensar a desproporcionalidade gerada pelos círculos locais.
 
 #### 3.2. A resposta do governo
 O governo defendia a rejeição do pedido, invocando dois argumentos centrais:
@@ -68,4 +68,4 @@ O Tribunal Constitucional checo rejeitou a posição do governo:
 ### 4. Síntese conclusiva
 O Tribunal Constitucional checo definiu que a proporcionalidade de um sistema eleitoral não se mede círculo a círculo, mas sim pelo resultado no conjunto do território eleitoral. O tribunal checo não exigiu a alteração dos círculos eleitorais, referindo que a sua integração no sistema eleitoral geral é que precisava de ser revista. Na eleição seguinte passou a existir um mecanismo de compensação a nível nacional.
 
-Esta compreensão da proporcionalidade aproxima-se da interpretação defendida por vários juizes do **[Tribunal Constitucional português]({{ '/tc.html' | relative_url }})** *[resumidas no link anterior]*
+Esta compreensão da proporcionalidade aproxima-se da interpretação defendida por vários juízes do **[Tribunal Constitucional português]({{ '/tc.html' | relative_url }})** *[resumidas na ligação anterior]*

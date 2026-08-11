@@ -35,17 +35,17 @@ O sistema eleitoral português distribui os 230 deputados da Assembleia da Repú
 #### 3.1. O ponto de partida: Cidade de Zurique, 2002
 O caso [BGE 129 I 185](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-129-I-185) dizia respeito a eleições com círculos que distribuíam entre 2 e 19 mandatos.
 
-Para fundamentar a decisão, o Tribunal Federal recorreu ao exemplo recente do círculo mais pequeno, equivalente a Portalegre, concluindo que «o facto de mais de um terço dos votos dos eleitores [...] não ter sido tido em conta, permanecendo sem peso, é incompatível com a igualdade do valor do voto».
+Para fundamentar a decisão, o Tribunal Federal recorreu ao exemplo recente do círculo mais pequeno, equivalente a Portalegre, concluindo que «o facto de mais de um terço dos votos dos eleitores... não ter sido tido em conta, permanecendo sem peso, é incompatível com a igualdade do valor do voto».
 
 O tribunal acrescentou ainda o seguinte cenário hipotético:
 «um partido que reúna apenas pouco mais de metade ou mesmo apenas uma maioria relativa dos votos pode ganhar ambos os mandatos, se os restantes votos estiverem fragmentados por vários partidos mais pequenos. Em ambos os casos, o caráter do sistema de representação proporcional é amplamente adulterado.»
 
-No caso português este cenário não é uma hipótese teórica: no círculo de Portalegre, o partido mais votado conquistou ambos os mandatos em 2005, 2019 e 2022, sendo que, nas duas últimas eleições, mais de metade dos votos expressos nesse círculo não contribuiu para a eleição de qualquer deputado, ficando, na formulation da própria jurisprudência suíça, inteiramente «sem peso».
+No caso português este cenário não é uma hipótese teórica: no círculo de Portalegre, o partido mais votado conquistou ambos os mandatos em 2005, 2019 e 2022, sendo que, nas duas últimas eleições, mais de metade dos votos expressos nesse círculo não contribuiu para a eleição de qualquer deputado, ficando, na formulação da própria jurisprudência suíça, inteiramente «sem peso».
 
 #### 3.2. A solução técnica: Cantão de Zurique e a "Dupla Proporcionalidade"
-O Cantão elegia 180 deputados através de círculos que distribuíam entre 4 e 16 mandatos.
+O Cantão elegia 180 deputados em círculos que distribuíam entre 4 e 16 mandatos.
 
-Antecipando que o seu modelo viria a ser declarado inconstitucional face à jurisprudência fixada na cidade, o Cantão reformou voluntariamente a lei, adotando um sistema que preservou a existência dos círculos geográficos originais, mas alterou a lógica de conversão: o cálculo total de deputados de cada partido passou a ser determinado com base na sua votação global, garantindo a igualdade de voto. Posteriormente, esses mandatos são distribuídos pelos círculos locais em função da distribuição dos votos, através do [método da dupla proporcionalidade](https://www.math.uni-augsburg.de/htdocs/emeriti/pukelsheim/2008e-en.pdf).
+Antecipando que o seu modelo seria declarado inconstitucional face à jurisprudência fixada na cidade, o Cantão reformou voluntariamente a lei, adotando um sistema que preservou a existência dos círculos geográficos originais, mas alterou a lógica de conversão: o cálculo total de deputados de cada partido passou a ser determinado com base na sua votação global, garantindo a igualdade de voto. Posteriormente, esses mandatos são distribuídos pelos círculos locais em função da distribuição dos votos, através do [método da dupla proporcionalidade](https://www.math.uni-augsburg.de/htdocs/emeriti/pukelsheim/2008e-en.pdf).
 
 Esse sistema viria posteriormente a ser adotado pela maioria dos cantões mencionados neste documento, bem como por outros abrangidos por jurisprudência semelhante do Tribunal Federal.
 
@@ -65,11 +65,11 @@ No caso [BGE 140 I 107](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-140-I-10
 
 #### 3.6. A consolidação final: Cantão de Uri
 No caso [BGE 143 I 92](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-143-I-92), a decisão referiu o caráter transdistrital da proporcionalidade, numa altura em que vários dos outros cantões já tinham adotado o modelo de Zurique que garantia a proporcionalidade global. 
-«A igualdade do valor do voto [...] tem caráter transdistrital, isto é, exige também uma realização igual do valor do voto em todo o território eleitoral.»
+«A igualdade do valor do voto... tem caráter transdistrital, isto é, exige também uma realização igual do valor do voto em todo o território eleitoral.»
 
 ---
 
 ### 4. Síntese conclusiva
 A jurisprudência suíça evoluiu de uma crítica aos círculos extremamente pequenos para a afirmação de um princípio geral: num sistema de representação proporcional, a igualdade do valor do voto exige que a proporcionalidade seja apreciada à escala do território eleitoral como um todo.
 
-Esta compreensão da proporcionalidade aproxima-se da interpretação defendida por vários juizes do **[Tribunal Constitucional português]({{ '/tc.html' | relative_url }})** *[resumidas no link anterior]*
+Esta compreensão da proporcionalidade aproxima-se da interpretação defendida por vários juízes do **[Tribunal Constitucional português]({{ '/tc.html' | relative_url }})** *[resumidas no link anterior]*
