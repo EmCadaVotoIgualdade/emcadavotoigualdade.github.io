@@ -21,7 +21,7 @@ Antes da análise dos casos concretos, importa contextualizar a base constitucio
 Esta formulação é particularmente relevante porque demonstra que a jurisprudência do Tribunal Federal Suíço não assentou numa cláusula constitucional detalhada sobre a dimensão dos círculos eleitorais, os quóruns naturais ou os mecanismos de compensação. Foi a partir desta garantia geral de representação proporcional que o tribunal desenvolveu progressivamente a doutrina da igualdade do valor do voto.
 
 #### Conceito Central: A igualdade do valor do voto
-Trata-se do princípio jurídico segundo o qual votos de peso semelhante devem ter uma capacidade semelhante de influenciar a distribuição final de mandatos. Num sistema proporcional, não basta que o cidadão tenha direito a um voto (igualdade formal); é preciso que esse voto tenha uma eficácia eleitoral comparável na eleição de representantes, independentemente da geografia do círculo.
+Trata-se do princípio jurídico segundo o qual votos de peso semelhante devem ter uma capacidade semelhante de influenciar a distribuição final de mandatos. **Num sistema proporcional, não basta que o cidadão tenha direito a um voto** (igualdade formal); **é preciso que esse voto tenha uma eficácia eleitoral comparável na eleição de representantes, independentemente da geografia do círculo**.
 
 ---
 
@@ -38,20 +38,20 @@ O caso [BGE 129 I 185](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-129-I-185
 Para fundamentar a decisão, o Tribunal Federal recorreu ao exemplo recente do círculo mais pequeno, equivalente a Portalegre, concluindo que «o facto de mais de um terço dos votos dos eleitores... não ter sido tido em conta, permanecendo sem peso, é incompatível com a igualdade do valor do voto».
 
 O tribunal acrescentou ainda o seguinte cenário hipotético:
-«um partido que reúna apenas pouco mais de metade ou mesmo apenas uma maioria relativa dos votos pode ganhar ambos os mandatos, se os restantes votos estiverem fragmentados por vários partidos mais pequenos. Em ambos os casos, o caráter do sistema de representação proporcional é amplamente adulterado.»
+«**um partido que reúna apenas pouco mais de metade ou mesmo apenas uma maioria relativa dos votos pode ganhar ambos os mandatos**, se os restantes votos estiverem fragmentados por vários partidos mais pequenos. Em ambos os casos, o caráter do sistema de representação proporcional é **amplamente adulterado**.»
 
-No caso português este cenário não é uma hipótese teórica: no círculo de Portalegre, o partido mais votado conquistou ambos os mandatos em 2005, 2019 e 2022, sendo que, nas duas últimas eleições, mais de metade dos votos expressos nesse círculo não contribuiu para a eleição de qualquer deputado, ficando, na formulação da própria jurisprudência suíça, inteiramente «sem peso».
+**No caso português este cenário não é uma hipótese teórica**: no círculo de Portalegre, o partido mais votado conquistou ambos os mandatos em **2005, 2019 e 2022**, sendo que, nessas duas últimas eleições, mais de metade dos votos expressos nesse círculo não contribuiu para a eleição de qualquer deputado, ficando, na formulação da própria jurisprudência suíça, inteiramente «sem peso».
 
 #### 3.2. A solução técnica: Cantão de Zurique e a "Dupla Proporcionalidade"
 O Cantão elegia 180 deputados em círculos que distribuíam entre 4 e 16 mandatos.
 
-Antecipando que o seu modelo seria declarado inconstitucional face à jurisprudência fixada na cidade, o Cantão reformou voluntariamente a lei, adotando um sistema que preservou a existência dos círculos geográficos originais, mas alterou a lógica de conversão: o cálculo total de deputados de cada partido passou a ser determinado com base na sua votação global, garantindo a igualdade de voto. Posteriormente, esses mandatos são distribuídos pelos círculos locais em função da distribuição dos votos, através do [método da dupla proporcionalidade](https://www.math.uni-augsburg.de/htdocs/emeriti/pukelsheim/2008e-en.pdf).
+Antecipando que o seu modelo seria declarado inconstitucional face à jurisprudência fixada na cidade, o Cantão reformou voluntariamente a lei, adotando um sistema que preservou a existência dos círculos geográficos originais, mas alterou a lógica de conversão: **o cálculo total de deputados de cada partido passou a ser determinado com base na sua votação global, garantindo a igualdade de voto**. Posteriormente, esses mandatos são distribuídos pelos círculos locais em função da distribuição dos votos, através do [método da dupla proporcionalidade](https://www.math.uni-augsburg.de/htdocs/emeriti/pukelsheim/2008e-en.pdf).
 
 Esse sistema viria posteriormente a ser adotado pela maioria dos cantões mencionados neste documento, bem como por outros abrangidos por jurisprudência semelhante do Tribunal Federal.
 
 #### 3.3. O limite dos 10%: Cantão de Argóvia
 No caso [BGE 131 I 74](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-131-I-74), o cantão tinha reduzido o seu parlamento para 140 membros, passando os círculos a ter entre 6 e 30 mandatos, o que levou o tribunal a chumbar os círculos menores, assinalando que:
-«a ultrapassagem de um limite de 10% [de quórum natural para eleger] é fundamentalmente incompatível com um sistema de representação proporcional.»
+«**a ultrapassagem de um limite de 10% [de quórum natural para eleger] é fundamentalmente incompatível com um sistema de representação proporcional**.»
 
 #### 3.4. O tamanho mínimo obrigatório, 10 mandatos: Cantão de Zug
 No caso [BGE 136 I 376](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-136-I-376), o parlamento tinha 80 mandatos, tendo os círculos entre 2 e 19 mandatos.
@@ -65,7 +65,7 @@ No caso [BGE 140 I 107](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-140-I-10
 
 #### 3.6. A consolidação final: Cantão de Uri
 No caso [BGE 143 I 92](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-143-I-92), a decisão referiu o caráter transdistrital da proporcionalidade, numa altura em que vários dos outros cantões já tinham adotado o modelo de Zurique que garantia a proporcionalidade global. 
-«A igualdade do valor do voto... tem caráter transdistrital, isto é, exige também uma realização igual do valor do voto em todo o território eleitoral.»
+«**A igualdade do valor do voto... tem caráter transdistrital**, isto é, exige também uma realização **igual do valor do voto em todo o território eleitoral**.»
 
 ---
 

@@ -13,11 +13,9 @@ description: Como o Tribunal Constitucional Federal Alemão levou à reforma do 
 
 ### 1. O Enquadramento Constitucional e a Igualdade do Valor do Resultado
 Sobre o direito de voto, a Lei Fundamental da República Federal da Alemanha estabelece no Artigo 38.º, n.º 1, 1.ª frase:
-> «Die Abgeordneten des Deutschen Bundestages werden in allgemeiner, unmittelbarer, freier, gleicher und geheimer Wahl gewählt.»
-> 
-> *(«Os deputados do Bundestag alemão são eleitos por sufrágio universal, direto, livre, igual e secreto.»)*
+> «Os deputados do Bundestag alemão são eleitos por sufrágio universal, direto, livre, igual e secreto.»*
 
-A jurisprudência constitucional alemã densificou o princípio da igualdade de voto (*Wahlgleichheit*) no conceito de **igualdade do valor do resultado** (*Erfolgswertgleichheit*): a garantia de que a contribuição de cada eleitor para a distribuição final dos lugares no parlamento deve ter substancialmente a mesma eficácia, sem que distorções geográficas ou regras técnicas atribuam a uns votos mais peso do que a outros.
+A jurisprudência constitucional alemã densificou o princípio da igualdade de voto no conceito de **igualdade do valor do resultado**: a garantia de que a contribuição de cada eleitor para a distribuição final dos lugares no parlamento deve ter substancialmente a mesma eficácia, sem que distorções geográficas ou regras técnicas atribuam a uns votos mais peso do que a outros.
 
 ---
 
@@ -33,27 +31,21 @@ Após décadas de contestação, e de decisões do Tribunal Constitucional no [A
 Em 2023, o *Bundestag* aprovou uma reforma destinada a fixar a dimensão da câmara em 630 deputados, estabelecendo que a eleição proporcional é o único critério determinante da distribuição de lugares. Se um partido ganhasse mais mandatos diretos locais do que a sua quota proporcional, os candidatos locais menos votados não tomariam posse.
 
 No [Acórdão 2 BvF 1/23 (Decisão de 30 de julho de 2024)](https://www.bundesverfassungsgericht.de/SharedDocs/Entscheidungen/DE/2024/07/fs20240730_2bvf000123.html) ([EN](https://www.bundesverfassungsgericht.de/SharedDocs/Pressemitteilungen/EN/2024/bvg24-064.html)), o Tribunal Constitucional confirmou a plena constitucionalidade da primazia da proporcionalidade global sobre a representação de candidatos locais uninominais:
-> «Der Gesetzgeber ist durch den Grundsatz der Wahlgleichheit gehalten, ein Wahlsystem zu schaffen, das die Chancengleichheit der Parteien wahrt und sicherstellt, dass der Erfolgswert jeder Stimme grundsätzlich gleich wiegt.»
-> 
-> *(«O legislador está obrigado pelo princípio da igualdade de voto a criar um sistema eleitoral que preserve a igualdade de oportunidades dos partidos e garanta que o valor de resultado [Erfolgswert] de cada voto tenha, em princípio, o mesmo peso.»)*
+> «O legislador está obrigado pelo princípio da igualdade de voto a criar um sistema eleitoral que preserve a igualdade de oportunidades dos partidos e garanta que o valor de resultado de cada voto tenha, em princípio, o mesmo peso.»*
 
 Sobre a nova lógica de distribuição, o tribunal afirmou ainda:
-> «Der Gesetzgeber hat sich zu Recht für eine reine Verhältniswahl entschieden, bei der die Zweitstimme allein über die Sitzverteilung entscheidet.»
-> 
-> *(«O legislador decidiu corretamente por um sistema de representação proporcional pura, no qual o segundo voto decide por si só a distribuição dos mandatos.»)*
+> «O legislador decidiu corretamente por um sistema de representação proporcional pura, no qual o segundo voto [o proporcional] decide por si só a distribuição dos mandatos.»*
 
 Quanto à proteção da representação local, o tribunal clarificou os limites do que é admissível:
-> «Die Wahlkreiseinteilung kann regionale Besonderheiten berücksichtigen, darf aber nicht zu einer Verzerrung des Verhältniswahlcharakters der Wahl führen.»
-> 
-> *(«A delimitação dos círculos eleitorais pode ter em conta particularidades regionais, mas não pode conduzir a uma distorção do caráter proporcional da eleição.»)*
+> «A delimitação dos círculos eleitorais pode ter em conta particularidades regionais, mas não pode conduzir a uma distorção do caráter proporcional da eleição.»*
 
-A reforma de 2023 entrou em vigor para as eleições federais de 2025, nas quais o *Bundestag* passou a ter exatamente 630 lugares, sem a garantia de que o mais votado num círculo local entraria no parlamento. Em 2025, 23 desses vencedores não chegaram ao parlamento, ficando quatro círculos locais sem representação e os restantes representados por candidatos derrotados eleitos pelas listas nacionais. Esta medida drástica foi a forma de evitar os vários problemas associados ao modelo alemão em vigor até aí, e sobre os quais elaborámos uma **[análise detalhada]({{ '/problema-alemao.html' | relative_url }})**.
+A reforma de 2023 entrou em vigor para as eleições federais de 2025, nas quais o *Bundestag* passou a ter exatamente 630 lugares, sem a garantia de que o candidato mais votado num círculo local entraria no parlamento. Em 2025, 23 desses vencedores não chegaram ao parlamento, ficando quatro círculos locais sem representação e os restantes representados por candidatos derrotados eleitos pelas listas nacionais. Esta medida drástica foi a forma de evitar os vários problemas associados ao modelo alemão em vigor até aí, e sobre os quais elaborámos uma **[análise detalhada]({{ '/problema-alemao.html' | relative_url }})**.
 
 ---
 
 ### 4. Síntese conclusiva
 A jurisprudência do Tribunal Constitucional Federal alemão evoluiu de uma aceitação condicionada dos mandatos excedentários para a afirmação inequívoca de um princípio: **num sistema de representação proporcional, o peso do voto deve ser igual em todo o território eleitoral, e a distribuição de mandatos deve refletir fielmente a proporção nacional de votos de cada partido.**
 
-Ao longo de várias décadas, o tribunal declarou inconstitucionais duas leis eleitorais (2008 e 2012), impôs prazos ao legislador, e acabou por forçar a abolição dos mecanismos que distorciam a proporcionalidade. A Alemanha chegou assim às eleições de 2025 com um sistema que garante que cada segundo voto tem o mesmo peso, independentemente de onde o eleitor reside.
+Ao longo de várias décadas, o tribunal declarou inconstitucionais duas leis eleitorais (2008 e 2012), impôs prazos ao legislador, e acabou por forçar a abolição dos mecanismos que distorciam a proporcionalidade. A Alemanha chegou assim às eleições de 2025 com um sistema que garante que cada segundo voto [o proporcional] tem o mesmo peso, independentemente de onde o eleitor reside.
 
 Esta compreensão da proporcionalidade aproxima-se da interpretação defendida por vários juízes do **[Tribunal Constitucional português]({{ '/tc.html' | relative_url }})**.
