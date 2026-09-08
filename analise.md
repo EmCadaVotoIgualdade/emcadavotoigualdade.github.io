@@ -236,6 +236,18 @@ Assim, defendiam que o sistema até podia manter os círculos existentes, e o m�
 
 ---
 
+## As decisões do Tribunal Constitucional Federal da Alemanha
+
+Ao longo de várias décadas, o tribunal declarou inconstitucionais duas leis eleitorais (2008 e 2012), e a decisão em relação à mais recente lei eleitoral (2024) foi a mais clara:
+
+«O legislador está obrigado pelo princípio da igualdade de voto a criar um sistema eleitoral que preserve a igualdade de oportunidades dos partidos e garanta que o valor de resultado de cada voto tenha, em princípio, o mesmo peso.»
+
+«A delimitação dos círculos eleitorais pode ter em conta particularidades regionais, mas não pode conduzir a uma distorção do caráter proporcional da eleição.»
+
+Assim, o sistema eleitoral nas eleições de 2025 sofreu a maior alteração desde 1949, já que pela primeira vez a vitória num círculo local não garantiu a entrada no parlamento. Os detalhes da decisão e das suas consequências podem ser consultados num [documento anexo]({{ '/alemanha.html' | relative_url }}). Já os problemas do sistema alemão, que originaram as várias intervenções do tribunal, podem ser consultados [aqui]({{ '/alemanha-problemas.html' | relative_url }}).
+
+---
+
 ## Extra: e a governabilidade?
 
 É habitual nas discussões sobre sistemas eleitorais falar-se no equilíbrio entre proporcionalidade e governabilidade/eficácia governativa.
@@ -257,4 +269,4 @@ Escreveu ainda que para atingir esse nível é preciso que o sistema proporciona
 ---
 
 > ⚖️ **Análise Constitucional Alargada (Tempo de leitura: ~45 minutos)**
-> Para quem quiser conhecer com mais detalhe os pareceres dos nossos constitucionalistas, os Acórdãos do Tribunal Constitucional e uma análise mais exaustiva dos sistemas eleitorais europeus, bem como detalhes sobre a decisão histórica do Tribunal Constitucional Checo, disponibilizamos a nossa [Análise Alargada](https://docs.google.com/document/d/1op3_6bZjSWOpL56qhZfjm7AFjMW0CeQEskStcXXmM8Y/edit?usp=sharing).
+> Para quem quiser conhecer com mais detalhe os pareceres dos nossos constitucionalistas, os Acórdãos do Tribunal Constitucional e uma análise mais exaustiva dos sistemas eleitorais europeus, bem como detalhes sobre as decisões históricas do Tribunal Federal Suíço e do Tribunal Constitucional Checo, disponibilizamos a nossa [Análise Alargada](https://docs.google.com/document/d/1op3_6bZjSWOpL56qhZfjm7AFjMW0CeQEskStcXXmM8Y/edit?usp=sharing).

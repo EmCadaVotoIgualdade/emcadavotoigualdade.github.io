@@ -6,7 +6,7 @@ description: Uma análise crítica ao sistema eleitoral alemão, as suas complex
 
 # Os Problemas do Sistema Alemão
 
-> **Nota de Actualidade:** O sistema alemão foi alterado para as últimas eleições em 2025, e pela primeira vez desde que o sistema existe (1949) os vencedores dos círculos uninominais (apenas um vencedor) já não têm garantida a presença no parlamento. Em 2025, 23 destes vencedores não chegaram ao parlamento, ficando os círculos locais sem representação ou representados por candidatos derrotados.
+> **Nota de Actualidade:** O sistema alemão foi alterado para as últimas eleições em 2025, e pela primeira vez desde que o sistema existe (1949) os vencedores dos círculos uninominais (apenas um vencedor) já não têm garantida a presença no parlamento. Em 2025, 23 destes vencedores não chegaram ao parlamento, ficando quatro desses círculos locais sem representação e os restantes representados por candidatos derrotados eleitos pelas listas de compensação.
 >
 > No entanto, a análise abaixo, do modelo anterior, continua válida, pois as propostas deste sistema para Portugal garantem geralmente a representação dos vencedores, mesmo que tenham uma percentagem baixa ou os seus partidos não tenham votos suficientes a nível nacional, o que traz os problemas que os alemães tinham no modelo anterior. Além disso, partidos do actual governo já manifestaram vontade de voltar ao modelo antigo.
 
