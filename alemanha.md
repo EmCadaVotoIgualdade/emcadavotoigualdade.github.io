@@ -31,13 +31,13 @@ Após décadas de contestação, e de decisões do Tribunal Constitucional no [A
 Em 2023, o *Bundestag* aprovou uma reforma destinada a fixar a dimensão da câmara em 630 deputados, estabelecendo que a eleição proporcional é o único critério determinante da distribuição de lugares. Se um partido ganhasse mais mandatos diretos locais do que a sua quota proporcional, os candidatos locais menos votados não tomariam posse.
 
 No [Acórdão 2 BvF 1/23 (Decisão de 30 de julho de 2024)](https://www.bundesverfassungsgericht.de/SharedDocs/Entscheidungen/DE/2024/07/fs20240730_2bvf000123.html) ([EN](https://www.bundesverfassungsgericht.de/SharedDocs/Pressemitteilungen/EN/2024/bvg24-064.html)), o Tribunal Constitucional confirmou a plena constitucionalidade da primazia da proporcionalidade global sobre a representação de candidatos locais uninominais:
-> «O legislador está obrigado pelo princípio da igualdade de voto a criar um sistema eleitoral que preserve a igualdade de oportunidades dos partidos e garanta que o valor de resultado de cada voto tenha, em princípio, o mesmo peso.»*
+> «O legislador está obrigado pelo princípio da igualdade de voto a criar um sistema eleitoral que preserve a igualdade de oportunidades dos partidos e garanta que o valor de resultado de cada voto tenha, em princípio, o mesmo peso.»
 
 Sobre a nova lógica de distribuição, o tribunal afirmou ainda:
-> «O legislador decidiu corretamente por um sistema de representação proporcional pura, no qual o segundo voto [o proporcional] decide por si só a distribuição dos mandatos.»*
+> «O legislador decidiu corretamente por um sistema de representação proporcional pura, no qual o segundo voto [o proporcional] decide por si só a distribuição dos mandatos.»
 
 Quanto à proteção da representação local, o tribunal clarificou os limites do que é admissível:
-> «A delimitação dos círculos eleitorais pode ter em conta particularidades regionais, mas não pode conduzir a uma distorção do caráter proporcional da eleição.»*
+> «A delimitação dos círculos eleitorais pode ter em conta particularidades regionais, mas não pode conduzir a uma distorção do caráter proporcional da eleição.»
 
 A reforma de 2023 entrou em vigor para as eleições federais de 2025, nas quais o *Bundestag* passou a ter exatamente 630 lugares, sem a garantia de que o candidato mais votado num círculo local entraria no parlamento. Em 2025, 23 desses vencedores não chegaram ao parlamento, ficando quatro círculos locais sem representação e os restantes representados por candidatos derrotados eleitos pelas listas nacionais. Esta medida drástica foi a forma de evitar os vários problemas associados ao modelo alemão em vigor até aí, e sobre os quais elaborámos uma **[análise detalhada]({{ '/problema-alemao.html' | relative_url }})**.
 
