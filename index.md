@@ -4,7 +4,7 @@ title: Em Cada Voto Igualdade
 description: Um projecto cívico, independente e apartidário focado em garantir a igualdade de voto em todo o país.
 ---
 
-## O problema
+## A situação actual
 
 O sistema eleitoral português não garante a igualdade de voto consagrada na Constituição. Um eleitor em Lisboa ou no Porto tem uma capacidade muito maior de eleger representantes do que os eleitores dos círculos mais pequenos, onde poucos partidos conseguem eleger deputados.
 
@@ -16,7 +16,7 @@ Embora a nossa Constituição seja das mais exigentes quanto à igualdade de vot
 
 Propomos um sistema inspirado no modelo dos países nórdicos, onde **os mandatos de cada partido dependem da votação nacional**, sendo depois todos alocados aos círculos actuais, dispensando uma lista nacional centralizada.
 Isto garante que os **votos valem o mesmo em todo o país**, mas mantém a representação dos círculos existentes.
-Descobre os detalhes abaixo!
+Descubra os detalhes abaixo.
 
 ---
 
@@ -25,7 +25,7 @@ Descobre os detalhes abaixo!
 Convidamos-te a explorar os dados, os estudos e os fundamentos técnicos que sustentam esta proposta:
 
 * 📊 **[A Proposta para Portugal]({{ '/proposta.html' | relative_url }}):** Conhece o enquadramento histórico, a proposta concreta e as consequências na igualdade de voto. (Pode também analisar o **[Anexo de Detalhes Técnicos]({{ '/detalhes.html' | relative_url }})**, ou explorar **[Modelos Alternativos]({{ '/alocacao-mandatos.html' | relative_url }})** para alocação de mandatos)
-* 🔍 **[Análise Constitucional]({{ '/analise.html' | relative_url }}):** Opinião de Constitucionalistas, Acórdãos do TC, comparativo com países europeus e decisões do tribunal suíço e checo. (Pode também ler a **[Versão Resumida]({{ '/analise-resumida.html' | relative_url }})** de 3 minutos ou conhecer em detalhe **[O Caso da Suíça]({{ '/suica.html' | relative_url }})**, **[O Caso da República Checa]({{ '/checa.html' | relative_url }})** ou a versão detalhada sobre o **[T.C. português]({{ '/tc.html' | relative_url }})**).
+* 🔍 **[Análise Constitucional]({{ '/analise.html' | relative_url }}):** Opinião de Constitucionalistas, Acórdãos do TC, comparativo com países europeus e decisões do tribunal suíço, checo e alemão. (Pode também ler a **[Versão Resumida]({{ '/analise-resumida.html' | relative_url }})** de 3 minutos, conhecer a versão completa sobre o **[T.C. português]({{ '/tc.html' | relative_url }})**), ou saber mais detalhes sobre **[O Caso da Suíça]({{ '/suica.html' | relative_url }})**, **[O Caso da República Checa]({{ '/checa.html' | relative_url }})** ou **[O Caso da Alemanha]({{ '/alemanha.html' | relative_url }})**.
 * ❓ **[Perguntas Frequentes (FAQ)]({{ '/faq.html' | relative_url }}):** Respostas às principais dúvidas sobre modelos alternativos ou consequências como a estabilidade governativa.
 * 🚀 **[Próximos Passos]({{ '/proximos-passos.html' | relative_url }}):** Simulações dos métodos de distribuição de mandatos (dinamarquês e suíço) e mapas de representação interactivos.
 
