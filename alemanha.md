@@ -12,14 +12,15 @@ description: Como o Tribunal Constitucional Federal Alemão levou à reforma do 
 ---
 
 ### 1. O Enquadramento Constitucional e a Igualdade do Valor do Resultado
-Sobre o direito de voto, a Lei Fundamental da República Federal da Alemanha estabelece no Artigo 38.º, n.º 1, 1.ª frase:
-> «Os deputados do Bundestag alemão são eleitos por sufrágio universal, direto, livre, igual e secreto.»
 
-A jurisprudência constitucional alemã densificou o princípio da igualdade de voto no conceito de **igualdade do valor do resultado**: a garantia de que a contribuição de cada eleitor para a distribuição final dos lugares no parlamento deve ter substancialmente a mesma eficácia, sem que distorções geográficas ou regras técnicas atribuam a uns votos mais peso do que a outros.
+Sobre a mecânica do sistema eleitoral, a Constituição da República Federal da Alemanha apenas estabelece no Artigo 38.º, n.º 1:
+> «Os deputados do Bundestag alemão são eleitos por sufrágio universal, direto, livre, *igual* e secreto.»
+
 
 ---
 
 ### 2. O Paradigma Português em Análise
+
 O sistema eleitoral português distribui os 230 deputados da Assembleia da República por 22 círculos eleitorais de dimensão muito desigual. Destes, 16 elegem menos de 10 deputados e 12 elegem 5 ou menos.
 
 ---
@@ -44,8 +45,7 @@ A reforma de 2023 entrou em vigor para as eleições federais de 2025, nas quais
 ---
 
 ### 4. Síntese conclusiva
-A jurisprudência do Tribunal Constitucional Federal alemão evoluiu de uma aceitação condicionada dos mandatos excedentários para a afirmação inequívoca de um princípio: **num sistema de representação proporcional, o peso do voto deve ser igual em todo o território eleitoral, e a distribuição de mandatos deve refletir fielmente a proporção nacional de votos de cada partido.**
 
-Ao longo de várias décadas, o tribunal declarou inconstitucionais duas leis eleitorais (2008 e 2012), impôs prazos ao legislador, e acabou por forçar a abolição dos mecanismos que distorciam a proporcionalidade. A Alemanha chegou assim às eleições de 2025 com um sistema que garante que cada segundo voto [o proporcional] tem o mesmo peso, independentemente de onde o eleitor reside.
+Ao longo de várias décadas, o tribunal declarou inconstitucionais duas leis eleitorais (2008 e 2012), forçou a abolição dos mecanismos que distorciam a proporcionalidade, e terminou com a afirmação inequívoca de um princípio: **num sistema de representação proporcional, o peso do voto deve ser igual em todo o território eleitoral, e a distribuição de mandatos deve refletir fielmente a proporção nacional de votos de cada partido.**
 
 Esta compreensão da proporcionalidade aproxima-se da interpretação defendida por vários juízes do **[Tribunal Constitucional português]({{ '/tc.html' | relative_url }})**.
