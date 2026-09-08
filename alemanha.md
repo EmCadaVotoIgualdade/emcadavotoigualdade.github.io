@@ -13,7 +13,7 @@ description: Como o Tribunal Constitucional Federal Alemão levou à reforma do 
 
 ### 1. O Enquadramento Constitucional e a Igualdade do Valor do Resultado
 Sobre o direito de voto, a Lei Fundamental da República Federal da Alemanha estabelece no Artigo 38.º, n.º 1, 1.ª frase:
-> «Os deputados do Bundestag alemão são eleitos por sufrágio universal, direto, livre, igual e secreto.»*
+> «Os deputados do Bundestag alemão são eleitos por sufrágio universal, direto, livre, igual e secreto.»
 
 A jurisprudência constitucional alemã densificou o princípio da igualdade de voto no conceito de **igualdade do valor do resultado**: a garantia de que a contribuição de cada eleitor para a distribuição final dos lugares no parlamento deve ter substancialmente a mesma eficácia, sem que distorções geográficas ou regras técnicas atribuam a uns votos mais peso do que a outros.
 
