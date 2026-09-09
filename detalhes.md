@@ -4,8 +4,6 @@ title: Detalhes Técnicos da Proposta
 description: O modelo de cálculo matemático e a simulação detalhada da distribuição de mandatos por círculo político.
 ---
 
-O sistema eleitoral proposto procura resolver as distorções da democracia portuguesa respeitando a diversidade territorial e promovendo o poder direto de decisão do eleitor.
-
 ### A nossa proposta para Portugal (aplicada a 2022)
 
 A reforma assenta em três pilares fundamentais:

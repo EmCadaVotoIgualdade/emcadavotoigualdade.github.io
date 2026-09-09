@@ -39,7 +39,7 @@ Os argumentos incluíam que, na eleição de 2017:
 3. Era possível a um partido com 5% dos votos obter zero mandatos, mas, com esses mesmos votos concentrados nos círculos certos, seria possível obter 12 mandatos.
 *(Em 2022, a IL obteve cerca de 5% dos votos e 8 mandatos. Os mesmos votos, concentrados nos círculos certos, podiam dar 20 mandatos; dispersos pelo país, podiam dar 0 mandatos; e com uma distribuição proporcional a nível nacional dariam 11 mandatos.)*
 4. Criticava-se o facto de o número de deputados de um partido poder depender da distribuição dos seus apoiantes dentro do país e, por consequência, **a possibilidade de um partido com mais votos que outro poder eleger menos deputados**, apesar de tal nunca ter acontecido até então.
-*(Esta inversão aconteceu em Portugal pela primeira nas eleições legislativas de 2022 entre CDS face ao PAN e ao Livre, e BE face à CDU, mas depois já se repetiu em 2025 entre o PS e o CH e entre o ADN e o JPP.)*
+*(Esta inversão aconteceu em Portugal pela primeira vez nas eleições legislativas de 2022 entre CDS face ao PAN e ao Livre, e BE face à CDU, mas depois já se repetiu em 2025 entre o PS e o CH e entre o ADN e o JPP.)*
 
 Com base nestes argumentos, os deputados defendiam que o sistema podia manter os círculos existentes e o método d'Hondt no cálculo dos mandatos, mas que eram precisos mecanismos adicionais para compensar a desproporcionalidade gerada pelos círculos locais.
 

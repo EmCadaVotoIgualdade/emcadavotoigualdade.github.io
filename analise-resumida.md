@@ -57,7 +57,7 @@ E o Índice CAd, que mede a vantagem que o sistema eleitoral dá aos dois maiore
 
 ## A jurisprudência do Tribunal Federal Suíço
 
-Houve uma série de decisões relativamente às eleições de vários cantões [Zurique](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-129-I-185), [Argóvia](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-131-I-74), [Zug](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-136-I-376), [Valais](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-140-I-107), [Uri](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-143-I-92), analisados em mais detalhe num [documento anexo]({{ '/suica.html' | relative_url }}), e levaram a mudanças de vários sistemas eleitorais para garantirem a igualdade de voto. A citação do tribunal que melhor resume estas decisões é:
+Houve uma série de decisões relativamente às eleições de vários cantões [Zurique](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-129-I-185), [Argóvia](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-131-I-74), [Zug](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-136-I-376), [Valais](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-140-I-107), [Uri](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-143-I-92), analisadas em mais detalhe num [documento anexo]({{ '/suica.html' | relative_url }}), e levaram a mudanças de vários sistemas eleitorais para garantirem a igualdade de voto. A citação do tribunal que melhor resume estas decisões é:
 
 «Sempre que não ocorra uma compensação com efeitos transdistritais, um círculo eleitoral deve dispor de, pelo menos, dez mandatos.»
 
@@ -84,5 +84,5 @@ Ao longo de várias décadas, o tribunal declarou inconstitucionais duas leis el
 
 «A delimitação dos círculos eleitorais pode ter em conta particularidades regionais, mas não pode conduzir a uma distorção do caráter proporcional da eleição.»
 
-Assim, o sistema eleitoral nas eleições de 2025 sofreu a maior alteração desde 1949, já que pela primeira vez a vitória num círculo local não garantiu a entrada no parlamento. Os detalhes da decisão e das suas consequências podem ser consultados num [documento anexo]({{ '/alemanha.html' | relative_url }}). Já os problemas do sistema alemão, que originaram as várias intervenções do tribunal, podem ser consultados [aqui]({{ '/alemanha-problemas.html' | relative_url }}).
+Assim, o sistema eleitoral nas eleições de 2025 sofreu a maior alteração desde 1949, já que pela primeira vez a vitória num círculo local não garantiu a entrada no parlamento. Os detalhes da decisão e das suas consequências podem ser consultados num [documento anexo]({{ '/alemanha.html' | relative_url }}). Já os problemas do sistema alemão, que originaram as várias intervenções do tribunal, podem ser consultados [aqui]({{ '/problemas-alemao.html' | relative_url }}).
 

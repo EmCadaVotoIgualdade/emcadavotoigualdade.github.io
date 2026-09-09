@@ -22,7 +22,7 @@ description: ACÓRDÃO  Nº 1/91 e Nº 199/00
 *[Após fazer referência ao tamanho médio dos círculos, ao índice de proporcionalidade em comparação com os sistemas proporcionais europeus, a estimativas dos limites para obter maioria absoluta, e rácios de votos/mandatos.]*
 
 «Terá de concluir-se que da soma de todas estas características resulta uma acentuada desfiguração do sistema proporcional, o que torna, só por si, inconstitucionais os n.os 2 e 3 do artigo 1.º do Decreto n.º 293/V, por violação dos princípios da proporcionalidade e da igualdade do sufrágio.
-Mas seria necessário pagar tal restrição ao princípio da proporcionalidade para respeitar a coincidência dos círculos eleitorais com os municípios, que o princípio da autonomia tenderia a justificar? Decerto que não.. A criação de um **círculo regional adicional** aos círculos municipais permitiria conciliar os princípios da igualdade e da proporcionalidade, por um lado, e da autonomia, por outro. Bastaria, para tanto, adoptar um sistema semelhante ao alemão...»
+Mas seria necessário pagar tal restrição ao princípio da proporcionalidade para respeitar a coincidência dos círculos eleitorais com os municípios, que o princípio da autonomia tenderia a justificar? Decerto que não... A criação de um **círculo regional adicional** aos círculos municipais permitiria conciliar os princípios da igualdade e da proporcionalidade, por um lado, e da autonomia, por outro. Bastaria, para tanto, adoptar um sistema semelhante ao alemão...»
 *[ou seja, com um círculo de compensação capaz de corrigir a proporcionalidade vinda dos círculos locais]*
 
 
@@ -46,7 +46,7 @@ Mas seria necessário pagar tal restrição ao princípio da proporcionalidade p
 ### Declaração de voto, Luís Nunes de Almeida
 
 «Verifica-se, assim, dada a dimensão das circunscrições, que o partido mais votado obteria um «benefício» de 14,11 %, enquanto todos os outros seriam penalizados. Particularmente **significativa e reveladora, porque chocante, é a circunstância de o CDS, apesar de obter mais votos, ser contemplado com menos mandatos que a UDP**... A injustiça do sistema — em termos de representação proporcional — é gritante, não parecendo legítimo ignorar estes números, cujo significado se afigura inegável.»
-*[Este último efeito ocorreu pela primeira nas eleições legislativas de 2022 entre CDS face ao PAN e ao Livre, e BE face à CDU, mas depois já se repetiu em 2025 entre o PS e o CH e entre o ADN e o JPP]*
+*[Este último efeito ocorreu pela primeira vez nas eleições legislativas de 2022 entre CDS face ao PAN e ao Livre, e BE face à CDU, mas depois já se repetiu em 2025 entre o PS e o CH e entre o ADN e o JPP]*
 
 «A mera comparação com este quadro [aqui refere o índice de proporcionalidade para a Alemanha, Dinamarca, Holanda, Irlanda, Itália, Bélgica, Luxemburgo e Espanha nos sistemas proporcionais, bem como no Reino Unido, França e mais 5 fora da Europa, nos sistemas maioritários] permite, sem margem para quaisquer dúvidas, colocar o sistema propugnado pelas normas em apreciação dentro dos valores médios próprios dos sistemas maioritários (entre 80 e 90), e afastá-lo dos valores médios atingidos pelos sistemas de representação proporcional (entre 90 e 98).»
 
@@ -63,11 +63,11 @@ Mas seria necessário pagar tal restrição ao princípio da proporcionalidade p
 
 ### Declaração de voto, Vítor Nunes de Almeida
 
-«É no confronto entre a repartição de mandatos e os votos obtidos por cada formação política concorrente, **no âmbito do colégio eleitoral, que se devem apurar os desvios à proporcionalidade - não círculo por círculo**, cada um dos quais não é mais do que um desdobramento geográfico desse mesmo colégio. Aliás à Constituição não repugna esta concepção, quando proclama que os deputados representam todo o país e não os círculos por que são eleitos..»
+«É no confronto entre a repartição de mandatos e os votos obtidos por cada formação política concorrente, **no âmbito do colégio eleitoral, que se devem apurar os desvios à proporcionalidade - não círculo por círculo**, cada um dos quais não é mais do que um desdobramento geográfico desse mesmo colégio. Aliás à Constituição não repugna esta concepção, quando proclama que os deputados representam todo o país e não os círculos por que são eleitos...»
 
 «Os critérios de determinação dos círculos assumem importância crucial, porque por via da definição dos círculos se podem praticar operações de verdadeira engenharia eleitoral, com vista à **fabricação de maiorias parlamentares**, aspectos estes que também foram referidos no Acórdão 1/91.»
 
 
 ## Equivalentes na jurisprudência europeia
 
-Estas interpretações encontram paralelo na jurisprudência de vários países europeus, e levaram à reforma de sistemas eleitorais no caso da **[Suiça]({{ '/suica.html' | relative_url }})** e da **[República Checa]({{ '/checa.html' | relative_url }})** *[os links anteriores conduzem a uma análise de cada um dos casos]*
+Estas interpretações encontram paralelo na jurisprudência de vários países europeus, e levaram à reforma de sistemas eleitorais no caso da **[Suíça]({{ '/suica.html' | relative_url }})** e da **[República Checa]({{ '/checa.html' | relative_url }})** *[os links anteriores conduzem a uma análise de cada um dos casos]*

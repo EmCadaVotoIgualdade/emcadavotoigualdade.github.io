@@ -37,7 +37,7 @@ Abaixo podes analisar de forma interactiva como o sistema actual inflaciona o cu
 
 No maior debate sobre este tema, o governo apresentou em 1998 uma proposta inspirada no sistema alemão, onde António Costa explicava[[2]](#ref-2) assim dois objectivos:
 
-1. *«a proporcionalidade é reforçada porque (...) com a criação do círculo nacional, devolve-se utilidade a todos os votos, de todos os partidos, em todo o territory nacional»*;
+1. *«a proporcionalidade é reforçada porque (...) com a criação do círculo nacional, devolve-se utilidade a todos os votos, de todos os partidos, em todo o território nacional»*;
 2. *«o eleitor ganha maior liberdade, deixa de estar limitado à escolha do partido, passando a poder escolher também o seu Deputado. O partido terá de se abrir à sociedade, terá de partilhar com os cidadãos a escolha dos seus representantes.»*
 
 O PSD, liderado por Marcelo Rebelo de Sousa, respondia numa proposta semelhante onde *«a proporcionalidade será sempre assegurada de acordo com o resultado obtido no apuramento do voto nacional»*[[2]](#ref-2).

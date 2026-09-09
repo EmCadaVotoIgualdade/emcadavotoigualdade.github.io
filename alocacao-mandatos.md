@@ -14,7 +14,7 @@ Na Europa há vários sistemas eleitorais que procuram conciliar a existência d
 Nestes sistemas há círculos locais e mandatos de compensação alocados a um nível superior. Os mandatos locais dependem apenas dos votos nesse círculo, enquanto os de compensação dependem dos votos totais de cada partido e do seu número de mandatos nos círculos locais.
 
 Este sistema tem duas desvantagens mencionadas em debates parlamentares sobre propostas deste género:
-* **Criação de duas categorias de deputados:** os eleitos diretamente pelos círculos locais e os eleitos pelas listas centrais de compensação.
+* **Criação de duas categorias de deputados:** os eleitos directamente pelos círculos locais e os eleitos pelas listas centrais de compensação.
 * **Erosão da representação local:** para criar um círculo de compensação sem aumentar o número total de deputados, é necessário retirar mandatos aos círculos actuais.
 
 
@@ -54,7 +54,7 @@ Aqui não vão ser apresentados os detalhes técnicos de cada sistema, apenas os
 Para cada eleição foram simuladas 5 mil variantes, onde cada partido tem a sua votação global a variar até $\pm 8\%$ de forma aleatória, bem como uma variação local em cada círculo até $\pm 2\%$, de forma independente.
 
 Este procedimento gerou 25 mil resultados eleitorais possíveis, que permitem uma análise mais robusta das consequências de cada método do que analisando apenas os cinco resultados históricos.
-*(os detalhes técnicos de cada sistema, os resultados detalhados das simulações, bem como o código para as reproduzir serão apresentados neste site no futuro, e até lá poderá ser solicitado em emcadavotoigualdade@gmail.com)*
+*(os detalhes técnicos de cada sistema, os resultados detalhados das simulações, bem como o código para as reproduzir serão apresentados neste site no futuro, e até então poderá ser solicitado em emcadavotoigualdade@gmail.com)*
 
 ---
 

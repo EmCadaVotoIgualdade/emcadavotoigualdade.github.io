@@ -165,7 +165,7 @@ Acrescentamos o Reino Unido, como exemplo de um sistema maioritário clássico, 
 
 <img src="{{ '/assets/images/inconstitucional_grafico_cad.png' | relative_url }}" alt="Gráfico do Índice CAd na Europa" class="mx-auto my-6 rounded-xl shadow-md max-w-full">
 
-O que estes indicadores mostram é que o nosso sistema que devia ser proporcional beneficia muito mais os dois grandes partidos que qualquer sistema proporcional europeu, e, nas últimas eleições, mais até que no sistema maioritário do Reino Unido, cujo objectivo conhecido (e cumprido) é ter dois grandes partidos e originar governos de maioria unipartidária artificial.
+Estes indicadores mostram que o nosso sistema que devia ser proporcional beneficia muito mais os dois grandes partidos que qualquer sistema proporcional europeu, e, nas últimas eleições, mais até que no sistema maioritário do Reino Unido, cujo objectivo conhecido (e cumprido) é ter dois grandes partidos e originar governos de maioria unipartidária artificial.
 
 Em 6 dos 10 sistemas, na Bélgica, Finlândia, Dinamarca, Noruega, República Checa e Alemanha, todos de base mais proporcionais que o de Portugal, foram introduzidas, desde o final do século passado, alterações que os tornaram ainda mais proporcionais.
 Nos 4 que se mantiveram inalterados estão os Países Baixos, onde não há margem para aumentar a proporcionalidade, e os 3 países com os sistemas mais desproporcionais, Espanha, Reino Unido e Portugal, inalterados praticamente desde sempre, e onde qualquer alteração teria mais resistência dos dois grandes partidos que beneficiam dessa desproporcionalidade.
@@ -244,7 +244,7 @@ Ao longo de várias décadas, o tribunal declarou inconstitucionais duas leis el
 
 «A delimitação dos círculos eleitorais pode ter em conta particularidades regionais, mas não pode conduzir a uma distorção do caráter proporcional da eleição.»
 
-Assim, o sistema eleitoral nas eleições de 2025 sofreu a maior alteração desde 1949, já que pela primeira vez a vitória num círculo local não garantiu a entrada no parlamento. Os detalhes da decisão e das suas consequências podem ser consultados num [documento anexo]({{ '/alemanha.html' | relative_url }}). Já os problemas do sistema alemão, que originaram as várias intervenções do tribunal, podem ser consultados [aqui]({{ '/alemanha-problemas.html' | relative_url }}).
+Assim, o sistema eleitoral nas eleições de 2025 sofreu a maior alteração desde 1949, já que pela primeira vez a vitória num círculo local não garantiu a entrada no parlamento. Os detalhes da decisão e das suas consequências podem ser consultados num [documento anexo]({{ '/alemanha.html' | relative_url }}). Já os problemas do sistema alemão, que originaram as várias intervenções do tribunal, podem ser consultados [aqui]({{ '/problemas-alemao.html' | relative_url }}).
 
 ---
 
