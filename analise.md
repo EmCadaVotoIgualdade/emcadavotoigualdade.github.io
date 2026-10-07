@@ -198,7 +198,7 @@ O Tribunal Federal recorreu ao exemplo recente do círculo mais pequeno, equival
 O tribunal acrescentou ainda o seguinte cenário, então apresentado como hipotético:
 «um partido que reúna apenas pouco mais de metade ou mesmo apenas uma maioria relativa dos votos pode ganhar ambos os mandatos, se os restantes votos estiverem fragmentados por vários partidos mais pequenos. Em ambos os casos, o caráter do sistema de representação proporcional é amplamente adulterado.»
 
-No caso português, este cenário deixou de ser uma mera hipótese teórica: no círculo de Portalegre, o partido mais votado conquistou ambos os mandatos em 2005, 2019 e 2022, sendo que, nas duas últimas eleições, mais de metade dos votos expressos nesse círculo não contribuiu para a eleição de qualquer deputado, ficando, na formulação da própria jurisprudência suíça, inteiramente «sem peso».
+No caso português, este cenário deixou de ser uma mera hipótese teórica: no círculo de Portalegre, o partido mais votado conquistou ambos os mandatos em 2005, 2019 e 2022, sendo que, nessas duas últimas eleições, mais de metade dos votos expressos nesse círculo não contribuiu para a eleição de qualquer deputado, ficando, na formulação da própria jurisprudência suíça, inteiramente «sem peso».
 
 ### [Zug (2010 - BGE 136 I 376)](http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-136-I-376)
 «Sempre que não ocorra uma compensação com efeitos transdistritais (o chamado sistema de representação proporcional puro), um círculo eleitoral deve dispor de, pelo menos, dez mandatos.»
