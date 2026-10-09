@@ -31,7 +31,7 @@
     return Number.isSafeInteger(value);
   }
 
-  function buildScale(values, metric) {
+  function buildScale(values, metric, metricId) {
     const scale = { minimum: null, maximum: null, classes: [], step: 1 };
     if (values.length === 0) return scale;
     let minimum = values[0];
@@ -41,6 +41,34 @@
       maximum = Math.max(maximum, values[valueIndex]);
     }
     const palette = palettes[metric.palette];
+    if (metricId === "represented_parties_count") {
+      scale.minimum = minimum;
+      scale.maximum = maximum;
+      const classCount = maximum - minimum + 1;
+      // One class per integer, with shades interpolated across the teal palette.
+      for (let classIndex = 0; classIndex < classCount; classIndex++) {
+        let color;
+        if (classCount === 1) {
+          color = palette[2];
+        } else {
+          const palettePosition = classIndex * (palette.length - 1) / (classCount - 1);
+          const paletteIndex = Math.floor(palettePosition);
+          const fraction = palettePosition - paletteIndex;
+          const startColor = palette[paletteIndex];
+          const endColor = palette[Math.min(paletteIndex + 1, palette.length - 1)];
+          color = "#";
+          for (let channelOffset = 1; channelOffset < 7; channelOffset += 2) {
+            const startChannel = parseInt(startColor.slice(channelOffset, channelOffset + 2), 16);
+            const endChannel = parseInt(endColor.slice(channelOffset, channelOffset + 2), 16);
+            const channel = Math.round(startChannel + (endChannel - startChannel) * fraction);
+            color += channel.toString(16).padStart(2, "0");
+          }
+        }
+        const count = minimum + classIndex;
+        scale.classes.push({ lower: count, upper: count, color: color, label: integerFormatter.format(count) });
+      }
+      return scale;
+    }
     const isCount = metric.unit === "count";
     let lower = Math.floor(minimum);
     let upper = Math.ceil(maximum);
@@ -143,7 +171,7 @@
           }
         }
       }
-      scales[metricId] = buildScale(values, metric);
+      scales[metricId] = buildScale(values, metric, metricId);
     }
 
     // Place the three static SVG panels in a responsive CSS grid. District path
