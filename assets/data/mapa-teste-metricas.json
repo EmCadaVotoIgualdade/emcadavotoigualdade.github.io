@@ -1,8 +1,16 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "demo": true,
   "notice": "PROTÓTIPO: DADOS FICTÍCIOS",
-  "description": "Valores inteiramente inventados, sem cálculo a partir de resultados eleitorais. Apenas para testar a visualização.",
+  "description": "Todos os valores dos dois modelos e dos quatro anos são inventados. Não são resultados eleitorais, cálculos de mandatos ou garantias de melhoria.",
+  "models": {
+    "current": {
+      "label": "Sistema atual"
+    },
+    "proposal": {
+      "label": "A nossa proposta"
+    }
+  },
   "years": [
     "2019",
     "2022",
@@ -11,34 +19,22 @@
   ],
   "metrics": {
     "wasted_votes_pct": {
-      "label": "Percentagem de votos desperdiçados",
+      "label": "Votos desperdiçados (%)",
       "unit": "percent",
-      "domain": [
-        0,
-        60
-      ],
-      "breaks": [
-        10,
-        20,
-        30,
-        40,
-        50
-      ]
+      "palette": "red",
+      "definition": "Percentagem fictícia de votos sem representação no círculo."
     },
     "effective_threshold_pct": {
-      "label": "Limiar eleitoral efectivo (%)",
+      "label": "Limiar eleitoral efetivo (%)",
       "unit": "percent",
-      "domain": [
-        0,
-        30
-      ],
-      "breaks": [
-        5,
-        10,
-        15,
-        20,
-        25
-      ]
+      "palette": "amber",
+      "definition": "Percentagem fictícia correspondente à barreira eleitoral efetiva no círculo."
+    },
+    "represented_parties_count": {
+      "label": "Partidos representados",
+      "unit": "count",
+      "palette": "teal",
+      "definition": "Número de partidos políticos distintos com pelo menos um deputado eleito no círculo."
     }
   },
   "regions": {
@@ -124,332 +120,824 @@
     }
   },
   "values": {
-    "2019": {
-      "aveiro": {
-        "wasted_votes_pct": 22.4,
-        "effective_threshold_pct": 5.8
+    "current": {
+      "2019": {
+        "aveiro": {
+          "wasted_votes_pct": 22.4,
+          "effective_threshold_pct": 5.8,
+          "represented_parties_count": 4
+        },
+        "beja": {
+          "wasted_votes_pct": 38.6,
+          "effective_threshold_pct": 18.4,
+          "represented_parties_count": 2
+        },
+        "braga": {
+          "wasted_votes_pct": 16.8,
+          "effective_threshold_pct": 4.7,
+          "represented_parties_count": 5
+        },
+        "braganca": {
+          "wasted_votes_pct": 46.2,
+          "effective_threshold_pct": 23.1,
+          "represented_parties_count": 2
+        },
+        "castelo-branco": {
+          "wasted_votes_pct": 34.5,
+          "effective_threshold_pct": 15.2,
+          "represented_parties_count": 3
+        },
+        "coimbra": {
+          "wasted_votes_pct": 26.7,
+          "effective_threshold_pct": 9.3,
+          "represented_parties_count": 4
+        },
+        "evora": {
+          "wasted_votes_pct": 41.3,
+          "effective_threshold_pct": 19.8,
+          "represented_parties_count": 2
+        },
+        "faro": {
+          "wasted_votes_pct": 21.5,
+          "effective_threshold_pct": 7.6,
+          "represented_parties_count": 4
+        },
+        "guarda": {
+          "wasted_votes_pct": 43.7,
+          "effective_threshold_pct": 21.4,
+          "represented_parties_count": 2
+        },
+        "leiria": {
+          "wasted_votes_pct": 25.1,
+          "effective_threshold_pct": 8.1,
+          "represented_parties_count": 4
+        },
+        "lisboa": {
+          "wasted_votes_pct": 12.6,
+          "effective_threshold_pct": 1.9,
+          "represented_parties_count": 7
+        },
+        "portalegre": {
+          "wasted_votes_pct": 49.4,
+          "effective_threshold_pct": 25.3,
+          "represented_parties_count": 2
+        },
+        "porto": {
+          "wasted_votes_pct": 14.9,
+          "effective_threshold_pct": 2.8,
+          "represented_parties_count": 6
+        },
+        "santarem": {
+          "wasted_votes_pct": 29.6,
+          "effective_threshold_pct": 10.7,
+          "represented_parties_count": 4
+        },
+        "setubal": {
+          "wasted_votes_pct": 18.2,
+          "effective_threshold_pct": 4.2,
+          "represented_parties_count": 5
+        },
+        "viana-do-castelo": {
+          "wasted_votes_pct": 35.8,
+          "effective_threshold_pct": 14.6,
+          "represented_parties_count": 3
+        },
+        "vila-real": {
+          "wasted_votes_pct": 40.1,
+          "effective_threshold_pct": 17.5,
+          "represented_parties_count": 3
+        },
+        "viseu": {
+          "wasted_votes_pct": 32.9,
+          "effective_threshold_pct": 11.8,
+          "represented_parties_count": 4
+        },
+        "acores": {
+          "wasted_votes_pct": 30.4,
+          "effective_threshold_pct": 12.9,
+          "represented_parties_count": 3
+        },
+        "madeira": {
+          "wasted_votes_pct": 28.3,
+          "effective_threshold_pct": 11.1,
+          "represented_parties_count": 4
+        }
       },
-      "beja": {
-        "wasted_votes_pct": 38.6,
-        "effective_threshold_pct": 18.4
+      "2022": {
+        "aveiro": {
+          "wasted_votes_pct": 28.1,
+          "effective_threshold_pct": 6.2,
+          "represented_parties_count": 4
+        },
+        "beja": {
+          "wasted_votes_pct": 44.7,
+          "effective_threshold_pct": 20.8,
+          "represented_parties_count": 2
+        },
+        "braga": {
+          "wasted_votes_pct": 23.5,
+          "effective_threshold_pct": 5.1,
+          "represented_parties_count": 4
+        },
+        "braganca": {
+          "wasted_votes_pct": 51.8,
+          "effective_threshold_pct": 24.6,
+          "represented_parties_count": 1
+        },
+        "castelo-branco": {
+          "wasted_votes_pct": 39.2,
+          "effective_threshold_pct": 16.7,
+          "represented_parties_count": 2
+        },
+        "coimbra": {
+          "wasted_votes_pct": 33.4,
+          "effective_threshold_pct": 10.1,
+          "represented_parties_count": 3
+        },
+        "evora": {
+          "wasted_votes_pct": 47.9,
+          "effective_threshold_pct": 22.3,
+          "represented_parties_count": 2
+        },
+        "faro": {
+          "wasted_votes_pct": 27.2,
+          "effective_threshold_pct": 8.4,
+          "represented_parties_count": 4
+        },
+        "guarda": {
+          "wasted_votes_pct": 48.6,
+          "effective_threshold_pct": 22.7,
+          "represented_parties_count": 1
+        },
+        "leiria": {
+          "wasted_votes_pct": 31.8,
+          "effective_threshold_pct": 9.5,
+          "represented_parties_count": 4
+        },
+        "lisboa": {
+          "wasted_votes_pct": 19.3,
+          "effective_threshold_pct": 2.4,
+          "represented_parties_count": 6
+        },
+        "portalegre": {
+          "wasted_votes_pct": 54.1,
+          "effective_threshold_pct": 27.6,
+          "represented_parties_count": 1
+        },
+        "porto": {
+          "wasted_votes_pct": 21.6,
+          "effective_threshold_pct": 3.1,
+          "represented_parties_count": 5
+        },
+        "santarem": {
+          "wasted_votes_pct": 35.3,
+          "effective_threshold_pct": 12.1,
+          "represented_parties_count": 3
+        },
+        "setubal": {
+          "wasted_votes_pct": 24.9,
+          "effective_threshold_pct": 4.8,
+          "represented_parties_count": 4
+        },
+        "viana-do-castelo": {
+          "wasted_votes_pct": 41.5,
+          "effective_threshold_pct": 16.2,
+          "represented_parties_count": 2
+        },
+        "vila-real": {
+          "wasted_votes_pct": 46.8,
+          "effective_threshold_pct": 19.7,
+          "represented_parties_count": 2
+        },
+        "viseu": {
+          "wasted_votes_pct": 38.6,
+          "effective_threshold_pct": 13.2,
+          "represented_parties_count": 3
+        },
+        "acores": {
+          "wasted_votes_pct": 36.1,
+          "effective_threshold_pct": 14.4,
+          "represented_parties_count": 2
+        },
+        "madeira": {
+          "wasted_votes_pct": 34.7,
+          "effective_threshold_pct": 12.5,
+          "represented_parties_count": 3
+        }
       },
-      "braga": {
-        "wasted_votes_pct": 16.8,
-        "effective_threshold_pct": 4.7
+      "2024": {
+        "aveiro": {
+          "wasted_votes_pct": 18.7,
+          "effective_threshold_pct": 4.9,
+          "represented_parties_count": 5
+        },
+        "beja": {
+          "wasted_votes_pct": 33.2,
+          "effective_threshold_pct": 16.6,
+          "represented_parties_count": 3
+        },
+        "braga": {
+          "wasted_votes_pct": 13.4,
+          "effective_threshold_pct": 3.8,
+          "represented_parties_count": 6
+        },
+        "braganca": {
+          "wasted_votes_pct": 39.5,
+          "effective_threshold_pct": 20.2,
+          "represented_parties_count": 2
+        },
+        "castelo-branco": {
+          "wasted_votes_pct": 29.1,
+          "effective_threshold_pct": 13.6,
+          "represented_parties_count": 3
+        },
+        "coimbra": {
+          "wasted_votes_pct": 22.3,
+          "effective_threshold_pct": 8.4,
+          "represented_parties_count": 5
+        },
+        "evora": {
+          "wasted_votes_pct": 36.7,
+          "effective_threshold_pct": 17.3,
+          "represented_parties_count": 3
+        },
+        "faro": {
+          "wasted_votes_pct": 17.8,
+          "effective_threshold_pct": 6.7,
+          "represented_parties_count": 5
+        },
+        "guarda": {
+          "wasted_votes_pct": 38.3,
+          "effective_threshold_pct": 19.4,
+          "represented_parties_count": 2
+        },
+        "leiria": {
+          "wasted_votes_pct": 20.5,
+          "effective_threshold_pct": 7.2,
+          "represented_parties_count": 5
+        },
+        "lisboa": {
+          "wasted_votes_pct": 8.7,
+          "effective_threshold_pct": 1.5,
+          "represented_parties_count": 8
+        },
+        "portalegre": {
+          "wasted_votes_pct": 43.6,
+          "effective_threshold_pct": 22.9,
+          "represented_parties_count": 2
+        },
+        "porto": {
+          "wasted_votes_pct": 10.8,
+          "effective_threshold_pct": 2.2,
+          "represented_parties_count": 7
+        },
+        "santarem": {
+          "wasted_votes_pct": 25.9,
+          "effective_threshold_pct": 9.8,
+          "represented_parties_count": 5
+        },
+        "setubal": {
+          "wasted_votes_pct": 14.6,
+          "effective_threshold_pct": 3.6,
+          "represented_parties_count": 6
+        },
+        "viana-do-castelo": {
+          "wasted_votes_pct": 30.2,
+          "effective_threshold_pct": 12.8,
+          "represented_parties_count": 4
+        },
+        "vila-real": {
+          "wasted_votes_pct": 34.5,
+          "effective_threshold_pct": 15.9,
+          "represented_parties_count": 3
+        },
+        "viseu": {
+          "wasted_votes_pct": 27.4,
+          "effective_threshold_pct": 10.5,
+          "represented_parties_count": 5
+        },
+        "acores": {
+          "wasted_votes_pct": 26.7,
+          "effective_threshold_pct": 11.3,
+          "represented_parties_count": 3
+        },
+        "madeira": {
+          "wasted_votes_pct": 23.9,
+          "effective_threshold_pct": 9.7,
+          "represented_parties_count": 4
+        }
       },
-      "braganca": {
-        "wasted_votes_pct": 46.2,
-        "effective_threshold_pct": 23.1
-      },
-      "castelo-branco": {
-        "wasted_votes_pct": 34.5,
-        "effective_threshold_pct": 15.2
-      },
-      "coimbra": {
-        "wasted_votes_pct": 26.7,
-        "effective_threshold_pct": 9.3
-      },
-      "evora": {
-        "wasted_votes_pct": 41.3,
-        "effective_threshold_pct": 19.8
-      },
-      "faro": {
-        "wasted_votes_pct": 21.5,
-        "effective_threshold_pct": 7.6
-      },
-      "guarda": {
-        "wasted_votes_pct": 43.7,
-        "effective_threshold_pct": 21.4
-      },
-      "leiria": {
-        "wasted_votes_pct": 25.1,
-        "effective_threshold_pct": 8.1
-      },
-      "lisboa": {
-        "wasted_votes_pct": 12.6,
-        "effective_threshold_pct": 1.9
-      },
-      "portalegre": {
-        "wasted_votes_pct": 49.4,
-        "effective_threshold_pct": 25.3
-      },
-      "porto": {
-        "wasted_votes_pct": 14.9,
-        "effective_threshold_pct": 2.8
-      },
-      "santarem": {
-        "wasted_votes_pct": 29.6,
-        "effective_threshold_pct": 10.7
-      },
-      "setubal": {
-        "wasted_votes_pct": 18.2,
-        "effective_threshold_pct": 4.2
-      },
-      "viana-do-castelo": {
-        "wasted_votes_pct": 35.8,
-        "effective_threshold_pct": 14.6
-      },
-      "vila-real": {
-        "wasted_votes_pct": 40.1,
-        "effective_threshold_pct": 17.5
-      },
-      "viseu": {
-        "wasted_votes_pct": 32.9,
-        "effective_threshold_pct": 11.8
-      },
-      "acores": {
-        "wasted_votes_pct": 30.4,
-        "effective_threshold_pct": 12.9
-      },
-      "madeira": {
-        "wasted_votes_pct": 28.3,
-        "effective_threshold_pct": 11.1
+      "2025": {
+        "aveiro": {
+          "wasted_votes_pct": 24.9,
+          "effective_threshold_pct": 5.5,
+          "represented_parties_count": 5
+        },
+        "beja": {
+          "wasted_votes_pct": 40.5,
+          "effective_threshold_pct": 19.1,
+          "represented_parties_count": 2
+        },
+        "braga": {
+          "wasted_votes_pct": 19.6,
+          "effective_threshold_pct": 4.3,
+          "represented_parties_count": 5
+        },
+        "braganca": {
+          "wasted_votes_pct": 47.1,
+          "effective_threshold_pct": 22.8,
+          "represented_parties_count": 2
+        },
+        "castelo-branco": {
+          "wasted_votes_pct": 36.4,
+          "effective_threshold_pct": 15.9,
+          "represented_parties_count": 3
+        },
+        "coimbra": {
+          "wasted_votes_pct": 29.8,
+          "effective_threshold_pct": 9.7,
+          "represented_parties_count": 4
+        },
+        "evora": {
+          "wasted_votes_pct": 43.2,
+          "effective_threshold_pct": 20.5,
+          "represented_parties_count": 2
+        },
+        "faro": {
+          "wasted_votes_pct": 23.6,
+          "effective_threshold_pct": 7.9,
+          "represented_parties_count": 5
+        },
+        "guarda": {
+          "wasted_votes_pct": 45.2,
+          "effective_threshold_pct": 21.9,
+          "represented_parties_count": 2
+        },
+        "leiria": {
+          "wasted_votes_pct": 27.3,
+          "effective_threshold_pct": 8.7,
+          "represented_parties_count": 5
+        },
+        "lisboa": {
+          "wasted_votes_pct": 15.2,
+          "effective_threshold_pct": 2.1,
+          "represented_parties_count": 7
+        },
+        "portalegre": {
+          "wasted_votes_pct": 50.8,
+          "effective_threshold_pct": 26.1,
+          "represented_parties_count": 2
+        },
+        "porto": {
+          "wasted_votes_pct": 17.3,
+          "effective_threshold_pct": 2.9,
+          "represented_parties_count": 6
+        },
+        "santarem": {
+          "wasted_votes_pct": 32.1,
+          "effective_threshold_pct": 11.4,
+          "represented_parties_count": 4
+        },
+        "setubal": {
+          "wasted_votes_pct": 20.7,
+          "effective_threshold_pct": 4.4,
+          "represented_parties_count": 5
+        },
+        "viana-do-castelo": {
+          "wasted_votes_pct": 37.6,
+          "effective_threshold_pct": 15.1,
+          "represented_parties_count": 3
+        },
+        "vila-real": {
+          "wasted_votes_pct": 42.8,
+          "effective_threshold_pct": 18.6,
+          "represented_parties_count": 3
+        },
+        "viseu": {
+          "wasted_votes_pct": 35.7,
+          "effective_threshold_pct": 12.4,
+          "represented_parties_count": 4
+        },
+        "acores": {
+          "wasted_votes_pct": 32.8,
+          "effective_threshold_pct": 13.6,
+          "represented_parties_count": 3
+        },
+        "madeira": {
+          "wasted_votes_pct": 30.6,
+          "effective_threshold_pct": 11.8,
+          "represented_parties_count": 4
+        }
       }
     },
-    "2022": {
-      "aveiro": {
-        "wasted_votes_pct": 28.1,
-        "effective_threshold_pct": 6.2
+    "proposal": {
+      "2019": {
+        "aveiro": {
+          "wasted_votes_pct": 10.8,
+          "effective_threshold_pct": 3.5,
+          "represented_parties_count": 5
+        },
+        "beja": {
+          "wasted_votes_pct": 19.4,
+          "effective_threshold_pct": 12.1,
+          "represented_parties_count": 3
+        },
+        "braga": {
+          "wasted_votes_pct": 8.2,
+          "effective_threshold_pct": 2.9,
+          "represented_parties_count": 6
+        },
+        "braganca": {
+          "wasted_votes_pct": 30.5,
+          "effective_threshold_pct": 16.4,
+          "represented_parties_count": 2
+        },
+        "castelo-branco": {
+          "wasted_votes_pct": 18.6,
+          "effective_threshold_pct": 10.5,
+          "represented_parties_count": 3
+        },
+        "coimbra": {
+          "wasted_votes_pct": 13.2,
+          "effective_threshold_pct": 5.9,
+          "represented_parties_count": 5
+        },
+        "evora": {
+          "wasted_votes_pct": 24.7,
+          "effective_threshold_pct": 13.8,
+          "represented_parties_count": 3
+        },
+        "faro": {
+          "wasted_votes_pct": 11.9,
+          "effective_threshold_pct": 4.6,
+          "represented_parties_count": 5
+        },
+        "guarda": {
+          "wasted_votes_pct": 31.2,
+          "effective_threshold_pct": 15.2,
+          "represented_parties_count": 3
+        },
+        "leiria": {
+          "wasted_votes_pct": 12.7,
+          "effective_threshold_pct": 5.3,
+          "represented_parties_count": 5
+        },
+        "lisboa": {
+          "wasted_votes_pct": 5.4,
+          "effective_threshold_pct": 1.1,
+          "represented_parties_count": 8
+        },
+        "portalegre": {
+          "wasted_votes_pct": 33.5,
+          "effective_threshold_pct": 18.7,
+          "represented_parties_count": 1
+        },
+        "porto": {
+          "wasted_votes_pct": 7.9,
+          "effective_threshold_pct": 1.6,
+          "represented_parties_count": 7
+        },
+        "santarem": {
+          "wasted_votes_pct": 15.1,
+          "effective_threshold_pct": 6.4,
+          "represented_parties_count": 5
+        },
+        "setubal": {
+          "wasted_votes_pct": 9.5,
+          "effective_threshold_pct": 2.6,
+          "represented_parties_count": 6
+        },
+        "viana-do-castelo": {
+          "wasted_votes_pct": 21.6,
+          "effective_threshold_pct": 8.9,
+          "represented_parties_count": 4
+        },
+        "vila-real": {
+          "wasted_votes_pct": 22.9,
+          "effective_threshold_pct": 11.4,
+          "represented_parties_count": 4
+        },
+        "viseu": {
+          "wasted_votes_pct": 18.4,
+          "effective_threshold_pct": 7.6,
+          "represented_parties_count": 5
+        },
+        "acores": {
+          "wasted_votes_pct": 16.7,
+          "effective_threshold_pct": 8.1,
+          "represented_parties_count": 4
+        },
+        "madeira": {
+          "wasted_votes_pct": 15.6,
+          "effective_threshold_pct": 7.8,
+          "represented_parties_count": 5
+        }
       },
-      "beja": {
-        "wasted_votes_pct": 44.7,
-        "effective_threshold_pct": 20.8
+      "2022": {
+        "aveiro": {
+          "wasted_votes_pct": 15.6,
+          "effective_threshold_pct": 4.1,
+          "represented_parties_count": 5
+        },
+        "beja": {
+          "wasted_votes_pct": 26.3,
+          "effective_threshold_pct": 14.8,
+          "represented_parties_count": 2
+        },
+        "braga": {
+          "wasted_votes_pct": 12.8,
+          "effective_threshold_pct": 3.2,
+          "represented_parties_count": 6
+        },
+        "braganca": {
+          "wasted_votes_pct": 34.6,
+          "effective_threshold_pct": 18.9,
+          "represented_parties_count": 2
+        },
+        "castelo-branco": {
+          "wasted_votes_pct": 24.1,
+          "effective_threshold_pct": 17.4,
+          "represented_parties_count": 3
+        },
+        "coimbra": {
+          "wasted_votes_pct": 19.7,
+          "effective_threshold_pct": 6.8,
+          "represented_parties_count": 4
+        },
+        "evora": {
+          "wasted_votes_pct": 30.4,
+          "effective_threshold_pct": 15.4,
+          "represented_parties_count": 1
+        },
+        "faro": {
+          "wasted_votes_pct": 16.8,
+          "effective_threshold_pct": 5.5,
+          "represented_parties_count": 5
+        },
+        "guarda": {
+          "wasted_votes_pct": 34.1,
+          "effective_threshold_pct": 17.2,
+          "represented_parties_count": 2
+        },
+        "leiria": {
+          "wasted_votes_pct": 18.2,
+          "effective_threshold_pct": 6.2,
+          "represented_parties_count": 5
+        },
+        "lisboa": {
+          "wasted_votes_pct": 8.5,
+          "effective_threshold_pct": 1.5,
+          "represented_parties_count": 7
+        },
+        "portalegre": {
+          "wasted_votes_pct": 38.2,
+          "effective_threshold_pct": 21.4,
+          "represented_parties_count": 2
+        },
+        "porto": {
+          "wasted_votes_pct": 10.7,
+          "effective_threshold_pct": 1.8,
+          "represented_parties_count": 7
+        },
+        "santarem": {
+          "wasted_votes_pct": 21.4,
+          "effective_threshold_pct": 8.1,
+          "represented_parties_count": 4
+        },
+        "setubal": {
+          "wasted_votes_pct": 13.6,
+          "effective_threshold_pct": 3.2,
+          "represented_parties_count": 5
+        },
+        "viana-do-castelo": {
+          "wasted_votes_pct": 26.5,
+          "effective_threshold_pct": 10.1,
+          "represented_parties_count": 3
+        },
+        "vila-real": {
+          "wasted_votes_pct": 29.2,
+          "effective_threshold_pct": 13.5,
+          "represented_parties_count": 3
+        },
+        "viseu": {
+          "wasted_votes_pct": 24.8,
+          "effective_threshold_pct": 9.3,
+          "represented_parties_count": 4
+        },
+        "acores": {
+          "wasted_votes_pct": 22.6,
+          "effective_threshold_pct": 9.9,
+          "represented_parties_count": 3
+        },
+        "madeira": {
+          "wasted_votes_pct": 21.8,
+          "effective_threshold_pct": 8.6,
+          "represented_parties_count": 4
+        }
       },
-      "braga": {
-        "wasted_votes_pct": 23.5,
-        "effective_threshold_pct": 5.1
+      "2024": {
+        "aveiro": {
+          "wasted_votes_pct": 8.9,
+          "effective_threshold_pct": 2.8,
+          "represented_parties_count": 6
+        },
+        "beja": {
+          "wasted_votes_pct": 16.7,
+          "effective_threshold_pct": 10.9,
+          "represented_parties_count": 3
+        },
+        "braga": {
+          "wasted_votes_pct": 6.4,
+          "effective_threshold_pct": 2.2,
+          "represented_parties_count": 7
+        },
+        "braganca": {
+          "wasted_votes_pct": 25.8,
+          "effective_threshold_pct": 14.6,
+          "represented_parties_count": 3
+        },
+        "castelo-branco": {
+          "wasted_votes_pct": 14.3,
+          "effective_threshold_pct": 8.8,
+          "represented_parties_count": 4
+        },
+        "coimbra": {
+          "wasted_votes_pct": 10.8,
+          "effective_threshold_pct": 5.1,
+          "represented_parties_count": 6
+        },
+        "evora": {
+          "wasted_votes_pct": 20.6,
+          "effective_threshold_pct": 11.9,
+          "represented_parties_count": 3
+        },
+        "faro": {
+          "wasted_votes_pct": 18.6,
+          "effective_threshold_pct": 4.1,
+          "represented_parties_count": 6
+        },
+        "guarda": {
+          "wasted_votes_pct": 26.4,
+          "effective_threshold_pct": 13.6,
+          "represented_parties_count": 2
+        },
+        "leiria": {
+          "wasted_votes_pct": 9.5,
+          "effective_threshold_pct": 4.6,
+          "represented_parties_count": 6
+        },
+        "lisboa": {
+          "wasted_votes_pct": 3.4,
+          "effective_threshold_pct": 0.7,
+          "represented_parties_count": 8
+        },
+        "portalegre": {
+          "wasted_votes_pct": 28.7,
+          "effective_threshold_pct": 16.7,
+          "represented_parties_count": 2
+        },
+        "porto": {
+          "wasted_votes_pct": 5.2,
+          "effective_threshold_pct": 1.2,
+          "represented_parties_count": 8
+        },
+        "santarem": {
+          "wasted_votes_pct": 12.6,
+          "effective_threshold_pct": 5.7,
+          "represented_parties_count": 6
+        },
+        "setubal": {
+          "wasted_votes_pct": 7.3,
+          "effective_threshold_pct": 2.1,
+          "represented_parties_count": 7
+        },
+        "viana-do-castelo": {
+          "wasted_votes_pct": 18.4,
+          "effective_threshold_pct": 7.8,
+          "represented_parties_count": 3
+        },
+        "vila-real": {
+          "wasted_votes_pct": 19.7,
+          "effective_threshold_pct": 9.9,
+          "represented_parties_count": 4
+        },
+        "viseu": {
+          "wasted_votes_pct": 14.8,
+          "effective_threshold_pct": 6.8,
+          "represented_parties_count": 6
+        },
+        "acores": {
+          "wasted_votes_pct": 13.1,
+          "effective_threshold_pct": 7.2,
+          "represented_parties_count": 4
+        },
+        "madeira": {
+          "wasted_votes_pct": 11.8,
+          "effective_threshold_pct": 6.6,
+          "represented_parties_count": 5
+        }
       },
-      "braganca": {
-        "wasted_votes_pct": 51.8,
-        "effective_threshold_pct": 24.6
-      },
-      "castelo-branco": {
-        "wasted_votes_pct": 39.2,
-        "effective_threshold_pct": 16.7
-      },
-      "coimbra": {
-        "wasted_votes_pct": 33.4,
-        "effective_threshold_pct": 10.1
-      },
-      "evora": {
-        "wasted_votes_pct": 47.9,
-        "effective_threshold_pct": 22.3
-      },
-      "faro": {
-        "wasted_votes_pct": 27.2,
-        "effective_threshold_pct": 8.4
-      },
-      "guarda": {
-        "wasted_votes_pct": 48.6,
-        "effective_threshold_pct": 22.7
-      },
-      "leiria": {
-        "wasted_votes_pct": 31.8,
-        "effective_threshold_pct": 9.5
-      },
-      "lisboa": {
-        "wasted_votes_pct": 19.3,
-        "effective_threshold_pct": 2.4
-      },
-      "portalegre": {
-        "wasted_votes_pct": 54.1,
-        "effective_threshold_pct": 27.6
-      },
-      "porto": {
-        "wasted_votes_pct": 21.6,
-        "effective_threshold_pct": 3.1
-      },
-      "santarem": {
-        "wasted_votes_pct": 35.3,
-        "effective_threshold_pct": 12.1
-      },
-      "setubal": {
-        "wasted_votes_pct": 24.9,
-        "effective_threshold_pct": 4.8
-      },
-      "viana-do-castelo": {
-        "wasted_votes_pct": 41.5,
-        "effective_threshold_pct": 16.2
-      },
-      "vila-real": {
-        "wasted_votes_pct": 46.8,
-        "effective_threshold_pct": 19.7
-      },
-      "viseu": {
-        "wasted_votes_pct": 38.6,
-        "effective_threshold_pct": 13.2
-      },
-      "acores": {
-        "wasted_votes_pct": 36.1,
-        "effective_threshold_pct": 14.4
-      },
-      "madeira": {
-        "wasted_votes_pct": 34.7,
-        "effective_threshold_pct": 12.5
-      }
-    },
-    "2024": {
-      "aveiro": {
-        "wasted_votes_pct": 18.7,
-        "effective_threshold_pct": 4.9
-      },
-      "beja": {
-        "wasted_votes_pct": 33.2,
-        "effective_threshold_pct": 16.6
-      },
-      "braga": {
-        "wasted_votes_pct": 13.4,
-        "effective_threshold_pct": 3.8
-      },
-      "braganca": {
-        "wasted_votes_pct": 39.5,
-        "effective_threshold_pct": 20.2
-      },
-      "castelo-branco": {
-        "wasted_votes_pct": 29.1,
-        "effective_threshold_pct": 13.6
-      },
-      "coimbra": {
-        "wasted_votes_pct": 22.3,
-        "effective_threshold_pct": 8.4
-      },
-      "evora": {
-        "wasted_votes_pct": 36.7,
-        "effective_threshold_pct": 17.3
-      },
-      "faro": {
-        "wasted_votes_pct": 17.8,
-        "effective_threshold_pct": 6.7
-      },
-      "guarda": {
-        "wasted_votes_pct": 38.3,
-        "effective_threshold_pct": 19.4
-      },
-      "leiria": {
-        "wasted_votes_pct": 20.5,
-        "effective_threshold_pct": 7.2
-      },
-      "lisboa": {
-        "wasted_votes_pct": 8.7,
-        "effective_threshold_pct": 1.5
-      },
-      "portalegre": {
-        "wasted_votes_pct": 43.6,
-        "effective_threshold_pct": 22.9
-      },
-      "porto": {
-        "wasted_votes_pct": 10.8,
-        "effective_threshold_pct": 2.2
-      },
-      "santarem": {
-        "wasted_votes_pct": 25.9,
-        "effective_threshold_pct": 9.8
-      },
-      "setubal": {
-        "wasted_votes_pct": 14.6,
-        "effective_threshold_pct": 3.6
-      },
-      "viana-do-castelo": {
-        "wasted_votes_pct": 30.2,
-        "effective_threshold_pct": 12.8
-      },
-      "vila-real": {
-        "wasted_votes_pct": 34.5,
-        "effective_threshold_pct": 15.9
-      },
-      "viseu": {
-        "wasted_votes_pct": 27.4,
-        "effective_threshold_pct": 10.5
-      },
-      "acores": {
-        "wasted_votes_pct": 26.7,
-        "effective_threshold_pct": 11.3
-      },
-      "madeira": {
-        "wasted_votes_pct": 23.9,
-        "effective_threshold_pct": 9.7
-      }
-    },
-    "2025": {
-      "aveiro": {
-        "wasted_votes_pct": 24.9,
-        "effective_threshold_pct": 5.5
-      },
-      "beja": {
-        "wasted_votes_pct": 40.5,
-        "effective_threshold_pct": 19.1
-      },
-      "braga": {
-        "wasted_votes_pct": 19.6,
-        "effective_threshold_pct": 4.3
-      },
-      "braganca": {
-        "wasted_votes_pct": 47.1,
-        "effective_threshold_pct": 22.8
-      },
-      "castelo-branco": {
-        "wasted_votes_pct": 36.4,
-        "effective_threshold_pct": 15.9
-      },
-      "coimbra": {
-        "wasted_votes_pct": 29.8,
-        "effective_threshold_pct": 9.7
-      },
-      "evora": {
-        "wasted_votes_pct": 43.2,
-        "effective_threshold_pct": 20.5
-      },
-      "faro": {
-        "wasted_votes_pct": 23.6,
-        "effective_threshold_pct": 7.9
-      },
-      "guarda": {
-        "wasted_votes_pct": 45.2,
-        "effective_threshold_pct": 21.9
-      },
-      "leiria": {
-        "wasted_votes_pct": 27.3,
-        "effective_threshold_pct": 8.7
-      },
-      "lisboa": {
-        "wasted_votes_pct": 15.2,
-        "effective_threshold_pct": 2.1
-      },
-      "portalegre": {
-        "wasted_votes_pct": 50.8,
-        "effective_threshold_pct": 26.1
-      },
-      "porto": {
-        "wasted_votes_pct": 17.3,
-        "effective_threshold_pct": 2.9
-      },
-      "santarem": {
-        "wasted_votes_pct": 32.1,
-        "effective_threshold_pct": 11.4
-      },
-      "setubal": {
-        "wasted_votes_pct": 20.7,
-        "effective_threshold_pct": 4.4
-      },
-      "viana-do-castelo": {
-        "wasted_votes_pct": 37.6,
-        "effective_threshold_pct": 15.1
-      },
-      "vila-real": {
-        "wasted_votes_pct": 42.8,
-        "effective_threshold_pct": 18.6
-      },
-      "viseu": {
-        "wasted_votes_pct": 35.7,
-        "effective_threshold_pct": 12.4
-      },
-      "acores": {
-        "wasted_votes_pct": 32.8,
-        "effective_threshold_pct": 13.6
-      },
-      "madeira": {
-        "wasted_votes_pct": 30.6,
-        "effective_threshold_pct": 11.8
+      "2025": {
+        "aveiro": {
+          "wasted_votes_pct": 12.3,
+          "effective_threshold_pct": 3.6,
+          "represented_parties_count": 6
+        },
+        "beja": {
+          "wasted_votes_pct": 22.8,
+          "effective_threshold_pct": 13.2,
+          "represented_parties_count": 3
+        },
+        "braga": {
+          "wasted_votes_pct": 9.7,
+          "effective_threshold_pct": 2.7,
+          "represented_parties_count": 6
+        },
+        "braganca": {
+          "wasted_votes_pct": 31.4,
+          "effective_threshold_pct": 17.5,
+          "represented_parties_count": 2
+        },
+        "castelo-branco": {
+          "wasted_votes_pct": 20.7,
+          "effective_threshold_pct": 11.6,
+          "represented_parties_count": 4
+        },
+        "coimbra": {
+          "wasted_votes_pct": 15.4,
+          "effective_threshold_pct": 6.1,
+          "represented_parties_count": 5
+        },
+        "evora": {
+          "wasted_votes_pct": 27.1,
+          "effective_threshold_pct": 14.7,
+          "represented_parties_count": 3
+        },
+        "faro": {
+          "wasted_votes_pct": 13.5,
+          "effective_threshold_pct": 4.9,
+          "represented_parties_count": 6
+        },
+        "guarda": {
+          "wasted_votes_pct": 32.6,
+          "effective_threshold_pct": 15.8,
+          "represented_parties_count": 3
+        },
+        "leiria": {
+          "wasted_votes_pct": 14.8,
+          "effective_threshold_pct": 5.6,
+          "represented_parties_count": 6
+        },
+        "lisboa": {
+          "wasted_votes_pct": 6.9,
+          "effective_threshold_pct": 1.2,
+          "represented_parties_count": 8
+        },
+        "portalegre": {
+          "wasted_votes_pct": 35.1,
+          "effective_threshold_pct": 19.6,
+          "represented_parties_count": 2
+        },
+        "porto": {
+          "wasted_votes_pct": 8.6,
+          "effective_threshold_pct": 1.7,
+          "represented_parties_count": 7
+        },
+        "santarem": {
+          "wasted_votes_pct": 17.9,
+          "effective_threshold_pct": 7.4,
+          "represented_parties_count": 5
+        },
+        "setubal": {
+          "wasted_votes_pct": 11.2,
+          "effective_threshold_pct": 2.9,
+          "represented_parties_count": 6
+        },
+        "viana-do-castelo": {
+          "wasted_votes_pct": 23.7,
+          "effective_threshold_pct": 9.4,
+          "represented_parties_count": 4
+        },
+        "vila-real": {
+          "wasted_votes_pct": 25.5,
+          "effective_threshold_pct": 12.2,
+          "represented_parties_count": 4
+        },
+        "viseu": {
+          "wasted_votes_pct": 20.6,
+          "effective_threshold_pct": 8.2,
+          "represented_parties_count": 5
+        },
+        "acores": {
+          "wasted_votes_pct": 18.4,
+          "effective_threshold_pct": 8.7,
+          "represented_parties_count": 4
+        },
+        "madeira": {
+          "wasted_votes_pct": 31.4,
+          "effective_threshold_pct": 12.3,
+          "represented_parties_count": 3
+        }
       }
     }
   }

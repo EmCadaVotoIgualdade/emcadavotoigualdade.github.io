@@ -1,134 +1,113 @@
-# Mapa eleitoral experimental
+# Mapa eleitoral experimental — M2
 
-Protótipo isolado em `/mapa-teste.html`, com o layout `default`, sem metadados de navegação, com `sitemap: false` e `preview_noindex: true`. O único ficheiro preexistente alterado é `_layouts/default.html`: acrescenta uma meta robots `noindex, nofollow` apenas quando `preview_noindex` é exactamente `true`. Não há alterações aos restantes conteúdos, menus, scripts ou estilos do site.
+Página isolada em **https://emcadavotoigualdade.github.io/mapa-teste.html**, depois de publicação pelo responsável. Mantém `layout: default`, `custom_scripts`, `relative_url`, `sitemap: false`, `preview_noindex: true` e ausência de metadados de navegação. A M2 altera apenas os seis ficheiros do protótipo; o layout, os menus, os conteúdos editoriais, os gráficos existentes e as dependências ficam intactos. Não foi efectuado commit, push ou deploy.
 
-Depois de uma publicação feita pelo responsável do site, o endereço será **https://emcadavotoigualdade.github.io/mapa-teste.html**. Não foi efectuado qualquer commit, push ou deploy.
+## Interface e estrutura
 
-## Ficheiros
+`mapa-teste.md` contém os botões de sistema, ano e indicador, a lista de círculos, o painel seleccionado, a legenda e a atribuição. `assets/css/mapa-teste.css` limita todas as regras a `#mapa-teste`. `assets/js/mapa-teste.js` carrega dois recursos locais: a geometria em `assets/images/mapa-teste.svg` e os números em `assets/data/mapa-teste-metricas.json`.
 
-- `mapa-teste.md`: página, avisos, controlos e atribuição geográfica.
-- `assets/images/mapa-teste.svg`: geometria estática, sem valores eleitorais.
-- `assets/data/mapa-teste-metricas.json`: valores fictícios e definições dos indicadores.
-- `assets/js/mapa-teste.js`: carregamento, cores, legenda e interacções.
-- `assets/css/mapa-teste.css`: regras limitadas a `#mapa-teste`.
-- `docs/mapa-teste.md`: esta documentação, sem front matter Jekyll.
+Os botões são gerados a partir do JSON, têm `aria-pressed`, sublinhado na opção activa, foco visível e altura mínima de 44 pixels. As dimensões são independentes; mudar uma preserva as outras e o círculo. Inicialmente: `current`, `2025`, `wasted_votes_pct` e um dos 20 círculos escolhido uniformemente com uma única chamada a `Math.random()`. Não há persistência nem novas escolhas aleatórias durante as interacções.
 
-O JavaScript usa o mecanismo existente `custom_scripts`. Os três recursos da página usam `relative_url`, incluindo os endereços de descarga do SVG e do JSON. Não há novas dependências de execução, serviços de mapas, tiles, plugins Jekyll ou backend.
+O SVG estático tem três painéis com `data-map-part`: continente, Açores e Madeira. O JavaScript coloca-os numa grelha CSS, sem recalcular limites. No desktop, a legenda vertical e os dois enquadramentos ficam ao lado do continente. Até 600 pixels, a legenda passa para cima e os enquadramentos ficam lado a lado abaixo do continente. Um pré-visualizador temporário mostra o valor sob o ponteiro/foco; não altera a selecção persistente nem faz anúncios automáticos. O painel seleccionado usa uma única região `aria-live="polite"`.
 
-## Geografia, licença e versão
+## JSON, versão 2
 
-Fonte utilizada: **Direção-Geral do Território (DGT), Carta Administrativa Oficial de Portugal, CAOP2025**, obtida directamente dos GeoPackages oficiais. A [página oficial da CAOP](https://www.dgterritorio.gov.pt/atividades/cartografia/cartografia-tematica/caop) identifica esta versão e a sua aprovação em 28 de Janeiro de 2026. Os `last_change` das camadas nos quatro GeoPackages datam de 9 de Janeiro de 2026. Consulta e preparação do protótipo: 9 de Outubro de 2026.
-
-Descargas utilizadas:
-
-- [CAOP_Continente_2025-gpkg.zip](https://geo2.dgterritorio.gov.pt/caop/CAOP_Continente_2025-gpkg.zip): `Continente_CAOP2025.gpkg`, camada `cont_distritos`.
-- [CAOP_RAA_2025-gpkg.zip](https://geo2.dgterritorio.gov.pt/caop/CAOP_RAA_2025-gpkg.zip): `ArqAcores_GCentral_GOriental_CAOP2025.gpkg`, camada `raa_cen_ori_nuts1`, e `ArqAcores_GOcidental_CAOP2025.gpkg`, camada `raa_oci_nuts1`.
-- [CAOP_RAM_2025-gpkg.zip](https://geo2.dgterritorio.gov.pt/caop/CAOP_RAM_2025-gpkg.zip): `ArqMadeira_CAOP2025.gpkg`, camada `ram_nuts1`.
-
-A [política de dados abertos da DGT](https://www.dgterritorio.gov.pt/dados-abertos) estabelece a licença [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/). Manter a identificação da DGT como proprietária, a referência à CAOP2025, o link da licença e a indicação das adaptações. A página e os metadados do SVG incluem essa atribuição. A licença diz respeito à geografia; os valores eleitorais são inventados para este protótipo.
-
-O repositório solicitado, [nmota/caop_GeoJSON](https://github.com/nmota/caop_GeoJSON), foi consultado e os seus ficheiros foram descarregados e inspeccionados temporariamente, na revisão `a13791dd9639304a9f033789b391420ee6684afd` (30 de Maio de 2025). Declara origem no WFS da DGT e os CRS EPSG:3763, 5014, 5015 e 5016. Não contém um ficheiro de licença e não identifica inequivocamente a edição CAOP das geometrias. Por isso, o SVG final utiliza exclusivamente os GeoPackages oficiais com versão conhecida.
-
-A consulta da API OGC da DGT identificou a CAOP2025, mas a resposta de todos os distritos veio truncada e uma consulta NUTS devolveu HTTP 502. As descargas directas dos três ZIP oficiais foram bem-sucedidas; nenhuma geometria truncada foi usada.
-
-SHA-256 dos ZIP usados, para identificar exactamente as entradas:
+Há **480 valores eleitorais fictícios explícitos**: dois sistemas × quatro anos × 20 círculos × três indicadores. Nenhum é calculado a partir de resultados reais ou gerado aleatoriamente na página. Também os valores de `current` são fictícios.
 
 ```text
-Continente: 87cd67f4b1fbadf23d9324e6fb231ff05531e4db347af36ccc7c6cbabe3ecd1d
-Açores:    b0e3b4fe5544647eb4593e0222c6430fae7e50c97f953d8ceae10707c4df9dcf
-Madeira:   ae568ca2006e91205601309ff46bc8ae0cc73236165f095f8aa99a5b9a17e5d6
+schema_version: 2
+demo: true
+models: current / proposal, cada um com label
+years: ["2019", "2022", "2024", "2025"]
+metrics: identificador → label, unit, palette, definition
+regions: identificador → name, geography_code
+values[model][year][region][metric]: número
 ```
 
-## Preparação do SVG
+Exemplo do acesso: `values["proposal"]["2025"]["portalegre"]["represented_parties_count"]` é `2`. Os identificadores dos círculos continuam iguais aos do SVG. `geography_code` conserva os códigos distritais 01–18 e os códigos NUTS I 2/3, apenas para rastrear a fonte.
 
-Foram usados Python 3.13, SQLite da biblioteca padrão, Shapely 2.2 e pyproj 3.8, apenas em armazenamento temporário, fora do repositório. Não é necessário executar essas ferramentas para publicar ou usar o site.
-
-1. Ler as geometrias WKB das camadas GeoPackage, removendo o cabeçalho e envelope GeoPackage e verificando o `srs_id` em `gpkg_geometry_columns`.
-2. No continente, conservar a projecção métrica oficial **EPSG:3763, ETRS89 / PT-TM06**. Simplificar os 18 distritos em conjunto com `shapely.coverage_simplify(..., 200, simplify_boundary=True)`, em metros. A cobertura é válida antes e depois; os limites partilhados permanecem coincidentes. A maior alteração de área de um distrito foi inferior a 0,026%.
-3. Nos Açores, converter as geometrias do grupo ocidental de **EPSG:5014, PTRA08 / UTM 25N**, e as dos grupos central e oriental de **EPSG:5015, PTRA08 / UTM 26N**, para **EPSG:4326** com `Transformer.from_crs(..., always_xy=True)`. Reprojectar ambas para uma projecção azimutal equivalente local: `+proj=laea +lat_0=38.5 +lon_0=-28 +datum=WGS84 +units=m +no_defs`. Só então agregar com união geométrica. A operação PTRA08 → WGS84 usada pelo PROJ indica precisão de 1 metro.
-4. Na Madeira, converter **EPSG:5016, PTRA08 / UTM 28N** para EPSG:4326 e depois para `+proj=laea +lat_0=32.7 +lon_0=-16.9 +datum=WGS84 +units=m +no_defs`. Usar o limite NUTS I regional, que inclui Madeira, Porto Santo, Desertas e Selvagens. Separar as Selvagens apenas para o enquadramento visual (latitude inferior a 31°), conservando o mesmo identificador eleitoral.
-5. Simplificar os Açores com tolerância de 80 metros, Madeira/Porto Santo/Desertas com 60 metros e Selvagens com 20 metros, usando `preserve_topology=True`. O número de componentes geográficos mantém-se após simplificação: 10 nos Açores (incluindo as nove ilhas principais e um componente menor) e 485 na Madeira (incluindo pequenos ilhéus e rochedos).
-6. Ajustar os limites métricos a rectângulos SVG mantendo a proporção de cada enquadramento e invertendo o eixo vertical. O `viewBox` é `0 0 400 945`: continente em cima, Açores e Madeira em enquadramentos menores abaixo. As escalas são distintas, tal como informa a página; as ilhas dos Açores mantêm a sua disposição relativa.
-7. Serializar os anéis como caminhos SVG com `fill-rule="evenodd"` e coordenadas com duas casas decimais. Remover pontos consecutivos coincidentes após arredondamento e anéis que não chegam a ter três pontos distintos nessa resolução. São limites oficiais simplificados, sem desenho manual de polígonos.
-
-Cada círculo é um único `<g id="mapa-teste-IDENTIFICADOR" data-region="IDENTIFICADOR">`; os caminhos interiores, incluindo todas as ilhas e os dois enquadramentos da Madeira, herdam o mesmo valor e estado de selecção. Não existem círculos Europa ou Fora da Europa.
-
-Para regenerar, descarregar os mesmos ZIP numa pasta temporária, instalar Shapely/pyproj nessa pasta e repetir estes passos. Para uma nova versão CAOP, verificar novamente camadas, CRS e licença antes de substituir o SVG. Manter os identificadores abaixo e actualizar a atribuição. Os ficheiros brutos, scripts de preparação, bibliotecas, caches e capturas de teste ficam fora do repositório.
-
-## Identificadores
-
-Os identificadores são independentes dos nomes apresentados e ligam `data-region` no SVG às chaves de `regions` e `values` no JSON. `geography_code` serve apenas para documentar a correspondência com a fonte.
-
-| Código da fonte | Identificador | Círculo |
+| Indicador | Unidade | Paleta |
 | --- | --- | --- |
-| 01 | `aveiro` | Aveiro |
-| 02 | `beja` | Beja |
-| 03 | `braga` | Braga |
-| 04 | `braganca` | Bragança |
-| 05 | `castelo-branco` | Castelo Branco |
-| 06 | `coimbra` | Coimbra |
-| 07 | `evora` | Évora |
-| 08 | `faro` | Faro |
-| 09 | `guarda` | Guarda |
-| 10 | `leiria` | Leiria |
-| 11 | `lisboa` | Lisboa |
-| 12 | `portalegre` | Portalegre |
-| 13 | `porto` | Porto |
-| 14 | `santarem` | Santarém |
-| 15 | `setubal` | Setúbal |
-| 16 | `viana-do-castelo` | Viana do Castelo |
-| 17 | `vila-real` | Vila Real |
-| 18 | `viseu` | Viseu |
-| 2 (NUTS I, PT2) | `acores` | Região Autónoma dos Açores |
-| 3 (NUTS I, PT3) | `madeira` | Região Autónoma da Madeira |
+| `wasted_votes_pct` | `percent` | `red` |
+| `effective_threshold_pct` | `percent` | `amber` |
+| `represented_parties_count` | `count` | `teal` |
 
-## Dados e actualizações
+Nas percentagens, `15.2` significa 15,2%, não 0,152%. A apresentação usa `Intl.NumberFormat('pt-PT')`, com uma casa decimal. As contagens são inteiros sem `%`. Valores ausentes, `null`, negativos, percentagens superiores a 100 ou contagens fraccionárias/fora do intervalo de inteiros seguros são inválidos: recebem cinzento e uma mensagem apenas quando relevantes. Não existe uma classe permanente «sem dados» na legenda.
 
-O JSON contém `schema_version: 1`, `demo: true`, um aviso explícito, os anos em `years`, as definições em `metrics`, os nomes em `regions` e os números em `values[ano][identificador][métrica]`. Estão guardados **160 valores explícitos**: 20 círculos × quatro anos (2019, 2022, 2024 e 2025) × dois indicadores. Não há números aleatórios nem cálculos a partir de eleições reais.
+**Partidos representados** significa o número de partidos políticos distintos com pelo menos um deputado eleito no círculo. Para manter os exemplos possíveis, os dois modelos assumem, apenas nesta demonstração, a mesma quantidade de mandatos locais por círculo e ano. Esta hipótese não implementa nem define a distribuição de mandatos da proposta.
 
-Exemplo real do ficheiro, ainda com valores fictícios:
+Os limites de capacidade usados na validação foram consultados nos mapas de mandatos da CNE, sem usar resultados eleitorais: [2019](https://www.cne.pt/sites/default/files/dl/2019_ar_mapa_deputados.pdf), [2022](https://www.cne.pt/sites/default/files/dl/ar2022-mapa-deputados-1-c-2021.pdf), [2024](https://www.cne.pt/sites/default/files/dl/eleicoes/2024_ar/docs_geral/2024_ar_mapa_deputados.pdf) e [2025](https://www.cne.pt/sites/default/files/dl/eleicoes/2025_ar/docs_geral/2025_ar_mapa_deputados.pdf).
 
-```json
-{
-  "2025": {
-    "lisboa": {
-      "wasted_votes_pct": 15.2,
-      "effective_threshold_pct": 2.1
-    }
-  }
-}
+| Círculos | Mandatos locais assumidos |
+| --- | --- |
+| Portalegre | 2 |
+| Beja, Bragança, Évora, Guarda | 3 |
+| Castelo Branco | 4 |
+| Vila Real, Açores | 5 |
+| Madeira | 6 |
+| Viseu | 8 |
+| Coimbra, Faro, Santarém | 9 |
+| Leiria | 10 |
+| Aveiro | 16 |
+| Braga | 19 |
+| Porto | 40 |
+| Lisboa | 48 |
+| Setúbal | 18 em 2019/2022; 19 em 2024/2025 |
+| Viana do Castelo | 6 em 2019/2022; 5 em 2024/2025 |
+
+As contagens fictícias respeitam estes limites, incluindo 1 ou 2 em Portalegre. A proposta tem geralmente menos votos desperdiçados, menor barreira efectiva e mais partidos representados, mas inclui resultados iguais e piores. Não são garantias. A contagem de partidos integrantes de coligações e a distribuição precisa de mandatos na proposta permanecem por definir quando existirem simulações reais.
+
+## Escalas comuns aos modelos e anos
+
+No carregamento, o JavaScript recolhe todos os valores válidos de cada indicador, em todos os modelos, anos e círculos: **160 valores por indicador** neste ficheiro. Calcula mínimo e máximo globais e guarda uma escala por indicador. A selecção de sistema, ano ou círculo nunca recalcula a escala; assim, valores iguais têm sempre a mesma cor.
+
+São considerados passos inteiros naturais `1, 2, 5` multiplicados por potências de dez. As percentagens arredondam os extremos para múltiplos do passo. As contagens começam no mínimo inteiro e formam categorias/intervalos inteiros. Entre alternativas com até seis classes, a escolha favorece cerca de cinco, penaliza classes vazias e extensão excessiva da escala. Gamas estreitas podem precisar de menos de três classes; dados todos iguais usam uma única classe. Sem valores válidos, a escala fica vazia e as regiões ficam neutras.
+
+Nas percentagens, o limite inferior pertence à classe e o superior não, excepto na última classe, que inclui o máximo. A legenda distingue `0–<10` de `50–60`. Nas contagens, os intervalos são fechados: `1–2`, `3–4`, etc. Todos os limites são inteiros; as unidades só aparecem no título da legenda.
+
+Com os dados fornecidos:
+
+- Votos desperdiçados: gama observada 3,4–54,1; escala 0–60, passo 10, seis vermelhos de `#fee5d9` a `#99000d`.
+- Limiar efectivo: gama observada 0,7–27,6; escala 0–30, passo 5, seis amarelos/âmbares de `#fff0b3` a `#874700`.
+- Partidos: gama observada 1–8; quatro classes 1–2, 3–4, 5–6 e 7–8, de verde claro `#e2f5ec` a verde/teal escuro `#08584f`.
+
+Os arrays de cores ficam no JavaScript; o JSON guarda apenas o nome da paleta como metadado do indicador. Foram removidos os antigos `domain` e `breaks`.
+
+## Actualizar os dados
+
+- **Valores:** editar `values` conservando as chaves dos modelos, anos, círculos e indicadores.
+- **Novo ano:** acrescentar a chave textual a `years` e preencher, nos dois modelos, os 20 círculos e todos os indicadores. O botão surge automaticamente; 2025 continua a ser o ano inicial se estiver disponível.
+- **Novo indicador:** acrescentar a `metrics` um identificador estável, nome português, `unit: "percent"` ou `"count"`, `palette: "red"`, `"amber"` ou `"teal"` e uma definição. Preencher o valor em cada modelo/ano/círculo. O botão, a formatação e a escala surgem sem alterar o SVG ou criar tabelas de valores no JavaScript.
+- **Dados reais:** definir primeiro coligações, atribuição de mandatos, cálculo e fontes. Substituir os números/proveniência, validar e só então alterar `demo` e os textos de apresentação que referem dados fictícios. Geografia e motor de interacção podem manter-se.
+
+## Geografia e atribuição
+
+Fonte: **Direção-Geral do Território (DGT), CAOP2025**, [página oficial](https://www.dgterritorio.gov.pt/atividades/cartografia/cartografia-tematica/caop). Versão aprovada em 28 de Janeiro de 2026; `last_change` das camadas de 9 de Janeiro de 2026; preparação inicial em 9 de Outubro de 2026. Manter a atribuição à DGT, versão, link da licença [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) e indicação das adaptações, conforme a [política de dados abertos](https://www.dgterritorio.gov.pt/dados-abertos). A página e os metadados SVG conservam esses elementos.
+
+Entradas originais:
+
+- [Continente](https://geo2.dgterritorio.gov.pt/caop/CAOP_Continente_2025-gpkg.zip): `Continente_CAOP2025.gpkg`, camada `cont_distritos`, EPSG:3763.
+- [Açores](https://geo2.dgterritorio.gov.pt/caop/CAOP_RAA_2025-gpkg.zip): camadas `raa_cen_ori_nuts1` em EPSG:5015 e `raa_oci_nuts1` em EPSG:5014.
+- [Madeira](https://geo2.dgterritorio.gov.pt/caop/CAOP_RAM_2025-gpkg.zip): `ArqMadeira_CAOP2025.gpkg`, camada `ram_nuts1`, EPSG:5016.
+
+SHA-256 dos ZIP, por essa ordem:
+
+```text
+87cd67f4b1fbadf23d9324e6fb231ff05531e4db347af36ccc7c6cbabe3ecd1d
+b0e3b4fe5544647eb4593e0222c6430fae7e50c97f953d8ceae10707c4df9dcf
+ae568ca2006e91205601309ff46bc8ae0cc73236165f095f8aa99a5b9a17e5d6
 ```
 
-Os números representam pontos percentuais: `15.2` aparece como `15,2%` (com o espaçamento definido por `Intl.NumberFormat('pt-PT')`), nunca como 1520%. `null`, uma chave ausente ou um número inválido recebem cinzento e «Sem dados disponíveis». Zero é um valor válido.
+A preparação inicial usou Python, SQLite, Shapely e pyproj temporariamente. O continente foi simplificado como cobertura conjunta em EPSG:3763, tolerância 200 m, preservando os limites comuns; alteração de área máxima inferior a 0,026%. As ilhas foram transformadas com `always_xy=True` para EPSG:4326 e projecções LAEA locais (Açores: latitude 38,5°, longitude −28°; Madeira: 32,7°, −16,9°). Só depois se agregaram os diferentes fusos dos Açores. Tolerâncias: 80 m nos Açores, 60 m no grupo principal da Madeira e 20 m nas Selvagens originalmente preparadas. Os caminhos SVG foram arredondados a duas casas decimais, com `fill-rule="evenodd"`.
 
-Cada métrica tem `label`, `unit: "percent"`, `domain` e **cinco limites crescentes em `breaks`**, que definem os seis tons verde/teal. Estes limites são iguais em todos os anos. O limite inferior pertence ao intervalo; a primeira e a última classe são abertas, para também representar valores futuros fora do domínio sugerido. As percentagens válidas situam-se entre 0 e 100.
+Na M2, os caminhos dos **18 distritos e dos Açores são exactamente os mesmos**. Na Madeira, foram conservados os dois maiores contornos do caminho existente — Madeira e Porto Santo — e ajustados conjuntamente ao enquadramento, preservando proporção e disposição relativa. Desertas, Selvagens, pequenos componentes exteriores e o enquadramento separado das Selvagens deixaram de ser apresentados. Isto é uma simplificação visual: a região autónoma não se limita às duas ilhas mostradas.
 
-- Votos desperdiçados: domínio sugerido 0–60%; limites 10, 20, 30, 40, 50.
-- Limiar efectivo: domínio sugerido 0–30%; limites 5, 10, 15, 20, 25.
+Cada círculo tem um único grupo `data-region`. Nos Açores e na Madeira, o rectângulo, o nome e as ilhas pertencem a esse grupo: clique/toque em qualquer ponto do rectângulo selecciona o círculo; Tab/Enter/Espaço e a lista produzem o mesmo realce. Não há focos separados para ilhas. Escalas geográficas distintas são identificadas nas descrições acessíveis do SVG. Não se incluem círculos da emigração.
 
-Para **actualizar valores**, editar as entradas de `values` mantendo as chaves dos círculos e das métricas. Geografia e valores são independentes.
+O repositório [nmota/caop_GeoJSON](https://github.com/nmota/caop_GeoJSON), revisão `a13791dd9639304a9f033789b391420ee6684afd`, foi inspeccionado inicialmente; o mapa usa exclusivamente os GeoPackages oficiais com versão conhecida. Nenhum arquivo GIS, biblioteca, script de preparação ou relatório temporário é acrescentado ao repositório. Não há serviços externos de mapas nem dependências novas no site.
 
-Para **acrescentar um ano**, juntar a sua chave, por exemplo `"2028"`, ao fim de `years`, e criar `values["2028"]` com os 20 círculos e todas as métricas. A página escolhe inicialmente o último ano da lista.
+## Validação
 
-Para **acrescentar uma métrica percentual**, criar uma chave estável em `metrics`, atribuir o nome português, `unit: "percent"`, um domínio entre 0 e 100 e cinco limites estritamente crescentes dentro dele. Preencher essa chave em cada círculo de cada ano. Os controlos e a legenda são gerados automaticamente; não é necessário alterar o JavaScript ou o SVG. Este protótipo suporta indicadores em percentagem e seis classes de cor.
+Passaram as verificações locais da cobertura dos 480 valores e limites das contagens, identificadores/XML, preservação dos caminhos, 24 combinações, cores/legendas comuns, valores iguais, limites exactos, dados constantes/em falta, escolha aleatória única, botões, mapa, teclado, rato, toque emulado e larguras de 320/390 pixels. Também foram verificados `relative_url` com `/subsite`, ausência de links nos menus/homepage, `noindex`, ficheiros fora do âmbito intactos, sintaxe JavaScript e `git diff --check`. Os dois gráficos existentes continuam a responder aos controlos e não houve erros de consola nos percursos normais. Relatórios e capturas ficam na pasta temporária.
 
-Para **usar dados reais no futuro**, substituir os valores e respectivas descrições/proveniência no JSON, marcar `demo: false` apenas depois de os verificar e actualizar os textos de apresentação da página que referem dados fictícios. O motor JavaScript e o SVG podem manter-se. Até essa revisão, conservar o aviso «PROTÓTIPO: DADOS FICTÍCIOS».
-
-## Validação e limites
-
-Verificações efectuadas com ferramentas temporárias:
-
-- Correspondência exacta entre os 20 identificadores SVG/JSON, todos os 18 distritos e os dois círculos regionais; cobertura completa dos 160 valores.
-- Todas as oito combinações de ano/indicador: cores dos 20 círculos, valores e etiquetas, percentagens portuguesas e legenda constante entre anos.
-- Rato: passagem do ponteiro e clique nos 20 círculos; clique nas nove ilhas principais dos Açores com o mesmo círculo seleccionado.
-- Teclado: Tab percorre os 20 círculos; Enter e Espaço seleccionam; a lista de círculos funciona; a selecção mantém-se ao mudar ano/indicador e o painel actualiza-se.
-- Edge/Chromium com toque emulado: toques em círculos continentais e nos dois arquipélagos, listas e mudanças de indicador/ano; larguras de 390 e 320 pixels sem transbordo horizontal. Não houve teste num telemóvel físico nem auditoria com leitor de ecrã.
-- Testes com respostas JSON temporárias: `null`, valor ausente, ano ausente, zero, identificadores incompatíveis e erro HTTP. Os cenários de ausência usam a cor neutra; falhas de carregamento mostram uma mensagem e mantêm os controlos desactivados.
-- Adição de um ano e de uma métrica alterando apenas uma resposta JSON de teste; recursos com `relative_url` sob `/subsite`.
-- Renderização alternativa Liquid/Markdown das 15 páginas com front matter; comparação dos menus antes/depois, incluindo desktop, mobile e rodapé; ausência do protótipo nos links da homepage; meta robots exclusiva desta página.
-- Os dois gráficos existentes em `proposta.html` carregaram e responderam às mudanças de ano e modo, sem erros JavaScript. O script e os estilos do mapa não são carregados nessa página nem na homepage.
-- Verificação da sintaxe JavaScript com `node --check`; confirmação de que nenhum Markdown preexistente foi alterado; `git diff --check` sem erros.
-
-**Não foi executado um build Jekyll completo:** Ruby, Bundler e Jekyll não estão disponíveis neste ambiente, e o checkout não tem `_config.yml`. A renderização alternativa não substitui o build real do GitHub Pages. Antes de publicar, o responsável pode executar `bundle exec jekyll build` num ambiente com as dependências do `Gemfile`.
-
-O SVG tem aproximadamente **231 kB** (230 624 bytes; cerca de 81 kB com gzip, se o servidor usar essa compressão) e o JSON cerca de **11 kB**. Não é carregada geometria GIS bruta pelo navegador. A simplificação e o arredondamento destinam-se a visualização estatística, não a medições cartográficas. Ilhas pequenas podem ser seleccionadas pela lista, sem exigir zoom.
+**Sem build Jekyll completo:** Ruby/Bundler/Jekyll não estão instalados e este checkout não tem `_config.yml`. A renderização alternativa Liquid/Markdown e os testes Edge/Chromium não substituem `bundle exec jekyll build` num ambiente preparado. O toque é emulado; não há teste em telemóvel físico ou auditoria com leitor de ecrã. A geografia é para visualização estatística, não para medições cartográficas.

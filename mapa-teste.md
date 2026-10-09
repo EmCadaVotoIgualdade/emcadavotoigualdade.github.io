@@ -16,21 +16,25 @@ custom_scripts:
 <section id="mapa-teste" class="not-prose" aria-label="Explorar o mapa eleitoral experimental" data-map-url="{{ '/assets/images/mapa-teste.svg' | relative_url }}" data-metrics-url="{{ '/assets/data/mapa-teste-metricas.json' | relative_url }}">
   <div class="mapa-teste-warning">
     <strong>PROTÓTIPO: DADOS FICTÍCIOS</strong>
-    <p>Todos os valores são inventados para testar o mapa. Não representam resultados eleitorais nem estimativas.</p>
+    <p>Valores inventados para os dois sistemas e todos os anos. Não representam resultados eleitorais nem garantias da proposta.</p>
   </div>
-  <p class="mapa-teste-intro">Explore os 18 distritos e as duas regiões autónomas. Compare anos com a mesma escala de cores para cada indicador.</p>
   <div class="mapa-teste-controls">
-    <label for="mapa-teste-year">Ano da eleição
-      <select id="mapa-teste-year" disabled><option>A carregar…</option></select>
-    </label>
-    <label for="mapa-teste-metric">Indicador eleitoral
-      <select id="mapa-teste-metric" disabled><option>A carregar…</option></select>
-    </label>
-    <label for="mapa-teste-region">Círculo eleitoral
-      <select id="mapa-teste-region" disabled><option>A carregar…</option></select>
-    </label>
+    <fieldset data-control="model" disabled>
+      <legend>Sistema eleitoral</legend>
+      <div class="mapa-teste-buttons" data-buttons="model"></div>
+    </fieldset>
+    <fieldset data-control="year" disabled>
+      <legend>Ano da eleição</legend>
+      <div class="mapa-teste-buttons" data-buttons="year"></div>
+    </fieldset>
+    <fieldset class="mapa-teste-indicators" data-control="metric" disabled>
+      <legend>Indicador eleitoral</legend>
+      <div class="mapa-teste-buttons" data-buttons="metric"></div>
+    </fieldset>
   </div>
-  <p id="mapa-teste-help" class="mapa-teste-help">Clique ou toque num círculo para o seleccionar. Pode também usar a lista de círculos ou percorrer o mapa com Tab e seleccionar com Enter ou Espaço.</p>
+  <label class="mapa-teste-region-control" for="mapa-teste-region">Círculo eleitoral
+    <select id="mapa-teste-region" disabled><option>A carregar…</option></select>
+  </label>
   <p class="mapa-teste-status" data-status role="status">A carregar o mapa e os dados fictícios…</p>
   <noscript><p class="mapa-teste-warning">Active o JavaScript para explorar este protótipo. Pode consultar o <a href="{{ '/assets/images/mapa-teste.svg' | relative_url }}">mapa geográfico</a> e os <a href="{{ '/assets/data/mapa-teste-metricas.json' | relative_url }}">dados fictícios em JSON</a>.</p></noscript>
   <div class="mapa-teste-content" data-content hidden>
@@ -45,15 +49,13 @@ custom_scripts:
         <span data-value-note>Valor fictício de demonstração</span>
       </div>
     </div>
-    <figure class="mapa-teste-figure" aria-describedby="mapa-teste-help mapa-teste-caption">
+    <div class="mapa-teste-visual">
+      <aside class="mapa-teste-legend" aria-label="Legenda das cores">
+        <h2 data-legend-title></h2>
+        <ul data-legend></ul>
+      </aside>
       <div class="mapa-teste-map" data-map></div>
-      <figcaption id="mapa-teste-caption">Os Açores e a Madeira são, cada um, um único círculo eleitoral. Os mapas das ilhas usam escalas diferentes da do continente e entre si; as Selvagens surgem num enquadramento separado. Não se incluem os círculos da emigração.</figcaption>
-    </figure>
-    <p class="mapa-teste-hover" data-hover aria-live="off">Passe o ponteiro sobre um círculo para consultar o seu valor fictício.</p>
-    <div class="mapa-teste-legend" aria-label="Legenda das cores">
-      <h2 data-legend-title></h2>
-      <ul data-legend></ul>
-      <p class="mapa-teste-help">Intervalos em percentagem; o limite inferior pertence ao intervalo. A escala mantém-se em todos os anos. <span class="mapa-teste-missing-key"></span> Sem dados disponíveis.</p>
+      <p class="mapa-teste-hover" data-hover hidden aria-live="off"></p>
     </div>
   </div>
   <p class="mapa-teste-attribution">Geografia: <a href="https://www.dgterritorio.gov.pt/atividades/cartografia/cartografia-tematica/caop">Direção-Geral do Território — CAOP2025</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Limites reprojetados, agregados e simplificados para este protótipo. Os valores eleitorais são inteiramente fictícios.</p>
