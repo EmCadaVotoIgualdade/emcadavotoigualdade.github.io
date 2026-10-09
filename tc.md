@@ -2,6 +2,10 @@
 layout: default
 title: Acórdãos do Tribunal Constitucional sobre a representação proporcional
 description: ACÓRDÃO  Nº 1/91 e Nº 199/00
+nav_section: analise
+nav_level: 2
+nav_order: 50
+nav_label: Detalhes do T.C.
 ---
 
 # Acórdãos do Tribunal Constitucional sobre a representação proporcional

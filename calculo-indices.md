@@ -2,6 +2,7 @@
 layout: default
 title: Cálculo dos Índices
 description: A formulação matemática do Índice de Gallagher (LSq) e do Índice de Custo Adicional (CAd).
+nav_section: analise
 ---
 
 # Cálculo dos Índices

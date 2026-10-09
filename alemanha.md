@@ -1,7 +1,11 @@
 ---
 layout: default
-title: Igualdade de Voto e Representação Local: O Caso da Alemanha
+title: "Igualdade de Voto e Representação Local: O Caso da Alemanha"
 description: Como o Tribunal Constitucional Federal Alemão levou à reforma do sistema eleitoral do Bundestag.
+nav_section: analise
+nav_level: 2
+nav_order: 40
+nav_label: O Caso da Alemanha
 ---
 
 # Igualdade de Voto e Representação Local

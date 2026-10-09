@@ -1,7 +1,11 @@
 ---
 layout: default
-title: Igualdade de Voto e Representação Local: O Caso da República Checa
+title: "Igualdade de Voto e Representação Local: O Caso da República Checa"
 description: Como o Tribunal Constitucional Checo levou à reforma do sistema eleitoral.
+nav_section: analise
+nav_level: 2
+nav_order: 30
+nav_label: O Caso da República Checa
 ---
 
 # Igualdade de Voto e Representação Local

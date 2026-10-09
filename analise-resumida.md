@@ -2,6 +2,10 @@
 layout: default
 title: O nosso sistema eleitoral é inconstitucional? (Versão Resumida)
 description: Um resumo de 3 minutos sobre a interpretação de constitucionalistas e de tribunais constitucionais.
+nav_section: analise
+nav_level: 2
+nav_order: 10
+nav_label: Versão Resumida
 ---
 
 # O nosso sistema eleitoral é inconstitucional?

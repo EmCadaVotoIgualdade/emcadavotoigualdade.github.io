@@ -2,6 +2,7 @@
 layout: default
 title: Os Problemas do Sistema Alemão
 description: Uma análise crítica ao sistema eleitoral alemão, as suas complexidades, fragilidades e o impacto das propostas inspiradas neste modelo para Portugal.
+nav_section: proposta
 ---
 
 # Os Problemas do Sistema Alemão

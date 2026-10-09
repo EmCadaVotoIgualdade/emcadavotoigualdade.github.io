@@ -1,7 +1,11 @@
 ---
 layout: default
-title: Igualdade de Voto e Representação Local: O Caso da Suíça
+title: "Igualdade de Voto e Representação Local: O Caso da Suíça"
 description: Como o Tribunal Federal Suíço levou à reforma dos sistemas eleitorais de cantões centenários.
+nav_section: analise
+nav_level: 2
+nav_order: 20
+nav_label: O Caso da Suíça
 ---
 
 # Igualdade de Voto e Representação Local 

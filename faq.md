@@ -2,6 +2,12 @@
 layout: default
 title: FAQ
 description: Perguntas frequentes sobre o sistema eleitoral, a proporcionalidade e a nossa proposta de reforma para que cada voto conte de forma igual.
+nav_section: faq
+nav_level: 1
+nav_order: 40
+nav_label: FAQ
+nav_mobile_label: Perguntas Frequentes
+nav_footer_label: Perguntas Frequentes (FAQ)
 ---
 
 ## Um sistema mais proporcional não vai gerar instabilidade?

@@ -5,6 +5,11 @@ description: Uma proposta de reforma do sistema eleitoral português baseada no 
 custom_scripts:
   - custo-votos
   - votos-desperdicados
+nav_section: proposta
+nav_level: 1
+nav_order: 20
+nav_label: A Proposta
+nav_footer_label: A Proposta de Reforma
 ---
 
 ## A Proposta de Reforma

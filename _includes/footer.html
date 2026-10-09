@@ -1,0 +1,45 @@
+<!-- RODAPÉ COMPACTO E CATEGORIZADO -->
+<footer class="bg-brand-navy text-slate-400 py-16 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+        <!-- Coluna 1: O Manifesto -->
+        <div class="space-y-4">
+            <h4 class="text-white font-bold text-lg">Em Cada Voto Igualdade</h4>
+            <p class="text-sm leading-relaxed text-slate-400">
+                Um projecto cívico, independente e apartidário dedicado a garantir a igualdade de voto em todo o país.
+            </p>
+        </div>
+
+        <!-- Coluna 2: Navegação Hierárquica -->
+        <div class="space-y-4">
+            <h4 class="text-white font-bold text-sm uppercase tracking-wider">Navegação</h4>
+            <ul class="space-y-2 text-sm">
+                {% assign previous_children_count = 0 %}
+                {% for nav_page in nav_top_pages %}
+                    {% assign nav_children = nav_child_pages | where: 'nav_section', nav_page.nav_section %}
+                    <li{% if nav_children.size > 0 %} class="pt-1"{% elsif previous_children_count > 0 %} class="pt-2"{% endif %}>
+                        <a href="{{ nav_page.url | relative_url }}" class="hover:text-white transition">{{ nav_page.nav_footer_label | default: nav_page.nav_label }}</a>
+                        {% if nav_children.size > 0 %}
+                            <ul class="pl-4 space-y-1 mt-1 text-slate-500 text-xs">
+                                {% for nav_child in nav_children %}
+                                    <li><a href="{{ nav_child.url | relative_url }}" class="hover:text-white transition">· {{ nav_child.nav_footer_label | default: nav_child.nav_label }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </li>
+                    {% assign previous_children_count = nav_children.size %}
+                {% endfor %}
+            </ul>
+        </div>
+
+        <!-- Coluna 3: Contacto Limpo -->
+        <div class="space-y-4">
+            <h4 class="text-white font-bold text-sm uppercase tracking-wider">Contacto</h4>
+            <p class="text-sm">
+                <a href="mailto:emcadavotoigualdade@gmail.com" class="text-slate-300 hover:text-white transition font-medium">emcadavotoigualdade@gmail.com</a>
+            </p>
+            <p class="text-xs text-slate-500 pt-4 border-t border-slate-800">
+                Projecto iniciado em 2022 &bull; &copy; 2022-2026
+            </p>
+        </div>
+    </div>
+</footer>

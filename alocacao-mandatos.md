@@ -2,6 +2,10 @@
 layout: default
 title: Métodos de alocação dos mandatos nacionais
 description: Método de Zurique e método de tipo dinamarquês para alocar mandatos nacionais aos círculos locais.
+nav_section: proposta
+nav_level: 2
+nav_order: 20
+nav_label: Modelos Alternativos
 ---
 
 ## Sistemas europeus com compensação global de mandatos

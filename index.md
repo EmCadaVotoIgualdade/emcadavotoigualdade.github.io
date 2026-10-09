@@ -2,6 +2,10 @@
 layout: default
 title: Em Cada Voto Igualdade
 description: Um projecto cívico, independente e apartidário focado em garantir a igualdade de voto em todo o país.
+nav_section: inicio
+nav_level: 1
+nav_order: 10
+nav_label: Início
 ---
 
 ## A situação actual

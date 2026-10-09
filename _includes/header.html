@@ -1,0 +1,50 @@
+<!-- BARRA DE NAVEGAÇÃO ÚNICA -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <!-- Logo + Título do Site -->
+        <a href="{{ '/' | relative_url }}" class="flex items-center gap-3 text-xl font-bold text-brand-navy tracking-tight hover:opacity-80 transition">
+            <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo Em Cada Voto Igualdade" class="h-8 w-auto">
+            <span>Em Cada Voto <span class="text-brand-accent">Igualdade</span></span>
+        </a>
+
+        <!-- Menu para Computador (Com Submenus Dropdown) -->
+        <div class="hidden md:flex space-x-6 font-medium items-center">
+            {% for nav_page in nav_top_pages %}
+                {% assign nav_children = nav_child_pages | where: 'nav_section', nav_page.nav_section %}
+                {% if nav_children.size > 0 %}
+                    <div class="relative group py-2">
+                        <a href="{{ nav_page.url | relative_url }}" class="flex items-center gap-1 {% if page.nav_section == nav_page.nav_section %}text-brand-accent font-bold{% else %}text-slate-600 hover:text-brand-accent{% endif %} transition">
+                            <span>{{ nav_page.nav_label }}</span>
+                            <svg class="w-4 h-4 opacity-70 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </a>
+                        <div class="absolute left-0 top-full hidden group-hover:block {% if nav_children.size > 2 %}w-60{% else %}w-56{% endif %} bg-white rounded-xl shadow-lg border border-slate-100 py-2 z-50 transition-all">
+                            {% for nav_child in nav_children %}
+                                <a href="{{ nav_child.url | relative_url }}" class="block px-4 py-2 text-sm {% if page.nav_section == nav_child.nav_section and page.path == nav_child.path %}text-brand-accent font-bold bg-slate-50{% else %}text-slate-600 hover:bg-slate-50 hover:text-brand-accent{% endif %} transition">{{ nav_child.nav_label }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% else %}
+                    <a href="{{ nav_page.url | relative_url }}" class="{% if page.nav_section == nav_page.nav_section %}text-brand-accent font-bold{% else %}text-slate-600 hover:text-brand-accent{% endif %} transition py-2">{{ nav_page.nav_label }}</a>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <!-- Botão Hamburguer (Telemóvel) -->
+        <button id="menu-btn" class="md:hidden text-slate-600 focus:outline-none" aria-label="Abrir Menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Menu Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-6 py-4 space-y-3 font-medium">
+        {% for nav_page in nav_top_pages %}
+            <a href="{{ nav_page.url | relative_url }}" class="block {% if page.nav_section == nav_page.nav_section %}text-brand-accent font-bold{% else %}text-slate-600{% endif %}">{{ nav_page.nav_mobile_label | default: nav_page.nav_label }}</a>
+            {% assign nav_children = nav_child_pages | where: 'nav_section', nav_page.nav_section %}
+            {% for nav_child in nav_children %}
+                <a href="{{ nav_child.url | relative_url }}" class="block pl-4 text-sm {% if page.nav_section == nav_child.nav_section and page.path == nav_child.path %}text-brand-accent font-bold{% else %}text-slate-500{% endif %}">└─ {{ nav_child.nav_mobile_label | default: nav_child.nav_label }}</a>
+            {% endfor %}
+        {% endfor %}
+    </div>
+</header>

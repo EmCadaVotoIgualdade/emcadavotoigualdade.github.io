@@ -2,6 +2,12 @@
 layout: default
 title: Próximos Passos
 description: O roteiro de desenvolvimento técnico e simulações científicas para o futuro do projecto Em Cada Voto Igualdade.
+nav_section: proximos-passos
+nav_level: 1
+nav_order: 50
+nav_label: Próximos Passos
+nav_mobile_label: Próximos Passos & Simulações
+nav_footer_label: Próximos Passos & Simulações
 ---
 
 # Próximos Passos & Desenvolvimento

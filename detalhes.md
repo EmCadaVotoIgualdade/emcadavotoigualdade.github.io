@@ -2,6 +2,11 @@
 layout: default
 title: Detalhes Técnicos da Proposta
 description: O modelo de cálculo matemático e a simulação detalhada da distribuição de mandatos por círculo político.
+nav_section: proposta
+nav_level: 2
+nav_order: 10
+nav_label: Detalhes da Reforma
+nav_footer_label: Detalhes Técnicos
 ---
 
 ### A nossa proposta para Portugal (aplicada a 2022)

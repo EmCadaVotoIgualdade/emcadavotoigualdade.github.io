@@ -2,6 +2,10 @@
 layout: default
 title: O nosso sistema eleitoral é inconstitucional?
 description: A interpretação de constitucionalistas e de tribunais constitucionais quanto ao sistema eleitoral.
+nav_section: analise
+nav_level: 1
+nav_order: 30
+nav_label: Análise Constitucional
 ---
 
 # O nosso sistema eleitoral é inconstitucional?
