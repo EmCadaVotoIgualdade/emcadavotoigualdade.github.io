@@ -57,6 +57,19 @@ custom_scripts:
       <div class="mapa-teste-map" data-map></div>
       <p class="mapa-teste-hover" data-hover hidden aria-live="off"></p>
     </div>
+    <section class="mapa-teste-history" aria-labelledby="mapa-teste-history-title">
+      <div class="mapa-teste-history-heading">
+        <h2 id="mapa-teste-history-title" data-history-title></h2>
+        <p><strong data-history-region></strong><span data-history-note></span></p>
+      </div>
+      <ul class="mapa-teste-history-legend" data-history-legend aria-label="Sistemas eleitorais"></ul>
+      <div class="mapa-teste-history-chart" data-history-chart></div>
+      <p class="mapa-teste-history-info" data-history-info></p>
+      <details class="mapa-teste-history-data">
+        <summary>Consultar valores do gráfico</summary>
+        <div data-history-table></div>
+      </details>
+    </section>
   </div>
   <p class="mapa-teste-attribution">Geografia: <a href="https://www.dgterritorio.gov.pt/atividades/cartografia/cartografia-tematica/caop">Direção-Geral do Território — CAOP2025</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Limites reprojetados, agregados e simplificados para este protótipo. Os valores eleitorais são inteiramente fictícios.</p>
 </section>

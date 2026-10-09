@@ -11,6 +11,7 @@
     style: "percent", minimumFractionDigits: 1, maximumFractionDigits: 1
   });
   const integerFormatter = new Intl.NumberFormat("pt-PT", { maximumFractionDigits: 0 });
+  const exactFormatter = new Intl.NumberFormat("pt-PT", { maximumSignificantDigits: 21 });
   const palettes = {
     red: ["#fee5d9", "#fcbba1", "#fc9272", "#ef6548", "#cb181d", "#99000d"],
     amber: ["#fff0b3", "#ffdc73", "#f9bc38", "#e69a17", "#bd710a", "#874700"],
@@ -135,6 +136,57 @@
     return scale;
   }
 
+  function svgElement(name, attributes, text) {
+    const element = document.createElementNS("http://www.w3.org/2000/svg", name);
+    const names = Object.keys(attributes);
+    for (let index = 0; index < names.length; index++) {
+      element.setAttribute(names[index], String(attributes[names[index]]));
+    }
+    if (text !== undefined) element.textContent = text;
+    return element;
+  }
+
+  function buildHistoryScale(values, metric) {
+    if (values.length === 0) return null;
+    let minimum = values[0];
+    let maximum = values[0];
+    for (let index = 1; index < values.length; index++) {
+      minimum = Math.min(minimum, values[index]);
+      maximum = Math.max(maximum, values[index]);
+    }
+    const span = maximum - minimum;
+    let padding;
+    if (metric.unit === "count") {
+      if (span === 0) padding = 2;
+      else padding = Math.max(.5, span * .1);
+    } else {
+      if (span === 0) padding = Math.max(1, minimum * .05);
+      else padding = Math.max(.1, span * .1);
+    }
+    const paddedMinimum = Math.max(0, minimum - padding);
+    let paddedMaximum = maximum + padding;
+    if (metric.unit === "percent") paddedMaximum = Math.min(100, paddedMaximum);
+    const targetStep = (paddedMaximum - paddedMinimum) / 4;
+    const magnitude = Math.pow(10, Math.floor(Math.log10(targetStep)));
+    const fraction = targetStep / magnitude;
+    let step;
+    if (fraction <= 1) step = magnitude;
+    else if (fraction <= 2) step = 2 * magnitude;
+    else if (fraction <= 2.5) step = 2.5 * magnitude;
+    else if (fraction <= 5) step = 5 * magnitude;
+    else step = 10 * magnitude;
+    if (metric.unit === "count") step = Math.max(1, Math.ceil(step));
+    const lower = Number((Math.floor(paddedMinimum / step) * step).toPrecision(12));
+    let upper = Number((Math.ceil(paddedMaximum / step) * step).toPrecision(12));
+    if (metric.unit === "percent") upper = Math.min(100, upper);
+    const ticks = [];
+    const intervals = Math.round((upper - lower) / step);
+    for (let index = 0; index <= intervals; index++) {
+      ticks.push(Number((lower + index * step).toPrecision(12)));
+    }
+    return { minimum: lower, maximum: upper, ticks: ticks };
+  }
+
   function initialise(data, svgText) {
     const svgDocument = new DOMParser().parseFromString(svgText, "image/svg+xml");
     const svg = svgDocument.documentElement;
@@ -203,6 +255,275 @@
     if (data.demo) demonstration = "Valor fictício de demonstração";
     root.querySelector(".mapa-teste-warning").hidden = !data.demo;
     const valueNote = root.querySelector("[data-value-note]");
+    const historyContainer = root.querySelector("[data-history-chart]");
+    const historyInfo = root.querySelector("[data-history-info]");
+    const historyStyles = {
+      current: { color: "#1e293b", dash: "" },
+      proposal: { color: "#0f766e", dash: "6 4" }
+    };
+    let historyView = null;
+    let selectedHistoryPoint = null;
+
+    function historyValue(modelId, year) {
+      const value = data.values?.[modelId]?.[year]?.[selection.region]?.[selection.metric];
+      if (validValue(value, data.metrics[selection.metric])) return value;
+      return null;
+    }
+
+    function formatHistoryValue(value) {
+      if (value === null) return "Dados indisponíveis";
+      if (data.metrics[selection.metric].unit === "percent") return exactFormatter.format(value) + "\u00a0%";
+      return integerFormatter.format(value);
+    }
+
+    function historyPointLabel(point) {
+      return point.year + " · " + data.models[point.model].label + " · " + data.regions[selection.region].name + ": " + formatHistoryValue(historyValue(point.model, point.year));
+    }
+
+    function showHistoryPoint(point, persist) {
+      if (persist) {
+        selectedHistoryPoint = point;
+        const markers = historyContainer.querySelectorAll("[data-history-model]");
+        for (let index = 0; index < markers.length; index++) {
+          const marker = markers[index];
+          marker.setAttribute("aria-pressed", String(marker.dataset.historyModel === point.model && marker.dataset.historyYear === String(point.year)));
+        }
+      }
+      historyInfo.textContent = historyPointLabel(point);
+    }
+
+    function restoreHistoryInfo() {
+      if (selectedHistoryPoint !== null) {
+        historyInfo.textContent = historyPointLabel(selectedHistoryPoint);
+      } else {
+        historyInfo.textContent = "Selecione um ponto para consultar o valor.";
+      }
+    }
+
+    function nearestHistoryMarker(event) {
+      if (event.type === "click" && event.detail === 0) return event.currentTarget;
+      const markers = historyContainer.querySelectorAll("[data-history-model]");
+      let nearest = event.currentTarget;
+      let distance = Infinity;
+      for (let index = 0; index < markers.length; index++) {
+        const marker = markers[index];
+        const bounds = marker.getBoundingClientRect();
+        const dx = event.clientX - (bounds.left + bounds.right) / 2;
+        const dy = event.clientY - (bounds.top + bounds.bottom) / 2;
+        const candidateDistance = dx * dx + dy * dy;
+        if (candidateDistance < distance || (candidateDistance === distance && marker.dataset.historyModel === selection.model)) {
+          distance = candidateDistance;
+          nearest = marker;
+        }
+      }
+      return nearest;
+    }
+
+    function historyMarker(modelId, year, x, y) {
+      const point = { model: modelId, year: year };
+      const marker = svgElement("g", {
+        class: "mapa-teste-history-point", transform: "translate(" + x + " " + y + ")",
+        role: "button", tabindex: "0", "aria-label": historyPointLabel(point),
+        "aria-pressed": "false", "data-history-model": modelId, "data-history-year": year
+      });
+      marker.append(svgElement("circle", { r: 12, class: "mapa-teste-history-hit" }));
+      marker.append(svgElement("circle", { r: 8, class: "mapa-teste-history-focus" }));
+      let radius = 4.5;
+      if (modelId === "proposal") radius = 3.5;
+      marker.append(svgElement("circle", { r: radius, class: "mapa-teste-history-dot" }));
+      marker.addEventListener("pointermove", function (event) {
+        if (event.pointerType !== "touch") {
+          const nearest = nearestHistoryMarker(event);
+          showHistoryPoint({ model: nearest.dataset.historyModel, year: nearest.dataset.historyYear }, false);
+        }
+      });
+      marker.addEventListener("pointerleave", function () {
+        if (document.activeElement !== marker) restoreHistoryInfo();
+      });
+      marker.addEventListener("focus", function () { showHistoryPoint(point, false); });
+      marker.addEventListener("blur", restoreHistoryInfo);
+      marker.addEventListener("click", function (event) {
+        const nearest = nearestHistoryMarker(event);
+        nearest.focus({ preventScroll: true });
+        showHistoryPoint({ model: nearest.dataset.historyModel, year: nearest.dataset.historyYear }, true);
+      });
+      marker.addEventListener("keydown", function (event) {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          showHistoryPoint(point, true);
+        }
+      });
+      return marker;
+    }
+
+    function historyX(index, plot) {
+      if (years.length === 1) return plot.left + plot.width / 2;
+      return plot.left + index * plot.width / (years.length - 1);
+    }
+
+    function historyY(value, scale, plot) {
+      return plot.bottom - (value - scale.minimum) * (plot.bottom - plot.top) / (scale.maximum - scale.minimum);
+    }
+
+    function drawHistoryAxes(chart, scale, plot, labelRows) {
+      if (scale !== null) {
+        for (let index = 0; index < scale.ticks.length; index++) {
+          const tick = scale.ticks[index];
+          const y = historyY(tick, scale, plot);
+          chart.append(svgElement("line", { x1: plot.left, x2: plot.left + plot.width, y1: y, y2: y, class: "mapa-teste-history-grid" }));
+          let label = exactFormatter.format(tick);
+          if (data.metrics[selection.metric].unit === "percent") label += "%";
+          chart.append(svgElement("text", { x: plot.left - 8, y: y, "text-anchor": "end", "dominant-baseline": "middle", class: "mapa-teste-history-axis" }, label));
+        }
+      }
+      for (let index = 0; index < years.length; index++) {
+        chart.append(svgElement("text", { x: historyX(index, plot), y: plot.bottom + 20 + (index % labelRows) * 15, "text-anchor": "middle", class: "mapa-teste-history-year" }, String(years[index])));
+      }
+    }
+
+    function drawHistorySeries(chart, scale, plot) {
+      for (let modelIndex = 0; modelIndex < modelIds.length; modelIndex++) {
+        const modelId = modelIds[modelIndex];
+        const style = historyStyles[modelId];
+        const group = svgElement("g", { "data-history-series": modelId, stroke: style.color, "stroke-dasharray": style.dash });
+        const markers = svgElement("g", { "stroke-dasharray": "none" });
+        let path = "";
+        let connected = false;
+        for (let yearIndex = 0; yearIndex < years.length; yearIndex++) {
+          const value = historyValue(modelId, years[yearIndex]);
+          if (value === null || scale === null) {
+            connected = false;
+          } else {
+            const x = historyX(yearIndex, plot);
+            const y = historyY(value, scale, plot);
+            if (connected) path += " L " + x + " " + y;
+            else path += " M " + x + " " + y;
+            connected = true;
+            markers.append(historyMarker(modelId, years[yearIndex], x, y));
+          }
+        }
+        group.append(svgElement("path", { d: path, class: "mapa-teste-history-line" }), markers);
+        chart.append(group);
+      }
+    }
+
+    function updateHistoryTable() {
+      const table = document.createElement("table");
+      const caption = document.createElement("caption");
+      caption.textContent = data.regions[selection.region].name + " · " + data.metrics[selection.metric].label;
+      const head = document.createElement("thead");
+      const headings = document.createElement("tr");
+      const yearHeading = document.createElement("th");
+      yearHeading.scope = "col";
+      yearHeading.textContent = "Ano";
+      headings.append(yearHeading);
+      for (let index = 0; index < modelIds.length; index++) {
+        const heading = document.createElement("th");
+        heading.scope = "col";
+        heading.textContent = data.models[modelIds[index]].label;
+        headings.append(heading);
+      }
+      head.append(headings);
+      const body = document.createElement("tbody");
+      for (let yearIndex = 0; yearIndex < years.length; yearIndex++) {
+        const row = document.createElement("tr");
+        const year = document.createElement("th");
+        year.scope = "row";
+        year.textContent = String(years[yearIndex]);
+        row.append(year);
+        for (let modelIndex = 0; modelIndex < modelIds.length; modelIndex++) {
+          const cell = document.createElement("td");
+          const modelId = modelIds[modelIndex];
+          const yearId = years[yearIndex];
+          const value = historyValue(modelId, yearId);
+          if (value === null) {
+            cell.textContent = formatHistoryValue(value);
+          } else {
+            const button = document.createElement("button");
+            button.type = "button";
+            button.className = "mapa-teste-history-value";
+            button.textContent = formatHistoryValue(value);
+            button.setAttribute("aria-label", historyPointLabel({ model: modelId, year: yearId }));
+            button.addEventListener("click", function () { showHistoryPoint({ model: modelId, year: yearId }, true); });
+            cell.append(button);
+          }
+          row.append(cell);
+        }
+        body.append(row);
+      }
+      table.append(caption, head, body);
+      root.querySelector("[data-history-table]").replaceChildren(table);
+    }
+
+    function updateHistoryEmphasis() {
+      const series = historyContainer.querySelectorAll("[data-history-series]");
+      for (let index = 0; index < series.length; index++) {
+        series[index].dataset.selected = String(series[index].dataset.historySeries === selection.model);
+      }
+    }
+
+    function updateHistoryChart() {
+      const width = Math.floor(historyContainer.getBoundingClientRect().width);
+      if (width === 0) return;
+      if (historyView !== null && historyView.region === selection.region && historyView.metric === selection.metric && historyView.width === width) {
+        updateHistoryEmphasis();
+        return;
+      }
+      const focused = document.activeElement;
+      let focusPoint = null;
+      if (historyView !== null && historyView.region === selection.region && historyView.metric === selection.metric) {
+        if (historyContainer.contains(focused) && focused.dataset.historyModel) {
+          focusPoint = { model: focused.dataset.historyModel, year: focused.dataset.historyYear };
+        }
+      } else {
+        selectedHistoryPoint = null;
+      }
+      historyView = { region: selection.region, metric: selection.metric, width: width };
+      const metric = data.metrics[selection.metric];
+      const heading = "Evolução de " + metric.label.charAt(0).toLowerCase() + metric.label.slice(1);
+      root.querySelector("[data-history-title]").textContent = heading;
+      root.querySelector("[data-history-region]").textContent = data.regions[selection.region].name;
+      if (data.demo) root.querySelector("[data-history-note]").textContent = " · Dados fictícios";
+      else root.querySelector("[data-history-note]").textContent = "";
+      const values = [];
+      const legend = root.querySelector("[data-history-legend]");
+      legend.replaceChildren();
+      for (let modelIndex = 0; modelIndex < modelIds.length; modelIndex++) {
+        const modelId = modelIds[modelIndex];
+        const item = document.createElement("li");
+        const swatch = document.createElement("span");
+        swatch.className = "mapa-teste-history-key";
+        swatch.style.borderColor = historyStyles[modelId].color;
+        if (modelId === "proposal") swatch.style.borderTopStyle = "dashed";
+        swatch.setAttribute("aria-hidden", "true");
+        item.append(swatch, document.createTextNode(data.models[modelId].label));
+        legend.append(item);
+        for (let yearIndex = 0; yearIndex < years.length; yearIndex++) {
+          const value = historyValue(modelId, years[yearIndex]);
+          if (value !== null) values.push(value);
+        }
+      }
+      const scale = buildHistoryScale(values, metric);
+      const plot = { left: 44, width: Math.max(1, width - 62), top: 18, bottom: 204 };
+      let labelRows = 1;
+      if (years.length > 1) labelRows = Math.max(1, Math.ceil(34 / (plot.width / (years.length - 1))));
+      const chart = svgElement("svg", { viewBox: "0 0 " + width + " " + (232 + (labelRows - 1) * 15), role: "group", "aria-labelledby": "mapa-teste-history-svg-title mapa-teste-history-svg-description" });
+      chart.append(svgElement("title", { id: "mapa-teste-history-svg-title" }, heading + " · " + data.regions[selection.region].name));
+      chart.append(svgElement("desc", { id: "mapa-teste-history-svg-description" }, "Comparação dos dois sistemas em todos os anos eleitorais, igualmente espaçados. Linha contínua: " + data.models.current.label + ". Linha tracejada: " + data.models.proposal.label + ". Cada ponto permite consultar o valor exato com rato, toque ou teclado. Valores em falta interrompem as linhas."));
+      drawHistoryAxes(chart, scale, plot, labelRows);
+      drawHistorySeries(chart, scale, plot);
+      if (scale === null) chart.append(svgElement("text", { x: width / 2, y: 110, "text-anchor": "middle", class: "mapa-teste-history-axis" }, "Dados indisponíveis"));
+      historyContainer.replaceChildren(chart);
+      updateHistoryEmphasis();
+      updateHistoryTable();
+      restoreHistoryInfo();
+      const markers = historyContainer.querySelectorAll("[data-history-model]");
+      for (let index = 0; index < markers.length; index++) {
+        const marker = markers[index];
+        if (selectedHistoryPoint !== null && marker.dataset.historyModel === selectedHistoryPoint.model && marker.dataset.historyYear === String(selectedHistoryPoint.year)) marker.setAttribute("aria-pressed", "true");
+        if (focusPoint !== null && marker.dataset.historyModel === focusPoint.model && marker.dataset.historyYear === focusPoint.year) marker.focus({ preventScroll: true });
+      }
+    }
 
     function valueFor(regionId) {
       const value = data.values?.[selection.model]?.[selection.year]?.[regionId]?.[selection.metric];
@@ -249,6 +570,7 @@
         shape.setAttribute("aria-pressed", String(shape.dataset.region === regionId));
       }
       updatePanel();
+      updateHistoryChart();
     }
 
     function updateLegend() {
@@ -358,6 +680,13 @@
     regionSelect.disabled = false;
     root.querySelector("[data-content]").hidden = false;
     status.hidden = true;
+    updateHistoryChart();
+    if (typeof ResizeObserver === "function") {
+      const historyResize = new ResizeObserver(updateHistoryChart);
+      historyResize.observe(historyContainer);
+    } else {
+      window.addEventListener("resize", updateHistoryChart);
+    }
   }
 
   Promise.all([
