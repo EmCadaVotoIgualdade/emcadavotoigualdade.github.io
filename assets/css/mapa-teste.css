@@ -1,0 +1,155 @@
+/* Styles confined to the experimental page. */
+#mapa-teste {
+  color: #1e293b;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+#mapa-teste [hidden] { display: none !important; }
+#mapa-teste p { margin: 0; }
+#mapa-teste a { color: #0f766e; text-decoration: underline; }
+
+#mapa-teste .mapa-teste-warning {
+  padding: 1rem 1.2rem;
+  border: 1px solid #e5bd64;
+  border-left: 4px solid #a16207;
+  border-radius: .65rem;
+  background: #fffbeb;
+  color: #713f12;
+}
+
+#mapa-teste .mapa-teste-warning strong {
+  display: block;
+  margin-bottom: .3rem;
+  font-size: .95rem;
+  letter-spacing: .03em;
+}
+
+#mapa-teste .mapa-teste-warning p { font-size: .9rem; }
+#mapa-teste .mapa-teste-intro { margin: 1.25rem 0; }
+
+#mapa-teste .mapa-teste-controls {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: .85rem 1rem;
+}
+
+#mapa-teste .mapa-teste-controls label {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  min-width: 0;
+  font-size: .85rem;
+  font-weight: 600;
+}
+
+#mapa-teste .mapa-teste-controls label:last-child { grid-column: 1 / -1; }
+
+#mapa-teste select {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: .6rem .65rem;
+  border: 1px solid #94a3b8;
+  border-radius: .45rem;
+  background: #fff;
+  color: #1e293b;
+  font: inherit;
+  font-size: .95rem;
+}
+
+#mapa-teste select:focus-visible {
+  outline: 3px solid #0f766e;
+  outline-offset: 2px;
+}
+
+#mapa-teste .mapa-teste-help {
+  margin-top: .85rem;
+  color: #475569;
+  font-size: .8rem;
+}
+
+#mapa-teste .mapa-teste-status { margin-top: 1rem; font-size: .9rem; }
+
+#mapa-teste .mapa-teste-panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: .75rem 1rem;
+  margin: 1.3rem 0 1rem;
+  padding: 1rem 1.2rem;
+  border: 1px solid #b7d9d3;
+  border-radius: .75rem;
+  background: #f0fdfa;
+}
+
+#mapa-teste .mapa-teste-eyebrow {
+  color: #475569;
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+#mapa-teste .mapa-teste-panel h2 { margin: .15rem 0; font-size: 1.2rem; font-weight: 700; }
+#mapa-teste .mapa-teste-panel p { font-size: .8rem; }
+#mapa-teste .mapa-teste-result { display: flex; flex-direction: column; }
+#mapa-teste .mapa-teste-result strong { font-size: 1.9rem; line-height: 1.2; color: #0f766e; }
+#mapa-teste .mapa-teste-result span { margin-top: .3rem; font-size: .75rem; color: #475569; }
+
+#mapa-teste .mapa-teste-figure { margin: 0; }
+#mapa-teste .mapa-teste-map {
+  padding: .6rem;
+  border: 1px solid #e2e8f0;
+  border-radius: .75rem;
+  background: #f8fafc;
+}
+
+#mapa-teste .mapa-teste-map svg { display: block; width: 100%; height: auto; max-height: 740px; }
+#mapa-teste .mapa-teste-map text { fill: #475569; font: 14px system-ui, sans-serif; pointer-events: none; }
+#mapa-teste .mapa-teste-map .mapa-teste-map-heading { fill: #1e293b; font-size: 18px; font-weight: 600; }
+#mapa-teste .mapa-teste-map .mapa-teste-inset-frame { fill: #fff; stroke: #cbd5e1; }
+#mapa-teste .mapa-teste-region { cursor: pointer; outline: none; }
+#mapa-teste .mapa-teste-region path {
+  fill: var(--region-fill, #cbd5e1);
+  stroke: #64748b;
+  stroke-width: .6;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+#mapa-teste .mapa-teste-region[aria-pressed="true"] path {
+  stroke: #0f172a;
+  stroke-width: 2.5;
+}
+
+#mapa-teste .mapa-teste-region:hover path,
+#mapa-teste .mapa-teste-region:focus-visible path {
+  stroke: #0f172a;
+  stroke-width: 3;
+  stroke-dasharray: 4 2;
+}
+
+#mapa-teste figcaption { margin-top: .65rem; font-size: .75rem; color: #475569; }
+#mapa-teste .mapa-teste-hover { min-height: 3.2em; margin: .8rem 0; font-size: .85rem; color: #334155; }
+#mapa-teste .mapa-teste-legend { padding-top: .85rem; border-top: 1px solid #e2e8f0; }
+#mapa-teste .mapa-teste-legend h2 { margin: 0 0 .65rem; font-size: .9rem; font-weight: 600; }
+#mapa-teste .mapa-teste-legend ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .6rem; list-style: none; padding: 0; margin: 0; }
+#mapa-teste .mapa-teste-legend li { display: flex; align-items: center; gap: .4rem; font-size: .8rem; }
+#mapa-teste .mapa-teste-swatch,
+#mapa-teste .mapa-teste-missing-key { display: inline-block; flex: 0 0 auto; width: 1rem; height: 1rem; border: 1px solid #64748b; border-radius: .15rem; vertical-align: middle; }
+#mapa-teste .mapa-teste-missing-key { background: #cbd5e1; margin-left: .4rem; }
+#mapa-teste .mapa-teste-attribution { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; font-size: .75rem; color: #475569; }
+
+@media (max-width: 520px) {
+  #mapa-teste .mapa-teste-controls { grid-template-columns: 1fr; }
+  #mapa-teste .mapa-teste-panel { padding: .85rem; }
+  #mapa-teste .mapa-teste-legend ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #mapa-teste .mapa-teste-map { padding: .2rem; }
+}
+
+@media (forced-colors: active) {
+  #mapa-teste .mapa-teste-region[aria-pressed="true"] path { stroke: Highlight; }
+  #mapa-teste .mapa-teste-region:focus-visible path { stroke: Highlight; stroke-dasharray: 4 2; }
+}

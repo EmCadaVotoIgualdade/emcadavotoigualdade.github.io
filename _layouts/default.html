@@ -10,6 +10,9 @@
     <!-- SEO Dinâmico (Lido das configurações no topo de cada página) -->
     <title>{{ page.title }} - Em Cada Voto Igualdade</title>
     <meta name="description" content="{{ page.description }}">
+    {% if page.preview_noindex == true %}
+    <meta name="robots" content="noindex, nofollow">
+    {% endif %}
     <link rel="canonical" href="https://emcadavotoigualdade.github.io{{ page.url }}">
 
     <!-- Open Graph (Previsão impecável para WhatsApp, Reddit, Facebook, LinkedIn) -->
