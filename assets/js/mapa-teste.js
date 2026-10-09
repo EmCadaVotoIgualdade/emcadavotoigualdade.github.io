@@ -129,8 +129,7 @@
       if (classCount === 1) classUpper = upper;
       let label;
       if (classLower === classUpper) label = integerFormatter.format(classLower);
-      else if (!isCount && classIndex < classCount - 1) label = integerFormatter.format(classLower) + "–<" + integerFormatter.format(classUpper);
-      else label = integerFormatter.format(classLower) + "–" + integerFormatter.format(classUpper);
+      else label = integerFormatter.format(classLower) + "-" + integerFormatter.format(classUpper);
       scale.classes.push({ lower: classLower, upper: classUpper, color: palette[paletteIndex], label: label });
     }
     return scale;
@@ -226,24 +225,11 @@
       scales[metricId] = buildScale(values, metric, metricId);
     }
 
-    // Place the three static SVG panels in a responsive CSS grid. District path
-    // coordinates stay unchanged; only the panels' screen position changes.
+    // Keep all panels inside one responsive SVG so every viewport shares the
+    // same geographic scale. Static transforms only reposition island outlines.
     const parts = svg.querySelectorAll("svg[data-map-part]");
     if (parts.length !== 3) throw new Error("Os enquadramentos do mapa são inválidos.");
-    const mainland = document.createElement("div");
-    mainland.className = "mapa-teste-mainland";
-    const insets = document.createElement("div");
-    insets.className = "mapa-teste-insets";
-    for (let partIndex = 0; partIndex < parts.length; partIndex++) {
-      const part = document.importNode(parts[partIndex], true);
-      part.removeAttribute("x");
-      part.removeAttribute("y");
-      part.removeAttribute("width");
-      part.removeAttribute("height");
-      if (part.dataset.mapPart === "mainland") mainland.append(part);
-      else insets.append(part);
-    }
-    mapContainer.replaceChildren(mainland, insets);
+    mapContainer.replaceChildren(document.importNode(svg, true));
     const regionShapes = mapContainer.querySelectorAll("[data-region]");
     const selection = {
       model: "current", year: "2025", metric: "wasted_votes_pct",
@@ -254,7 +240,6 @@
     let demonstration = "Valor eleitoral";
     if (data.demo) demonstration = "Valor fictício de demonstração";
     root.querySelector(".mapa-teste-warning").hidden = !data.demo;
-    const valueNote = root.querySelector("[data-value-note]");
     const historyContainer = root.querySelector("[data-history-chart]");
     const historyInfo = root.querySelector("[data-history-info]");
     const historyStyles = {
@@ -290,13 +275,16 @@
         }
       }
       historyInfo.textContent = historyPointLabel(point);
+      historyInfo.hidden = false;
     }
 
     function restoreHistoryInfo() {
       if (selectedHistoryPoint !== null) {
         historyInfo.textContent = historyPointLabel(selectedHistoryPoint);
+        historyInfo.hidden = false;
       } else {
-        historyInfo.textContent = "Selecione um ponto para consultar o valor.";
+        historyInfo.textContent = "";
+        historyInfo.hidden = true;
       }
     }
 
@@ -407,54 +395,6 @@
       }
     }
 
-    function updateHistoryTable() {
-      const table = document.createElement("table");
-      const caption = document.createElement("caption");
-      caption.textContent = data.regions[selection.region].name + " · " + data.metrics[selection.metric].label;
-      const head = document.createElement("thead");
-      const headings = document.createElement("tr");
-      const yearHeading = document.createElement("th");
-      yearHeading.scope = "col";
-      yearHeading.textContent = "Ano";
-      headings.append(yearHeading);
-      for (let index = 0; index < modelIds.length; index++) {
-        const heading = document.createElement("th");
-        heading.scope = "col";
-        heading.textContent = data.models[modelIds[index]].label;
-        headings.append(heading);
-      }
-      head.append(headings);
-      const body = document.createElement("tbody");
-      for (let yearIndex = 0; yearIndex < years.length; yearIndex++) {
-        const row = document.createElement("tr");
-        const year = document.createElement("th");
-        year.scope = "row";
-        year.textContent = String(years[yearIndex]);
-        row.append(year);
-        for (let modelIndex = 0; modelIndex < modelIds.length; modelIndex++) {
-          const cell = document.createElement("td");
-          const modelId = modelIds[modelIndex];
-          const yearId = years[yearIndex];
-          const value = historyValue(modelId, yearId);
-          if (value === null) {
-            cell.textContent = formatHistoryValue(value);
-          } else {
-            const button = document.createElement("button");
-            button.type = "button";
-            button.className = "mapa-teste-history-value";
-            button.textContent = formatHistoryValue(value);
-            button.setAttribute("aria-label", historyPointLabel({ model: modelId, year: yearId }));
-            button.addEventListener("click", function () { showHistoryPoint({ model: modelId, year: yearId }, true); });
-            cell.append(button);
-          }
-          row.append(cell);
-        }
-        body.append(row);
-      }
-      table.append(caption, head, body);
-      root.querySelector("[data-history-table]").replaceChildren(table);
-    }
-
     function updateHistoryEmphasis() {
       const series = historyContainer.querySelectorAll("[data-history-series]");
       for (let index = 0; index < series.length; index++) {
@@ -504,10 +444,10 @@
         }
       }
       const scale = buildHistoryScale(values, metric);
-      const plot = { left: 44, width: Math.max(1, width - 62), top: 18, bottom: 204 };
+      const plot = { left: 44, width: Math.max(1, width - 62), top: 18, bottom: Math.round(Math.min(300, Math.max(204, width * .5))) };
       let labelRows = 1;
       if (years.length > 1) labelRows = Math.max(1, Math.ceil(34 / (plot.width / (years.length - 1))));
-      const chart = svgElement("svg", { viewBox: "0 0 " + width + " " + (232 + (labelRows - 1) * 15), role: "group", "aria-labelledby": "mapa-teste-history-svg-title mapa-teste-history-svg-description" });
+      const chart = svgElement("svg", { viewBox: "0 0 " + width + " " + (plot.bottom + 28 + (labelRows - 1) * 15), role: "group", "aria-labelledby": "mapa-teste-history-svg-title mapa-teste-history-svg-description" });
       chart.append(svgElement("title", { id: "mapa-teste-history-svg-title" }, heading + " · " + data.regions[selection.region].name));
       chart.append(svgElement("desc", { id: "mapa-teste-history-svg-description" }, "Comparação dos dois sistemas em todos os anos eleitorais, igualmente espaçados. Linha contínua: " + data.models.current.label + ". Linha tracejada: " + data.models.proposal.label + ". Cada ponto permite consultar o valor exato com rato, toque ou teclado. Valores em falta interrompem as linhas."));
       drawHistoryAxes(chart, scale, plot, labelRows);
@@ -515,7 +455,6 @@
       if (scale === null) chart.append(svgElement("text", { x: width / 2, y: 110, "text-anchor": "middle", class: "mapa-teste-history-axis" }, "Dados indisponíveis"));
       historyContainer.replaceChildren(chart);
       updateHistoryEmphasis();
-      updateHistoryTable();
       restoreHistoryInfo();
       const markers = historyContainer.querySelectorAll("[data-history-model]");
       for (let index = 0; index < markers.length; index++) {
@@ -553,15 +492,6 @@
       return data.regions[regionId].name + ": " + valueLabel + " — " + demonstration + "; " + data.models[selection.model].label + ", " + selection.year + ", " + data.metrics[selection.metric].label;
     }
 
-    function updatePanel() {
-      const value = valueFor(selection.region);
-      root.querySelector("[data-selected-name]").textContent = data.regions[selection.region].name;
-      root.querySelector("[data-selected-context]").textContent = data.models[selection.model].label + " · " + selection.year + " · " + data.metrics[selection.metric].label;
-      root.querySelector("[data-selected-value]").textContent = formatValue(value);
-      if (value === null) valueNote.textContent = "Não existe um valor válido para esta seleção.";
-      else valueNote.textContent = demonstration;
-    }
-
     function selectRegion(regionId) {
       selection.region = regionId;
       regionSelect.value = regionId;
@@ -569,7 +499,6 @@
         const shape = regionShapes[shapeIndex];
         shape.setAttribute("aria-pressed", String(shape.dataset.region === regionId));
       }
-      updatePanel();
       updateHistoryChart();
     }
 
@@ -655,7 +584,7 @@
       shape.classList.add("mapa-teste-region");
       shape.setAttribute("role", "button");
       shape.setAttribute("tabindex", "0");
-      shape.setAttribute("aria-controls", "mapa-teste-selection");
+      shape.setAttribute("aria-controls", "mapa-teste-history");
       shape.addEventListener("click", function () { selectRegion(regionId); });
       shape.addEventListener("keydown", function (event) {
         if (event.key === "Enter" || event.key === " ") {

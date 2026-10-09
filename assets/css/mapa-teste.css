@@ -1,4 +1,7 @@
 /* All rules apply only to the experimental page. */
+.page-wide-layout { padding-top: 2rem; padding-bottom: 2rem; }
+.page-wide-layout > article { padding: clamp(1rem, 2.5vw, 2rem); }
+.page-wide-layout > article > .prose > h1 { margin-bottom: .75rem; font-size: clamp(1.5rem, 3vw, 2rem); }
 #mapa-teste { color: #1e293b; font-size: 1rem; line-height: 1.5; }
 #mapa-teste [hidden] { display: none !important; }
 #mapa-teste p { margin: 0; }
@@ -11,33 +14,23 @@
 #mapa-teste legend,
 #mapa-teste .mapa-teste-region-control { font-size: .8rem; font-weight: 600; }
 #mapa-teste legend { margin-bottom: .3rem; }
-#mapa-teste .mapa-teste-indicators { flex-basis: 100%; }
+#mapa-teste .mapa-teste-indicators { flex: 1 1 25rem; }
 #mapa-teste .mapa-teste-buttons { display: flex; flex-wrap: wrap; gap: .35rem; }
 #mapa-teste .mapa-teste-option { min-width: 0; min-height: 44px; padding: .45rem .7rem; border: 1px solid #94a3b8; border-radius: .45rem; background: #fff; color: #334155; font: inherit; font-size: .85rem; line-height: 1.3; cursor: pointer; }
 #mapa-teste .mapa-teste-option[aria-pressed="true"] { border-color: #0f766e; background: #0f766e; color: #fff; font-weight: 700; text-decoration: underline; text-underline-offset: .18em; }
 #mapa-teste .mapa-teste-option:hover { border-color: #0f172a; }
 #mapa-teste .mapa-teste-option:disabled { cursor: wait; }
-#mapa-teste .mapa-teste-region-control { display: flex; flex-direction: column; gap: .3rem; }
+#mapa-teste .mapa-teste-region-control { display: flex; flex-direction: column; gap: .3rem; margin-top: .75rem; max-width: 26rem; }
 #mapa-teste select { width: 100%; min-width: 0; min-height: 44px; padding: .5rem .65rem; border: 1px solid #94a3b8; border-radius: .45rem; background: #fff; color: #1e293b; font: inherit; font-size: .9rem; }
 #mapa-teste .mapa-teste-option:focus-visible,
 #mapa-teste select:focus-visible { outline: 3px solid #0f172a; outline-offset: 2px; }
 #mapa-teste .mapa-teste-status { margin-top: 1rem; font-size: .9rem; }
-#mapa-teste .mapa-teste-panel { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .5rem 1rem; margin: .8rem 0; padding: .8rem 1rem; border: 1px solid #b7d9d3; border-radius: .65rem; background: #f0fdfa; }
-#mapa-teste .mapa-teste-eyebrow { color: #475569; font-size: .7rem; font-weight: 600; }
-#mapa-teste .mapa-teste-panel h2 { margin: .1rem 0; font-size: 1.15rem; font-weight: 700; }
-#mapa-teste .mapa-teste-panel p { font-size: .8rem; }
-#mapa-teste .mapa-teste-result { display: flex; flex-direction: column; }
-#mapa-teste .mapa-teste-result strong { font-size: 1.9rem; line-height: 1.2; color: #0f766e; }
-#mapa-teste .mapa-teste-result span { font-size: .7rem; color: #475569; }
-#mapa-teste .mapa-teste-visual { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(145px, 1fr); grid-template-rows: max-content 1fr; gap: .75rem; align-items: start; position: relative; padding: .75rem; border: 1px solid #e2e8f0; border-radius: .75rem; background: #f8fafc; }
-#mapa-teste .mapa-teste-map { display: contents; }
-#mapa-teste .mapa-teste-mainland { grid-column: 1; grid-row: 1 / span 2; min-width: 0; }
-#mapa-teste .mapa-teste-insets { display: grid; grid-column: 2; grid-row: 2; gap: .5rem; min-width: 0; }
-#mapa-teste .mapa-teste-map svg { display: block; width: 100%; height: auto; overflow: visible; }
-#mapa-teste .mapa-teste-mainland svg { max-height: 620px; }
+#mapa-teste .mapa-teste-content { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; align-items: start; margin-top: .85rem; }
+#mapa-teste .mapa-teste-visual { min-width: 0; position: relative; padding: .75rem; border: 1px solid #e2e8f0; border-radius: .75rem; background: #f8fafc; }
+#mapa-teste .mapa-teste-map { min-width: 0; }
+#mapa-teste .mapa-teste-map > svg { display: block; width: 100%; height: auto; max-height: 520px; }
 #mapa-teste .mapa-teste-map text { fill: #334155; font: 18px system-ui, sans-serif; pointer-events: none; }
 #mapa-teste .mapa-teste-map .mapa-teste-map-heading { fill: #1e293b; font-size: 23px; font-weight: 600; }
-#mapa-teste .mapa-teste-insets .mapa-teste-map-heading { font-size: 26px; }
 #mapa-teste .mapa-teste-region { cursor: pointer; outline: none; }
 #mapa-teste .mapa-teste-region path { fill: var(--region-fill, #cbd5e1); stroke: #475569; stroke-width: .65; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
 #mapa-teste .mapa-teste-inset-frame { fill: #fff; stroke: #94a3b8; stroke-width: 1; vector-effect: non-scaling-stroke; }
@@ -47,14 +40,17 @@
 #mapa-teste .mapa-teste-region:focus-visible path,
 #mapa-teste .mapa-teste-region:hover .mapa-teste-inset-frame,
 #mapa-teste .mapa-teste-region:focus-visible .mapa-teste-inset-frame { stroke: #0f172a; stroke-width: 3; stroke-dasharray: 4 2; }
-#mapa-teste .mapa-teste-legend { grid-column: 2; grid-row: 1; padding: .25rem; }
+#mapa-teste .mapa-teste-legend { margin-bottom: .65rem; }
 #mapa-teste .mapa-teste-legend h2 { margin: 0 0 .45rem; font-size: .8rem; font-weight: 600; }
-#mapa-teste .mapa-teste-legend ul { display: grid; gap: .3rem; list-style: none; padding: 0; margin: 0; }
+#mapa-teste .mapa-teste-legend ul { display: flex; flex-wrap: wrap; gap: .3rem .7rem; list-style: none; padding: 0; margin: 0; }
 #mapa-teste .mapa-teste-legend li { display: flex; align-items: center; gap: .45rem; font-size: .8rem; }
 #mapa-teste .mapa-teste-swatch { flex: 0 0 auto; width: 1.1rem; height: .9rem; border: 1px solid #64748b; border-radius: .1rem; }
 #mapa-teste .mapa-teste-hover { position: absolute; right: .75rem; bottom: .75rem; max-width: min(250px, calc(100% - 1.5rem)); padding: .55rem .7rem; border-radius: .45rem; background: #1e293b; color: #fff; font-size: .8rem; pointer-events: none; }
 #mapa-teste .mapa-teste-attribution { margin-top: .9rem; font-size: .7rem; color: #475569; }
-#mapa-teste .mapa-teste-history { min-width: 0; margin-top: 1rem; padding: .75rem; border: 1px solid #e2e8f0; border-radius: .75rem; background: #fff; }
+#mapa-teste .mapa-teste-explanations { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem 1.5rem; margin: 1rem 0 0; padding-top: .75rem; border-top: 1px solid #e2e8f0; font-size: .8rem; }
+#mapa-teste .mapa-teste-explanations dt { font-weight: 600; }
+#mapa-teste .mapa-teste-explanations dd { margin: .15rem 0 0; color: #475569; }
+#mapa-teste .mapa-teste-history { min-width: 0; padding: .75rem; border: 1px solid #e2e8f0; border-radius: .75rem; background: #fff; }
 #mapa-teste .mapa-teste-history-heading h2 { margin: 0 0 .2rem; font-size: 1rem; font-weight: 600; line-height: 1.35; }
 #mapa-teste .mapa-teste-history-heading p { font-size: .75rem; color: #475569; overflow-wrap: anywhere; }
 #mapa-teste .mapa-teste-history-heading strong { font-weight: 600; }
@@ -75,31 +71,18 @@
 #mapa-teste .mapa-teste-history-point:hover .mapa-teste-history-focus,
 #mapa-teste .mapa-teste-history-point:focus .mapa-teste-history-focus,
 #mapa-teste .mapa-teste-history-point[aria-pressed="true"] .mapa-teste-history-focus { opacity: 1; }
-#mapa-teste .mapa-teste-history-info { min-height: 2.8em; margin-top: .2rem; font-size: .75rem; color: #334155; overflow-wrap: anywhere; }
-#mapa-teste .mapa-teste-history-data { margin-top: .4rem; font-size: .75rem; }
-#mapa-teste .mapa-teste-history-data summary { width: fit-content; max-width: 100%; cursor: pointer; text-decoration: underline; text-underline-offset: .15em; }
-#mapa-teste .mapa-teste-history-data summary:focus-visible { outline: 3px solid #0f172a; outline-offset: 3px; }
-#mapa-teste .mapa-teste-history-data table { width: 100%; table-layout: fixed; border-collapse: collapse; margin-top: .5rem; }
-#mapa-teste .mapa-teste-history-data caption { text-align: left; padding: .3rem 0; color: #475569; }
-#mapa-teste .mapa-teste-history-data th,
-#mapa-teste .mapa-teste-history-data td { padding: .35rem .2rem; border-bottom: 1px solid #e2e8f0; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
-#mapa-teste .mapa-teste-history-data th { font-weight: 600; }
-#mapa-teste .mapa-teste-history-data th:first-child { width: 20%; }
-#mapa-teste .mapa-teste-history-value { max-width: 100%; min-height: 44px; padding: 0; border: 0; background: transparent; color: #0f766e; font: inherit; text-align: left; overflow-wrap: anywhere; text-decoration: underline; cursor: pointer; }
-#mapa-teste .mapa-teste-history-value:focus-visible { outline: 3px solid #0f172a; outline-offset: 2px; }
+#mapa-teste .mapa-teste-history-info { margin-top: .2rem; font-size: .75rem; color: #334155; overflow-wrap: anywhere; }
+
+@media (min-width: 1000px) {
+  #mapa-teste .mapa-teste-content { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+}
 
 @media (max-width: 600px) {
   #mapa-teste .mapa-teste-indicators .mapa-teste-buttons { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
   #mapa-teste .mapa-teste-indicators button:last-child:nth-child(odd) { grid-column: 1 / -1; }
-  #mapa-teste .mapa-teste-visual { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto auto; gap: .4rem; padding: .5rem; }
-  #mapa-teste .mapa-teste-legend { grid-column: 1; grid-row: 1; }
-  #mapa-teste .mapa-teste-legend ul { display: flex; flex-wrap: wrap; gap: .3rem .7rem; }
-  #mapa-teste .mapa-teste-mainland { grid-column: 1; grid-row: 2; }
-  #mapa-teste .mapa-teste-mainland svg { max-height: 530px; }
-  #mapa-teste .mapa-teste-insets { grid-column: 1; grid-row: 3; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .4rem; }
-  #mapa-teste .mapa-teste-insets .mapa-teste-map-heading { font-size: 34px; }
-  #mapa-teste .mapa-teste-panel { padding: .7rem .8rem; }
+  #mapa-teste .mapa-teste-visual { padding: .5rem; }
   #mapa-teste .mapa-teste-history { padding: .5rem; }
+  #mapa-teste .mapa-teste-explanations { grid-template-columns: minmax(0, 1fr); }
 }
 
 @media (forced-colors: active) {
