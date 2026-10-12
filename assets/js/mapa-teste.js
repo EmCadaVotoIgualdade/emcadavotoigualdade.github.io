@@ -14,7 +14,6 @@
   const exactFormatter = new Intl.NumberFormat("pt-PT", { maximumSignificantDigits: 21 });
   const palettes = {
     red: ["#fee5d9", "#fcbba1", "#fc9272", "#ef6548", "#cb181d", "#99000d"],
-    amber: ["#fff0b3", "#ffdc73", "#f9bc38", "#e69a17", "#bd710a", "#874700"],
     teal: ["#e2f5ec", "#b7e1d4", "#7bc3b1", "#3b9f90", "#14796f", "#08584f"]
   };
   const missingColor = "#cbd5e1";
@@ -193,14 +192,17 @@
     const regionIds = Object.keys(data.regions || {});
     const modelIds = Object.keys(data.models || {});
     const metricIds = Object.keys(data.metrics || {});
-    const years = data.years || [];
+    const suppliedYears = data.years;
+    // Normalise JSON keys and sort chronologically, including future elections.
+    const years = Array.isArray(suppliedYears) ? suppliedYears.map(String).sort(function (a, b) { return Number(a) - Number(b); }) : [];
     const shapes = svg.querySelectorAll("[data-region]");
     const seenIds = new Set();
     for (let shapeIndex = 0; shapeIndex < shapes.length; shapeIndex++) seenIds.add(shapes[shapeIndex].dataset.region);
-    if (data.schema_version !== 2 || typeof data.demo !== "boolean" ||
+    if (data.schema_version !== 2 ||
         regionIds.length !== 20 || shapes.length !== 20 || seenIds.size !== 20 ||
         modelIds.length !== 2 || !data.models.current || !data.models.proposal ||
-        !Array.isArray(years) || years.length === 0 || new Set(years).size !== years.length || metricIds.length === 0) {
+        years.length === 0 || years.some(function (year) { return !/^\d{4}$/.test(year); }) ||
+        new Set(years).size !== years.length || metricIds.length === 0) {
       throw new Error("Os identificadores ou o formato dos dados não correspondem ao mapa.");
     }
     for (let regionIndex = 0; regionIndex < regionIds.length; regionIndex++) {
@@ -230,16 +232,53 @@
     const parts = svg.querySelectorAll("svg[data-map-part]");
     if (parts.length !== 3) throw new Error("Os enquadramentos do mapa são inválidos.");
     mapContainer.replaceChildren(document.importNode(svg, true));
+    const mapSvg = mapContainer.querySelector("svg");
+    const mapParts = Array.from(mapSvg.querySelectorAll("svg[data-map-part]"));
+    const desktopViewBox = mapSvg.getAttribute("viewBox");
+    const desktopPositions = mapParts.map(function (part) { return { x: part.getAttribute("x"), y: part.getAttribute("y") }; });
+    const narrowMap = window.matchMedia("(max-width: 600px)");
+
+    function arrangeMap() {
+      if (narrowMap.matches) {
+        // Stack whole panels at their existing size; every outline keeps the
+        // same geographic scale, even on phones. The CSS puts the legend above.
+        const mainland = mapParts.find(function (part) { return part.dataset.mapPart === "mainland"; });
+        const width = Number(mainland.getAttribute("width"));
+        let nextY = 0;
+        for (let index = 0; index < mapParts.length; index++) {
+          const part = mapParts[index];
+          part.setAttribute("x", String((width - Number(part.getAttribute("width"))) / 2));
+          part.setAttribute("y", String(nextY));
+          nextY += Number(part.getAttribute("height")) + 18;
+        }
+        mapSvg.setAttribute("viewBox", "0 0 " + width + " " + (nextY - 18));
+      } else {
+        mapSvg.setAttribute("viewBox", desktopViewBox);
+        for (let index = 0; index < mapParts.length; index++) {
+          mapParts[index].setAttribute("x", desktopPositions[index].x);
+          mapParts[index].setAttribute("y", desktopPositions[index].y);
+        }
+      }
+    }
+    arrangeMap();
+    narrowMap.addEventListener("change", arrangeMap);
     const regionShapes = mapContainer.querySelectorAll("[data-region]");
     const selection = {
-      model: "current", year: "2025", metric: "wasted_votes_pct",
+      model: "current", year: years[years.length - 1], metric: "wasted_votes_pct",
       region: regionIds[Math.floor(Math.random() * regionIds.length)]
     };
-    if (!years.includes(selection.year)) selection.year = String(years[years.length - 1]);
     if (!Object.hasOwn(data.metrics, selection.metric)) selection.metric = metricIds[0];
-    let demonstration = "Valor eleitoral";
-    if (data.demo) demonstration = "Valor fictício de demonstração";
-    root.querySelector(".mapa-teste-warning").hidden = !data.demo;
+    const source = data.source || {};
+    const sourceNotes = [];
+    if (source.file) sourceNotes.push("Fonte eleitoral: " + source.file + ".");
+    if (source.valid_votes_basis) sourceNotes.push("Base dos votos válidos: " + source.valid_votes_basis + ".");
+    if (source.national_scope === "18_mainland_districts_plus_acores_and_madeira") sourceNotes.push("Âmbito nacional: 18 distritos, Açores e Madeira.");
+    if (source.omitted_lists_assumed_unrepresented) {
+      sourceNotes.push("As listas omitidas são consideradas sem deputados nos dois sistemas e os seus votos válidos contam como desperdiçados. A atribuição de mandatos usa apenas as listas incluídas; os resultados dependem desta hipótese.");
+    } else if (Array.isArray(source.assumptions)) {
+      sourceNotes.push(...source.assumptions);
+    }
+    root.querySelector("[data-source]").textContent = sourceNotes.join(" ");
     const historyContainer = root.querySelector("[data-history-chart]");
     const historyInfo = root.querySelector("[data-history-info]");
     const historyStyles = {
@@ -423,8 +462,6 @@
       const heading = "Evolução de " + metric.label.charAt(0).toLowerCase() + metric.label.slice(1);
       root.querySelector("[data-history-title]").textContent = heading;
       root.querySelector("[data-history-region]").textContent = data.regions[selection.region].name;
-      if (data.demo) root.querySelector("[data-history-note]").textContent = " · Dados fictícios";
-      else root.querySelector("[data-history-note]").textContent = "";
       const values = [];
       const legend = root.querySelector("[data-history-legend]");
       legend.replaceChildren();
@@ -489,7 +526,7 @@
         if (valueFor(regionId) === 1) valueLabel += " partido";
         else valueLabel += " partidos";
       }
-      return data.regions[regionId].name + ": " + valueLabel + " — " + demonstration + "; " + data.models[selection.model].label + ", " + selection.year + ", " + data.metrics[selection.metric].label;
+      return data.regions[regionId].name + ": " + valueLabel + " — " + data.models[selection.model].label + ", " + selection.year + ", " + data.metrics[selection.metric].label;
     }
 
     function selectRegion(regionId) {
@@ -527,7 +564,7 @@
     }
 
     function showPreview(regionId) {
-      preview.textContent = data.regions[regionId].name + ": " + formatValue(valueFor(regionId)) + " · " + demonstration;
+      preview.textContent = data.regions[regionId].name + ": " + formatValue(valueFor(regionId));
       preview.hidden = false;
     }
 
@@ -625,6 +662,6 @@
     initialise(assets[0], assets[1]);
   }).catch(function (error) {
     console.error("Mapa experimental:", error);
-    status.textContent = "Não foi possível carregar este protótipo. Recarregue a página para tentar novamente. Os valores dos dois sistemas são fictícios.";
+    status.textContent = "Não foi possível carregar o mapa e os dados eleitorais. Recarregue a página para tentar novamente.";
   });
 })();
