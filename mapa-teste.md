@@ -33,11 +33,12 @@ custom_scripts:
   <noscript><p>Active o JavaScript para explorar o mapa. Pode consultar o <a href="{{ '/assets/images/mapa-teste.svg' | relative_url }}">mapa geográfico</a> e os <a href="{{ '/assets/data/mapa-teste-metricas.json' | relative_url }}">dados eleitorais em JSON</a>.</p></noscript>
   <div class="mapa-teste-content" data-content hidden>
     <div class="mapa-teste-visual">
+      <button type="button" class="mapa-teste-option mapa-teste-size-toggle" data-map-size aria-pressed="false" aria-controls="mapa-teste-map" hidden disabled>Tornar maior</button>
       <aside class="mapa-teste-legend" aria-label="Legenda das cores">
         <h2 data-legend-title></h2>
         <ul data-legend></ul>
       </aside>
-      <div class="mapa-teste-map" data-map></div>
+      <div id="mapa-teste-map" class="mapa-teste-map" data-map></div>
       <p class="mapa-teste-hover" data-hover hidden aria-live="off"></p>
     </div>
     <section id="mapa-teste-history" class="mapa-teste-history" aria-labelledby="mapa-teste-history-title">

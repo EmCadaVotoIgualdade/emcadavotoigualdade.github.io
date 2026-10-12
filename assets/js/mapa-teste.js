@@ -33,6 +33,20 @@
 
   function buildScale(values, metric, metricId) {
     const scale = { minimum: null, maximum: null, classes: [], step: 1 };
+    const palette = palettes[metric.palette];
+    if (metricId === "wasted_votes_pct") {
+      // Fixed bands shared by every election and model; 50+ includes 100%.
+      const boundaries = [0, 5, 10, 20, 30, 50];
+      scale.minimum = 0;
+      scale.maximum = 100;
+      for (let index = 0; index < boundaries.length; index++) {
+        const lower = boundaries[index];
+        const upper = boundaries[index + 1] ?? 100;
+        const label = index === boundaries.length - 1 ? "50+" : lower + "-" + upper;
+        scale.classes.push({ lower: lower, upper: upper, color: palette[index], label: label });
+      }
+      return scale;
+    }
     if (values.length === 0) return scale;
     let minimum = values[0];
     let maximum = values[0];
@@ -40,7 +54,6 @@
       minimum = Math.min(minimum, values[valueIndex]);
       maximum = Math.max(maximum, values[valueIndex]);
     }
-    const palette = palettes[metric.palette];
     if (metricId === "represented_parties_count") {
       scale.minimum = minimum;
       scale.maximum = maximum;
@@ -237,9 +250,16 @@
     const desktopViewBox = mapSvg.getAttribute("viewBox");
     const desktopPositions = mapParts.map(function (part) { return { x: part.getAttribute("x"), y: part.getAttribute("y") }; });
     const narrowMap = window.matchMedia("(max-width: 600px)");
+    const mapSizeButton = root.querySelector("[data-map-size]");
+    let mobileMapExpanded = false;
 
     function arrangeMap() {
-      if (narrowMap.matches) {
+      const expanded = narrowMap.matches && mobileMapExpanded;
+      mapSizeButton.hidden = !narrowMap.matches;
+      mapSizeButton.disabled = false;
+      mapSizeButton.setAttribute("aria-pressed", String(expanded));
+      mapSizeButton.textContent = expanded ? "Tornar menor" : "Tornar maior";
+      if (expanded) {
         // Stack whole panels at their existing size; every outline keeps the
         // same geographic scale, even on phones. The CSS puts the legend above.
         const mainland = mapParts.find(function (part) { return part.dataset.mapPart === "mainland"; });
@@ -260,6 +280,10 @@
         }
       }
     }
+    mapSizeButton.addEventListener("click", function () {
+      mobileMapExpanded = !mobileMapExpanded;
+      arrangeMap();
+    });
     arrangeMap();
     narrowMap.addEventListener("change", arrangeMap);
     const regionShapes = mapContainer.querySelectorAll("[data-region]");
@@ -516,8 +540,11 @@
     function colorFor(value) {
       const scale = scales[selection.metric];
       if (value === null || scale.classes.length === 0) return missingColor;
-      const classIndex = Math.min(scale.classes.length - 1, Math.floor((value - scale.minimum) / scale.step));
-      return scale.classes[classIndex].color;
+      // Find the inclusive lower boundary, including non-uniform bands.
+      for (let index = scale.classes.length - 1; index >= 0; index--) {
+        if (value >= scale.classes[index].lower) return scale.classes[index].color;
+      }
+      return missingColor;
     }
 
     function regionLabel(regionId) {
