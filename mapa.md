@@ -1,20 +1,23 @@
 ---
 layout: default
 content_width: 90rem
-title: Mapa eleitoral experimental
-description: Mapa experimental dos círculos eleitorais portugueses, com dados eleitorais e comparação entre o sistema atual e a proposta.
-permalink: /mapa-teste.html
-sitemap: false
-preview_noindex: true
+title: Mapa e gráficos
+description: Mapa interativo dos círculos eleitorais portugueses e gráficos históricos, com dados eleitorais e comparação entre o sistema atual e a proposta.
+permalink: /mapa.html
+nav_section: proposta
+nav_level: 2
+nav_order: 15
+nav_label: Mapa e gráficos
+nav_footer_label: Mapa e gráficos
 custom_scripts:
-  - mapa-teste
+  - mapa
 ---
 
-# Mapa eleitoral experimental
+# Mapa e gráficos
 
-<link rel="stylesheet" href="{{ '/assets/css/mapa-teste.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/mapa.css' | relative_url }}">
 
-<section id="mapa-teste" class="not-prose" aria-label="Explorar o mapa eleitoral experimental" data-map-url="{{ '/assets/images/mapa-teste.svg' | relative_url }}" data-metrics-url="{{ '/assets/data/mapa-teste-metricas.json' | relative_url }}">
+<section id="mapa-teste" class="not-prose" aria-label="Explorar o mapa e os gráficos eleitorais" data-map-url="{{ '/assets/images/mapa.svg' | relative_url }}" data-metrics-url="{{ '/assets/data/mapa-metricas.json' | relative_url }}">
   <div class="mapa-teste-controls">
     <fieldset data-control="year" disabled>
       <legend>Ano da eleição</legend>
@@ -30,7 +33,7 @@ custom_scripts:
     </fieldset>
   </div>
   <p class="mapa-teste-status" data-status role="status">A carregar o mapa e os dados eleitorais…</p>
-  <noscript><p>Active o JavaScript para explorar o mapa. Pode consultar o <a href="{{ '/assets/images/mapa-teste.svg' | relative_url }}">mapa geográfico</a> e os <a href="{{ '/assets/data/mapa-teste-metricas.json' | relative_url }}">dados eleitorais em JSON</a>.</p></noscript>
+  <noscript><p>Active o JavaScript para explorar o mapa. Pode consultar o <a href="{{ '/assets/images/mapa.svg' | relative_url }}">mapa geográfico</a> e os <a href="{{ '/assets/data/mapa-metricas.json' | relative_url }}">dados eleitorais em JSON</a>.</p></noscript>
   <div class="mapa-teste-content" data-content hidden>
     <div class="mapa-teste-visual">
       <aside class="mapa-teste-legend" aria-label="Legenda das cores">
@@ -57,6 +60,7 @@ custom_scripts:
   <dl class="mapa-teste-explanations">
     <div><dt>Votos desperdiçados</dt><dd>Percentagem de votos que não contribuíram para o partido eleger deputados. No sistema atual, refere-se a partidos sem deputados eleitos no círculo; na proposta, a partidos sem deputados eleitos a nível nacional.</dd></div>
   </dl>
-  <p class="mapa-teste-source">Fonte: <a href="https://www.cne.pt/">https://www.cne.pt/</a></p>
-  <p class="mapa-teste-attribution">Mapa: <a href="https://www.dgterritorio.gov.pt/atividades/cartografia/cartografia-tematica/caop">Direção-Geral do Território — CAOP2025</a></p>
+  <p class="mapa-teste-source"><strong>Dados eleitorais:</strong> <a href="https://www.cne.pt/">CNE</a> · <strong>Cálculos e simulações:</strong> Em Cada Voto Igualdade (<a href="{{ '/detalhes.html' | relative_url }}">Detalhes Técnicos</a>) · <a href="{{ '/assets/data/mapa-metricas.json' | relative_url }}">Consultar dados (JSON)</a></p>
+  <p class="mapa-teste-source">As simulações consideram os 226 mandatos dos 18 distritos continentais e das duas Regiões Autónomas, sem os círculos da emigração. As listas não individualizadas nos dados de origem são assumidas como não elegendo deputados.</p>
+  <p class="mapa-teste-attribution">Mapa: <a href="https://www.dgterritorio.gov.pt/atividades/cartografia/cartografia-tematica/caop">Direção-Geral do Território — CAOP2025</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p>
 </section>

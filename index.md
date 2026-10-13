@@ -28,10 +28,10 @@ Descubra os detalhes abaixo.
 
 Convidamos-te a explorar os dados, os estudos e os fundamentos técnicos que sustentam esta proposta:
 
-* 📊 **[A Proposta para Portugal]({{ '/proposta.html' | relative_url }}):** Conhece o enquadramento histórico, a proposta concreta e as consequências na igualdade de voto. (Pode também analisar o **[Anexo de Detalhes Técnicos]({{ '/detalhes.html' | relative_url }})**, ou explorar **[Modelos Alternativos]({{ '/alocacao-mandatos.html' | relative_url }})** para alocação de mandatos)
+* 📊 **[A Proposta para Portugal]({{ '/proposta.html' | relative_url }}):** Conhece o enquadramento histórico, a proposta concreta e as consequências na igualdade de voto. (Pode também analisar o **[Anexo de Detalhes Técnicos]({{ '/detalhes.html' | relative_url }})**, visualizar as diferenças em **[Mapas e gráficos interativos]({{ '/mapa.html' | relative_url }})**, ou explorar **[Modelos Alternativos]({{ '/alocacao-mandatos.html' | relative_url }})** para alocação de mandatos)
 * 🔍 **[Análise Constitucional]({{ '/analise.html' | relative_url }}):** Opinião de Constitucionalistas, Acórdãos do TC, comparativo com países europeus e decisões do tribunal suíço, checo e alemão. (Pode também ler a **[Versão Resumida]({{ '/analise-resumida.html' | relative_url }})** de 3 minutos, conhecer a versão completa sobre o **[T.C. português]({{ '/tc.html' | relative_url }})**, ou saber mais detalhes sobre os casos da **[Suíça]({{ '/suica.html' | relative_url }})**, **[República Checa]({{ '/checa.html' | relative_url }})** ou **[Alemanha]({{ '/alemanha.html' | relative_url }})**).
 * ❓ **[Perguntas Frequentes (FAQ)]({{ '/faq.html' | relative_url }}):** Respostas às principais dúvidas sobre modelos alternativos ou consequências como a estabilidade governativa.
-* 🚀 **[Próximos Passos]({{ '/proximos-passos.html' | relative_url }}):** Simulações dos métodos de distribuição de mandatos (dinamarquês e suíço) e mapas de representação interactivos.
+* 🚀 **[Próximos Passos]({{ '/proximos-passos.html' | relative_url }}):** Investigação e testes de robustez dos modelos eleitorais, incluindo simulações de diferentes cenários de votação e futuros desenvolvimentos das ferramentas interativas.
 
 ---
 

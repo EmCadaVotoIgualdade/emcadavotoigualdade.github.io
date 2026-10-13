@@ -12,7 +12,7 @@ nav_footer_label: Próximos Passos & Simulações
 
 # Próximos Passos & Desenvolvimento
 
-O objectivo é manter este espaço em constante evolução técnica, servindo como um laboratório aberto para a engenharia eleitoral em Portugal. Abaixo encontras as funcionalidades, simulações e ferramentas visuais que estamos a planear e a desenvolver activamente.
+O objectivo é manter este espaço em constante evolução técnica, servindo como um laboratório aberto para a engenharia eleitoral em Portugal. Abaixo encontras as funcionalidades já disponíveis e as simulações e ferramentas visuais que estamos a planear e a desenvolver activamente.
 
 ---
 
@@ -31,14 +31,21 @@ O objectivo desta análise de sensibilidade é medir o alinhamento efectivo entr
 
 ### 2. Painel Dinâmico de Votos Desperdiçados
 
-Desenvolvimento de gráficos dinâmicos para mapear a percentagem de votos "desperdiçados" (votos que não contribuíram para eleger qualquer deputado) ao nível local e nacional:
-* Comparação interactiva entre o sistema real e cada uma das variantes de simulação.
-* Histórico visual do desperdício de voto por círculo eleitoral ao longo das últimas eleições.
+Na página **[Mapa e gráficos]({{ '/mapa.html' | relative_url }})**, já estão disponíveis visualizações da percentagem de votos "desperdiçados" (votos que não contribuíram para o partido eleger deputados):
+* Comparação interactiva entre o sistema actual, considerando a representação no círculo, e o sistema proposto, considerando a representação nacional.
+* Gráfico histórico do desperdício de voto por círculo eleitoral nas eleições de 2015, 2019, 2022, 2024 e 2025.
+
+Como desenvolvimentos futuros, pretendemos alargar a comparação a outros sistemas eleitorais e integrar resultados de simulações e cenários alternativos, além de outros indicadores e ferramentas de exploração.
 
 ---
 
 ### 3. Mapa de Representação Territorial Interactiva
 
-Construção de um mapa interactivo de Portugal que permita visualizar, partido a partido ou de forma global:
-* Quem são os eleitos reais e simulados em cada círculo do território nacional.
-* Como se altera a pluralidade da representação territorial em cada cenário simulado, em particular na melhoria dos círculos mais pequenos.
+O mapa geográfico interactivo de Portugal já está disponível na página **[Mapa e gráficos]({{ '/mapa.html' | relative_url }})** e permite:
+* Comparar o sistema actual e o sistema proposto nos 18 distritos continentais, Açores e Madeira.
+* Visualizar os votos desperdiçados e o número de listas representadas em cada círculo, com selecção pelo mapa ou pela lista de círculos.
+* Consultar a evolução histórica destes indicadores ao longo de várias eleições.
+
+Como possíveis desenvolvimentos futuros, queremos acrescentar:
+* Visualização pormenorizada dos mandatos de cada partido em cada círculo.
+* Identificação das alterações de representação partido a partido, incluindo os resultados de cenários simulados e a evolução da pluralidade nos círculos mais pequenos.

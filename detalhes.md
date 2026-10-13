@@ -40,79 +40,31 @@ Uma curiosidade é que o RIR, com os seus 22.559 votos, passaria a estar present
 
 ### b) Distribuição de todos os mandatos pelos círculos locais
 
-O ponto de partida é a distribuição a nível nacional de mandatos por partido, e a distribuição prévia de mandatos totais pelos círculos (Lisboa 48, até Portalegre 2).
+O ponto de partida é o número de mandatos atribuído a cada partido a nível nacional, calculado na secção anterior, e o número de mandatos de cada círculo, tal como no sistema actual (de 48 em Lisboa a 2 em Portalegre, em 2022).
 
-A regra para a distribuição de mandatos pelos partidos/círculos tem os seguintes passos:
-1. Os votos de cada partido em cada círculo são divididos por **1, 3, 6, 10, 15, etc.** (incrementos de +2, +3, +4, etc., para aumentar o efeito “distributivo” do sistema)
-2. Os mandatos são atribuídos começando pelos maiores quocientes (calculados no ponto 1)
-3. Quando o limite de mandatos de um partido ou círculo é atingido os restantes quocientes desse partido ou círculo são ignorados
+Para cada partido, em cada círculo, dividem-se os votos obtidos pela sequência de divisores 1, 4, 7, 10, …, (+3).
+Os quocientes de todos os partidos e círculos são reunidos numa única lista e ordenados do maior para o menor. Apenas participam nesta distribuição os partidos aos quais tenham sido atribuídos mandatos no cálculo nacional.
 
-#### Exemplificando com alguns quocientes:
-* **1º quociente:** PS em Lisboa (483.034 votos)
-* **2º:** PS no Porto (418.958)
-* **3º:** PSD no Porto (318.390)
-* **4º:** PSD em Lisboa (285.646)
-* **5º:** PS em Braga (207.837)
-* **6º:** PS em Setúbal (198.126)
-* **7º:** PSD em Braga (172.021)
-* **8º:** Segundo mandato PS em Lisboa (161.011 = 483.034 votos / 3)
+#### Primeira fase: distribuição com limite de quatro mandatos
 
-#### Os primeiros mandatos dos pequenos partidos:
-* **15º:** IL em Lisboa (93.567)
-* **16º:** CH em Lisboa (92.001)
-* **29º:** CDU em Lisboa (59.899)
-* **32º:** BE em Lisboa (55.802)
-* **36º:** IL no Porto (50.389), o primeiro de um pequeno partido fora de Lisboa
-* **65º:** L em Lisboa (28.854)
-* **84º:** PAN em Lisboa (23.577)
+Percorrem-se os quocientes por ordem decrescente, atribuindo um mandato sempre que estejam simultaneamente satisfeitas três condições:
+1. O partido ainda não atingiu o seu total de mandatos definido a nível nacional;
+2. O círculo ainda não recebeu todos os mandatos que lhe cabem;
+3. O partido ainda não recebeu **quatro mandatos** nesse círculo, durante esta primeira fase.
 
-#### Os primeiros mandatos dos partidos em círculos sem representação actual:
-* **98º:** CDS em Lisboa (19.558)
-* **103º:** BE em Braga (18.550)
-* **110º:** PAN no Porto (16.722)
-* **112º:** IL em Aveiro (16.294)
-* **126º:** CH em Viseu (14.383)
-* **140º:** CDU em Braga (13.018)
-* **144º:** PSD em Portalegre (12.433)
-* **154º:** L no Porto (11.438)
-* **226º:** RIR no Porto (7.212)
+Quando uma destas condições deixa de se verificar, o quociente correspondente é ignorado nessa fase. A primeira fase prossegue até se esgotarem os quocientes elegíveis ou até todos os mandatos terem sido distribuídos.
 
-#### Primeiro quociente ignorado por ser atingido o limite de um círculo:
-* **151º:** 2º mandato PS em Évora (34.700 / 3 = 11.567). É o 3º e último mandato de Évora, passando os restantes quocientes de Évora a ser ignorados.
-* **152º:** CDU em Évora, (11.494), ignorado. A CDU não elege em Évora por 74 votos, e assim esse mandato da CDU será alocado a outro círculo.
+Este limite inicial procura favorecer uma distribuição mais alargada da representação pelos diferentes círculos, sem alterar o total nacional de deputados de cada partido.
 
-#### Primeiro quociente ignorado por ser atingido o limite de um partido:
-* **162º:** BE em Leiria (10.709), último dos 10 mandatos do BE.
-* **165º:** BE em Santarém (10.011), ignorado, sendo o mandato de Santarém alocado a outro partido. Com mais 700 votos em Santarém seria aí que o BE teria representação, perdendo-a em Leiria.
+#### Segunda fase: distribuição dos mandatos restantes
 
-Comparando com o sistema actual, nenhum partido perde representação num círculo, e 12 dos 20 círculos passam a estar representados por pelo menos mais um partido.
+Se ainda houver mandatos por atribuir, percorrem-se novamente os quocientes que não deram origem a mandatos na primeira fase, mantendo a mesma ordem e a mesma sequência de divisores.
 
----
+Nesta segunda fase, deixa de existir o limite de quatro mandatos por partido em cada círculo. Mantêm-se apenas duas condições:
+1. O partido não pode ultrapassar o número de mandatos que lhe foi atribuído a nível nacional;
+2. O círculo não pode ultrapassar o número de mandatos que lhe cabe eleger.
 
-### Distribuição Simulada por Círculo (2022)
-
-Para cada círculo, o número de deputados de cada partido, com as novas presenças assinaladas com um asterisco (`*`):
-
-* **Açores:** PS 3, PSD 2
-* **Madeira:** PS 3, PSD 3
-* **Porto:** PS 17, PSD 11, CH 2, IL 2, BE 2, CDU 2, \*CDS 1, \*PAN 1, \*L 1, \*RIR 1
-* **Lisboa:** PS 21, PSD 10, CH 4, IL 4, BE 2, CDU 3, \*CDS 1, PAN 1, L 2
-* **Braga:** PS 7, PSD 7, CH 2, IL 1, \*BE 1, \*CDU 1
-* **Viana do Castelo:** PS 3, PSD 3
-* **Vila Real:** PS 3, PSD 2
-* **Bragança:** PS 2, PSD 1
-* **Aveiro:** PS 6, PSD 6, CH 1, \*IL 1, \*BE 1, \*CDS 1
-* **Viseu:** PS 4, PSD 3, \*CH 1
-* **Guarda:** PS 2, PSD 1
-* **Castelo Branco:** PS 2, PSD 2
-* **Coimbra:** PS 4, PSD 3, \*CH 1, \*BE 1
-* **Leiria:** PS 4, PSD 3, CH 1, \*IL 1, \*BE 1
-* **Santarém:** PS 4, PSD 3, CH 1, \*CDU 1
-* **Setúbal:** PS 7, PSD 4, CH 2, IL 1, BE 1, CDU 2, \*PAN 1
-* **Faro:** PS 3, PSD 2, CH 2, \*IL 1, \*BE 1
-* **Évora:** PS 2, PSD 1
-* **Beja:** PS 1, \*PSD 1, CDU 1
-* **Portalegre:** PS 1, \*PSD 1
+O processo termina quando todos os mandatos estão distribuídos. Desta forma, mantém-se a proporcionalidade nacional entre partidos e a distribuição territorial de todos os deputados, sem recorrer a uma lista nacional de candidatos.
 
 ---
 
