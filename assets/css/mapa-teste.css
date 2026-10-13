@@ -73,18 +73,39 @@
 #mapa-teste .mapa-teste-history-info { margin-top: .2rem; font-size: .75rem; color: #334155; overflow-wrap: anywhere; }
 
 @media (min-width: 1000px) {
-  #mapa-teste .mapa-teste-content { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  #mapa-teste .mapa-teste-content { grid-template-columns: minmax(0, 34rem) minmax(0, 1fr); align-items: stretch; }
+  #mapa-teste .mapa-teste-visual { justify-self: stretch; align-self: start; }
+  #mapa-teste .mapa-teste-history { display: flex; flex-direction: column; min-height: 0; position: relative; }
+  #mapa-teste .mapa-teste-history-chart { flex: 1 1 0; min-height: 0; }
+  #mapa-teste .mapa-teste-history-chart svg { height: 100%; }
+  #mapa-teste .mapa-teste-history-info { position: absolute; right: .75rem; bottom: 6rem; z-index: 1; max-width: calc(100% - 1.5rem); padding: .35rem .5rem; border: 1px solid #e2e8f0; border-radius: .35rem; background: #fff; box-shadow: 0 2px 6px #0f172a14; pointer-events: none; }
+  #mapa-teste .mapa-teste-region-control { max-width: none; }
 }
 
 @media (max-width: 600px) {
+  .page-wide-layout { padding-top: .75rem; }
+  .page-wide-layout > article { padding: .6rem; }
+  .page-wide-layout > article > .prose > h1 { margin-bottom: .5rem; font-size: clamp(1.15rem, 5vw, 1.35rem); line-height: 1.2; }
+  #mapa-teste .mapa-teste-controls { gap: .45rem .8rem; margin: .5rem 0; }
+  #mapa-teste legend { margin-bottom: .2rem; font-size: .75rem; }
+  #mapa-teste .mapa-teste-option { padding: .35rem .4rem; font-size: .75rem; line-height: 1.15; }
+  #mapa-teste .mapa-teste-buttons { gap: .25rem; }
+  #mapa-teste .mapa-teste-content { margin-top: .55rem; }
   #mapa-teste .mapa-teste-indicators .mapa-teste-buttons { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  #mapa-teste .mapa-teste-visual { grid-template-columns: minmax(0, 1fr); padding: .5rem; }
-  #mapa-teste .mapa-teste-size-toggle { display: block; grid-area: 1 / 1; justify-self: start; margin-bottom: .5rem; }
-  #mapa-teste .mapa-teste-map { grid-area: 3 / 1; }
-  #mapa-teste .mapa-teste-legend { grid-area: 2 / 1; margin-bottom: .65rem; padding: 0; }
-  #mapa-teste .mapa-teste-legend h2 { font-size: .8rem; }
-  #mapa-teste .mapa-teste-legend ul { display: flex; flex-wrap: wrap; gap: .3rem .7rem; }
-  #mapa-teste .mapa-teste-legend li { font-size: .8rem; }
+  #mapa-teste .mapa-teste-visual { padding: .5rem; }
+  #mapa-teste .mapa-teste-size-toggle { display: block; grid-area: 1 / 1 / 2 / 2; align-self: end; justify-self: center; z-index: 1; max-width: 100%; min-height: 30px; margin: 0; padding: .25rem .3rem; font-size: .7rem; line-height: 1.2; }
+  #mapa-teste .mapa-teste-legend { padding: 0; }
+  #mapa-teste .mapa-teste-legend h2 { margin-bottom: .3rem; font-size: .7rem; line-height: 1.25; }
+  #mapa-teste .mapa-teste-legend ul { gap: .1rem .3rem; }
+  #mapa-teste .mapa-teste-legend li { gap: .2rem; font-size: .7rem; line-height: 1.25; }
+  #mapa-teste .mapa-teste-swatch { width: .7rem; height: .6rem; }
+  #mapa-teste[data-map-expanded="true"] .mapa-teste-visual { grid-template-columns: minmax(0, 1fr); }
+  #mapa-teste[data-map-expanded="true"] .mapa-teste-legend { grid-area: 1 / 1; margin-bottom: .65rem; }
+  #mapa-teste[data-map-expanded="true"] .mapa-teste-legend h2 { font-size: .8rem; }
+  #mapa-teste[data-map-expanded="true"] .mapa-teste-legend ul { display: flex; flex-wrap: wrap; gap: .3rem .7rem; }
+  #mapa-teste[data-map-expanded="true"] .mapa-teste-legend li { font-size: .8rem; }
+  #mapa-teste[data-map-expanded="true"] .mapa-teste-map { grid-area: 2 / 1; }
+  #mapa-teste[data-map-expanded="true"] .mapa-teste-size-toggle { grid-area: 3 / 1; margin-top: .3rem; }
   #mapa-teste .mapa-teste-history { padding: .5rem; }
 }
 

@@ -251,10 +251,12 @@
     const desktopPositions = mapParts.map(function (part) { return { x: part.getAttribute("x"), y: part.getAttribute("y") }; });
     const narrowMap = window.matchMedia("(max-width: 600px)");
     const mapSizeButton = root.querySelector("[data-map-size]");
+    const mapLegend = root.querySelector(".mapa-teste-legend");
     let mobileMapExpanded = false;
 
     function arrangeMap() {
       const expanded = narrowMap.matches && mobileMapExpanded;
+      root.dataset.mapExpanded = String(expanded);
       mapSizeButton.hidden = !narrowMap.matches;
       mapSizeButton.disabled = false;
       mapSizeButton.setAttribute("aria-pressed", String(expanded));
@@ -278,11 +280,38 @@
           mapParts[index].setAttribute("x", desktopPositions[index].x);
           mapParts[index].setAttribute("y", desktopPositions[index].y);
         }
+        if (narrowMap.matches) {
+          const viewBox = mapSvg.viewBox.baseVal;
+          const scale = mapContainer.getBoundingClientRect().width / viewBox.width;
+          if (scale > 0) {
+            // Reserve only the measured legend/button space. All panels keep
+            // their original dimensions and the same geographic scale.
+            const acores = mapParts.find(function (part) { return part.dataset.mapPart === "acores"; });
+            const madeira = mapParts.find(function (part) { return part.dataset.mapPart === "madeira"; });
+            const originalY = Number(desktopPositions[mapParts.indexOf(acores)].y);
+            const islandsY = Math.max(originalY, Math.ceil((mapLegend.getBoundingClientRect().height + 8) / scale));
+            const madeiraY = islandsY + Number(acores.getAttribute("height")) + 18;
+            acores.setAttribute("y", String(islandsY));
+            madeira.setAttribute("y", String(madeiraY));
+            const bottom = madeiraY + Number(madeira.getAttribute("height"));
+            const height = Math.ceil(Math.max(viewBox.height, bottom + (mapSizeButton.getBoundingClientRect().height + 6) / scale));
+            mapSvg.setAttribute("viewBox", "0 0 " + viewBox.width + " " + height);
+          }
+        }
       }
     }
     mapSizeButton.addEventListener("click", function () {
       mobileMapExpanded = !mobileMapExpanded;
       arrangeMap();
+      if (!mobileMapExpanded && narrowMap.matches) {
+        const controls = root.querySelector(".mapa-teste-controls");
+        const header = document.querySelector("header");
+        const headerHeight = header ? header.getBoundingClientRect().height : 0;
+        const controlsTop = controls.getBoundingClientRect().top;
+        if (controlsTop < headerHeight + 8) {
+          window.scrollTo(0, Math.max(0, window.scrollY + controlsTop - headerHeight - 8));
+        }
+      }
     });
     arrangeMap();
     narrowMap.addEventListener("change", arrangeMap);
@@ -305,6 +334,7 @@
     root.querySelector("[data-source]").textContent = sourceNotes.join(" ");
     const historyContainer = root.querySelector("[data-history-chart]");
     const historyInfo = root.querySelector("[data-history-info]");
+    const wideHistory = window.matchMedia("(min-width: 1000px)");
     const historyStyles = {
       current: { color: "#1e293b", dash: "" },
       proposal: { color: "#0f766e", dash: "6 4" }
@@ -466,9 +496,11 @@
     }
 
     function updateHistoryChart() {
-      const width = Math.floor(historyContainer.getBoundingClientRect().width);
+      const bounds = historyContainer.getBoundingClientRect();
+      const width = Math.floor(bounds.width);
+      const height = wideHistory.matches ? Math.floor(bounds.height) : 0;
       if (width === 0) return;
-      if (historyView !== null && historyView.region === selection.region && historyView.metric === selection.metric && historyView.width === width) {
+      if (historyView !== null && historyView.region === selection.region && historyView.metric === selection.metric && historyView.width === width && historyView.height === height) {
         updateHistoryEmphasis();
         return;
       }
@@ -481,7 +513,7 @@
       } else {
         selectedHistoryPoint = null;
       }
-      historyView = { region: selection.region, metric: selection.metric, width: width };
+      historyView = { region: selection.region, metric: selection.metric, width: width, height: height };
       const metric = data.metrics[selection.metric];
       const heading = "Evolução de " + metric.label.charAt(0).toLowerCase() + metric.label.slice(1);
       root.querySelector("[data-history-title]").textContent = heading;
@@ -508,6 +540,7 @@
       const plot = { left: 44, width: Math.max(1, width - 62), top: 18, bottom: Math.round(Math.min(300, Math.max(204, width * .5))) };
       let labelRows = 1;
       if (years.length > 1) labelRows = Math.max(1, Math.ceil(34 / (plot.width / (years.length - 1))));
+      if (wideHistory.matches && height > 0) plot.bottom = Math.max(plot.top + 80, height - 28 - (labelRows - 1) * 15);
       const chart = svgElement("svg", { viewBox: "0 0 " + width + " " + (plot.bottom + 28 + (labelRows - 1) * 15), role: "group", "aria-labelledby": "mapa-teste-history-svg-title mapa-teste-history-svg-description" });
       chart.append(svgElement("title", { id: "mapa-teste-history-svg-title" }, heading + " · " + data.regions[selection.region].name));
       chart.append(svgElement("desc", { id: "mapa-teste-history-svg-description" }, "Comparação dos dois sistemas em todos os anos eleitorais, igualmente espaçados. Linha contínua: " + data.models.current.label + ". Linha tracejada: " + data.models.proposal.label + ". Cada ponto permite consultar o valor exato com rato, toque ou teclado. Valores em falta interrompem as linhas."));
@@ -610,6 +643,7 @@
       }
       preview.hidden = true;
       updateLegend();
+      arrangeMap();
       selectRegion(selection.region);
     }
 
@@ -673,12 +707,15 @@
     regionSelect.disabled = false;
     root.querySelector("[data-content]").hidden = false;
     status.hidden = true;
+    arrangeMap();
     updateHistoryChart();
     if (typeof ResizeObserver === "function") {
       const historyResize = new ResizeObserver(updateHistoryChart);
       historyResize.observe(historyContainer);
+      const mapResize = new ResizeObserver(arrangeMap);
+      mapResize.observe(mapContainer);
     } else {
-      window.addEventListener("resize", updateHistoryChart);
+      window.addEventListener("resize", function () { arrangeMap(); updateHistoryChart(); });
     }
   }
 
