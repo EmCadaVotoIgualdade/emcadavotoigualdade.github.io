@@ -60,7 +60,6 @@ custom_scripts:
   <dl class="mapa-teste-explanations">
     <div><dt>Votos desperdiçados</dt><dd>Percentagem de votos que não contribuíram para o partido eleger deputados. No sistema atual, refere-se a partidos sem deputados eleitos no círculo; na proposta, a partidos sem deputados eleitos a nível nacional.</dd></div>
   </dl>
-  <p class="mapa-teste-source"><strong>Dados eleitorais:</strong> <a href="https://www.cne.pt/">CNE</a> · <strong>Cálculos e simulações:</strong> Em Cada Voto Igualdade (<a href="{{ '/detalhes.html' | relative_url }}">Detalhes Técnicos</a>) · <a href="{{ '/assets/data/mapa-metricas.json' | relative_url }}">Consultar dados (JSON)</a></p>
-  <p class="mapa-teste-source">As simulações consideram os 226 mandatos dos 18 distritos continentais e das duas Regiões Autónomas, sem os círculos da emigração. As listas não individualizadas nos dados de origem são assumidas como não elegendo deputados.</p>
-  <p class="mapa-teste-attribution">Mapa: <a href="https://www.dgterritorio.gov.pt/atividades/cartografia/cartografia-tematica/caop">Direção-Geral do Território — CAOP2025</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p>
+  <p class="mapa-teste-source"><strong>Dados eleitorais:</strong> <a href="https://www.cne.pt/">CNE</a> · <strong>Cálculos e simulações:</strong> Em Cada Voto Igualdade (<a href="{{ '/detalhes.html' | relative_url }}">Detalhes Técnicos</a>)</p>
+  <p class="mapa-teste-attribution">Mapa: <a href="https://www.dgterritorio.gov.pt/atividades/cartografia/cartografia-tematica/caop">Direção-Geral do Território — CAOP2025</a></p>
 </section>
