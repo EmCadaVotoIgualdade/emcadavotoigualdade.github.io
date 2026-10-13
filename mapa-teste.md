@@ -57,6 +57,6 @@ custom_scripts:
   <dl class="mapa-teste-explanations">
     <div><dt>Votos desperdiçados</dt><dd>Percentagem de votos que não contribuíram para o partido eleger deputados. No sistema atual, refere-se a partidos sem deputados eleitos no círculo; na proposta, a partidos sem deputados eleitos a nível nacional.</dd></div>
   </dl>
-  <p class="mapa-teste-source"><span data-source></span> <a href="{{ '/assets/data/mapa-teste-metricas.json' | relative_url }}">Fonte e hipóteses dos dados</a>.</p>
-  <p class="mapa-teste-attribution">Geografia: <a href="https://www.dgterritorio.gov.pt/atividades/cartografia/cartografia-tematica/caop">Direção-Geral do Território — CAOP2025</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Limites reprojetados, agregados e simplificados para este mapa.</p>
+  <p class="mapa-teste-source">Fonte: <a href="https://www.cne.pt/">https://www.cne.pt/</a></p>
+  <p class="mapa-teste-attribution">Mapa: <a href="https://www.dgterritorio.gov.pt/atividades/cartografia/cartografia-tematica/caop">Direção-Geral do Território — CAOP2025</a></p>
 </section>

@@ -11,7 +11,6 @@
     style: "percent", minimumFractionDigits: 1, maximumFractionDigits: 1
   });
   const integerFormatter = new Intl.NumberFormat("pt-PT", { maximumFractionDigits: 0 });
-  const exactFormatter = new Intl.NumberFormat("pt-PT", { maximumSignificantDigits: 21 });
   const palettes = {
     red: ["#fee5d9", "#fcbba1", "#fc9272", "#ef6548", "#cb181d", "#99000d"],
     teal: ["#e2f5ec", "#b7e1d4", "#7bc3b1", "#3b9f90", "#14796f", "#08584f"]
@@ -165,31 +164,24 @@
       minimum = Math.min(minimum, values[index]);
       maximum = Math.max(maximum, values[index]);
     }
-    const span = maximum - minimum;
-    let padding;
-    if (metric.unit === "count") {
-      if (span === 0) padding = 2;
-      else padding = Math.max(.5, span * .1);
-    } else {
-      if (span === 0) padding = Math.max(1, minimum * .05);
-      else padding = Math.max(.1, span * .1);
-    }
-    const paddedMinimum = Math.max(0, minimum - padding);
-    let paddedMaximum = maximum + padding;
-    if (metric.unit === "percent") paddedMaximum = Math.min(100, paddedMaximum);
-    const targetStep = (paddedMaximum - paddedMinimum) / 4;
-    const magnitude = Math.pow(10, Math.floor(Math.log10(targetStep)));
-    const fraction = targetStep / magnitude;
+    let lower;
+    let upper;
     let step;
-    if (fraction <= 1) step = magnitude;
-    else if (fraction <= 2) step = 2 * magnitude;
-    else if (fraction <= 2.5) step = 2.5 * magnitude;
-    else if (fraction <= 5) step = 5 * magnitude;
-    else step = 10 * magnitude;
-    if (metric.unit === "count") step = Math.max(1, Math.ceil(step));
-    const lower = Number((Math.floor(paddedMinimum / step) * step).toPrecision(12));
-    let upper = Number((Math.ceil(paddedMaximum / step) * step).toPrecision(12));
-    if (metric.unit === "percent") upper = Math.min(100, upper);
+    if (metric.unit === "count") {
+      step = 1;
+      lower = Math.max(0, minimum - 1);
+      upper = maximum + 1;
+    } else {
+      const targetStep = (maximum - minimum) / 4;
+      step = [1, 2, 5, 10].find(function (candidate) { return candidate >= targetStep; }) ?? 10;
+      lower = Math.floor(minimum / step) * step;
+      upper = Math.min(100, Math.ceil(maximum / step) * step);
+      // Constant series still need a non-zero domain, without extra top padding.
+      if (lower === upper) {
+        lower = Math.max(0, lower - step);
+        if (lower === upper) upper = Math.min(100, upper + step);
+      }
+    }
     const ticks = [];
     const intervals = Math.round((upper - lower) / step);
     for (let index = 0; index <= intervals; index++) {
@@ -208,6 +200,11 @@
     const suppliedYears = data.years;
     // Normalise JSON keys and sort chronologically, including future elections.
     const years = Array.isArray(suppliedYears) ? suppliedYears.map(String).sort(function (a, b) { return Number(a) - Number(b); }) : [];
+    const regionNames = { acores: "Açores", madeira: "Madeira" };
+    function regionName(regionId) { return regionNames[regionId] || data.regions[regionId].name; }
+    function modelName(modelId) { return modelId === "proposal" ? "Sistema proposto" : data.models[modelId].label; }
+    const regionCollator = new Intl.Collator("pt-PT", { sensitivity: "base" });
+    const sortedRegionIds = regionIds.slice().sort(function (a, b) { return regionCollator.compare(regionName(a), regionName(b)); });
     const shapes = svg.querySelectorAll("[data-region]");
     const seenIds = new Set();
     for (let shapeIndex = 0; shapeIndex < shapes.length; shapeIndex++) seenIds.add(shapes[shapeIndex].dataset.region);
@@ -258,6 +255,26 @@
     const mapLegend = root.querySelector(".mapa-teste-legend");
     let mobileMapExpanded = false;
 
+    function largestMobileLegendHeight() {
+      // Measure both indicators so switching between them cannot move the map.
+      const probe = document.createElement("aside");
+      probe.className = mapLegend.className;
+      probe.setAttribute("aria-hidden", "true");
+      probe.style.cssText = "position:absolute;visibility:hidden;pointer-events:none;left:0;top:0;";
+      probe.style.width = mapLegend.getBoundingClientRect().width + "px";
+      const list = document.createElement("ul");
+      probe.append(list);
+      mapLegend.parentElement.append(probe);
+      let height = 0;
+      for (const metricId of metricIds) {
+        probe.dataset.legendMetric = metricId;
+        fillLegend(list, metricId);
+        height = Math.max(height, probe.getBoundingClientRect().height);
+      }
+      probe.remove();
+      return height;
+    }
+
     function arrangeMap() {
       const expanded = narrowMap.matches && mobileMapExpanded;
       root.dataset.mapExpanded = String(expanded);
@@ -289,16 +306,16 @@
         mapSvg.setAttribute("viewBox", "0 " + desktopViewport.y + " " + width + " " + (nextY - 18 - desktopViewport.y));
       } else if (narrowMap.matches) {
         const scale = mapWidth / desktopViewport.width;
-        // The compact legend and shorter Madeira frame share the left column.
-        // Align the button with the coastline, allowing extra height only when
-        // future legend entries need it. Every panel retains the same scale.
-        const islandsY = desktopViewport.y + (mapLegend.getBoundingClientRect().height + 8) / scale;
-        const madeiraY = islandsY + Number(acores.getAttribute("height")) + 12;
-        acores.setAttribute("y", String(islandsY));
-        madeira.setAttribute("y", String(madeiraY));
+        // Anchor both insets above the button, reserving the larger legend.
+        // The spare gap varies; the coast, insets and button stay in place.
         const frame = madeira.querySelector("rect");
-        const insetsBottom = madeiraY + Number(frame.getAttribute("y")) + Number(frame.getAttribute("height"));
-        const south = Math.max(mainlandBottom, insetsBottom + (mapSizeButton.getBoundingClientRect().height + 6) / scale);
+        const madeiraBottom = Number(frame.getAttribute("y")) + Number(frame.getAttribute("height"));
+        const buttonHeight = mapSizeButton.getBoundingClientRect().height;
+        const requiredSouth = desktopViewport.y + (largestMobileLegendHeight() + 8 + buttonHeight + 6) / scale + Number(acores.getAttribute("height")) + 12 + madeiraBottom;
+        const south = Math.max(mainlandBottom, requiredSouth);
+        const madeiraY = south - (buttonHeight + 6) / scale - madeiraBottom;
+        acores.setAttribute("y", String(madeiraY - 12 - Number(acores.getAttribute("height"))));
+        madeira.setAttribute("y", String(madeiraY));
         mainland.setAttribute("y", String(Number(mainland.getAttribute("y")) + south - mainlandBottom));
         const height = south + 4 - desktopViewport.y;
         mapSvg.setAttribute("viewBox", "0 " + desktopViewport.y + " " + desktopViewport.width + " " + height);
@@ -326,17 +343,6 @@
       region: regionIds[Math.floor(Math.random() * regionIds.length)]
     };
     if (!Object.hasOwn(data.metrics, selection.metric)) selection.metric = metricIds[0];
-    const source = data.source || {};
-    const sourceNotes = [];
-    if (source.file) sourceNotes.push("Fonte eleitoral: " + source.file + ".");
-    if (source.valid_votes_basis) sourceNotes.push("Base dos votos válidos: " + source.valid_votes_basis + ".");
-    if (source.national_scope === "18_mainland_districts_plus_acores_and_madeira") sourceNotes.push("Âmbito nacional: 18 distritos, Açores e Madeira.");
-    if (source.omitted_lists_assumed_unrepresented) {
-      sourceNotes.push("As listas omitidas são consideradas sem deputados nos dois sistemas e os seus votos válidos contam como desperdiçados. A atribuição de mandatos usa apenas as listas incluídas; os resultados dependem desta hipótese.");
-    } else if (Array.isArray(source.assumptions)) {
-      sourceNotes.push(...source.assumptions);
-    }
-    root.querySelector("[data-source]").textContent = sourceNotes.join(" ");
     const historyContainer = root.querySelector("[data-history-chart]");
     const historyInfo = root.querySelector("[data-history-info]");
     const wideHistory = window.matchMedia("(min-width: 1000px)");
@@ -344,6 +350,11 @@
       current: { color: "#1e293b", dash: "" },
       proposal: { color: "#0f766e", dash: "6 4" }
     };
+    function historyStyle(modelId) {
+      const style = historyStyles[modelId];
+      if (selection.metric === "wasted_votes_pct") return { color: modelId === "current" ? "#7f1d1d" : "#b91c1c", dash: style.dash };
+      return style;
+    }
     let historyView = null;
     let selectedHistoryPoint = null;
 
@@ -355,12 +366,12 @@
 
     function formatHistoryValue(value) {
       if (value === null) return "Dados indisponíveis";
-      if (data.metrics[selection.metric].unit === "percent") return exactFormatter.format(value) + "\u00a0%";
+      if (data.metrics[selection.metric].unit === "percent") return percentFormatter.format(value / 100);
       return integerFormatter.format(value);
     }
 
     function historyPointLabel(point) {
-      return point.year + " · " + data.models[point.model].label + " · " + data.regions[selection.region].name + ": " + formatHistoryValue(historyValue(point.model, point.year));
+      return point.year + " · " + modelName(point.model) + " · " + regionName(selection.region) + ": " + formatHistoryValue(historyValue(point.model, point.year));
     }
 
     function showHistoryPoint(point, persist) {
@@ -457,7 +468,7 @@
           const tick = scale.ticks[index];
           const y = historyY(tick, scale, plot);
           chart.append(svgElement("line", { x1: plot.left, x2: plot.left + plot.width, y1: y, y2: y, class: "mapa-teste-history-grid" }));
-          let label = exactFormatter.format(tick);
+          let label = integerFormatter.format(tick);
           if (data.metrics[selection.metric].unit === "percent") label += "%";
           chart.append(svgElement("text", { x: plot.left - 8, y: y, "text-anchor": "end", "dominant-baseline": "middle", class: "mapa-teste-history-axis" }, label));
         }
@@ -470,7 +481,7 @@
     function drawHistorySeries(chart, scale, plot) {
       for (let modelIndex = 0; modelIndex < modelIds.length; modelIndex++) {
         const modelId = modelIds[modelIndex];
-        const style = historyStyles[modelId];
+        const style = historyStyle(modelId);
         const group = svgElement("g", { "data-history-series": modelId, stroke: style.color, "stroke-dasharray": style.dash });
         const markers = svgElement("g", { "stroke-dasharray": "none" });
         let path = "";
@@ -522,7 +533,7 @@
       const metric = data.metrics[selection.metric];
       const heading = "Evolução de " + metric.label.charAt(0).toLowerCase() + metric.label.slice(1);
       root.querySelector("[data-history-title]").textContent = heading;
-      root.querySelector("[data-history-region]").textContent = data.regions[selection.region].name;
+      root.querySelector("[data-history-region]").textContent = regionName(selection.region);
       const values = [];
       const legend = root.querySelector("[data-history-legend]");
       legend.replaceChildren();
@@ -531,10 +542,10 @@
         const item = document.createElement("li");
         const swatch = document.createElement("span");
         swatch.className = "mapa-teste-history-key";
-        swatch.style.borderColor = historyStyles[modelId].color;
+        swatch.style.borderColor = historyStyle(modelId).color;
         if (modelId === "proposal") swatch.style.borderTopStyle = "dashed";
         swatch.setAttribute("aria-hidden", "true");
-        item.append(swatch, document.createTextNode(data.models[modelId].label));
+        item.append(swatch, document.createTextNode(modelName(modelId)));
         legend.append(item);
         for (let yearIndex = 0; yearIndex < years.length; yearIndex++) {
           const value = historyValue(modelId, years[yearIndex]);
@@ -547,8 +558,8 @@
       if (years.length > 1) labelRows = Math.max(1, Math.ceil(34 / (plot.width / (years.length - 1))));
       if (wideHistory.matches && height > 0) plot.bottom = Math.max(plot.top + 80, height - 28 - (labelRows - 1) * 15);
       const chart = svgElement("svg", { viewBox: "0 0 " + width + " " + (plot.bottom + 28 + (labelRows - 1) * 15), role: "group", "aria-labelledby": "mapa-teste-history-svg-title mapa-teste-history-svg-description" });
-      chart.append(svgElement("title", { id: "mapa-teste-history-svg-title" }, heading + " · " + data.regions[selection.region].name));
-      chart.append(svgElement("desc", { id: "mapa-teste-history-svg-description" }, "Comparação dos dois sistemas em todos os anos eleitorais, igualmente espaçados. Linha contínua: " + data.models.current.label + ". Linha tracejada: " + data.models.proposal.label + ". Cada ponto permite consultar o valor exato com rato, toque ou teclado. Valores em falta interrompem as linhas."));
+      chart.append(svgElement("title", { id: "mapa-teste-history-svg-title" }, heading + " · " + regionName(selection.region)));
+      chart.append(svgElement("desc", { id: "mapa-teste-history-svg-description" }, "Comparação dos dois sistemas em todos os anos eleitorais, igualmente espaçados. Linha contínua: " + modelName("current") + ". Linha tracejada: " + modelName("proposal") + ". Cada ponto permite consultar o valor com rato, toque ou teclado. Percentagens apresentadas com uma casa decimal. Valores em falta interrompem as linhas."));
       drawHistoryAxes(chart, scale, plot, labelRows);
       drawHistorySeries(chart, scale, plot);
       if (scale === null) chart.append(svgElement("text", { x: width / 2, y: 110, "text-anchor": "middle", class: "mapa-teste-history-axis" }, "Dados indisponíveis"));
@@ -591,7 +602,7 @@
         if (valueFor(regionId) === 1) valueLabel += " partido";
         else valueLabel += " partidos";
       }
-      return data.regions[regionId].name + ": " + valueLabel + " — " + data.models[selection.model].label + ", " + selection.year + ", " + data.metrics[selection.metric].label;
+      return regionName(regionId) + ": " + valueLabel + " — " + modelName(selection.model) + ", " + selection.year + ", " + data.metrics[selection.metric].label;
     }
 
     function selectRegion(regionId) {
@@ -604,12 +615,8 @@
       updateHistoryChart();
     }
 
-    function updateLegend() {
-      const scale = scales[selection.metric];
-      root.dataset.mapMetric = selection.metric;
-      mapLegend.setAttribute("aria-label", "Legenda: " + data.metrics[selection.metric].label);
-      root.querySelector("[data-legend-title]").textContent = data.metrics[selection.metric].label;
-      const legend = root.querySelector("[data-legend]");
+    function fillLegend(legend, metricId) {
+      const scale = scales[metricId];
       legend.replaceChildren();
       for (let classIndex = 0; classIndex < scale.classes.length; classIndex++) {
         const entry = scale.classes[classIndex];
@@ -630,8 +637,16 @@
       }
     }
 
+    function updateLegend() {
+      root.dataset.mapMetric = selection.metric;
+      mapLegend.dataset.legendMetric = selection.metric;
+      mapLegend.setAttribute("aria-label", "Legenda: " + data.metrics[selection.metric].label);
+      root.querySelector("[data-legend-title]").textContent = data.metrics[selection.metric].label;
+      fillLegend(root.querySelector("[data-legend]"), selection.metric);
+    }
+
     function showPreview(regionId) {
-      preview.textContent = data.regions[regionId].name + ": " + formatValue(valueFor(regionId));
+      preview.textContent = regionName(regionId) + ": " + formatValue(valueFor(regionId));
       preview.hidden = false;
     }
 
@@ -671,7 +686,7 @@
     }
     for (let modelIndex = 0; modelIndex < modelIds.length; modelIndex++) {
       const modelId = modelIds[modelIndex];
-      addButton("model", modelId, data.models[modelId].label);
+      addButton("model", modelId, modelName(modelId));
     }
     for (let yearIndex = 0; yearIndex < years.length; yearIndex++) addButton("year", years[yearIndex], String(years[yearIndex]));
     for (let metricIndex = 0; metricIndex < metricIds.length; metricIndex++) {
@@ -679,9 +694,9 @@
       addButton("metric", metricId, data.metrics[metricId].label, data.metrics[metricId].definition);
     }
     regionSelect.replaceChildren();
-    for (let regionIndex = 0; regionIndex < regionIds.length; regionIndex++) {
-      const regionId = regionIds[regionIndex];
-      regionSelect.append(new Option(data.regions[regionId].name, regionId));
+    for (let regionIndex = 0; regionIndex < sortedRegionIds.length; regionIndex++) {
+      const regionId = sortedRegionIds[regionIndex];
+      regionSelect.append(new Option(regionName(regionId), regionId));
     }
     for (let shapeIndex = 0; shapeIndex < regionShapes.length; shapeIndex++) {
       const shape = regionShapes[shapeIndex];
