@@ -27,6 +27,7 @@
 #mapa-teste .mapa-teste-map { grid-area: 1 / 1 / 2 / 3; min-width: 0; }
 #mapa-teste .mapa-teste-size-toggle { display: none; }
 #mapa-teste .mapa-teste-map > svg { display: block; width: 100%; height: auto; }
+#mapa-teste .mapa-teste-map svg { overflow: visible; }
 #mapa-teste .mapa-teste-map text { fill: #334155; font: 18px system-ui, sans-serif; pointer-events: none; }
 #mapa-teste .mapa-teste-map .mapa-teste-map-heading { fill: #1e293b; font-size: 23px; font-weight: 600; }
 #mapa-teste .mapa-teste-region { cursor: pointer; outline: none; }
@@ -95,9 +96,10 @@
   #mapa-teste .mapa-teste-visual { padding: .5rem; }
   #mapa-teste .mapa-teste-size-toggle { display: block; grid-area: 1 / 1 / 2 / 2; align-self: end; justify-self: center; z-index: 1; max-width: 100%; min-height: 30px; margin: 0; padding: .25rem .3rem; font-size: .7rem; line-height: 1.2; }
   #mapa-teste .mapa-teste-legend { padding: 0; }
-  #mapa-teste .mapa-teste-legend h2 { margin-bottom: .3rem; font-size: .7rem; line-height: 1.25; }
+  #mapa-teste .mapa-teste-legend h2 { display: none; }
   #mapa-teste .mapa-teste-legend ul { gap: .1rem .3rem; }
   #mapa-teste .mapa-teste-legend li { gap: .2rem; font-size: .7rem; line-height: 1.25; }
+  #mapa-teste[data-map-metric="represented_parties_count"] .mapa-teste-legend ul { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   #mapa-teste .mapa-teste-swatch { width: .7rem; height: .6rem; }
   #mapa-teste[data-map-expanded="true"] .mapa-teste-visual { grid-template-columns: minmax(0, 1fr); }
   #mapa-teste[data-map-expanded="true"] .mapa-teste-legend { grid-area: 1 / 1; margin-bottom: .65rem; }

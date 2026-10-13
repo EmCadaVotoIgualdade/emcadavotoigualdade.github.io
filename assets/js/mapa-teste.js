@@ -248,7 +248,11 @@
     const mapSvg = mapContainer.querySelector("svg");
     const mapParts = Array.from(mapSvg.querySelectorAll("svg[data-map-part]"));
     const desktopViewBox = mapSvg.getAttribute("viewBox");
+    const desktopViewport = { y: mapSvg.viewBox.baseVal.y, width: mapSvg.viewBox.baseVal.width };
     const desktopPositions = mapParts.map(function (part) { return { x: part.getAttribute("x"), y: part.getAttribute("y") }; });
+    const mainland = mapParts.find(function (part) { return part.dataset.mapPart === "mainland"; });
+    const acores = mapParts.find(function (part) { return part.dataset.mapPart === "acores"; });
+    const madeira = mapParts.find(function (part) { return part.dataset.mapPart === "madeira"; });
     const narrowMap = window.matchMedia("(max-width: 600px)");
     const mapSizeButton = root.querySelector("[data-map-size]");
     const mapLegend = root.querySelector(".mapa-teste-legend");
@@ -261,43 +265,44 @@
       mapSizeButton.disabled = false;
       mapSizeButton.setAttribute("aria-pressed", String(expanded));
       mapSizeButton.textContent = expanded ? "Tornar menor" : "Tornar maior";
+      mapSizeButton.style.marginBottom = "";
+      mapSvg.setAttribute("viewBox", desktopViewBox);
+      for (let index = 0; index < mapParts.length; index++) {
+        mapParts[index].setAttribute("x", desktopPositions[index].x);
+        mapParts[index].setAttribute("y", desktopPositions[index].y);
+      }
+      const mapWidth = mapContainer.getBoundingClientRect().width;
+      if (mapWidth === 0) return;
+      const mainlandBounds = mainland.getBBox();
+      const mainlandBottom = Number(mainland.getAttribute("y")) + mainlandBounds.y + mainlandBounds.height - mainland.viewBox.baseVal.y;
       if (expanded) {
         // Stack whole panels at their existing size; every outline keeps the
         // same geographic scale, even on phones. The CSS puts the legend above.
-        const mainland = mapParts.find(function (part) { return part.dataset.mapPart === "mainland"; });
         const width = Number(mainland.getAttribute("width"));
-        let nextY = 0;
-        for (let index = 0; index < mapParts.length; index++) {
-          const part = mapParts[index];
+        mainland.setAttribute("x", "0");
+        let nextY = mainlandBottom + 18;
+        for (const part of [acores, madeira]) {
           part.setAttribute("x", String((width - Number(part.getAttribute("width"))) / 2));
           part.setAttribute("y", String(nextY));
           nextY += Number(part.getAttribute("height")) + 18;
         }
-        mapSvg.setAttribute("viewBox", "0 0 " + width + " " + (nextY - 18));
-      } else {
-        mapSvg.setAttribute("viewBox", desktopViewBox);
-        for (let index = 0; index < mapParts.length; index++) {
-          mapParts[index].setAttribute("x", desktopPositions[index].x);
-          mapParts[index].setAttribute("y", desktopPositions[index].y);
-        }
-        if (narrowMap.matches) {
-          const viewBox = mapSvg.viewBox.baseVal;
-          const scale = mapContainer.getBoundingClientRect().width / viewBox.width;
-          if (scale > 0) {
-            // Reserve only the measured legend/button space. All panels keep
-            // their original dimensions and the same geographic scale.
-            const acores = mapParts.find(function (part) { return part.dataset.mapPart === "acores"; });
-            const madeira = mapParts.find(function (part) { return part.dataset.mapPart === "madeira"; });
-            const originalY = Number(desktopPositions[mapParts.indexOf(acores)].y);
-            const islandsY = Math.max(originalY, Math.ceil((mapLegend.getBoundingClientRect().height + 8) / scale));
-            const madeiraY = islandsY + Number(acores.getAttribute("height")) + 18;
-            acores.setAttribute("y", String(islandsY));
-            madeira.setAttribute("y", String(madeiraY));
-            const bottom = madeiraY + Number(madeira.getAttribute("height"));
-            const height = Math.ceil(Math.max(viewBox.height, bottom + (mapSizeButton.getBoundingClientRect().height + 6) / scale));
-            mapSvg.setAttribute("viewBox", "0 0 " + viewBox.width + " " + height);
-          }
-        }
+        mapSvg.setAttribute("viewBox", "0 " + desktopViewport.y + " " + width + " " + (nextY - 18 - desktopViewport.y));
+      } else if (narrowMap.matches) {
+        const scale = mapWidth / desktopViewport.width;
+        // The compact legend and shorter Madeira frame share the left column.
+        // Align the button with the coastline, allowing extra height only when
+        // future legend entries need it. Every panel retains the same scale.
+        const islandsY = desktopViewport.y + (mapLegend.getBoundingClientRect().height + 8) / scale;
+        const madeiraY = islandsY + Number(acores.getAttribute("height")) + 12;
+        acores.setAttribute("y", String(islandsY));
+        madeira.setAttribute("y", String(madeiraY));
+        const frame = madeira.querySelector("rect");
+        const insetsBottom = madeiraY + Number(frame.getAttribute("y")) + Number(frame.getAttribute("height"));
+        const south = Math.max(mainlandBottom, insetsBottom + (mapSizeButton.getBoundingClientRect().height + 6) / scale);
+        mainland.setAttribute("y", String(Number(mainland.getAttribute("y")) + south - mainlandBottom));
+        const height = south + 4 - desktopViewport.y;
+        mapSvg.setAttribute("viewBox", "0 " + desktopViewport.y + " " + desktopViewport.width + " " + height);
+        mapSizeButton.style.marginBottom = String(4 * scale) + "px";
       }
     }
     mapSizeButton.addEventListener("click", function () {
@@ -601,6 +606,8 @@
 
     function updateLegend() {
       const scale = scales[selection.metric];
+      root.dataset.mapMetric = selection.metric;
+      mapLegend.setAttribute("aria-label", "Legenda: " + data.metrics[selection.metric].label);
       root.querySelector("[data-legend-title]").textContent = data.metrics[selection.metric].label;
       const legend = root.querySelector("[data-legend]");
       legend.replaceChildren();
